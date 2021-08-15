@@ -96,10 +96,10 @@ public class Enemy : MonoBehaviour
     private void SpawnRandomPI()
     {
         inimigosSoltamPI = Random.Range(chanceMinSoltarPID,chanceMaxSoltarPID);
-        if (inimigosSoltamPI == 10)
+        if (inimigosSoltamPI >= 10)
         {
             GameObject PI = Instantiate(PIPrefab, transform.position, Quaternion.identity) as GameObject;
         }
-        else return;
+        //else return;
     }
 }
