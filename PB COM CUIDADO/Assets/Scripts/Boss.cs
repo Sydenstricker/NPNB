@@ -26,6 +26,9 @@ public class Boss : MonoBehaviour
     [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
     [SerializeField] AudioClip shootSound;
     [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.25f;
+    [SerializeField] AudioClip introSFX;
+    [SerializeField] [Range(0, 1)] float volumeIntro = 0.75f;
+    [SerializeField] float tempoIntroBoss = 2f;
 
     //private bool tomoudano = false;
 
@@ -36,10 +39,20 @@ public class Boss : MonoBehaviour
     void Start()
     {
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
+        SomChefePutissimo();
+    }
         
+    private void SomChefePutissimo()
+    {
+        StartCoroutine((IEnumerator)WaitAndLoad());        
+    }
+   
+    IEnumerator WaitAndLoad()
+    {
+        yield return new WaitForSeconds(tempoIntroBoss);
+        AudioSource.PlayClipAtPoint(introSFX, Camera.main.transform.position, volumeMorte);
     }
 
-    // Update is called once per frame
     void Update()
     {
         CountDownAndShoot();
