@@ -21,6 +21,11 @@ public class SceneLoader : MonoBehaviour {
         SceneManager.LoadScene("NaveBlueGameplay");
         FindObjectOfType<GameSession>().ResetGame();
     }
+    public void LoadCavernaGameplay()
+    {
+        SceneManager.LoadScene("CavernaGameplay");
+        FindObjectOfType<GameSession>().ResetGame();
+    }
 
     public void QuitGame()
     {

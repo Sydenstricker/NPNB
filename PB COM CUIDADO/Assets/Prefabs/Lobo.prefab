@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 6334884320611663201}
   - component: {fileID: 8969204247277605743}
   - component: {fileID: 8302409573424441975}
-  - component: {fileID: 8004231730893663167}
   - component: {fileID: 3892209311952423598}
+  - component: {fileID: -5014095671166048007}
+  - component: {fileID: 1025352895}
   m_Layer: 0
   m_Name: Lobo
   m_TagString: Untagged
@@ -153,18 +154,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8004231730893663167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299872023879919693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 826013dc3d69d04418cea894ec4f9739, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3892209311952423598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,14 +166,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897647e01a3ecc94e8c5b54747de22df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  scoreValue: 150
   chanceMaxSoltarPID: 100
   chanceMinSoltarPID: 1
   inimigosSoltamPI: 0
-  PIPrefab: {fileID: 0}
-  morteVFX: {fileID: 0}
-  durationOfExplosion: 1
-  pontosPorInimigo: 0
-  deathSFX: {fileID: 0}
-  volumeMorte: 0.75
+--- !u!114 &-5014095671166048007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299872023879919693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91cbe32d3ca11d45adc5106d0c65bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1025352895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299872023879919693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34409c24467bb95409525bbe7c78f03a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100

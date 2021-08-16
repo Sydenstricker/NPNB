@@ -10,15 +10,12 @@ public class PlayerCav : MonoBehaviour
     [SerializeField] float velEsqDir = 10f;
     [SerializeField] float limiteTela = 1f;
     [SerializeField] int health = 200;
-    [SerializeField] GameObject deathVFX;
-    [SerializeField] float durationOfExplosion = 1f;
+    [SerializeField] int scoreValue = 150;
 
     [Header("Player Audio")]
     [SerializeField] AudioClip deathSFX;
     [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
-    [SerializeField] AudioClip shootSound;
-    [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.25f;
-
+   
     // Pulo duplo
     private bool puloDouble = false;
     private int puloCount = 0;
@@ -51,6 +48,20 @@ public class PlayerCav : MonoBehaviour
         if (!damageDealer) { return; }
         TomarDano(damageDealer);
 
+        if (other.tag == "Moeda")
+        {
+            Destroy(other.gameObject);
+            FindObjectOfType<GameSession>().AddToScore(scoreValue); 
+            
+        }
+        else if (other.tag == "PuloDuplo")
+        {
+            Destroy(other.gameObject);
+            puloDouble = true;
+           // soundManager.PlayAudio("puloduplo");
+
+        }
+
     }
 
     private void PegaVidaCoracao()
@@ -74,10 +85,8 @@ public class PlayerCav : MonoBehaviour
     private void PlayerMorreu()
     {
         Destroy(gameObject);
-        GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
-        Destroy(explosion, durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
-        FindObjectOfType<Level>().LoadGameOver();
+        FindObjectOfType<Level>().LoadGameOverCav();
     }
     public int GetHealth()
     {

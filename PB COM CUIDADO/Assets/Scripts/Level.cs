@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Level : MonoBehaviour
 {
     [SerializeField] float delayGameOver = 2f;
+    [SerializeField] float delayGameOverCav = 2f;
     [SerializeField] float delayCinematicaFinal = 2f;
 
     public void LoadNextScene()
@@ -22,6 +23,17 @@ public class Level : MonoBehaviour
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void LoadGameOverCav()
+    {
+        StartCoroutine((IEnumerator)WaitAndLoadCav());
+    }
+    IEnumerator WaitAndLoadCav()
+    {
+        yield return new WaitForSeconds(delayGameOverCav);
+        SceneManager.LoadScene("CavGameover");
+
     }
     public void LoadGameOver()
     {
