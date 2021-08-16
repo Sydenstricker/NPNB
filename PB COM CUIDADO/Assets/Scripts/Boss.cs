@@ -101,6 +101,7 @@ public class Boss : MonoBehaviour
 
         //tomandoDano = false;
         return;
+        
     }
 
        private void BossMorreu()
