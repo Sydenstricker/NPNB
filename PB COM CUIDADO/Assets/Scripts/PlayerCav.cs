@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCav : MonoBehaviour
 {
+    public Animator animator;
     [Header("Player Config")]
     [SerializeField] float velCimaBaixo = 10f;
     [SerializeField] float velEsqDir = 10f;
@@ -15,12 +16,17 @@ public class PlayerCav : MonoBehaviour
     [Header("Player Audio")]
     [SerializeField] AudioClip deathSFX;
     [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
-   
-    // Pulo duplo
+
+    public float velocidade = 5;
+    public float pulo = 8;
+    public bool grounded;
     private bool puloDouble = false;
     private int puloCount = 0;
+    private bool tomouDano = false;
+    private bool deslizando = false;
+    private bool morreu = false;
+    private Rigidbody2D body;
 
-    public bool grounded;
     //os 2 sao pra barra do coracao
     public HealthBar healthBar;
     public int currentHealth;
@@ -77,6 +83,7 @@ public class PlayerCav : MonoBehaviour
         //currenthealth é a vida da barra com coraçao, health era ref em string
         currentHealth = health;
         healthBar.SetHealth(currentHealth);
+        animator.SetTrigger("TomandoDano 0");        
         if (health <= 0)
         {
             PlayerMorreu();
@@ -84,6 +91,7 @@ public class PlayerCav : MonoBehaviour
     }
     private void PlayerMorreu()
     {
+        animator.SetBool("Morreu", true);
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
         FindObjectOfType<Level>().LoadGameOverCav();
@@ -114,7 +122,23 @@ public class PlayerCav : MonoBehaviour
 
         //player anda direita/esquerda
         transform.position = new Vector2(transform.position.x, newYPos);
+
+        Pulo();
     }
+
+    private void Pulo()
+    {
+        if (Input.GetMouseButton(0) || Input.GetButtonDown("Jump"))
+        {
+            if (grounded || (puloDouble && puloCount < 2))
+            {
+                body.velocity = new Vector2(body.velocity.x, pulo);
+                puloCount++;
+                //soundManager.PlayAudio("pulo");
+            }
+        }
+    }
+
     private void SetUpMoveBoundry()
     {
         Camera gameCamera = Camera.main;

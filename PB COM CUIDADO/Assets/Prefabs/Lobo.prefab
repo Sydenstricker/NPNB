@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 8969204247277605743}
   - component: {fileID: 8302409573424441975}
   - component: {fileID: 3892209311952423598}
-  - component: {fileID: -5014095671166048007}
   - component: {fileID: 1025352895}
+  - component: {fileID: -549070992694085048}
   m_Layer: 0
   m_Name: Lobo
   m_TagString: Untagged
@@ -169,18 +169,6 @@ MonoBehaviour:
   chanceMaxSoltarPID: 100
   chanceMinSoltarPID: 1
   inimigosSoltamPI: 0
---- !u!114 &-5014095671166048007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299872023879919693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b91cbe32d3ca11d45adc5106d0c65bfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1025352895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,3 +182,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
+--- !u!114 &-549070992694085048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299872023879919693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826013dc3d69d04418cea894ec4f9739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

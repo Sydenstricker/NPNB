@@ -17,7 +17,7 @@ public class EnemyPathingCav : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        MoveCav();
     }
 
     public void SetWaveConfig(WaveConfig waveConfig)
@@ -25,7 +25,7 @@ public class EnemyPathingCav : MonoBehaviour
         this.waveConfig = waveConfig;
     }
 
-    private void Move()
+    private void MoveCav()
     {
         if (waypointIndex <= waypoints.Count - 1)
         {
@@ -34,13 +34,13 @@ public class EnemyPathingCav : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
             if (transform.position == targetPosition)
             {
-                waypointIndex++;
+                waypointIndex--;
 
             }
         }
         else
         {
-            return;
+            Destroy(gameObject);
         }
     }
 }
