@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     private Vector2 playerInicio;
 
     public Text pontosTxt;
+    public Text pontosTxtMenu;
 
     public DeathMenu deathMenu;
     
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
     public void AddPontos(int valor) {
         pontos += valor;
         pontosTxt.text = "Pontos: " + pontos;
+        pontosTxtMenu.text = "Pontos: " + pontos;
     }
 
     public void RestartGame() {
@@ -34,5 +36,8 @@ public class GameManager : MonoBehaviour
         deathMenu.gameObject.SetActive(false);
         player.transform.position = playerInicio;
         player.SetActive(true);
+        pontos = 0;
+        pontosTxt.text = "Pontos: " + pontos;
+        pontosTxtMenu.text = "Pontos: " + pontos;
     }
 }

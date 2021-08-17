@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
         if (spawnoBoss == false && FindObjectOfType<Player>().pontosIDcoletados >= ptsSpawnBoss)
         {
             InvocaBigBoneco();
-        }
+        }        
     }
 
     private void InvocaBigBoneco()

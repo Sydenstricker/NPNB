@@ -11,7 +11,7 @@ public class PontosDeIdentidade : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         AudioSource.PlayClipAtPoint(coletaSFX, Camera.main.transform.position, volumeColeta);
-        FindObjectOfType<Player>().PontosdeID();
+        FindObjectOfType<Player>().PontosdeID();        
         Destroy(gameObject);
     }
     
