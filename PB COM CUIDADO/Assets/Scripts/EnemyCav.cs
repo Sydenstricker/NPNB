@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class EnemyCav : MonoBehaviour
 {
-    [Header("Inimigo Configs")]
-    [SerializeField] int chanceMaxSoltarPID = 100;
-    [SerializeField] int chanceMinSoltarPID = 1;
-    [SerializeField] int inimigosSoltamPI;
-        
+            
     //[SerializeField] GameObject spriteTomouDano; spawna sprite quando toma dano
        
     void Start()

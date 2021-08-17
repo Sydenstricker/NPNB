@@ -9,24 +9,12 @@ public class PlayerCav : MonoBehaviour
     [Header("Player Config")]
     [SerializeField] float velCimaBaixo = 10f;
     [SerializeField] float velEsqDir = 10f;
-    [SerializeField] float limiteTela = 1f;
     [SerializeField] int health = 200;
-    [SerializeField] int scoreValue = 150;
-
+   
     [Header("Player Audio")]
     [SerializeField] AudioClip deathSFX;
     [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
-
-    public float velocidade = 5;
-    public float pulo = 8;
-    public bool grounded;
-    private bool puloDouble = false;
-    private int puloCount = 0;
-    private bool tomouDano = false;
-    private bool deslizando = false;
-    private bool morreu = false;
-    private Rigidbody2D body;
-
+     
     //os 2 sao pra barra do coracao
     public HealthBar healthBar;
     public int currentHealth;
@@ -41,7 +29,7 @@ public class PlayerCav : MonoBehaviour
     void Start()
     {
         SetUpMoveBoundry();
-        PegaVidaCoracao();
+        PegaVidaCoracao();        
     }
 
     void Update()
@@ -52,24 +40,8 @@ public class PlayerCav : MonoBehaviour
     {
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
-        TomarDano(damageDealer);
-
-        if (other.tag == "Moeda")
-        {
-            Destroy(other.gameObject);
-            FindObjectOfType<GameSession>().AddToScore(scoreValue); 
-            
-        }
-        else if (other.tag == "PuloDuplo")
-        {
-            Destroy(other.gameObject);
-            puloDouble = true;
-           // soundManager.PlayAudio("puloduplo");
-
-        }
-
+        TomarDano(damageDealer);                     
     }
-
     private void PegaVidaCoracao()
     {
         currentHealth = health;
@@ -83,7 +55,7 @@ public class PlayerCav : MonoBehaviour
         //currenthealth é a vida da barra com coraçao, health era ref em string
         currentHealth = health;
         healthBar.SetHealth(currentHealth);
-        animator.SetTrigger("TomandoDano 0");        
+        animator.SetBool("Ai",true);        
         if (health <= 0)
         {
             PlayerMorreu();
@@ -103,8 +75,7 @@ public class PlayerCav : MonoBehaviour
     public int GetPI()
     {
         return pontosIDcoletados;
-    }
-    
+    }    
     private void Move()
     {
         // Movimento runner
@@ -122,31 +93,16 @@ public class PlayerCav : MonoBehaviour
 
         //player anda direita/esquerda
         transform.position = new Vector2(transform.position.x, newYPos);
-
-        Pulo();
+       
     }
-
-    private void Pulo()
-    {
-        if (Input.GetMouseButton(0) || Input.GetButtonDown("Jump"))
-        {
-            if (grounded || (puloDouble && puloCount < 2))
-            {
-                body.velocity = new Vector2(body.velocity.x, pulo);
-                puloCount++;
-                //soundManager.PlayAudio("pulo");
-            }
-        }
-    }
-
     private void SetUpMoveBoundry()
     {
         Camera gameCamera = Camera.main;
-        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + limiteTela;
-        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - limiteTela;
-        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + limiteTela;
-        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - limiteTela;
-    }    
+        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x;
+        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
+        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y;
+        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y;
+    }
     public void PontosdeID()
     {
         pontosIDcoletados++;

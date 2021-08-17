@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4590433093603005407}
   - component: {fileID: 8120298065811879966}
   - component: {fileID: 7170278299349105915}
+  - component: {fileID: 6537589318316057538}
   m_Layer: 0
   m_Name: Morcego
   m_TagString: Untagged
@@ -177,14 +178,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897647e01a3ecc94e8c5b54747de22df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  scoreValue: 150
-  chanceMaxSoltarPID: 100
-  chanceMinSoltarPID: 1
-  inimigosSoltamPI: 0
-  PIPrefab: {fileID: 0}
-  morteVFX: {fileID: 0}
-  durationOfExplosion: 1
-  pontosPorInimigo: 0
-  deathSFX: {fileID: 0}
-  volumeMorte: 0.75
+--- !u!114 &6537589318316057538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124581678163071466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34409c24467bb95409525bbe7c78f03a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
