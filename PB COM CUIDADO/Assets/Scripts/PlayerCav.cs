@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCav : MonoBehaviour
 {
-    public Animator animator;
+  
     [Header("Player Config")]
     [SerializeField] float velCimaBaixo = 10f;
     [SerializeField] float velEsqDir = 10f;
@@ -14,7 +14,17 @@ public class PlayerCav : MonoBehaviour
     [Header("Player Audio")]
     [SerializeField] AudioClip deathSFX;
     [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
-     
+
+    [Header("OK VAMOS LA")]
+    private bool puloDouble = false;
+    private int puloCount = 0;
+    private Rigidbody2D body;
+    private Animator animator;
+    public float velocidade = 5;
+    public float pulo = 8;
+    public bool grounded;
+   
+
     //os 2 sao pra barra do coracao
     public HealthBar healthBar;
     public int currentHealth;
@@ -24,23 +34,52 @@ public class PlayerCav : MonoBehaviour
     float yMin;
     float yMax;
 
+   
+
     //PI
     public int pontosIDcoletados;
     void Start()
     {
-        SetUpMoveBoundry();
-        PegaVidaCoracao();        
+        
+        PegaVidaCoracao();
+        body = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        Move();        
+        SetUpMoveBoundry();
+        Move();
+        // Movimento runner
+        body.velocity = new Vector2(velocidade, body.velocity.y);
+
+        // Pulo
+        if (Input.GetMouseButton(0) || Input.GetButtonDown("Jump"))
+        {
+            if (grounded || (puloDouble && puloCount < 2))
+            {
+                body.velocity = new Vector2(body.velocity.x, pulo);
+                puloCount++;
+                //soundManager.PlayAudio("pulo");
+            }
+        }
+
+        // Animação
+        //animator.SetFloat("Velocidade", body.velocity.x);
+        //animator.SetBool("grounded", grounded);
+        
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
-        TomarDano(damageDealer);                     
+        TomarDano(damageDealer);
+        
+        if (other.gameObject.layer == 3)
+        {
+            grounded = true;
+            puloCount = 0;
+        }
     }
     private void PegaVidaCoracao()
     {
@@ -55,11 +94,16 @@ public class PlayerCav : MonoBehaviour
         //currenthealth é a vida da barra com coraçao, health era ref em string
         currentHealth = health;
         healthBar.SetHealth(currentHealth);
-        animator.SetBool("Ai",true);        
+                
         if (health <= 0)
         {
             PlayerMorreu();
         }
+        else
+        {
+            animator.SetBool("Ai", true);
+        }
+        return;
     }
     private void PlayerMorreu()
     {
