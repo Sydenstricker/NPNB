@@ -38,12 +38,17 @@ public class PlayerCav : MonoBehaviour
 
     //PI
     public int pontosIDcoletados;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     void Start()
     {
         
         PegaVidaCoracao();
         body = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        
     }
 
     void Update()
@@ -58,6 +63,7 @@ public class PlayerCav : MonoBehaviour
         {
             if (grounded || (puloDouble && puloCount < 2))
             {
+                animator.SetTrigger("Pulando");
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloCount++;
                 //soundManager.PlayAudio("pulo");
@@ -101,14 +107,15 @@ public class PlayerCav : MonoBehaviour
         }
         else
         {
-            animator.SetBool("Ai", true);
+            animator.SetTrigger("AiAi");
+            //animator.SetBool("Ai", true);
         }
         return;
     }
     private void PlayerMorreu()
     {
-        animator.SetBool("Morreu", true);
-        Destroy(gameObject);
+        animator.SetTrigger("Morreu");
+        //Destroy(gameObject);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
         FindObjectOfType<Level>().LoadGameOverCav();
     }
