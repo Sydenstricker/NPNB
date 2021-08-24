@@ -59,13 +59,28 @@ public class PlayerCav : MonoBehaviour
         body.velocity = new Vector2(velocidade, body.velocity.y);
 
         // Pulo
-        if (Input.GetMouseButton(0) || Input.GetButtonDown("Jump"))
+        if ( Input.GetButtonDown("Jump"))
         {
             if (grounded || (puloDouble && puloCount < 2))
             {
                 animator.SetTrigger("Pulando");
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloCount++;
+                grounded = false;
+                //soundManager.PlayAudio("pulo");
+            }
+        }
+
+        // Dezlizar
+        if ( Input.GetButtonDown("Slide"))
+        {
+            if (grounded)
+            {
+                animator.SetTrigger("Deslizando");
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                Physics2D.gravity = new Vector2(0, 0);
+                //body.velocity = new Vector2(body.velocity.x, pulo);
+                //puloCount++;
                 //soundManager.PlayAudio("pulo");
             }
         }
@@ -73,20 +88,37 @@ public class PlayerCav : MonoBehaviour
         // Animação
         //animator.SetFloat("Velocidade", body.velocity.x);
         //animator.SetBool("grounded", grounded);
-        
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.layer == 6)
+        {
+            return;
+        }
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
-        TomarDano(damageDealer);
-        
-        if (other.gameObject.layer == 3)
+        TomarDano(damageDealer);    
+       
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 3)
         {
             grounded = true;
             puloCount = 0;
         }
+        if (collision.gameObject.layer == 6)
+        {
+            return;
+        }
     }
+    private void AtivarBoxCollider()
+    {
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        Physics2D.gravity = new Vector2(0, -10);
+    }
+    
     private void PegaVidaCoracao()
     {
         currentHealth = health;
@@ -114,7 +146,9 @@ public class PlayerCav : MonoBehaviour
     }
     private void PlayerMorreu()
     {
+        velocidade = 0; pulo = 0;
         animator.SetTrigger("Morreu");
+        //Time.timeScale = 0;
         //Destroy(gameObject);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
         FindObjectOfType<Level>().LoadGameOverCav();
@@ -144,7 +178,7 @@ public class PlayerCav : MonoBehaviour
 
         //player anda direita/esquerda
         transform.position = new Vector2(transform.position.x, newYPos);
-       
+                
     }
     private void SetUpMoveBoundry()
     {
