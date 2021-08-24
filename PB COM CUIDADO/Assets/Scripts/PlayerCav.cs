@@ -66,6 +66,7 @@ public class PlayerCav : MonoBehaviour
                 animator.SetTrigger("Pulando");
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloCount++;
+                grounded = false;
                 //soundManager.PlayAudio("pulo");
             }
         }
@@ -91,16 +92,26 @@ public class PlayerCav : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == 0)
+        if (other.gameObject.layer == 6)
+        {
+            return;
+        }
+        DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+        if (!damageDealer) { return; }
+        TomarDano(damageDealer);    
+       
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 3)
         {
             grounded = true;
             puloCount = 0;
         }
-        DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
-        if (!damageDealer) { return; }
-        TomarDano(damageDealer);
-        
-       
+        if (collision.gameObject.layer == 6)
+        {
+            return;
+        }
     }
     private void AtivarBoxCollider()
     {
