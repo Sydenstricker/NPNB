@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame(){
         //soundManager.PlayAudio("startgame");
-        SceneManager.LoadScene(cena);
+        SceneManager.LoadScene("Tutorial");
     }
     public void QuitGame(){
         Application.Quit();

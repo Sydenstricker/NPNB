@@ -11,8 +11,8 @@ public class TutorialController : MonoBehaviour
         if (other.tag == "Player")
         {
             FindObjectOfType<DialogManager>().StartDialog(file);
-            Destroy(gameObject.GetComponent<Collider2D>());
-        }
-
+            Destroy(gameObject.GetComponent<Collider2D>());            
+        }        
     }
+  
 }

@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         body.velocity = new Vector2(velocidade, body.velocity.y);
 
         // Pulo
-        if (Input.GetMouseButton(0) || Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             if (grounded || (puloDouble && puloCount < 2))
             {
