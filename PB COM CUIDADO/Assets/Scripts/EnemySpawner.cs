@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,11 +11,13 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] bool isEndless = false;
     [SerializeField] int ptsSpawnBoss = 5;
     private bool spawnoBoss = false;
+    GameObject enemyParent;
+    const string ENEMY_PARENT_NAME = "Enemy";
     
-
     // Start is called before the first frame update
     IEnumerator Start()
     {
+        CreateEnemyParent();        
         //GetComponent<Player>().pontosIDcoletados;
         do
         {
@@ -22,12 +25,27 @@ public class EnemySpawner : MonoBehaviour
         }
         while (isEndless);
     }
+
+    
+
+    private void CreateEnemyParent()
+    {
+        enemyParent = GameObject.Find(ENEMY_PARENT_NAME);
+        if (! enemyParent)
+        {
+            enemyParent = new GameObject(ENEMY_PARENT_NAME);
+        }
+    }
+
     private void Update()
     {
+        if (FindObjectOfType<Player>() == null) {return;}
+
         if (spawnoBoss == false && FindObjectOfType<Player>().pontosIDcoletados >= ptsSpawnBoss)
         {
             InvocaBigBoneco();
-        }        
+        }
+        
     }
 
     private void InvocaBigBoneco()
@@ -55,6 +73,7 @@ public class EnemySpawner : MonoBehaviour
             waveConfig.GetEnemyPrefab(),
             waveConfig.GetWaypoints()[0].transform.position,
             Quaternion.identity);
+            newEnemy.transform.parent = enemyParent.transform;
             newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
             yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
         }
@@ -72,7 +91,7 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int enemyCount = 0; enemyCount < bossConfig.GetNumberOfEnemies(); enemyCount++)
         {
-            var newEnemy = Instantiate(
+             var newEnemy = Instantiate (
              bossConfig.GetEnemyPrefab(),
              bossConfig.GetWaypoints()[0].transform.position,
              Quaternion.identity);

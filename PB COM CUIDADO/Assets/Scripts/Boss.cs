@@ -50,7 +50,7 @@ public class Boss : MonoBehaviour
     IEnumerator WaitAndLoad()
     {
         yield return new WaitForSeconds(tempoIntroBoss);
-        AudioSource.PlayClipAtPoint(introSFX, Camera.main.transform.position, volumeMorte);
+        AudioSource.PlayClipAtPoint(introSFX, Camera.main.transform.position, volumeIntro);
     }
 
     void Update()
@@ -86,8 +86,7 @@ public class Boss : MonoBehaviour
     }
 
     private void TomarDano(DamageDealer damageDealer)
-    {
-        //tomandoDano = true;
+    {       
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
         if (health <= 0)
@@ -96,11 +95,8 @@ public class Boss : MonoBehaviour
         }
         else
         {
-            animator.SetTrigger("Ai");
-        }
-
-        //tomandoDano = false;
-        return;
+            animator.SetTrigger("Ai");            
+        }                      
         
     }
 

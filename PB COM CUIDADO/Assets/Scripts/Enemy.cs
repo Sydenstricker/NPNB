@@ -30,9 +30,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] AudioClip shootSound;
     [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.25f;
 
-
+    GameObject enemyLaserParent;
+    const string ENEMY_LASER_NAME = "EnemyLaser";
     void Start()
-    {
+    {        
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
     }
 
@@ -41,6 +42,7 @@ public class Enemy : MonoBehaviour
     {
         CountDownAndShoot();
     }
+        
     private void CountDownAndShoot()
     {
         shotCounter -= Time.deltaTime;
