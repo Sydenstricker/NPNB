@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float velocidade = 5f;
     [SerializeField] float pulo = 8;
     [SerializeField] bool grounded;
+    [SerializeField] bool isDialogNaoPulaCacete;
 
     [SerializeField] GameManager gameManager;
     [SerializeField] SoundManager soundManager;
@@ -32,7 +33,7 @@ public class PlayerController : MonoBehaviour
         body.velocity = new Vector2(velocidade, body.velocity.y);
 
         // Pulo
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && grounded == true && isDialogNaoPulaCacete == false)
         {
             if (grounded || (puloDouble && puloCount < 2))
             {
@@ -70,7 +71,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
             grounded = false;
-    }
+    }   
     //Triggers
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -80,6 +81,15 @@ public class PlayerController : MonoBehaviour
             gameManager.AddPontos(10);
             soundManager.PlayAudio("moeda");
         }
+        else if (other.tag == "PulaFDP")
+        {
+            isDialogNaoPulaCacete = false;
+        }
+        else if (other.tag == "NaoPulaFDP")
+        {
+            isDialogNaoPulaCacete = true;
+        }
+
         else if (other.tag == "PuloDuplo")
         {
             Destroy(other.gameObject);
