@@ -37,12 +37,25 @@ public class PlayerController : MonoBehaviour
         {
             if (grounded || (puloDouble && puloCount < 2))
             {
+                animator.SetTrigger("Pulando");
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloCount++;
                 soundManager.PlayAudio("pulo");
             }
         }
-        
+        // Deslizar
+        if (Input.GetButtonDown("Slide"))
+        {
+            if (grounded)
+            {
+                animator.SetTrigger("Deslizando");
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                Physics2D.gravity = new Vector2(0, 0);
+                //body.velocity = new Vector2(body.velocity.x, pulo);
+                //puloCount++;
+                //soundManager.PlayAudio("pulo");
+            }
+        }
         // Animação
         animator.SetFloat("Velocidade", body.velocity.x);
         animator.SetBool("Grounded", grounded);   
@@ -71,7 +84,13 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
             grounded = false;
-    }   
+    }
+    private void AtivarBoxColliderTut()
+    {
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        Physics2D.gravity = new Vector2(0, -10);
+    }
+
     //Triggers
     void OnTriggerEnter2D(Collider2D other)
     {

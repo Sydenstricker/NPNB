@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     {
         pontos = 0;
         player = GameObject.Find("Player");
-        playerInicio = player.transform.position;
+        //playerInicio = player.transform.position;
     }
 
     public void AddPontos(int valor) {
