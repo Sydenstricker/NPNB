@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
     public float velocidade = 5f;
     [SerializeField] float pulo = 8;
     [SerializeField] bool grounded;
-    [SerializeField] bool isDialogNaoPulaCacete;
+    [SerializeField] bool podeSlide = false;
+    [SerializeField] public bool isDialogNaoPulaCacete = true;
 
     [SerializeField] GameManager gameManager;
     [SerializeField] SoundManager soundManager;
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource AmbCCTrigger;
     public AudioSource AmbDestrigger;
 
+   
 
     // Pulo duplo
     private bool puloDouble = false;
@@ -46,7 +48,7 @@ public class PlayerController : MonoBehaviour
         // Deslizar
         if (Input.GetButtonDown("Slide"))
         {
-            if (grounded)
+            if (grounded && podeSlide == true)
             {
                 animator.SetTrigger("Deslizando");
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
@@ -107,6 +109,10 @@ public class PlayerController : MonoBehaviour
         else if (other.tag == "NaoPulaFDP")
         {
             isDialogNaoPulaCacete = true;
+        }
+        else if (other.tag == "SlideFDP")
+        {
+            podeSlide = true;
         }
 
         else if (other.tag == "PuloDuplo")

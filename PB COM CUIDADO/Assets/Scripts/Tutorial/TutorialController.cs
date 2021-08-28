@@ -11,6 +11,7 @@ public class TutorialController : MonoBehaviour
         if (other.tag == "Player")
         {
             FindObjectOfType<DialogManager>().StartDialog(file);
+            FindObjectOfType<PlayerController>().isDialogNaoPulaCacete = true;           
             Destroy(gameObject.GetComponent<Collider2D>());            
         }        
     }
