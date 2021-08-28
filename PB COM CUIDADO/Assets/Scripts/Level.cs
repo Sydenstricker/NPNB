@@ -52,8 +52,8 @@ public class Level : MonoBehaviour
     }
     IEnumerator DelayCinematicaFinal()
     {
-        yield return new WaitForSeconds(delayCinematicaFinal);
-        SceneManager.LoadScene("Cinematica Final");
+        yield return new WaitForSeconds(delayCinematicaFinal);        
+        SceneManager.LoadScene("DialogueNaveEnd");
 
     }
     public void QuitGame()
