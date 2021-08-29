@@ -7,9 +7,8 @@ public class Boss : MonoBehaviour
     [Header("Inimigo Configs")]
     [SerializeField] float health = 100f;
     [SerializeField] int scoreValue = 150;
-    //[SerializeField] float delayCinematicaFinal = 5f;
     private Animator animator;
-    public bool bossMorreu = false;
+    //public bool bossMorreu = false;
 
     [Header("Inimigo Atirando")]
     float shotCounter;
@@ -29,8 +28,7 @@ public class Boss : MonoBehaviour
     [SerializeField] AudioClip introSFX;
     [SerializeField] [Range(0, 1)] float volumeIntro = 0.75f;
     [SerializeField] float tempoIntroBoss = 2f;
-    
-    //private bool tomoudano = false;
+      
 
     private void Awake()
     {
@@ -55,8 +53,7 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-        CountDownAndShoot();
-        
+        CountDownAndShoot();        
     }
     
     private void CountDownAndShoot()
@@ -82,33 +79,28 @@ public class Boss : MonoBehaviour
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
         TomarDano(damageDealer);
-        //tomoudano = true;
+        animator.SetTrigger("Ai");        
     }
 
     private void TomarDano(DamageDealer damageDealer)
-    {       
+    {
+        if (damageDealer == null) { return; }
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
         if (health <= 0)
         {
             BossMorreu();            
-        }
-        else
-        {
-            animator.SetTrigger("Ai");            
-        }                      
-        
+        }               
     }
 
        private void BossMorreu()
     {
-        bossMorreu = true;
+        //bossMorreu = true;
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
         Destroy(gameObject);
         GameObject explosion = Instantiate(morteVFX, transform.position, transform.rotation);
         Destroy(explosion, durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
         FindObjectOfType<Level>().LoadCinematicaFinal();       
-    }
-       
+    }       
 }

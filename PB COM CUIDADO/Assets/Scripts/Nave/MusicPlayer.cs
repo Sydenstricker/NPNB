@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
-   
+    //private bool destruirGO = false;
+    //private int ativarDestruirGO = 0;
     void Awake()
     {
         //Singleton pra musica nao ficar resetando quando muda scene
@@ -23,9 +24,15 @@ public class MusicPlayer : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-   /* private void Update()
+    /*private void Update()
     {
-        if (GetComponent<Boss>().bossMorreu == true)
+        ativarDestruirGO = FindObjectsOfType<Boss>().Length;
+        destruirGO = GetComponent<Boss>().bossMorreu;
+        if (ativarDestruirGO > 1)
+        {
+            Destroy(gameObject);
+        }
+        if (destruirGO == true)
         {
             DestruirMusicaPorFavor();
         }
@@ -34,5 +41,6 @@ public class MusicPlayer : MonoBehaviour
     {        
         Destroy(gameObject);
     }
-   */
+    */
+   
 }

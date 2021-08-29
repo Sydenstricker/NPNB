@@ -11,22 +11,22 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] bool isEndless = false;
     [SerializeField] int ptsSpawnBoss = 5;
     private bool spawnoBoss = false;
+    
+    //Organizador Inspector
     GameObject enemyParent;
     const string ENEMY_PARENT_NAME = "Enemy";
-    
+       
+
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        CreateEnemyParent();        
-        //GetComponent<Player>().pontosIDcoletados;
+        CreateEnemyParent();                
         do
         {
             yield return StartCoroutine(SpawnAllWaves());
         }
         while (isEndless);
-    }
-
-    
+    }  
 
     private void CreateEnemyParent()
     {
@@ -34,7 +34,7 @@ public class EnemySpawner : MonoBehaviour
         if (! enemyParent)
         {
             enemyParent = new GameObject(ENEMY_PARENT_NAME);
-        }
+        }       
     }
 
     private void Update()
@@ -44,8 +44,7 @@ public class EnemySpawner : MonoBehaviour
         if (spawnoBoss == false && FindObjectOfType<Player>().pontosIDcoletados >= ptsSpawnBoss)
         {
             InvocaBigBoneco();
-        }
-        
+        }        
     }
 
     private void InvocaBigBoneco()
@@ -61,10 +60,10 @@ public class EnemySpawner : MonoBehaviour
         for (int waveIndex = startingWave; waveIndex < waveConfig.Count; waveIndex++)
         {
             var currentWave = waveConfig[waveIndex];
-            yield return StartCoroutine(SpawnAllEnemieInWave(currentWave));
-           
+            yield return StartCoroutine(SpawnAllEnemieInWave(currentWave));           
         }
     }
+
     private IEnumerator SpawnAllEnemieInWave(WaveConfig waveConfig)
     {
         for (int enemyCount = 0; enemyCount < waveConfig.GetNumberOfEnemies(); enemyCount++)
@@ -78,13 +77,13 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
         }
     }
+
     private IEnumerator SpawnBossWave()
     {
         for (int bossIndex = startingWave; bossIndex < bossConfig.Count; bossIndex++)
         {
             var bossWave = bossConfig[bossIndex];
             yield return StartCoroutine(SpawnBossEnemieInWave(bossWave));
-
         }
     }
     private IEnumerator SpawnBossEnemieInWave(BossConfig bossConfig)

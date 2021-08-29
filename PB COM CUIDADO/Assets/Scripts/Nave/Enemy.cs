@@ -30,19 +30,40 @@ public class Enemy : MonoBehaviour
     [SerializeField] AudioClip shootSound;
     [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.25f;
 
-    GameObject enemyLaserParent;
-    const string ENEMY_LASER_NAME = "EnemyLaser";
+    //Organizador Inspector
+    GameObject laserParent;
+    const string LASER_PARENT_NAME = "Laser";
+   
+    GameObject pontosIDParent;
+    const string PI_PARENT_NAME = "Pontos de ID";
+
+
     void Start()
-    {        
+    {
+        CreateLaserParent();
+        CreatePIParent();
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
     }
-
-    // Update is called once per frame
     void Update()
     {
         CountDownAndShoot();
     }
-        
+    private void CreatePIParent()
+    {
+        pontosIDParent = GameObject.Find(PI_PARENT_NAME);
+        if (!pontosIDParent)
+        {
+            pontosIDParent = new GameObject(PI_PARENT_NAME);
+        }
+    }       
+    private void CreateLaserParent()
+    {       
+        laserParent = GameObject.Find(LASER_PARENT_NAME);
+        if (!laserParent)
+        {
+            laserParent = new GameObject(LASER_PARENT_NAME);
+        }
+    }
     private void CountDownAndShoot()
     {
         shotCounter -= Time.deltaTime;
@@ -60,15 +81,14 @@ public class Enemy : MonoBehaviour
             Quaternion.identity) as GameObject;
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(-projectileSpeed, 0);
         AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position, shootSoundVolume);
+        laser.transform.parent = laserParent.transform;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
-        TomarDano(damageDealer);
-        
+        TomarDano(damageDealer);        
     }
-
     private void TomarDano(DamageDealer damageDealer)
     {
        /* GameObject laser = Instantiate(
@@ -82,9 +102,7 @@ public class Enemy : MonoBehaviour
         {
             Morreu();
         }
-    }
-    
-
+    }    
     private void Morreu()
     {
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
@@ -94,14 +112,13 @@ public class Enemy : MonoBehaviour
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
         SpawnRandomPI();
     }
-
     private void SpawnRandomPI()
     {
         inimigosSoltamPI = Random.Range(chanceMinSoltarPID,chanceMaxSoltarPID);
         if (inimigosSoltamPI >= 10)
         {
             GameObject PI = Instantiate(PIPrefab, transform.position, Quaternion.identity) as GameObject;
-        }
-        //else return;
+            PI.transform.parent = pontosIDParent.transform;
+        }        
     }
 }
