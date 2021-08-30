@@ -15,7 +15,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     int activeMessage = 0;
     public static bool isActive = false;
 
-    public void OpenDialogue(Message[] messages, Actor[] actors)
+        public void OpenDialogue(Message[] messages, Actor[] actors)
     {
         currentMessages = messages;
         currentActors = actors;
@@ -63,6 +63,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     void Start()
     {
         backgroundBox.transform.localScale = Vector3.zero;
+
     }
 
     // Update is called once per frame

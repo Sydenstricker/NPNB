@@ -13,11 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameManager gameManager;
     [SerializeField] SoundManager soundManager;
     private Rigidbody2D body;
-    private Animator animator;
-    public AudioSource AmbCCTrigger;
-    public AudioSource AmbDestrigger;
-
-   
+    private Animator animator;  
 
     // Pulo duplo
     private bool puloDouble = false;
@@ -30,12 +26,12 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    {      
+    {
         // Movimento runner
         body.velocity = new Vector2(velocidade, body.velocity.y);
 
         // Pulo
-        if (Input.GetButtonDown("Jump") && grounded == true && isDialogNaoPulaCacete == false)
+        if (Input.GetButtonDown("Jump") && grounded == true)
         {
             if (grounded || (puloDouble && puloCount < 2))
             {
@@ -60,7 +56,17 @@ public class PlayerController : MonoBehaviour
         }
         // Animação
         animator.SetFloat("Velocidade", body.velocity.x);
-        animator.SetBool("Grounded", grounded);   
+        animator.SetBool("Grounded", grounded);
+
+        //Pinky em posição idle no tutorial
+        if (DialogueCutsceneManager.isActive == true)
+        {
+            ParaPinkTutorial();
+        }
+        if (DialogueCutsceneManager.isActive == false)
+        {
+            AndaPinkTutorial();
+        }
 
     }
     //Colisão
@@ -102,14 +108,7 @@ public class PlayerController : MonoBehaviour
             gameManager.AddPontos(10);
             soundManager.PlayAudio("moeda");
         }
-        else if (other.tag == "PulaFDP")
-        {
-            isDialogNaoPulaCacete = false;
-        }
-        else if (other.tag == "NaoPulaFDP")
-        {
-            isDialogNaoPulaCacete = true;
-        }
+        
         else if (other.tag == "SlideFDP")
         {
             podeSlide = true;
@@ -121,14 +120,20 @@ public class PlayerController : MonoBehaviour
             puloDouble = true;
             soundManager.PlayAudio("puloduplo");
 
-        } else if (other.tag == "AMB CC TRIGGER")
-        {
-            AmbCCTrigger.Play();
         }
-        else if (other.tag == "AMB DESF")
-        {
-            AmbDestrigger.Play();
-        }   
         
     }
+    
+    //Parar e seguir no tutorial
+    private void ParaPinkTutorial()
+    {
+        body.velocity = new Vector2(0, 0);
+        animator.SetFloat("Velocidade", 0);
+    }
+    private void AndaPinkTutorial()
+    {
+        body.velocity = new Vector2(velocidade, body.velocity.y);
+        animator.SetFloat("Velocidade", body.velocity.x);
+    }
+
 }
