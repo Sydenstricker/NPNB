@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerCav : MonoBehaviour
-{
-  
+{  
     [Header("Player Config")]
     [SerializeField] float velCimaBaixo = 10f;
     [SerializeField] float velEsqDir = 10f;
@@ -127,8 +126,15 @@ public class PlayerCav : MonoBehaviour
     private void TomarDano(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
-        damageDealer.Hit();
-
+        if (damageDealer.gameObject.layer == 12)
+        {
+            damageDealer.PedraCaiFeliz();
+        }
+        else
+        {
+            damageDealer.Hit();
+        }
+            
         //currenthealth é a vida da barra com coraçao, health era ref em string
         currentHealth = health;
         healthBar.SetHealth(currentHealth);

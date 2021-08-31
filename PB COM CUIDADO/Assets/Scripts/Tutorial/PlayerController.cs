@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         // Pulo
         if (Input.GetButtonDown("Jump") && grounded == true)
         {
-            if (grounded || (puloDouble && puloCount < 2))
+            if (grounded || (puloCount < 2))
             {
                 animator.SetTrigger("Pulando");
                 body.velocity = new Vector2(body.velocity.x, pulo);

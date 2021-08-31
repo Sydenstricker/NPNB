@@ -13,4 +13,8 @@ public class DamageDealer : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    public void PedraCaiFeliz()
+    {
+        return;
+    }
 }
