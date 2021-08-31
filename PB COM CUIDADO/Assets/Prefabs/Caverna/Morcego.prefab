@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4124581678163071464}
   - component: {fileID: 4124581678163071465}
   - component: {fileID: 4590433093603005407}
-  - component: {fileID: 8120298065811879966}
   - component: {fileID: 7170278299349105915}
   - component: {fileID: 6537589318316057538}
+  - component: {fileID: -8181925508182834875}
   m_Layer: 0
   m_Name: Morcego
   m_TagString: Untagged
@@ -105,7 +105,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.44}
+    oldSize: {x: 4, y: 2.75}
     newSize: {x: 0.64, y: 0.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -154,18 +154,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8120298065811879966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4124581678163071466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 826013dc3d69d04418cea894ec4f9739, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7170278299349105915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,3 +179,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
+--- !u!114 &-8181925508182834875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124581678163071466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91cbe32d3ca11d45adc5106d0c65bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

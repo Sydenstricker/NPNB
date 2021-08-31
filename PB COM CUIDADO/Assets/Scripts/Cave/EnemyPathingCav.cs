@@ -32,15 +32,15 @@ public class EnemyPathingCav : MonoBehaviour
             var targetPosition = waypoints[waypointIndex].transform.position;
             var movementThisFrame = waveConfig.GetMoveSpeed() * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
-            if (transform.position == targetPosition)
+            if (transform.position == targetPosition )
             {
-                waypointIndex--;
+                waypointIndex++;               
 
             }
         }
         else
         {
-            Destroy(gameObject);
+            waypointIndex = 0;            
         }
     }
 }

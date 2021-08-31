@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 8302409573424441975}
   - component: {fileID: 3892209311952423598}
   - component: {fileID: 1025352895}
-  - component: {fileID: -549070992694085048}
+  - component: {fileID: -4688701836448971326}
+  - component: {fileID: 224791404029902416}
   m_Layer: 0
   m_Name: Lobo
   m_TagString: Untagged
@@ -105,7 +106,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 4, y: 4}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -166,9 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897647e01a3ecc94e8c5b54747de22df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceMaxSoltarPID: 100
-  chanceMinSoltarPID: 1
-  inimigosSoltamPI: 0
 --- !u!114 &1025352895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
---- !u!114 &-549070992694085048
+--- !u!114 &-4688701836448971326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,6 +189,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1299872023879919693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 826013dc3d69d04418cea894ec4f9739, type: 3}
+  m_Script: {fileID: 11500000, guid: b91cbe32d3ca11d45adc5106d0c65bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &224791404029902416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299872023879919693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0487cc1346fe754f95cd9e9bacf513b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
