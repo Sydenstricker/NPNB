@@ -440,7 +440,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &293690606
 SpriteRenderer:
@@ -1899,7 +1899,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569168720}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.0002507996}
-  m_LocalPosition: {x: 5.54, y: -0.49, z: 0}
+  m_LocalPosition: {x: 0.05, y: -0.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1979,52 +1979,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorId: 0
-    message: "Ei, senhor, que lugar \xE9 esse?"
-  - actorId: 1
-    message: E agora? E agora?!
+    message: "Aqui est\xE1, senhor."
   - actorId: 0
-    message: "Ol\xE1? Tudo bem a\xED?"
+    message: "Veja quem encontrou seu tesouro para voc\xEA."
   - actorId: 1
-    message: "O que \xE9, menina?"
+    message: "Err\u2026"
   - actorId: 1
-    message: "N\xE3o v\xEA que estou ocupado tentando achar o que perdi?"
+    message: Acho que te devo desculpas.
+  - actorId: 1
+    message: Confesso que te achei indefesa para um lugar como esse.
+  - actorId: 2
+    message: "PINKY DEVOLVE A B\xDASSOLA AO HOMEM."
+  - actorId: 1
+    message: "De qualquer forma, obrigado por recuper\xE1-la. "
+  - actorId: 3
+    message: Me chamo DEEP.
   - actorId: 0
-    message: "O que \xE9? "
+    message: (Suspiro) De nada, DEEP. Sou PINKY.
   - actorId: 0
-    message: "Posso te ajudar a encontrar se voc\xEA me disser onde estamos."
-  - actorId: 1
-    message: Meu tesouro!
-  - actorId: 1
-    message: Ele estava agorinha no meu bolso e desapareceu!
+    message: 'Agora me diga: '
   - actorId: 0
-    message: "Posso encontr\xE1-lo para voc\xEA."
-  - actorId: 1
-    message: Hahaha!
-  - actorId: 1
-    message: "O que uma menina como voc\xEA pode fazer nessa caverna?"
-  - actorId: 1
-    message: "Volte para casa enquanto \xE9 tempo!"
-  - actorId: 1
-    message: "Esse lugar n\xE3o \xE9 para voc\xEA."
+    message: "Como fa\xE7o para sair daqui? Tudo parece ser t\xE3o igual..."
+  - actorId: 3
+    message: "A b\xFAssola, meu tesouro... "
+  - actorId: 3
+    message: "Ela \xE9 o caminho."
+  - actorId: 3
+    message: "Por mais que voc\xEA procure algo, \xE0s vezes s\xF3 \xE9 poss\xEDvel
+      encontr\xE1-lo com ajuda."
   - actorId: 0
-    message: "O que voc\xEA quer dizer com isso?! "
+    message: "(Cochicha) T\xE3o enigm\xE1tico\u2026"
+  - actorId: 3
+    message: "V\xE1, minha jovem."
+  - actorId: 3
+    message: "Encontre seu pr\xF3prio caminho."
+  - actorId: 3
+    message: 'Preciso reencontrar o meu. '
   - actorId: 0
-    message: Eu sou capaz de fazer qualquer coisa!
-  - actorId: 1
-    message: "Ah, \xE9? Veremos\u2026"
-  - actorId: 1
-    message: "Se voc\xEA encontrar meu tesouro, te dou qualquer informa\xE7\xE3o
-      que precisar."
+    message: "Certo\u2026 "
   - actorId: 0
-    message: Aceito seu desafio!
-  - actorId: 0
-    message: "Espere e ver\xE1."
-  - actorId: 1
-    message: "S\xF3 n\xE3o v\xE1 se perder a\xED dentro!"
+    message: "At\xE9 mais!"
   actors:
   - name: PINKY
     sprite: {fileID: 21300000, guid: e9b015c59c6f86248aa5a5be4637f525, type: 3}
   - name: HOMEM
+    sprite: {fileID: 21300000, guid: 01f41d7b02b960e4982978a00e8a0840, type: 3}
+  - name: QUEST COMPLETA!
+    sprite: {fileID: 8988813464308184034, guid: 823650918f934774b88757afa9bb8814, type: 3}
+  - name: DEEP
     sprite: {fileID: 21300000, guid: 01f41d7b02b960e4982978a00e8a0840, type: 3}
 --- !u!1 &789688477
 GameObject:
@@ -2103,7 +2105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789688477}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.88, y: -0.43, z: 0}
+  m_LocalPosition: {x: 9.34, y: -0.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4187,7 +4189,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1166022948
 GameObject:
@@ -4324,7 +4326,7 @@ Transform:
   - {fileID: 2003258541}
   - {fileID: 1791766717}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1201449146
 GameObject:
@@ -5507,7 +5509,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5674,11 +5676,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -546.3954
+      value: -625
       objectReference: {fileID: 0}
     - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 184.7955
+      value: 185
       objectReference: {fileID: 0}
     - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5710,11 +5712,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 12.5
       objectReference: {fileID: 0}
     - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 119.8
+      value: 113
       objectReference: {fileID: 0}
     - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5727,63 +5729,58 @@ PrefabInstance:
     - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759269347571557296, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -174.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759269347571557296, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 76.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759269347571557303, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 32426584f9294444b85ec0069cafad1e, type: 3}
+    - target: {fileID: 2759269347571557303, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759269347571557303, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759269347588983001, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 32426584f9294444b85ec0069cafad1e, type: 3}
+    - target: {fileID: 2759269347588983001, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759269347588983002, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 345.9156
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759269347588983002, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 336.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517739035195375299, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 41.9806
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517739035195375299, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 48.9804
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517739035195375299, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -28.1001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7517739035195375299, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 20.2948
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
---- !u!1001 &8749549976765561059
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8749549976338435012, guid: 8cddce2946f8a5d4784078098910b5c2, type: 3}
-      propertyPath: m_Name
-      value: DialogueTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749549976338435016, guid: 8cddce2946f8a5d4784078098910b5c2, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749549976338435016, guid: 8cddce2946f8a5d4784078098910b5c2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749549976338435016, guid: 8cddce2946f8a5d4784078098910b5c2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749549976338435016, guid: 8cddce2946f8a5d4784078098910b5c2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -376.36194
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749549976338435016, guid: 8cddce2946f8a5d4784078098910b5c2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749549976338435016, guid: 8cddce2946f8a5d4784078098910b5c2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749549976338435016, guid: 8cddce2946f8a5d4784078098910b5c2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749549976338435016, guid: 8cddce2946f8a5d4784078098910b5c2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749549976338435016, guid: 8cddce2946f8a5d4784078098910b5c2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749549976338435016, guid: 8cddce2946f8a5d4784078098910b5c2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749549976338435016, guid: 8cddce2946f8a5d4784078098910b5c2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8cddce2946f8a5d4784078098910b5c2, type: 3}
