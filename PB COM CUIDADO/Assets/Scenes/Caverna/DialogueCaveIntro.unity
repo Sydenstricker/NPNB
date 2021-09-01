@@ -1833,6 +1833,7 @@ GameObject:
   - component: {fileID: 569168724}
   - component: {fileID: 569168726}
   - component: {fileID: 569168725}
+  - component: {fileID: 569168727}
   m_Layer: 0
   m_Name: Old man
   m_TagString: Untagged
@@ -2030,6 +2031,25 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 01f41d7b02b960e4982978a00e8a0840, type: 3}
   - name: QUEST
     sprite: {fileID: 7532077416104040861, guid: 823650918f934774b88757afa9bb8814, type: 3}
+--- !u!95 &569168727
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569168720}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc5a3146fc33b4b428f7d00ddc07eaf2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &806866527
 PrefabInstance:
   m_ObjectHideFlags: 0
