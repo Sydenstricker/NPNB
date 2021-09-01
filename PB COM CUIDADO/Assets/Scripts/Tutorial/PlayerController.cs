@@ -13,11 +13,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameManager gameManager;
     [SerializeField] SoundManager soundManager;
     private Rigidbody2D body;
-    private Animator animator;  
+    private Animator animator;
 
     // Pulo duplo
-    private bool puloDouble = false;
-    private int puloCount = 0;    
+    [SerializeField] private bool puloDouble = false;
+    [SerializeField] private int puloCount = 0;    
 
     void Start()
     {
@@ -33,13 +33,22 @@ public class PlayerController : MonoBehaviour
         // Pulo
         if (Input.GetButtonDown("Jump") && grounded == true)
         {
-            if (grounded || (puloCount < 2))
+            if (puloDouble == false)
             {
                 animator.SetTrigger("Pulando");
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloCount++;
                 soundManager.PlayAudio("pulo");
             }
+            if ((puloDouble = true) && (puloCount < 2))
+            {
+                animator.SetTrigger("Pulando");
+                body.velocity = new Vector2(body.velocity.x, pulo);
+                //puloCount++;
+                //soundManager.PlayAudio("pulo");
+            }
+           
+            
         }
         // Deslizar
         if (Input.GetButtonDown("Slide"))
@@ -118,7 +127,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(other.gameObject);
             puloDouble = true;
-            soundManager.PlayAudio("puloduplo");
+            //soundManager.PlayAudio("puloduplo");
 
         }
         

@@ -13,15 +13,16 @@ public class PlayerCav : MonoBehaviour
     [Header("Player Audio")]
     [SerializeField] AudioClip deathSFX;
     [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
-
-    [Header("OK VAMOS LA")]
-    private bool puloDouble = false;
-    private int puloCount = 0;
+    
+    [SerializeField] private bool puloDouble = false;
+    [SerializeField] private int puloCount = 0;
     private Rigidbody2D body;
     private Animator animator;
     public float velocidade = 5;
     public float pulo = 8;
     public bool grounded;
+
+    [SerializeField] private bool footIsGrounded = false;
    
 
     //os 2 sao pra barra do coracao
@@ -32,9 +33,7 @@ public class PlayerCav : MonoBehaviour
     float xMax;
     float yMin;
     float yMax;
-
-   
-
+       
     //PI
     public int pontosIDcoletados;
 
@@ -43,37 +42,45 @@ public class PlayerCav : MonoBehaviour
         animator = GetComponent<Animator>();
     }
     void Start()
-    {
-        
+    {        
         PegaVidaCoracao();
-        body = GetComponent<Rigidbody2D>();
-        
+        body = GetComponent<Rigidbody2D>();        
     }
 
     void Update()
     {
         SetUpMoveBoundry();
-        Move();
-        // Movimento runner
-        body.velocity = new Vector2(velocidade, body.velocity.y);
+        Move();                
 
         // Pulo
-        if ( Input.GetButtonDown("Jump"))
+        if ( Input.GetButtonDown("Jump") )
         {
-            if (grounded || (puloDouble && puloCount < 2))
+            if ((puloCount == 1) && (puloDouble == true))
+            {
+                //animator.SetTrigger("Pulando");
+                body.velocity = new Vector2(body.velocity.x, pulo);
+                puloDouble = false;
+                puloCount = 0;
+                Debug.Log("Pulo Doble funcionou");
+            }
+
+            if (grounded &&  (puloCount == 0) && footIsGrounded )
             {
                 animator.SetTrigger("Pulando");
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloCount++;
                 grounded = false;
+                footIsGrounded = false;
                 //soundManager.PlayAudio("pulo");
             }
+
+            
         }
 
         // Deslizar
         if ( Input.GetButtonDown("Slide"))
         {
-            if (grounded)
+            if (grounded && footIsGrounded == true)
             {
                 animator.SetTrigger("Deslizando");
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
@@ -95,28 +102,45 @@ public class PlayerCav : MonoBehaviour
         {
             return;
         }
+        if (other.gameObject.layer == 13)
+        {
+            footIsGrounded = true;
+        }
+        if (other.gameObject.layer == 14)
+        {
+            puloDouble = true;
+        }
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
         TomarDano(damageDealer);    
        
     }
+
+    private void DesativaFoot()
+    {
+        this.footIsGrounded = false;
+        Debug.Log("Desativou foot is Grounded");
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 3)
+        if (collision.gameObject.layer == 13)
         {
             grounded = true;
-            puloCount = 0;
+            puloCount = 0;            
         }
         if (collision.gameObject.layer == 6)
         {
             return;
         }
     }
+    
     private void AtivarBoxCollider()
     {
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
         Physics2D.gravity = new Vector2(0, -10);
     }
+
     
     private void PegaVidaCoracao()
     {
@@ -170,7 +194,7 @@ public class PlayerCav : MonoBehaviour
     private void Move()
     {
         // Movimento runner
-        //body.velocity = new Vector2(velocidade, body.velocity.y);
+        body.velocity = new Vector2(velocidade, body.velocity.y);
 
         var deltaY = Input.GetAxis("Vertical") * (Time.deltaTime) * velCimaBaixo;
         var newYPos = Mathf.Clamp(transform.position.y + deltaY, (yMin), yMax);
