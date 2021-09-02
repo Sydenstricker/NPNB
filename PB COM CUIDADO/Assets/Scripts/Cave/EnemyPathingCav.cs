@@ -35,7 +35,7 @@ public class EnemyPathingCav : MonoBehaviour
             if (transform.position == targetPosition )
             {
                 waypointIndex++;
-                transform.rotation = Quaternion.Euler(0, - 180f, 0);
+                //transform.rotation = Quaternion.Euler(0, - 180f, 0);
 
             }
         }
