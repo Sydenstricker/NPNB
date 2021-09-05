@@ -51,33 +51,31 @@ public class PlayerCav : MonoBehaviour
     {
         SetUpMoveBoundry();
         Move();                
-
-        // Pulo
+               
         if ( Input.GetButtonDown("Jump") )
         {
             if ((puloCount == 1) && (puloDouble == true))
             {
-                //animator.SetTrigger("Pulando");
+                animator.SetTrigger("Pulando");
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloDouble = true; //no tutorial deixar false
                 puloCount = 0;
                 Debug.Log("Pulo Doble funcionou");
+                animator.SetBool("isGrounded",false) ;
             }
 
-            if (grounded &&  (puloCount == 0) && footIsGrounded )
+            if (grounded && (puloCount == 0) && footIsGrounded )
             {
                 animator.SetTrigger("Pulando");
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloCount++;
                 grounded = false;
                 footIsGrounded = false;
+                animator.SetBool("isGrounded", false);
                 //soundManager.PlayAudio("pulo");
-            }
-
-            
+            }            
         }
 
-        // Deslizar
         if ( Input.GetButtonDown("Slide"))
         {
             if (grounded && footIsGrounded == true)
@@ -85,16 +83,12 @@ public class PlayerCav : MonoBehaviour
                 animator.SetTrigger("Deslizando");
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 Physics2D.gravity = new Vector2(0, 0);
+                pulo = 0f;
                 //body.velocity = new Vector2(body.velocity.x, pulo);
                 //puloCount++;
                 //soundManager.PlayAudio("pulo");
             }
-        }
-
-        // Animação
-        //animator.SetFloat("Velocidade", body.velocity.x);
-        //animator.SetBool("grounded", grounded);
-
+        }       
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -112,8 +106,7 @@ public class PlayerCav : MonoBehaviour
         }
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
-        TomarDano(damageDealer);    
-       
+        TomarDano(damageDealer);           
     }
 
     private void DesativaFoot()
@@ -122,10 +115,16 @@ public class PlayerCav : MonoBehaviour
         Debug.Log("Desativou foot is Grounded");
     }
 
+    private void FinalPuloIsGrounded()
+    {
+        return;
+    }
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 13)
         {
+            animator.SetBool("isGrounded", true);
             grounded = true;
             puloCount = 0;            
         }
@@ -139,6 +138,7 @@ public class PlayerCav : MonoBehaviour
     {
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
         Physics2D.gravity = new Vector2(0, -10);
+        pulo = 9f;
     }
 
     
@@ -165,7 +165,7 @@ public class PlayerCav : MonoBehaviour
                 
         if (health <= 0)
         {
-            PlayerMorreu();
+            PlayerMorreu();            
         }
         else
         {
@@ -178,8 +178,6 @@ public class PlayerCav : MonoBehaviour
     {
         velocidade = 0; pulo = 0;
         animator.SetTrigger("Morreu");
-        //Time.timeScale = 0;
-        //Destroy(gameObject);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
         FindObjectOfType<Level>().LoadGameOverCav();
     }
@@ -202,13 +200,11 @@ public class PlayerCav : MonoBehaviour
         var deltaX = Input.GetAxis("Horizontal") * (Time.deltaTime) * velEsqDir;
         var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
 
-
         //jogador anda para cima/baixo
         transform.position = new Vector2(newXPos, transform.position.y);
 
         //player anda direita/esquerda
-        transform.position = new Vector2(transform.position.x, newYPos);
-                
+        transform.position = new Vector2(transform.position.x, newYPos);                
     }
     private void SetUpMoveBoundry()
     {
