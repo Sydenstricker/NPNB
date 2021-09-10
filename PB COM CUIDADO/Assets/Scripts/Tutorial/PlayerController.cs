@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,7 +9,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float pulo = 8;
     [SerializeField] bool grounded;
     [SerializeField] bool podeSlide = false;
-    [SerializeField] public bool isDialogNaoPulaCacete = true;
+    [SerializeField] bool podePular = false;
+    [SerializeField] private bool footIsGrounded = false;
+
 
     [SerializeField] GameManager gameManager;
     [SerializeField] SoundManager soundManager;
@@ -31,31 +34,57 @@ public class PlayerController : MonoBehaviour
         body.velocity = new Vector2(velocidade, body.velocity.y);
 
         // Pulo
-        if (Input.GetButtonDown("Jump") && grounded == true)
+        if (Input.GetButtonDown("Jump") &&(podePular == true))
         {
-            if (puloDouble == false)
+            if ((puloCount == 1) && (puloDouble == true))
+            {
+                animator.SetTrigger("Pulando");
+                body.velocity = new Vector2(body.velocity.x, pulo);
+                puloDouble = true; //no tutorial deixar false
+                puloCount = 0;
+                Debug.Log("Pulo Doble funcionou");
+                animator.SetBool("Grounded", false);
+            }
+
+            if (grounded && (puloCount == 0) && footIsGrounded)
             {
                 animator.SetTrigger("Pulando");
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloCount++;
-                soundManager.PlayAudio("pulo");
+                grounded = false;
+                footIsGrounded = false;
+                animator.SetBool("Grounded", false);
+                //soundManager.PlayAudio("pulo");
             }
-            if ((puloDouble = true) && (puloCount < 2))
+            //if (podePular == true)
             {
-                animator.SetTrigger("Pulando");
-                body.velocity = new Vector2(body.velocity.x, pulo);
+                //animator.SetTrigger("Pulando");
+                //body.velocity = new Vector2(body.velocity.x, pulo);
                 //puloCount++;
                 //soundManager.PlayAudio("pulo");
             }
-           
-            
+            //if ((puloDouble = true) && (puloCount < 2))
+            {
+               // animator.SetTrigger("Pulando");
+                //body.velocity = new Vector2(body.velocity.x, pulo);
+                //puloCount++;
+                //soundManager.PlayAudio("pulo");
+            }
+                        
         }
+
+        if (Input.GetButtonDown("Restart"))
+            {
+                SceneManager.LoadScene("Tutorial");
+                Debug.Log("deu bug socorr");
+            }
         // Deslizar
         if (Input.GetButtonDown("Slide"))
         {
             if (grounded && podeSlide == true)
             {
                 animator.SetTrigger("Deslizando");
+                //gameObject.GetComponent<BoxCollider2D>().size = new Vector2 (0.01f,0.01f);
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 Physics2D.gravity = new Vector2(0, 0);
                 //body.velocity = new Vector2(body.velocity.x, pulo);
@@ -81,8 +110,9 @@ public class PlayerController : MonoBehaviour
     //Colisão
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 0)
         {
+            animator.SetBool("Grounded", true);
             grounded = true;
             puloCount = 0;
         }
@@ -104,6 +134,7 @@ public class PlayerController : MonoBehaviour
     }
     private void AtivarBoxColliderTut()
     {
+        //gameObject.GetComponent<BoxCollider2D>().size = new Vector2(1f, 2f);
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
         Physics2D.gravity = new Vector2(0, -10);
     }
@@ -117,13 +148,21 @@ public class PlayerController : MonoBehaviour
             gameManager.AddPontos(10);
             soundManager.PlayAudio("moeda");
         }
-        
-        else if (other.tag == "SlideFDP")
+
+        if (other.gameObject.layer == 0)
+        {
+            footIsGrounded = true;
+        }
+        if (other.tag == "SlideFDP")
         {
             podeSlide = true;
         }
+        if (other.tag == "PulaFDP")
+        {
+            podePular = true;
+        }
 
-        else if (other.tag == "PuloDuplo")
+        if (other.tag == "PuloDuplo")
         {
             Destroy(other.gameObject);
             puloDouble = true;

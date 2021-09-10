@@ -50,8 +50,15 @@ public class PlayerCav : MonoBehaviour
     void Update()
     {
         SetUpMoveBoundry();
-        Move();                
-               
+        Move();
+
+        if (Input.GetButtonDown("Restart"))
+        {
+            SceneManager.LoadScene("CavernaGameplay");
+            FindObjectOfType<GameSession>().ResetGame();
+            Debug.Log("deu bug socorr");
+        }
+
         if ( Input.GetButtonDown("Jump") )
         {
             if ((puloCount == 1) && (puloDouble == true))

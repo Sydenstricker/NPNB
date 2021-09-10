@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         pontos = 0;
-        player = GameObject.Find("Player");
+        player = GameObject.Find("PlayerTut");
         //playerInicio = player.transform.position;
     }
 

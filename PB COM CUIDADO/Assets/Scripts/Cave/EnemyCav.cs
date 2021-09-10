@@ -7,6 +7,8 @@ public class EnemyCav : MonoBehaviour
 
     private Animator animator;
     private Rigidbody2D rigidBody2D;
+    [SerializeField] private bool isMorcegoStalker = false;
+    [SerializeField] private float velMorcegoStalker = 10f;
     //[SerializeField] GameObject spriteTomouDano; spawna sprite quando toma dano
        
     void Start()
@@ -17,9 +19,10 @@ public class EnemyCav : MonoBehaviour
                 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == 8)
+        if ((isMorcegoStalker == true) && (other.gameObject.layer == 8))
         {
             animator.SetTrigger("VoaMorcego");
+            MovimentaMorcegoDiagonal();
             //transform.position = new Vector3(-0.01f,-0.05f,0);
             //PerseguePlayer();
         }
@@ -53,7 +56,11 @@ public class EnemyCav : MonoBehaviour
     }
     private void MovimentaMorcegoDiagonal()
     {
-        transform.position = new Vector2(-0.1f, -0.1f);
+        var targetPosition = FindObjectOfType<PlayerCav>().gameObject.transform.position;
+        var movementThisFrame = velMorcegoStalker * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
+
+        //transform.position = new Vector2(-0.1f, -0.1f);
         Debug.Log("Morcego persegue Player loucamente");        
     }
 
