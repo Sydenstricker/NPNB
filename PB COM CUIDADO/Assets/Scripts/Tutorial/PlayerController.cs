@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         body.velocity = new Vector2(velocidade, body.velocity.y);
 
         // Pulo
-        if (Input.GetButtonDown("Jump") &&(podePular == true))
+        if (Input.GetButtonDown("Jump") && (podePular == true))
         {
             if ((puloCount == 1) && (puloDouble == true))
             {
@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloDouble = true; //no tutorial deixar false
                 puloCount = 0;
+                soundManager.PlayAudio("puloduplo");
                 Debug.Log("Pulo Doble funcionou");
                 animator.SetBool("Grounded", false);
             }

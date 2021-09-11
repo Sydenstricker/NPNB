@@ -18,13 +18,13 @@ public class GameManager : MonoBehaviour
     {
         pontos = 0;
         player = GameObject.Find("PlayerTut");
-        //playerInicio = player.transform.position;
+        playerInicio = player.transform.position;
     }
 
     public void AddPontos(int valor) {
         pontos += valor;
-        pontosTxt.text = "Pontos: " + pontos;
-        pontosTxtMenu.text = "Pontos: " + pontos;
+        pontosTxt.text = "          " + pontos;
+        pontosTxtMenu.text = "High score: " + pontos;
     }
 
     public void RestartGame() {
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         player.transform.position = playerInicio;
         player.SetActive(true);
         pontos = 0;
-        pontosTxt.text = "Pontos: " + pontos;
-        pontosTxtMenu.text = "Pontos: " + pontos;
+        pontosTxt.text = "          " + pontos;
+        pontosTxtMenu.text = "High score: " + pontos;
     }
 }
