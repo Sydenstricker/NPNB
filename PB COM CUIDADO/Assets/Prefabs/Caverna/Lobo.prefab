@@ -101,7 +101,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009492874, y: 0.0015821457}
+  m_Offset: {x: -0.03051138, y: -0.093812585}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -112,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.35521317, y: 0.27610612}
+  m_Size: {x: 1.19838, y: 0.8361659}
   m_EdgeRadius: 0
 --- !u!50 &8969204247277605743
 Rigidbody2D:
@@ -166,6 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897647e01a3ecc94e8c5b54747de22df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMorcegoStalker: 0
+  velMorcegoStalker: 10
 --- !u!114 &1025352895
 MonoBehaviour:
   m_ObjectHideFlags: 0

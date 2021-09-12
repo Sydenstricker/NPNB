@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         // Movimento runner
         body.velocity = new Vector2(velocidade, body.velocity.y);
-
+        
         // Pulo
         if (Input.GetButtonDown("Jump") && (podePular == true))
         {
@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviour
                 soundManager.PlayAudio("puloduplo");
                 Debug.Log("Pulo Doble funcionou");
                 animator.SetBool("Grounded", false);
+                gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
             }
 
             if (grounded && (puloCount == 0) && footIsGrounded)
@@ -55,6 +57,8 @@ public class PlayerController : MonoBehaviour
                 grounded = false;
                 footIsGrounded = false;
                 animator.SetBool("Grounded", false);
+                gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
                 //soundManager.PlayAudio("pulo");
             }
             //if (podePular == true)
@@ -87,7 +91,8 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("Deslizando");
                 //gameObject.GetComponent<BoxCollider2D>().size = new Vector2 (0.01f,0.01f);
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                Physics2D.gravity = new Vector2(0, 0);
+                gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+
                 //body.velocity = new Vector2(body.velocity.x, pulo);
                 //puloCount++;
                 //soundManager.PlayAudio("pulo");
@@ -107,6 +112,13 @@ public class PlayerController : MonoBehaviour
             AndaPinkTutorial();
         }
 
+    }
+
+    private void AtivarCapsuleCollider()
+    {
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+        Physics2D.gravity = new Vector2(0, -10);
+        pulo = 9f;
     }
     //Colisão
     void OnCollisionEnter2D(Collision2D collision)

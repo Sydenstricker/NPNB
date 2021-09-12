@@ -52,6 +52,7 @@ public class PlayerCav : MonoBehaviour
         SetUpMoveBoundry();
         Move();
 
+
         if (Input.GetButtonDown("Restart"))
         {
             SceneManager.LoadScene("CavernaGameplay");
@@ -64,23 +65,29 @@ public class PlayerCav : MonoBehaviour
             if ((puloCount == 1) && (puloDouble == true))
             {
                 animator.SetTrigger("Pulando");
+                
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloDouble = true; //no tutorial deixar false
                 puloCount = 0;
                 Debug.Log("Pulo Doble funcionou");
                 animator.SetBool("isGrounded",false) ;
+                
             }
 
             if (grounded && (puloCount == 0) && footIsGrounded )
             {
                 animator.SetTrigger("Pulando");
+               
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloCount++;
                 grounded = false;
                 footIsGrounded = false;
                 animator.SetBool("isGrounded", false);
+                
+
                 //soundManager.PlayAudio("pulo");
-            }            
+            }
+
         }
 
         if ( Input.GetButtonDown("Slide"))
@@ -89,12 +96,18 @@ public class PlayerCav : MonoBehaviour
             {
                 animator.SetTrigger("Deslizando");
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                Physics2D.gravity = new Vector2(0, 0);
-                pulo = 0f;
+                gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+
+                
+
+
+
                 //body.velocity = new Vector2(body.velocity.x, pulo);
                 //puloCount++;
                 //soundManager.PlayAudio("pulo");
             }
+
+          
         }       
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -148,7 +161,19 @@ public class PlayerCav : MonoBehaviour
         pulo = 9f;
     }
 
-    
+    private void AtivarCapsuleCollider()
+    {
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+        Physics2D.gravity = new Vector2(0, -10);
+        pulo = 9f;
+    }
+
+    private void DestivarCapsuleCollider()
+    {
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+        Physics2D.gravity = new Vector2(0, -10);
+        pulo = 9f;
+    }
     private void PegaVidaCoracao()
     {
         currentHealth = health;
