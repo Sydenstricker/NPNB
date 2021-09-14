@@ -1930,7 +1930,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 3}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!50 &569168724
 Rigidbody2D:
@@ -2019,9 +2019,13 @@ MonoBehaviour:
   - actorId: 0
     message: Aceito seu desafio!
   - actorId: 2
-    message: "VOC\xCA TEM UMA NOVA MISS\xC3O!"
+    message: A cada novo desafio, PINKY tem a oportunidade de conhecer mais sobre
+      si mesma ao coletar PONTOS DE IDENTIDADE nas fases.
+  - actorId: 2
+    message: "Colet\xE1-los \xE9 um PR\xC9-REQUISITO para avan\xE7ar de n\xEDvel.
+      N\xE3o se esque\xE7a!"
   - actorId: 0
-    message: "Espere e ver\xE1."
+    message: "Eu vou conseguir ach\xE1-lo. Espere e ver\xE1."
   - actorId: 1
     message: "S\xF3 n\xE3o v\xE1 se perder a\xED dentro!"
   actors:
@@ -2029,8 +2033,8 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: e9b015c59c6f86248aa5a5be4637f525, type: 3}
   - name: HOMEM
     sprite: {fileID: 21300000, guid: 01f41d7b02b960e4982978a00e8a0840, type: 3}
-  - name: QUEST
-    sprite: {fileID: 7532077416104040861, guid: 823650918f934774b88757afa9bb8814, type: 3}
+  - name: TUTORIAL
+    sprite: {fileID: -7546925105496099844, guid: 823650918f934774b88757afa9bb8814, type: 3}
 --- !u!95 &569168727
 Animator:
   serializedVersion: 3
@@ -4802,8 +4806,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 265.5, y: 55.554}
-  m_SizeDelta: {x: 160.22, y: 44.563}
+  m_AnchoredPosition: {x: 280.2307, y: 55.554}
+  m_SizeDelta: {x: 189.6815, y: 44.563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1442271570
 MonoBehaviour:
@@ -5608,7 +5612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8518354055456953100, guid: a354499b39e3fab47978f8d58b5f8e61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.42
+      value: 14.22
       objectReference: {fileID: 0}
     - target: {fileID: 8518354055456953100, guid: a354499b39e3fab47978f8d58b5f8e61, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5861,7 +5865,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: e9b015c59c6f86248aa5a5be4637f525, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6113,6 +6117,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8291881131730728712, guid: 3390ee6ebde2eba40a9535759aebcc87, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291881132109120272, guid: 3390ee6ebde2eba40a9535759aebcc87, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8291881133026776213, guid: 3390ee6ebde2eba40a9535759aebcc87, type: 3}
       propertyPath: m_Name
       value: Portais Cav Dialogo Intro
