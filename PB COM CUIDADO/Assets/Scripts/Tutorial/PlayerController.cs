@@ -133,7 +133,7 @@ public class PlayerController : MonoBehaviour
         {
             case "Dead":
             case "Obstaculo":
-                soundManager.PlayAudio("obstaculocolission");
+                soundManager.PlayAudio("obstaculocolision");
                 
                 gameManager.RestartGame();
                 break;

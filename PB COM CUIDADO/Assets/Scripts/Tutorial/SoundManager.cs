@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip startgame;
     public AudioClip quitgame;
     public AudioClip puloduplo;
-    public AudioClip obstaculocolission;
+    public AudioClip obstaculocolision;
 
     void Start()
     {
@@ -28,7 +28,7 @@ public class SoundManager : MonoBehaviour
             audio.PlayOneShot(quitgame);
         else if (nome == "puloduplo")
             audio.PlayOneShot(puloduplo);
-        else if (nome == "obstaculocolission")
-            audio.PlayOneShot(obstaculocolission);
+        else if (nome == "obstaculocolision")
+            audio.PlayOneShot(obstaculocolision);
     }
 }
