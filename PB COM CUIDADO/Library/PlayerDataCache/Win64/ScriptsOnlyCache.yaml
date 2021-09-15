@@ -58,6 +58,7 @@ ScriptsOnlyBuild:
     Unity.2D.PixelPerfect.dll:
     - UnityEngine.U2D.PixelPerfectCamera
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
@@ -65,6 +66,11 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
+    Unity.2D.Tilemap.Extras.Editor.dll:
+    - UnityEditor.Tilemaps.GameObjectBrush
+    - UnityEditor.Tilemaps.GroupBrush
+    - UnityEditor.Tilemaps.LineBrush
+    - UnityEditor.Tilemaps.RandomBrush
     Unity.2D.Tilemap.Extras.dll:
     - UnityEngine.Tilemaps.AnimatedTile
     Unity.Rider.Editor.dll:
@@ -199,7 +205,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 650}
     - Class: 114
-      Script: {instanceID: 1484}
+      Script: {instanceID: 1482}
     - Class: 114
       Script: {instanceID: 1486}
     - Class: 114
@@ -492,7 +498,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1482}
     - Class: 114
-      Script: {instanceID: 1486}
+      Script: {instanceID: 1484}
     - Class: 114
       Script: {instanceID: 1488}
     - Class: 114
@@ -547,7 +553,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1486}
+      Script: {instanceID: 1482}
     - Class: 114
       Script: {instanceID: 1488}
     - Class: 114
@@ -598,7 +604,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1482}
     - Class: 114
-      Script: {instanceID: 1486}
+      Script: {instanceID: 1484}
     - Class: 114
       Script: {instanceID: 1488}
     - Class: 114
@@ -1043,77 +1049,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/Scenes/Nave/NaveBlueMainMenu.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 1482}
-    - Class: 114
-      Script: {instanceID: 1486}
-    - Class: 114
-      Script: {instanceID: 1488}
-    - Class: 114
-      Script: {instanceID: 1756}
-    - Class: 114
-      Script: {instanceID: 1866}
-    - Class: 114
-      Script: {instanceID: 2524}
-    - Class: 114
-      Script: {instanceID: 2702}
-    - Class: 114
-      Script: {instanceID: 2866}
-    - Class: 114
-      Script: {instanceID: 2914}
-    - Class: 114
-      Script: {instanceID: 3466}
-    - Class: 114
-      Script: {instanceID: 3540}
-    - Class: 114
-      Script: {instanceID: 3872}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 198
-      Script: {instanceID: 0}
-    - Class: 199
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 850595691
-      Script: {instanceID: 0}
     Assets/Scenes/Nave/ThanksForPlaying.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -1320,6 +1255,12 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1330,12 +1271,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
-  - hash:
-      serializedVersion: 2
-      Hash: a6e561615949734e9f12f9b61661f43e
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
@@ -2256,7 +2191,7 @@ ScriptsOnlyBuild:
     className: EnemyPathingCav
   - hash:
       serializedVersion: 2
-      Hash: cef220377bd90375ee8ca721f8405acc
+      Hash: 26077cad3e4906983ca003d9128dc4f7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SoundManager
@@ -2360,7 +2295,6 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Caverna/DialogueCaveIntro.unity
   - Assets/Scenes/Caverna/CavernaGameplay.unity
   - Assets/Scenes/Caverna/DialogueCaveEnd.unity
-  - Assets/Scenes/Nave/NaveBlueMainMenu.unity
   - Assets/Scenes/Nave/DialogueNaveIntro.unity
   - Assets/Scenes/Nave/NaveBlueGameplay.unity
   - Assets/Scenes/Nave/DialogueNaveEnd.unity
