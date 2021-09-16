@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     public void AddPontos(int valor) {
         pontos += valor;
-        pontosTxt.text = "          " + pontos;
+        pontosTxt.text = "" + pontos;
         pontosTxtMenu.text = "High score: " + pontos;
     }
 
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         player.transform.position = playerInicio;
         player.SetActive(true);
         pontos = 0;
-        pontosTxt.text = "          " + pontos;
+        pontosTxt.text = "" + pontos;
         pontosTxtMenu.text = "High score: " + pontos;
     }
 }
