@@ -1900,8 +1900,7 @@ MonoBehaviour:
     message: A cada novo desafio, PINKY tem a oportunidade de conhecer mais sobre
       si mesma ao coletar PONTOS DE IDENTIDADE nas fases.
   - actorId: 2
-    message: "Colet\xE1-los \xE9 um PR\xC9-REQUISITO para avan\xE7ar de n\xEDvel.
-      N\xE3o se esque\xE7a!"
+    message: "Colet\xE1-los \xE9 um PR\xC9-REQUISITO para avan\xE7ar de n\xEDvel."
   - actorId: 2
     message: "Al\xE9m disso, tome cuidado para n\xE3o zerar o HP de PINKY ao colidir
       com obst\xE1culos e inimigos."
@@ -4334,8 +4333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 12.5, y: 113}
-  m_SizeDelta: {x: -625, y: 185}
+  m_AnchoredPosition: {x: -0.6047363, y: 134.19257}
+  m_SizeDelta: {x: -598.7905, y: 205.3852}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214557893
 MonoBehaviour:
@@ -6267,6 +6266,10 @@ PrefabInstance:
     - target: {fileID: 8132456162901154867, guid: 56cfa17f570635146826cad56be401a5, type: 3}
       propertyPath: m_Name
       value: Bola Preta Fade Out
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132456162901154867, guid: 56cfa17f570635146826cad56be401a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56cfa17f570635146826cad56be401a5, type: 3}
