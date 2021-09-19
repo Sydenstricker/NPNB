@@ -6,23 +6,31 @@ using UnityEngine.UI;
 public class DialogueCutsceneManager : MonoBehaviour
 {
     public Image actorImage;
+    //public Animator actorAnimator;
     public Text actorName;
     public Text messageText;
     public RectTransform backgroundBox;
 
     Message[] currentMessages;
     Actor[] currentActors;
+    //AudioClip[] currentSFX;
     int activeMessage = 0;
+    //int activeSFX = 0;
     public static bool isActive = false;
 
+    //[SerializeField] AudioClip [] messageSFX;
     [SerializeField] AudioClip questCompleta;
+    [SerializeField] AudioClip dialogo6;
     private int contadorDialogo = 0;
+    
 
         public void OpenDialogue(Message[] messages, Actor[] actors)
     {
         currentMessages = messages;
         currentActors = actors;
+        //currentSFX = messages;
         activeMessage = 0;
+        //activeSFX = 0;
 
         isActive = true;
         
@@ -37,9 +45,11 @@ public class DialogueCutsceneManager : MonoBehaviour
     {
         Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.message;
-
+                
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
+
+        //actorAnimator = GetComponent<TriggerDialogue>().Animator.animacaoDialogo; 
         actorImage.sprite = actorToDisplay.sprite;
 
         AnimateTextColor();
@@ -49,15 +59,41 @@ public class DialogueCutsceneManager : MonoBehaviour
     {
         
         activeMessage++;
-        if (activeMessage < currentMessages.Length) {
+        //activeSFX++;
+        if (activeMessage < currentMessages.Length)
+        {
             DisplayMessage();
+            PlayDialogueSFX();
             contadorDialogo++;
-        } else {
+        }
+        else {
             Debug.Log("Conversation ended!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
             isActive = false;
         }
             
+    }
+
+    private static void PlayDialogueSFX()
+    {
+        //AudioClip messageSFX = currentSFX[activeSFX];
+        //AudioClip().PlayOnShot(currentSFX);
+       
+        //GetComponent<AudioSource>().PlayOneShot(currentSFX);
+
+        //GetComponent<AudioSource>().PlayOneShot(messageSFX);
+        //Message soundToDisplay = currentSFX[];
+        //GetComponent<AudioSource>().PlayOneShot(currentSFX);
+        //Message messageToDisplay = currentMessages[activeMessage];
+
+
+        //Message audiotoDisplay = currentMessages[PlayDialogueSFX];
+
+
+        //GetComponent<TriggerDialogue>(Message).messages;
+        //FindObjectOfType<TriggerDialogue>().Message.messageSFX;
+        //GetComponent<TriggerDialogue>().AudioClip.PlayOneShot(messageSFX);
+        //GetComponent<AudioSource>().PlayOneShot(messageSFX);
     }
 
     void AnimateTextColor()
@@ -77,7 +113,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return) && isActive == true) {
-            NextMessage();
+            NextMessage();            
         }
         if (contadorDialogo == 5)
         {
@@ -85,6 +121,6 @@ public class DialogueCutsceneManager : MonoBehaviour
             GetComponent<AudioSource>().PlayOneShot(questCompleta);
             Debug.Log("tocou quest completed SFX");
             contadorDialogo++;
-        }
+        }        
     }
 }

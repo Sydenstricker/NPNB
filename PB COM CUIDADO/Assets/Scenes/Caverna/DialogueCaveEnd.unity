@@ -2913,6 +2913,7 @@ GameObject:
   - component: {fileID: 569168724}
   - component: {fileID: 569168726}
   - component: {fileID: 569168725}
+  - component: {fileID: 569168728}
   - component: {fileID: 569168727}
   m_Layer: 0
   m_Name: Old man
@@ -3046,7 +3047,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 569168726}
-  questComplete: {fileID: 8300000, guid: ebc950829a90d5a4ebcfff9906715d17, type: 3}
 --- !u!114 &569168726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3063,47 +3063,68 @@ MonoBehaviour:
   messages:
   - actorId: 0
     message: "Aqui est\xE1, senhor."
+    messageSFX: {fileID: 8300000, guid: 8b99d2d95b48b594eba13aba20b48fc0, type: 3}
   - actorId: 0
     message: "Veja quem encontrou seu tesouro para voc\xEA."
+    messageSFX: {fileID: 0}
   - actorId: 1
     message: "Err\u2026"
+    messageSFX: {fileID: 0}
   - actorId: 1
     message: Acho que te devo desculpas.
+    messageSFX: {fileID: 0}
   - actorId: 1
     message: Confesso que te achei indefesa para um lugar como esse.
+    messageSFX: {fileID: 0}
   - actorId: 2
     message: "PINKY devolve a B\xDASSOLA ao HOMEM."
+    messageSFX: {fileID: 0}
   - actorId: 1
     message: "De qualquer forma, obrigado por recuper\xE1-la. "
+    messageSFX: {fileID: 0}
   - actorId: 3
     message: Me chamo DEEP.
+    messageSFX: {fileID: 0}
   - actorId: 0
     message: ...
+    messageSFX: {fileID: 0}
   - actorId: 0
     message: De nada, DEEP. Sou PINKY.
+    messageSFX: {fileID: 0}
   - actorId: 0
     message: 'Agora me diga: '
+    messageSFX: {fileID: 0}
   - actorId: 0
     message: "Como fa\xE7o para sair daqui? Tudo parece ser t\xE3o igual..."
+    messageSFX: {fileID: 0}
   - actorId: 3
     message: "A b\xFAssola, meu tesouro... "
+    messageSFX: {fileID: 0}
   - actorId: 3
     message: "Ela \xE9 o caminho."
+    messageSFX: {fileID: 0}
   - actorId: 3
     message: "Por mais que voc\xEA procure algo, \xE0s vezes s\xF3 \xE9 poss\xEDvel
       encontr\xE1-lo com ajuda."
+    messageSFX: {fileID: 0}
   - actorId: 0
     message: "(T\xE3o enigm\xE1tico\u2026)"
+    messageSFX: {fileID: 0}
   - actorId: 3
     message: "V\xE1, minha jovem."
+    messageSFX: {fileID: 0}
   - actorId: 3
     message: "Encontre seu pr\xF3prio caminho."
+    messageSFX: {fileID: 0}
   - actorId: 3
     message: 'Preciso reencontrar o meu. '
+    messageSFX: {fileID: 0}
   - actorId: 0
     message: "Certo\u2026 "
+    messageSFX: {fileID: 0}
   - actorId: 0
     message: "At\xE9 mais!"
+    messageSFX: {fileID: 0}
   actors:
   - name: PINKY
     sprite: {fileID: 21300000, guid: e9b015c59c6f86248aa5a5be4637f525, type: 3}
@@ -3123,8 +3144,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ebc950829a90d5a4ebcfff9906715d17, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3209,6 +3230,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &569168728
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569168720}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc5a3146fc33b4b428f7d00ddc07eaf2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &720153451
 GameObject:
   m_ObjectHideFlags: 0
@@ -5941,12 +5981,16 @@ MonoBehaviour:
   messages:
   - actorId: 0
     message: "Oi! Quem \xE9 voc\xEA?"
+    messageSFX: {fileID: 0}
   - actorId: 1
     message: "Meu nome \xE9 Man. E o seu?"
+    messageSFX: {fileID: 0}
   - actorId: 0
     message: Me chamo Pinky. Prazer!
+    messageSFX: {fileID: 0}
   - actorId: 1
     message: Prazer!
+    messageSFX: {fileID: 0}
   actors:
   - name: Pinky
     sprite: {fileID: 21300000, guid: e9b015c59c6f86248aa5a5be4637f525, type: 3}
@@ -6727,6 +6771,107 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1727390616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2759269347397056328, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+  m_PrefabInstance: {fileID: 2759269348338899339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1727390617
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727390616}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1737109268
 GameObject:
   m_ObjectHideFlags: 0
@@ -7500,6 +7645,10 @@ PrefabInstance:
       value: DialogueBox
       objectReference: {fileID: 0}
     - target: {fileID: 2759269347397056332, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: dialogo6
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b99d2d95b48b594eba13aba20b48fc0, type: 3}
+    - target: {fileID: 2759269347397056332, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
       propertyPath: questCompleta
       value: 
       objectReference: {fileID: 8300000, guid: ebc950829a90d5a4ebcfff9906715d17, type: 3}
@@ -7624,6 +7773,10 @@ PrefabInstance:
       value: 420
       objectReference: {fileID: 0}
     - target: {fileID: 7225136866270452635, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225136866270452635, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
@@ -7643,5 +7796,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 20.2948
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7225136866270452635, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
