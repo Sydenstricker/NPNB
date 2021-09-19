@@ -15,6 +15,9 @@ public class DialogueCutsceneManager : MonoBehaviour
     int activeMessage = 0;
     public static bool isActive = false;
 
+    [SerializeField] AudioClip questCompleta;
+    private int contadorDialogo = 0;
+
         public void OpenDialogue(Message[] messages, Actor[] actors)
     {
         currentMessages = messages;
@@ -27,6 +30,7 @@ public class DialogueCutsceneManager : MonoBehaviour
         DisplayMessage();
 
         backgroundBox.LeanScale(Vector3.one, 0.5f);
+        
     }
 
     void DisplayMessage()
@@ -43,14 +47,17 @@ public class DialogueCutsceneManager : MonoBehaviour
 
     public void NextMessage()
     {
+        
         activeMessage++;
         if (activeMessage < currentMessages.Length) {
             DisplayMessage();
+            contadorDialogo++;
         } else {
             Debug.Log("Conversation ended!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
             isActive = false;
         }
+            
     }
 
     void AnimateTextColor()
@@ -71,6 +78,13 @@ public class DialogueCutsceneManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return) && isActive == true) {
             NextMessage();
+        }
+        if (contadorDialogo == 5)
+        {
+            //AudioSource.PlayOneShot(questCompleta);
+            GetComponent<AudioSource>().PlayOneShot(questCompleta);
+            Debug.Log("tocou quest completed SFX");
+            contadorDialogo++;
         }
     }
 }

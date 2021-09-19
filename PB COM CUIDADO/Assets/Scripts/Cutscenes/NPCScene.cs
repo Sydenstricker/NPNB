@@ -17,7 +17,7 @@ public class NPCScene : MonoBehaviour
             {
                 return;
             }
-            GetComponent<AudioSource>().PlayOneShot(questComplete);
+            //GetComponent<AudioSource>().PlayOneShot(questComplete);
 
         }
             
