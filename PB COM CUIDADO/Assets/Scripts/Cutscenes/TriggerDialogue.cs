@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
 public class TriggerDialogue : MonoBehaviour
 {
     public Message[] messages;
@@ -10,7 +13,8 @@ public class TriggerDialogue : MonoBehaviour
     public void StartDialogue()
     {
         FindObjectOfType<DialogueCutsceneManager>().OpenDialogue(messages, actors);
-    }
+    }  
+
 }
 [System.Serializable]
 public class Message
@@ -24,3 +28,4 @@ public class Actor
     public string name;
     public Sprite sprite;
 }
+

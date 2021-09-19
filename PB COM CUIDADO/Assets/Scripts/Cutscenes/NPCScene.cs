@@ -5,6 +5,7 @@ using UnityEngine;
 public class NPCScene : MonoBehaviour
 {
     public TriggerDialogue trigger;
+    [SerializeField] AudioClip questComplete;
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -12,6 +13,12 @@ public class NPCScene : MonoBehaviour
         {
             trigger.StartDialogue();
             Destroy(gameObject.GetComponent<Collider2D>());
+            if (questComplete == null)
+            {
+                return;
+            }
+            GetComponent<AudioSource>().PlayOneShot(questComplete);
+
         }
             
     }   

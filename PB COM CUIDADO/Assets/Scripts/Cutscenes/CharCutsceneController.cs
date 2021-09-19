@@ -42,4 +42,10 @@ public class CharCutsceneController : MonoBehaviour
         body.velocity = new Vector2(velocity, body.velocity.y);
         animator.SetFloat("Velocidade", body.velocity.x);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        animator.SetTrigger("EntraFase");
+        Debug.Log("Corre menina");
+    }
 }
