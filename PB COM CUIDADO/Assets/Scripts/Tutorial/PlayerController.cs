@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetTrigger("Deslizando");
                 //gameObject.GetComponent<BoxCollider2D>().size = new Vector2 (0.01f,0.01f);
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+              
 
                 //body.velocity = new Vector2(body.velocity.x, pulo);
                 //puloCount++;
@@ -117,6 +117,13 @@ public class PlayerController : MonoBehaviour
     private void AtivarCapsuleCollider()
     {
         gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+        Physics2D.gravity = new Vector2(0, -10);
+        pulo = 9f;
+    }
+
+    private void DestivarCapsuleCollider()
+    {
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
         Physics2D.gravity = new Vector2(0, -10);
         pulo = 9f;
     }
