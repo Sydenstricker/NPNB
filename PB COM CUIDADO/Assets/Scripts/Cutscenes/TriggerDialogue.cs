@@ -30,7 +30,8 @@ public class Actor
 {
     public string name;
     //public Animator animacaoDialogo;
-    public Sprite sprite; 
+    public Sprite sprite;
+    public Animator bonecoAnimado;
   
 }
 

@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class DialogueCutsceneManager : MonoBehaviour
 {
     public Image actorImage;
-    //public Animator actorAnimator;
+    public Animator actorAnimator;
     public Text actorName;
     public Text messageText;
+    public AudioClip messageSFX;
     public RectTransform backgroundBox;
 
     Message[] currentMessages;
@@ -19,9 +20,9 @@ public class DialogueCutsceneManager : MonoBehaviour
     public static bool isActive = false;
 
     //[SerializeField] AudioClip [] messageSFX;
-    [SerializeField] AudioClip questCompleta;
-    [SerializeField] AudioClip dialogo6;
-    private int contadorDialogo = 0;
+    //[SerializeField] AudioClip questCompleta;
+    //[SerializeField] AudioClip dialogo6;
+    //private int contadorDialogo = 0;
     
 
         public void OpenDialogue(Message[] messages, Actor[] actors)
@@ -45,12 +46,15 @@ public class DialogueCutsceneManager : MonoBehaviour
     {
         Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.message;
+        messageSFX = messageToDisplay.messageSFX;
+        AudioSource.PlayClipAtPoint(messageSFX, Camera.main.transform.position, 0.6f);
                 
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
-
-        //actorAnimator = GetComponent<TriggerDialogue>().Animator.animacaoDialogo; 
+        actorAnimator = actorToDisplay.bonecoAnimado; 
         actorImage.sprite = actorToDisplay.sprite;
+
+        
 
         AnimateTextColor();
     }
@@ -64,7 +68,7 @@ public class DialogueCutsceneManager : MonoBehaviour
         {
             DisplayMessage();
             PlayDialogueSFX();
-            contadorDialogo++;
+            //contadorDialogo++;
         }
         else {
             Debug.Log("Conversation ended!");
@@ -115,12 +119,13 @@ public class DialogueCutsceneManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) && isActive == true) {
             NextMessage();            
         }
-        if (contadorDialogo == 5)
+        /*if (contadorDialogo == 5)
         {
             //AudioSource.PlayOneShot(questCompleta);
             GetComponent<AudioSource>().PlayOneShot(questCompleta);
             Debug.Log("tocou quest completed SFX");
             contadorDialogo++;
-        }        
+        } 
+        */
     }
 }

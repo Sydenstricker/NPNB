@@ -205,6 +205,72 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &52816330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 52816332}
+  - component: {fileID: 52816331}
+  - component: {fileID: 52816333}
+  m_Layer: 0
+  m_Name: teste
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &52816331
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52816330}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0bbb99bd7c2cba845a23825ddfc1d0d2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &52816332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52816330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 639.5979, y: 145.77623, z: -128.21263}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &52816333
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52816330}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: fa5cbd213c448524f98f965040410e4a, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &96998831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2914,7 +2980,6 @@ GameObject:
   - component: {fileID: 569168726}
   - component: {fileID: 569168725}
   - component: {fileID: 569168728}
-  - component: {fileID: 569168727}
   m_Layer: 0
   m_Name: Old man
   m_TagString: Untagged
@@ -3063,173 +3128,81 @@ MonoBehaviour:
   messages:
   - actorId: 0
     message: "Aqui est\xE1, senhor."
-    messageSFX: {fileID: 8300000, guid: 8b99d2d95b48b594eba13aba20b48fc0, type: 3}
+    messageSFX: {fileID: 8300000, guid: 1c697c25ee0bcb542ab4844d4c9c2d2b, type: 3}
   - actorId: 0
     message: "Veja quem encontrou seu tesouro para voc\xEA."
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 6d389491666366843917bcec8dae7f7b, type: 3}
   - actorId: 1
     message: "Err\u2026"
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 7fee01ce39a48444eb55392865210141, type: 3}
   - actorId: 1
     message: Acho que te devo desculpas.
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 5228f553e58db0841bcb42fbde1ef7ae, type: 3}
   - actorId: 1
     message: Confesso que te achei indefesa para um lugar como esse.
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: ebc950829a90d5a4ebcfff9906715d17, type: 3}
   - actorId: 2
     message: "PINKY devolve a B\xDASSOLA ao HOMEM."
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 7fee01ce39a48444eb55392865210141, type: 3}
   - actorId: 1
     message: "De qualquer forma, obrigado por recuper\xE1-la. "
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 8b99d2d95b48b594eba13aba20b48fc0, type: 3}
   - actorId: 3
     message: Me chamo DEEP.
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   - actorId: 0
     message: ...
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: b546be93c2ddcdf48b6243a103684770, type: 3}
   - actorId: 0
     message: De nada, DEEP. Sou PINKY.
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 2650898a0723fca4d91b8f48b982b700, type: 3}
   - actorId: 0
     message: 'Agora me diga: '
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: b546be93c2ddcdf48b6243a103684770, type: 3}
   - actorId: 0
     message: "Como fa\xE7o para sair daqui? Tudo parece ser t\xE3o igual..."
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 7fee01ce39a48444eb55392865210141, type: 3}
   - actorId: 3
     message: "A b\xFAssola, meu tesouro... "
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 5228f553e58db0841bcb42fbde1ef7ae, type: 3}
   - actorId: 3
     message: "Ela \xE9 o caminho."
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 8b99d2d95b48b594eba13aba20b48fc0, type: 3}
   - actorId: 3
     message: "Por mais que voc\xEA procure algo, \xE0s vezes s\xF3 \xE9 poss\xEDvel
       encontr\xE1-lo com ajuda."
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   - actorId: 0
     message: "(T\xE3o enigm\xE1tico\u2026)"
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 7fee01ce39a48444eb55392865210141, type: 3}
   - actorId: 3
     message: "V\xE1, minha jovem."
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 6d389491666366843917bcec8dae7f7b, type: 3}
   - actorId: 3
     message: "Encontre seu pr\xF3prio caminho."
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 5228f553e58db0841bcb42fbde1ef7ae, type: 3}
   - actorId: 3
     message: 'Preciso reencontrar o meu. '
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: b546be93c2ddcdf48b6243a103684770, type: 3}
   - actorId: 0
     message: "Certo\u2026 "
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 2650898a0723fca4d91b8f48b982b700, type: 3}
   - actorId: 0
     message: "At\xE9 mais!"
-    messageSFX: {fileID: 0}
+    messageSFX: {fileID: 8300000, guid: 1c697c25ee0bcb542ab4844d4c9c2d2b, type: 3}
   actors:
   - name: PINKY
     sprite: {fileID: 21300000, guid: e9b015c59c6f86248aa5a5be4637f525, type: 3}
+    bonecoAnimado: {fileID: 52816331}
   - name: HOMEM
     sprite: {fileID: 21300000, guid: 01f41d7b02b960e4982978a00e8a0840, type: 3}
+    bonecoAnimado: {fileID: 1186857516}
   - name: "DESAFIO CONCLU\xCDDO!"
     sprite: {fileID: 21300000, guid: 82d535a9f6e084f49a8a7a636bc2051f, type: 3}
+    bonecoAnimado: {fileID: 0}
   - name: DEEP
     sprite: {fileID: 21300000, guid: 01f41d7b02b960e4982978a00e8a0840, type: 3}
---- !u!82 &569168727
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569168720}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+    bonecoAnimado: {fileID: 0}
 --- !u!95 &569168728
 Animator:
   serializedVersion: 3
@@ -5688,6 +5661,107 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1060140431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2759269347571557297, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+  m_PrefabInstance: {fileID: 2759269348338899339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1060140435
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060140431}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8b99d2d95b48b594eba13aba20b48fc0, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1119755717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5888,6 +5962,56 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1186857515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1186857517}
+  - component: {fileID: 1186857516}
+  m_Layer: 0
+  m_Name: teste 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1186857516
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186857515}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0bbb99bd7c2cba845a23825ddfc1d0d2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &1186857517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186857515}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 639.5979, y: 145.77623, z: -128.21263}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1190944541
 GameObject:
   m_ObjectHideFlags: 0
@@ -5994,8 +6118,10 @@ MonoBehaviour:
   actors:
   - name: Pinky
     sprite: {fileID: 21300000, guid: e9b015c59c6f86248aa5a5be4637f525, type: 3}
+    bonecoAnimado: {fileID: 0}
   - name: Man
     sprite: {fileID: 21300000, guid: 63e65cdc7d4705e4ca95aa936e689b00, type: 3}
+    bonecoAnimado: {fileID: 0}
 --- !u!114 &1201449149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6346,6 +6472,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1467241290 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2759269346745896622, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+  m_PrefabInstance: {fileID: 2759269348338899339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1467241294
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467241290}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &1467241295
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467241290}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1472759993
 GameObject:
   m_ObjectHideFlags: 0
@@ -7640,6 +7805,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1166022952}
     m_Modifications:
+    - target: {fileID: 2759269346745896620, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2759269347397056328, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
       propertyPath: m_Name
       value: DialogueBox
@@ -7648,6 +7817,14 @@ PrefabInstance:
       propertyPath: dialogo6
       value: 
       objectReference: {fileID: 8300000, guid: 8b99d2d95b48b594eba13aba20b48fc0, type: 3}
+    - target: {fileID: 2759269347397056332, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: messageSFX
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759269347397056332, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+      propertyPath: actorAnimator
+      value: 
+      objectReference: {fileID: 1467241294}
     - target: {fileID: 2759269347397056332, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
       propertyPath: questCompleta
       value: 
