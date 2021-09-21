@@ -9,7 +9,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     public Animator actorAnimator;
     public Text actorName;
     public Text messageText;
-    public AudioClip messageSFX;
+    //public AudioClip messageSFX;
     public RectTransform backgroundBox;
 
     Message[] currentMessages;
@@ -46,15 +46,13 @@ public class DialogueCutsceneManager : MonoBehaviour
     {
         Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.message;
-        messageSFX = messageToDisplay.messageSFX;
-        AudioSource.PlayClipAtPoint(messageSFX, Camera.main.transform.position, 0.6f);
+        //messageSFX = messageToDisplay.messageSFX;
+        //AudioSource.PlayClipAtPoint(messageSFX, Camera.main.transform.position, 0.6f);
                 
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
         actorAnimator = actorToDisplay.bonecoAnimado; 
-        actorImage.sprite = actorToDisplay.sprite;
-
-        
+        actorImage.sprite = actorToDisplay.sprite;        
 
         AnimateTextColor();
     }
@@ -67,7 +65,7 @@ public class DialogueCutsceneManager : MonoBehaviour
         if (activeMessage < currentMessages.Length)
         {
             DisplayMessage();
-            PlayDialogueSFX();
+            //PlayDialogueSFX();
             //contadorDialogo++;
         }
         else {
@@ -78,7 +76,7 @@ public class DialogueCutsceneManager : MonoBehaviour
             
     }
 
-    private static void PlayDialogueSFX()
+    /*private static void PlayDialogueSFX()
     {
         //AudioClip messageSFX = currentSFX[activeSFX];
         //AudioClip().PlayOnShot(currentSFX);
@@ -98,7 +96,7 @@ public class DialogueCutsceneManager : MonoBehaviour
         //FindObjectOfType<TriggerDialogue>().Message.messageSFX;
         //GetComponent<TriggerDialogue>().AudioClip.PlayOneShot(messageSFX);
         //GetComponent<AudioSource>().PlayOneShot(messageSFX);
-    }
+    }*/
 
     void AnimateTextColor()
     {

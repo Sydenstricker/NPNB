@@ -5,7 +5,7 @@ using UnityEngine;
 public class ColliderNextScene : MonoBehaviour
 {
 
-    [SerializeField] float delayBolaPreta = 1f;
+    //[SerializeField] float delayBolaPreta = 1f;
     //Stop all sounds
     private AudioSource[] allAudioSources;
 
@@ -21,7 +21,7 @@ public class ColliderNextScene : MonoBehaviour
     {
         StopAllAudio();
         StopAllCoroutines();
-        FindObjectOfType<BolaPretaEntra>().AtivaBolaPreta();
+        //FindObjectOfType<BolaPretaEntra>().AtivaBolaPreta();
         StartCoroutine(ProxSceneCollider());
         //CACETE FOI PORRA
         //GetComponent<BolaPretaEntra>().AtivaBolaPreta();
@@ -32,7 +32,7 @@ public class ColliderNextScene : MonoBehaviour
     }
     IEnumerator ProxSceneCollider()
     {
-        yield return new WaitForSeconds(delayBolaPreta);
+        yield return new WaitForSeconds(0);
         FindObjectOfType<SceneLoader>().LoadNextScene();
         //AudioSource.PlayClipAtPoint(introSFX, Camera.main.transform.position, volumeIntro);
     }
