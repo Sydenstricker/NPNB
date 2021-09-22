@@ -9,7 +9,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     public Animator actorAnimator;
     public Text actorName;
     public Text messageText;
-    public AudioClip messageSFX;
+    //public AudioClip messageSFX;
     public RectTransform backgroundBox;
 
     Message[] currentMessages;
@@ -46,8 +46,8 @@ public class DialogueCutsceneManager : MonoBehaviour
     {
         Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.message;
-        messageSFX = messageToDisplay.messageSFX;
-        AudioSource.PlayClipAtPoint(messageSFX, Camera.main.transform.position, 0.6f);
+        //messageSFX = messageToDisplay.messageSFX;
+        //AudioSource.PlayClipAtPoint(messageSFX, Camera.main.transform.position, 0.6f);
                 
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
