@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour
     }
     private void AtivarBoxColliderTut()
     {
-        //gameObject.GetComponent<BoxCollider2D>().size = new Vector2(1f, 2f);
+        gameObject.GetComponent<BoxCollider2D>().size = new Vector2(1f, 2f);
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
         Physics2D.gravity = new Vector2(0, -10);
     }
