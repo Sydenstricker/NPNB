@@ -126,15 +126,8 @@ public class DialogueCutsceneManager : MonoBehaviour
         if (contadorDialogo == 4 && mandouTrigger == false)
         {
             FindObjectOfType<CharCutsceneController>().ExclamacaoTutorial();
-            //FindObjectOfType<AnimatorControllerParameter.Equals>(animator.enabled);
-            //GetComponent<PlayerCav>(animator.GetCurrentAnimatorClipInfo)
-            //PinkyAnimator.SetTrigger("exclamacao");
-            //AudioSource.PlayOneShot(questCompleta);
-            //GetComponent<Animator>.
-            //GetComponent<AudioSource>().PlayOneShot(questCompleta);
             
-            mandouTrigger = true;
-            
+            mandouTrigger = true;            
         }
         
         if (contadorDialogo == 1 && mandouTrigger == false)
@@ -157,16 +150,16 @@ public class DialogueCutsceneManager : MonoBehaviour
             FindObjectOfType<CharCutsceneController>().TrofeuTutorial();
             mandouTrigger = true;
         }
-
-        if (contadorDialogo == 4 )
-        {
-            FindObjectOfType<AnciaoScript>().AnciaoProcurando();            
-        }
+        
         if (contadorDialogo == 15 && mandouTrigger == false)
         {
             FindObjectOfType<PortalTriggerPlayer>().VelhoAtivaPortal();
             FindObjectOfType<AnciaoScript>().AnciaoAtivaPortal();
             mandouTrigger = true;
+        }
+        if (contadorDialogo == 4)
+        {
+            FindObjectOfType<AnciaoScript>().AnciaoProcurando();
         }
     }
 }

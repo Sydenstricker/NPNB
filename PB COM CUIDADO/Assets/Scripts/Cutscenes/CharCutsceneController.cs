@@ -56,6 +56,7 @@ public class CharCutsceneController : MonoBehaviour
     {
         pinkyAnimator.SetTrigger("exclamacao");
         Debug.Log("animacao exclamacao");
+        
     }
     public void OlhaAtrasTutorial()
     {
@@ -75,7 +76,7 @@ public class CharCutsceneController : MonoBehaviour
     public void PuloDuroTutorial()
     {
         pinkyAnimator.SetTrigger("puloDuro");
-        Debug.Log("animacao pulo Duro");
+        Debug.Log("animacao pulo Duro");        
     }
 }
 
