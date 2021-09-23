@@ -16,10 +16,8 @@ public class PortalTriggerPlayer : MonoBehaviour
             animator.SetTrigger("AbrePortal");
         }
     }
-
-    // Update is called once per frame
-    void Update()
+    public void VelhoAtivaPortal()
     {
-        
+        animator.SetTrigger("AbrePortal");
     }
 }

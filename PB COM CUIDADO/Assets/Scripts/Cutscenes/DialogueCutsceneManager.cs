@@ -122,6 +122,7 @@ public class DialogueCutsceneManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) && isActive == true) {
             NextMessage();            
         }
+     
         if (contadorDialogo == 4 && mandouTrigger == false)
         {
             FindObjectOfType<CharCutsceneController>().ExclamacaoTutorial();
@@ -131,10 +132,41 @@ public class DialogueCutsceneManager : MonoBehaviour
             //AudioSource.PlayOneShot(questCompleta);
             //GetComponent<Animator>.
             //GetComponent<AudioSource>().PlayOneShot(questCompleta);
-            Debug.Log("manda o trigger pro animator do avatar");
+            
             mandouTrigger = true;
             
-        } 
+        }
         
+        if (contadorDialogo == 1 && mandouTrigger == false)
+        {
+            FindObjectOfType<CharCutsceneController>().OlhaAtrasTutorial();
+            mandouTrigger = true;
+        }
+        if (contadorDialogo == 3 && mandouTrigger == false)
+        {
+            FindObjectOfType<CharCutsceneController>().PuloDuroTutorial();
+            mandouTrigger = true;
+        }
+        if (contadorDialogo == 26 && mandouTrigger == false)
+        {
+            FindObjectOfType<CharCutsceneController>().CheckTutorial();
+            mandouTrigger = true;
+        }
+        if (contadorDialogo == 50 && mandouTrigger == false)
+        {
+            FindObjectOfType<CharCutsceneController>().TrofeuTutorial();
+            mandouTrigger = true;
+        }
+
+        if (contadorDialogo == 4 )
+        {
+            FindObjectOfType<AnciaoScript>().AnciaoProcurando();            
+        }
+        if (contadorDialogo == 15 && mandouTrigger == false)
+        {
+            FindObjectOfType<PortalTriggerPlayer>().VelhoAtivaPortal();
+            FindObjectOfType<AnciaoScript>().AnciaoAtivaPortal();
+            mandouTrigger = true;
+        }
     }
 }
