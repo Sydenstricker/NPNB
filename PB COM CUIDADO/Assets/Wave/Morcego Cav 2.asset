@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2106c32dc36a60941bf696ba9088253a, type: 3}
+  m_Name: Morcego Cav 2
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 4124581678163071466, guid: cb9c7674a72830240ad9334e3972b1b6, type: 3}
+  pathPrefab: {fileID: 3389858915819948971, guid: 7ca661eaf80fa484f8ea49d2eab031f2, type: 3}
+  timeBetweenSpawns: 0.8
+  spawnRandomFactor: 0.3
+  numberOfEnemies: 2
+  moveSpeed: 4

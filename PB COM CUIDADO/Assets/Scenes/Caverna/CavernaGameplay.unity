@@ -1389,7 +1389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8180827926189326157, guid: 127baba0360252648981a52e5a8e1727, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8180827926189326157, guid: 127baba0360252648981a52e5a8e1727, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2740,26 +2740,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1955600439}
     m_Modifications:
-    - target: {fileID: 3113294210288554560, guid: 127baba0360252648981a52e5a8e1727, type: 3}
-      propertyPath: velMorcegoStalker
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512636297071998685, guid: 127baba0360252648981a52e5a8e1727, type: 3}
-      propertyPath: m_Size.x
-      value: 0.74337196
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512636297071998685, guid: 127baba0360252648981a52e5a8e1727, type: 3}
-      propertyPath: m_Offset.x
-      value: 4.9283857
-      objectReference: {fileID: 0}
-    - target: {fileID: 8180827926189326156, guid: 127baba0360252648981a52e5a8e1727, type: 3}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8180827926189326156, guid: 127baba0360252648981a52e5a8e1727, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8180827926189326157, guid: 127baba0360252648981a52e5a8e1727, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2808,10 +2788,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Morcego Invertido Trigger (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 8180827926189326162, guid: 127baba0360252648981a52e5a8e1727, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: d2427f7b521bbfd4280d6b13b0f8f939, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127baba0360252648981a52e5a8e1727, type: 3}
 --- !u!1 &833938918
@@ -33892,7 +33868,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3113294210288554560, guid: 127baba0360252648981a52e5a8e1727, type: 3}
       propertyPath: velMorcegoStalker
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4512636297071998685, guid: 127baba0360252648981a52e5a8e1727, type: 3}
       propertyPath: m_Size.x
@@ -33912,7 +33888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8180827926189326157, guid: 127baba0360252648981a52e5a8e1727, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8180827926189326157, guid: 127baba0360252648981a52e5a8e1727, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34068,7 +34044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8180827926189326157, guid: 127baba0360252648981a52e5a8e1727, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8180827926189326157, guid: 127baba0360252648981a52e5a8e1727, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34203,7 +34179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8180827926189326157, guid: 127baba0360252648981a52e5a8e1727, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8180827926189326157, guid: 127baba0360252648981a52e5a8e1727, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34735,12 +34711,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7796015529566880909, guid: b82ffdb9114dbd44ebc1e43e20a659b2, type: 3}
       propertyPath: waveConfig.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7796015529566880909, guid: b82ffdb9114dbd44ebc1e43e20a659b2, type: 3}
       propertyPath: waveConfig.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: 8392538735205d545a46bf242ee51f41, type: 2}
+    - target: {fileID: 7796015529566880909, guid: b82ffdb9114dbd44ebc1e43e20a659b2, type: 3}
+      propertyPath: waveConfig.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: c9a38b7b2f8091b43bbad5e42ee8545c, type: 2}
+    - target: {fileID: 7796015529566880909, guid: b82ffdb9114dbd44ebc1e43e20a659b2, type: 3}
+      propertyPath: waveConfig.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 20b7ffc1f83959b4bbac9b2bc846079c, type: 2}
+    - target: {fileID: 7796015529566880909, guid: b82ffdb9114dbd44ebc1e43e20a659b2, type: 3}
+      propertyPath: waveConfig.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 20b7ffc1f83959b4bbac9b2bc846079c, type: 2}
+    - target: {fileID: 7796015529566880909, guid: b82ffdb9114dbd44ebc1e43e20a659b2, type: 3}
+      propertyPath: waveConfig.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 20b7ffc1f83959b4bbac9b2bc846079c, type: 2}
+    - target: {fileID: 7796015529566880909, guid: b82ffdb9114dbd44ebc1e43e20a659b2, type: 3}
+      propertyPath: waveConfig.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 20b7ffc1f83959b4bbac9b2bc846079c, type: 2}
+    - target: {fileID: 7796015529566880909, guid: b82ffdb9114dbd44ebc1e43e20a659b2, type: 3}
+      propertyPath: waveConfig.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 20b7ffc1f83959b4bbac9b2bc846079c, type: 2}
+    - target: {fileID: 7796015529566880909, guid: b82ffdb9114dbd44ebc1e43e20a659b2, type: 3}
+      propertyPath: waveConfig.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 20b7ffc1f83959b4bbac9b2bc846079c, type: 2}
+    - target: {fileID: 7796015529566880909, guid: b82ffdb9114dbd44ebc1e43e20a659b2, type: 3}
+      propertyPath: waveConfig.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 20b7ffc1f83959b4bbac9b2bc846079c, type: 2}
+    - target: {fileID: 7796015529566880909, guid: b82ffdb9114dbd44ebc1e43e20a659b2, type: 3}
+      propertyPath: waveConfig.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 20b7ffc1f83959b4bbac9b2bc846079c, type: 2}
+    - target: {fileID: 7796015529566880909, guid: b82ffdb9114dbd44ebc1e43e20a659b2, type: 3}
+      propertyPath: waveConfig.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 20b7ffc1f83959b4bbac9b2bc846079c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b82ffdb9114dbd44ebc1e43e20a659b2, type: 3}
 --- !u!1001 &4247354186831478487
