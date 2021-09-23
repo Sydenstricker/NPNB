@@ -9,11 +9,13 @@ public class DialogueCutsceneManager : MonoBehaviour
     public Animator actorAnimator;
     public Text actorName;
     public Text messageText;
-    //public AudioClip messageSFX;
+    public AudioClip messageSFX;
     public RectTransform backgroundBox;
+    private Animator animator;
 
     Message[] currentMessages;
     Actor[] currentActors;
+    
     //AudioClip[] currentSFX;
     int activeMessage = 0;
     //int activeSFX = 0;
@@ -22,7 +24,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     //[SerializeField] AudioClip [] messageSFX;
     //[SerializeField] AudioClip questCompleta;
     //[SerializeField] AudioClip dialogo6;
-    //private int contadorDialogo = 0;
+    private int contadorDialogo = 0;
     
 
         public void OpenDialogue(Message[] messages, Actor[] actors)
@@ -46,8 +48,8 @@ public class DialogueCutsceneManager : MonoBehaviour
     {
         Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.message;
-        //messageSFX = messageToDisplay.messageSFX;
-        //AudioSource.PlayClipAtPoint(messageSFX, Camera.main.transform.position, 0.6f);
+        messageSFX = messageToDisplay.messageSFX;
+        AudioSource.PlayClipAtPoint(messageSFX, Camera.main.transform.position, 0.6f);
                 
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
@@ -66,8 +68,9 @@ public class DialogueCutsceneManager : MonoBehaviour
         {
             DisplayMessage();
             //PlayDialogueSFX();
-            //contadorDialogo++;
+            contadorDialogo++;
         }
+        
         else {
             Debug.Log("Conversation ended!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
@@ -108,7 +111,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     void Start()
     {
         backgroundBox.transform.localScale = Vector3.zero;
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -117,13 +120,15 @@ public class DialogueCutsceneManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) && isActive == true) {
             NextMessage();            
         }
-        /*if (contadorDialogo == 5)
+        if (contadorDialogo == 4 )
         {
+            animator.SetTrigger("exclamacao");
             //AudioSource.PlayOneShot(questCompleta);
-            GetComponent<AudioSource>().PlayOneShot(questCompleta);
-            Debug.Log("tocou quest completed SFX");
-            contadorDialogo++;
+            //GetComponent<Animator>.
+            //GetComponent<AudioSource>().PlayOneShot(questCompleta);
+            Debug.Log("tocou animacao exclamaçao");
+            
         } 
-        */
+        
     }
 }

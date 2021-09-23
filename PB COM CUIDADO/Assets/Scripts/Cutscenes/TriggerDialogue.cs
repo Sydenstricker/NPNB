@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class TriggerDialogue : MonoBehaviour
 {
-    public int contadorDialogo = 0;
+    
     public Message[] messages;
     public Actor[] actors;
-    //public AudioClip[] messagesSFX;
+    public AudioClip[] messagesSFX;
+    
     
     
 
@@ -23,7 +24,8 @@ public class Message
 {    
     public int actorId;
     public string message;
-    public AudioClip messageSFX;       
+    public AudioClip messageSFX;
+    
 }
 [System.Serializable]
 public class Actor
