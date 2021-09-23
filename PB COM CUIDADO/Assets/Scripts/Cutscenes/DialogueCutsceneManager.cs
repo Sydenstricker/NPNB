@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class DialogueCutsceneManager : MonoBehaviour
 {
     public Image actorImage;
-    public Animator actorAnimator;
+    //public Animator actorAnimator;
     public Text actorName;
     public Text messageText;
     public AudioClip messageSFX;
     public RectTransform backgroundBox;
-    private Animator animator;
+    //public bool ativaExclamacao = false;
+    private bool mandouTrigger = false;
+    //public Animator PinkyAnimator;
 
     Message[] currentMessages;
     Actor[] currentActors;
@@ -53,7 +55,7 @@ public class DialogueCutsceneManager : MonoBehaviour
                 
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
-        actorAnimator = actorToDisplay.bonecoAnimado; 
+        //actorAnimator = actorToDisplay.bonecoAnimado; 
         actorImage.sprite = actorToDisplay.sprite;        
 
         AnimateTextColor();
@@ -61,7 +63,7 @@ public class DialogueCutsceneManager : MonoBehaviour
 
     public void NextMessage()
     {
-        
+        mandouTrigger = false;
         activeMessage++;
         //activeSFX++;
         if (activeMessage < currentMessages.Length)
@@ -111,7 +113,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     void Start()
     {
         backgroundBox.transform.localScale = Vector3.zero;
-        animator = GetComponent<Animator>();
+        //PinkyAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -120,13 +122,17 @@ public class DialogueCutsceneManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) && isActive == true) {
             NextMessage();            
         }
-        if (contadorDialogo == 4 )
+        if (contadorDialogo == 4 && mandouTrigger == false)
         {
-            animator.SetTrigger("exclamacao");
+            FindObjectOfType<CharCutsceneController>().ExclamacaoTutorial();
+            //FindObjectOfType<AnimatorControllerParameter.Equals>(animator.enabled);
+            //GetComponent<PlayerCav>(animator.GetCurrentAnimatorClipInfo)
+            //PinkyAnimator.SetTrigger("exclamacao");
             //AudioSource.PlayOneShot(questCompleta);
             //GetComponent<Animator>.
             //GetComponent<AudioSource>().PlayOneShot(questCompleta);
-            Debug.Log("tocou animacao exclamaçao");
+            Debug.Log("manda o trigger pro animator do avatar");
+            mandouTrigger = true;
             
         } 
         

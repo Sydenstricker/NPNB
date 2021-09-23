@@ -8,18 +8,21 @@ public class CharCutsceneController : MonoBehaviour
 
     [SerializeField] float velocity = 10f;
     private Rigidbody2D body;
-    private Animator animator;
+    private Animator pinkyAnimator;
 
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();     
+        pinkyAnimator = GetComponent<Animator>();     
     }       
 
     // Update is called once per frame
     void Update()
     {
+        //GetComponent<DialogueCutsceneManager>().ativaExclamacao);
+        //FindObjectOfType<DialogueCutsceneManager>().ativaExclamacao);
+        
         if (DialogueCutsceneManager.isActive == true)
         {
             ParaPinkTutorial();
@@ -35,17 +38,24 @@ public class CharCutsceneController : MonoBehaviour
     private void ParaPinkTutorial()
     {
         body.velocity = new Vector2(0, 0);
-        animator.SetFloat("Velocidade", 0);
+        pinkyAnimator.SetFloat("Velocidade", 0);
     }
     private void AndaPinkTutorial()
     {
         body.velocity = new Vector2(velocity, body.velocity.y);
-        animator.SetFloat("Velocidade", body.velocity.x);
+        pinkyAnimator.SetFloat("Velocidade", body.velocity.x);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        animator.SetTrigger("EntraFase");
+        pinkyAnimator.SetTrigger("EntraFase");
         Debug.Log("Corre menina");
     }
+
+    public void ExclamacaoTutorial()
+    {
+        pinkyAnimator.SetTrigger("exclamacao");
+        Debug.Log("animacao exclamacao");
+    }
+
 }

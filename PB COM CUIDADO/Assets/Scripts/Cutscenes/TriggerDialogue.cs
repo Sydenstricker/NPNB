@@ -9,9 +9,9 @@ public class TriggerDialogue : MonoBehaviour
     public Message[] messages;
     public Actor[] actors;
     public AudioClip[] messagesSFX;
-    
-    
-    
+
+   
+
 
     public void StartDialogue()
     {
