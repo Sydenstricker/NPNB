@@ -80,28 +80,7 @@ public class DialogueCutsceneManager : MonoBehaviour
         }
             
     }
-
-    /*private static void PlayDialogueSFX()
-    {
-        //AudioClip messageSFX = currentSFX[activeSFX];
-        //AudioClip().PlayOnShot(currentSFX);
-       
-        //GetComponent<AudioSource>().PlayOneShot(currentSFX);
-
-        //GetComponent<AudioSource>().PlayOneShot(messageSFX);
-        //Message soundToDisplay = currentSFX[];
-        //GetComponent<AudioSource>().PlayOneShot(currentSFX);
-        //Message messageToDisplay = currentMessages[activeMessage];
-
-
-        //Message audiotoDisplay = currentMessages[PlayDialogueSFX];
-
-
-        //GetComponent<TriggerDialogue>(Message).messages;
-        //FindObjectOfType<TriggerDialogue>().Message.messageSFX;
-        //GetComponent<TriggerDialogue>().AudioClip.PlayOneShot(messageSFX);
-        //GetComponent<AudioSource>().PlayOneShot(messageSFX);
-    }*/
+      
 
     void AnimateTextColor()
     {
