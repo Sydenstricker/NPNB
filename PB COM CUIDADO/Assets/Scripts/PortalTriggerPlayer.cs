@@ -14,6 +14,7 @@ public class PortalTriggerPlayer : MonoBehaviour
         if (other.tag == "Player")
         {
             animator.SetTrigger("AbrePortal");
+            animator.SetTrigger("NaveFim");
         }
     }
     public void VelhoAtivaPortal()

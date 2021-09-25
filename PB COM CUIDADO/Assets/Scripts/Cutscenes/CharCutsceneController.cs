@@ -46,6 +46,7 @@ public class CharCutsceneController : MonoBehaviour
         pinkyAnimator.SetFloat("Velocidade", body.velocity.x);
     }
 
+    //Animações
     private void OnTriggerEnter2D(Collider2D collision)
     {
         pinkyAnimator.SetTrigger("EntraFase");

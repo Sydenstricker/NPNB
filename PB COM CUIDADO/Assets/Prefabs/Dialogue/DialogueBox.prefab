@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85.0723, y: 0.8204}
-  m_SizeDelta: {x: 143.445, y: 154.03}
+  m_AnchoredPosition: {x: 52.9, y: -0.0000026822}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2759269346745896611
 CanvasRenderer:
@@ -115,8 +115,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 119.8}
-  m_SizeDelta: {x: -546.3954, y: 184.7955}
+  m_AnchoredPosition: {x: 0, y: 126}
+  m_SizeDelta: {x: -279.5687, y: 184.7955}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2759269347397056333
 CanvasRenderer:
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 694932820d68e7a4da64f52010705a10, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -171,8 +171,8 @@ MonoBehaviour:
   actorImage: {fileID: 2759269346745896620}
   actorName: {fileID: 2759269347588983001}
   messageText: {fileID: 2759269347571557303}
+  messageSFX: {fileID: 0}
   backgroundBox: {fileID: 2759269347397056335}
-  questComplete: {fileID: 8300000, guid: ebc950829a90d5a4ebcfff9906715d17, type: 3}
 --- !u!82 &7225136866270452635
 AudioSource:
   m_ObjectHideFlags: 0
@@ -303,8 +303,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 75.42804, y: -23.275}
-  m_SizeDelta: {x: -186.70999, y: 105.84}
+  m_AnchoredPosition: {x: 44.106, y: -19.6}
+  m_SizeDelta: {x: -128.9677, y: 57.8455}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2759269347571557302
 CanvasRenderer:
@@ -335,11 +335,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: 32426584f9294444b85ec0069cafad1e, type: 3}
+    m_FontSize: 11
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -384,8 +384,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 248.89, y: 55.554}
-  m_SizeDelta: {x: 160.22, y: 44.563}
+  m_AnchoredPosition: {x: 260.68683, y: 22.281}
+  m_SizeDelta: {x: 304.1936, y: 44.563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2759269347588983000
 CanvasRenderer:
@@ -416,8 +416,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 35
+    m_Font: {fileID: 12800000, guid: 32426584f9294444b85ec0069cafad1e, type: 3}
+    m_FontSize: 14
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -466,11 +466,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5486947357224232368, guid: 2890f83acd7566942b532cb7187997b8, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 70
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5486947357224232368, guid: 2890f83acd7566942b532cb7187997b8, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5486947357224232368, guid: 2890f83acd7566942b532cb7187997b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -502,11 +502,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5486947357224232368, guid: 2890f83acd7566942b532cb7187997b8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -42.1
+      value: -26.8
       objectReference: {fileID: 0}
     - target: {fileID: 5486947357224232368, guid: 2890f83acd7566942b532cb7187997b8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 23.3
+      value: 14.6
       objectReference: {fileID: 0}
     - target: {fileID: 5486947357224232368, guid: 2890f83acd7566942b532cb7187997b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
