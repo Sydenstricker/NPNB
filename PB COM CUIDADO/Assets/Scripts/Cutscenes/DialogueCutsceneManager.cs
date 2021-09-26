@@ -11,7 +11,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     public Text messageText;
     public AudioClip messageSFX;
     public RectTransform backgroundBox;
-    //public bool ativaExclamacao = false;
+    private bool ativaExclamacao = false;
     private bool mandouTrigger = false;
     //public Animator PinkyAnimator;
 
@@ -102,11 +102,11 @@ public class DialogueCutsceneManager : MonoBehaviour
             NextMessage();            
         }
      
-        if (contadorDialogo == 4 && mandouTrigger == false)
+        if (contadorDialogo == 4 && mandouTrigger == false && ativaExclamacao == true)
         {
-            FindObjectOfType<CharCutsceneController>().ExclamacaoTutorial();
-            
-            mandouTrigger = true;            
+            FindObjectOfType<CharCutsceneController>().ExclamacaoTutorial();            
+            mandouTrigger = true;
+            ativaExclamacao = false;
         }
         
         if (contadorDialogo == 1 && mandouTrigger == false)
@@ -118,13 +118,14 @@ public class DialogueCutsceneManager : MonoBehaviour
         {
             FindObjectOfType<CharCutsceneController>().PuloDuroTutorial();
             mandouTrigger = true;
+            ativaExclamacao = true;
         }
         if (contadorDialogo == 26 && mandouTrigger == false)
         {
             FindObjectOfType<CharCutsceneController>().CheckTutorial();
             mandouTrigger = true;
         }
-        if (contadorDialogo == 50 && mandouTrigger == false)
+        if (contadorDialogo == 5 && mandouTrigger == false)
         {
             FindObjectOfType<CharCutsceneController>().TrofeuTutorial();
             mandouTrigger = true;

@@ -66,7 +66,7 @@ public class CharCutsceneController : MonoBehaviour
     }
     public void TrofeuTutorial()
     {
-        pinkyAnimator.SetTrigger("trofeu");
+        pinkyAnimator.SetTrigger("Trofeu");
         Debug.Log("animacao trofeu");
     }
     public void CheckTutorial()
