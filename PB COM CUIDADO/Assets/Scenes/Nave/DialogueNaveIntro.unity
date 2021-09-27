@@ -352,6 +352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a26abead4d8657640b29f8b1bbaa1b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  limiteAndar: 2300
+  delayBlueCorrer: 1.5
 --- !u!1001 &401153378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1057,7 +1059,7 @@ GameObject:
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1572849027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1787,6 +1789,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 405434327082499633, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 405434327082499635, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: m_Name
       value: Blu
@@ -1794,6 +1800,10 @@ PrefabInstance:
     - target: {fileID: 405434327082499635, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499642, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499646, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: m_RootOrder

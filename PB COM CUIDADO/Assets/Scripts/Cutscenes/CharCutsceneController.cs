@@ -9,6 +9,7 @@ public class CharCutsceneController : MonoBehaviour
     [SerializeField] float velocity = 10f;
     private Rigidbody2D body;
     private Animator pinkyAnimator;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class CharCutsceneController : MonoBehaviour
     {
         body.velocity = new Vector2(0, 0);
         pinkyAnimator.SetFloat("Velocidade", 0);
+        //pinkyAnimator.SetBool("andando", false);
     }
     private void AndaPinkTutorial()
     {
@@ -52,7 +54,11 @@ public class CharCutsceneController : MonoBehaviour
         pinkyAnimator.SetTrigger("EntraFase");
         Debug.Log("Corre menina");
     }
-
+    public void TrofeuNave()
+    {
+        pinkyAnimator.SetTrigger("TrofeuNave");
+       
+    }
     public void ExclamacaoTutorial()
     {
         pinkyAnimator.SetTrigger("exclamacao");
@@ -63,7 +69,11 @@ public class CharCutsceneController : MonoBehaviour
         pinkyAnimator.SetTrigger("exclamacao Nave");
         Debug.Log("animacao exclamacao");
     }
-
+    public void OlhaTrasNave()
+    {
+        transform.rotation = Quaternion.AngleAxis(180, Vector3.zero);
+    }
+    
     public void OlhaAtrasTutorial()
     {
         pinkyAnimator.SetTrigger("olhaTras");
@@ -83,6 +93,10 @@ public class CharCutsceneController : MonoBehaviour
     {
         pinkyAnimator.SetTrigger("puloDuro");
         Debug.Log("animacao pulo Duro");        
+    }
+    public void CorreNavePink()
+    {
+        pinkyAnimator.SetTrigger("correr");        
     }
 }
 

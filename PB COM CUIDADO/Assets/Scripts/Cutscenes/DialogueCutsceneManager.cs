@@ -13,6 +13,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     public RectTransform backgroundBox;
     private bool ativaExclamacao = false;
     private bool mandouTrigger = false;
+    
     //public Animator PinkyAnimator;
 
     Message[] currentMessages;
@@ -72,7 +73,7 @@ public class DialogueCutsceneManager : MonoBehaviour
             //PlayDialogueSFX();
             contadorDialogo++;
         }
-        
+       
         else {
             Debug.Log("Conversation ended!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
@@ -126,10 +127,12 @@ public class DialogueCutsceneManager : MonoBehaviour
             FindObjectOfType<CharCutsceneController>().PuloDuroTutorial();
             mandouTrigger = true;
             ativaExclamacao = true;
-        }
+        }             
+
         if (contadorDialogo == 26 && mandouTrigger == false)
         {
             FindObjectOfType<CharCutsceneController>().CheckTutorial();
+            FindObjectOfType<BlueAndaDialogo>().PulaBlue();
             mandouTrigger = true;
         }
         if (contadorDialogo == 5 && mandouTrigger == false)
@@ -137,13 +140,25 @@ public class DialogueCutsceneManager : MonoBehaviour
             FindObjectOfType<CharCutsceneController>().TrofeuTutorial();
             mandouTrigger = true;
         }
-        
+        if (contadorDialogo == 36 && mandouTrigger == false && Input.GetKeyDown(KeyCode.Return))
+        {
+            FindObjectOfType<BlueAndaDialogo>().CorreDireita();
+            FindObjectOfType<CharCutsceneController>().CorreNavePink();
+            mandouTrigger = true;
+        }
+
         if (contadorDialogo == 15 && mandouTrigger == false)
         {
             FindObjectOfType<PortalTriggerPlayer>().VelhoAtivaPortal();
             FindObjectOfType<AnciaoScript>().AnciaoAtivaPortal();
             mandouTrigger = true;
         }
+        if (contadorDialogo == 14 && mandouTrigger == false)
+        {
+            FindObjectOfType<CharCutsceneController>().TrofeuNave();
+            mandouTrigger = true;
+        }        
+
         if (contadorDialogo == 4)
         {
             FindObjectOfType<AnciaoScript>().AnciaoProcurando();
