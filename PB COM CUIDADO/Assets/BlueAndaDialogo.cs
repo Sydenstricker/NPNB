@@ -7,9 +7,11 @@ public class BlueAndaDialogo : MonoBehaviour
     private Rigidbody2D body;
     private Animator blueAnimator;
     private float contaTempo = 0f;
-    private bool estaAndando = false;
+    private bool DiegoForgiveMe = false;
+    [SerializeField] private bool estaAndando = false;
     [SerializeField] float limiteAndar = 0f;
     [SerializeField] float delayBlueCorrer = 0f;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,8 @@ public class BlueAndaDialogo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(estaAndando == true)
+        
+        if(estaAndando == true && DiegoForgiveMe == false )
         {
             contaTempo++;
             blueAnimator.SetBool("andar", true);
@@ -33,9 +36,15 @@ public class BlueAndaDialogo : MonoBehaviour
             blueAnimator.SetBool("andar", false);
             ParaBlue();
             contaTempo = 0;
-        }
+        }      
     }
+    public void AndaNaveFinal()
+    {
+        //body.velocity = new Vector2(5, 0);
+        estaAndando = true;
+        DiegoForgiveMe = true;
 
+    }
     public void AndaBlueESQ()
     {
         body.velocity = new Vector2(-5, 0);
@@ -58,7 +67,11 @@ public class BlueAndaDialogo : MonoBehaviour
         Debug.Log("CORRE BLUE MEU FILHO");
     }
 
-    
+    public void CorreNaveFinal()
+    {
+        body.velocity = new Vector2(-5, 0);
+        estaAndando = true;
+    }
     private void ParaBlue()
     {
         body.velocity = new Vector2(0, 0);
@@ -72,5 +85,5 @@ public class BlueAndaDialogo : MonoBehaviour
             ParaBlue();
         }
     }  
-
+    
 }

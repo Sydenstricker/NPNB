@@ -9,7 +9,11 @@ public class CharCutsceneController : MonoBehaviour
     [SerializeField] float velocity = 10f;
     private Rigidbody2D body;
     private Animator pinkyAnimator;
-    
+    private float contaTempo = 0f;
+    private bool estaAndando = false;
+    [SerializeField] float limiteAndar = 0f;
+    [SerializeField] float delayBlueCorrer = 0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +27,18 @@ public class CharCutsceneController : MonoBehaviour
     {
         //GetComponent<DialogueCutsceneManager>().ativaExclamacao);
         //FindObjectOfType<DialogueCutsceneManager>().ativaExclamacao);
-        
+        if (estaAndando == true)
+        {
+            contaTempo++;
+            pinkyAnimator.SetBool("andar", true);
+            Debug.Log(contaTempo);
+        }
+        if (contaTempo >= limiteAndar)
+        {
+            pinkyAnimator.SetBool("andar", false);
+            ParaPinkTutorial();
+            contaTempo = 0;
+        }
         if (DialogueCutsceneManager.isActive == true)
         {
             ParaPinkTutorial();

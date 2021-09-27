@@ -13,7 +13,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     public RectTransform backgroundBox;
     private bool ativaExclamacao = false;
     private bool mandouTrigger = false;
-    
+    [SerializeField] bool isNaveFinalBlue = false;
     //public Animator PinkyAnimator;
 
     Message[] currentMessages;
@@ -99,10 +99,15 @@ public class DialogueCutsceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isNaveFinalBlue == true)
+        {
+            FindObjectOfType<BlueAndaDialogo>().AndaNaveFinal();
+            mandouTrigger = true;
+        }
         if (Input.GetKeyDown(KeyCode.Return) && isActive == true) {
             NextMessage();            
         }
-        if (contadorDialogo == 2 && mandouTrigger == false  )
+        if (contadorDialogo == 2 && mandouTrigger == false  && isNaveFinalBlue ==false)
         {
             FindObjectOfType<CharCutsceneController>().ExclamacaoNave();
             FindObjectOfType<BlueAndaDialogo>().AndaBlueESQ();
@@ -129,7 +134,7 @@ public class DialogueCutsceneManager : MonoBehaviour
             ativaExclamacao = true;
         }             
 
-        if (contadorDialogo == 26 && mandouTrigger == false)
+        if (contadorDialogo == 26 && mandouTrigger == false && isNaveFinalBlue == false)
         {
             FindObjectOfType<CharCutsceneController>().CheckTutorial();
             FindObjectOfType<BlueAndaDialogo>().PulaBlue();
@@ -140,7 +145,7 @@ public class DialogueCutsceneManager : MonoBehaviour
             FindObjectOfType<CharCutsceneController>().TrofeuTutorial();
             mandouTrigger = true;
         }
-        if (contadorDialogo == 36 && mandouTrigger == false && Input.GetKeyDown(KeyCode.Return))
+        if (contadorDialogo == 36 && mandouTrigger == false && Input.GetKeyDown(KeyCode.Return) && isNaveFinalBlue == false)
         {
             FindObjectOfType<BlueAndaDialogo>().CorreDireita();
             FindObjectOfType<CharCutsceneController>().CorreNavePink();
