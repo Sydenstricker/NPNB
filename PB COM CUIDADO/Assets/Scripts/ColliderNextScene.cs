@@ -17,15 +17,20 @@ public class ColliderNextScene : MonoBehaviour
             audioS.Stop();
         }
     }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
-        StopAllAudio();
-        StopAllCoroutines();
-        //FindObjectOfType<BolaPretaEntra>().AtivaBolaPreta();
-        StartCoroutine(ProxSceneCollider());
-        //CACETE FOI PORRA
-        //GetComponent<BolaPretaEntra>().AtivaBolaPreta();
-        //GetComponent<BolaPretaEntra>().bolaPreta.SetTrigger("EntraBola");
+        if (other.gameObject.layer == 9)
+            return;
+        else
+            StopAllAudio();
+            StopAllCoroutines();
+            //FindObjectOfType<BolaPretaEntra>().AtivaBolaPreta();
+            StartCoroutine(ProxSceneCollider());
+            //CACETE FOI PORRA
+            //GetComponent<BolaPretaEntra>().AtivaBolaPreta();
+            //GetComponent<BolaPretaEntra>().bolaPreta.SetTrigger("EntraBola");)
+        
         
        
         //FindObjectOfType<BolaPretaEntra>().AtivaBolaPreta;

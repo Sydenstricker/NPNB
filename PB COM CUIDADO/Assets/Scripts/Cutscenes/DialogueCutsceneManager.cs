@@ -101,7 +101,14 @@ public class DialogueCutsceneManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) && isActive == true) {
             NextMessage();            
         }
-     
+        if (contadorDialogo == 2 && mandouTrigger == false  )
+        {
+            FindObjectOfType<CharCutsceneController>().ExclamacaoNave();
+            FindObjectOfType<BlueAndaDialogo>().AndaBlueESQ();
+            mandouTrigger = true;
+            
+        }
+
         if (contadorDialogo == 4 && mandouTrigger == false && ativaExclamacao == true)
         {
             FindObjectOfType<CharCutsceneController>().ExclamacaoTutorial();            

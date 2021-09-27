@@ -56,9 +56,14 @@ public class CharCutsceneController : MonoBehaviour
     public void ExclamacaoTutorial()
     {
         pinkyAnimator.SetTrigger("exclamacao");
-        Debug.Log("animacao exclamacao");
-        
+        Debug.Log("animacao exclamacao");        
     }
+    public void ExclamacaoNave()
+    {
+        pinkyAnimator.SetTrigger("exclamacao Nave");
+        Debug.Log("animacao exclamacao");
+    }
+
     public void OlhaAtrasTutorial()
     {
         pinkyAnimator.SetTrigger("olhaTras");
