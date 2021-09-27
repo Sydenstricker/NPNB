@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class ativadorDoLoboAndar : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        GetComponentInChildren<MorcegoEsquerda>().AtivaAndarLobo();
-        //FindObjectOfType<MorcegoEsquerda>().AtivaAndarLobo();
-        Debug.Log("corre cachorro");
+        if (other.tag == "Player")
+        {
+            GetComponentInChildren<MorcegoEsquerda>().AtivaAndarLobo();
+            //FindObjectOfType<MorcegoEsquerda>().AtivaAndarLobo();
+            Debug.Log("corre cachorro");
+        }
+        
     }
 }

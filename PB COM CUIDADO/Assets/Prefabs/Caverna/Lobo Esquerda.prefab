@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1114749813312444948}
   - component: {fileID: 1114749813312444950}
   - component: {fileID: 1114749813312444949}
-  - component: {fileID: 1114749813312444951}
+  - component: {fileID: 1826885599001070988}
   m_Layer: 0
   m_Name: Lobo Esquerda
   m_TagString: Untagged
@@ -154,8 +154,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &1114749813312444951
-CircleCollider2D:
+--- !u!61 &1826885599001070988
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -167,6 +167,16 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.047171354}
+  m_Offset: {x: 0.05752945, y: 0.017775357}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1.2216704
+  m_Size: {x: 2.1379395, y: 1.0605639}
+  m_EdgeRadius: 0
