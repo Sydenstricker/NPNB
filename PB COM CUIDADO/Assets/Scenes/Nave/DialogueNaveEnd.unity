@@ -569,6 +569,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: actors.Array.data[0].name
       value: PINKY
       objectReference: {fileID: 0}
@@ -579,34 +583,35 @@ PrefabInstance:
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: actors.Array.data[0].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e9b015c59c6f86248aa5a5be4637f525, type: 3}
+      objectReference: {fileID: 21300000, guid: 3e343dc093d9ea442bdf32de80cbca56, type: 3}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: actors.Array.data[1].sprite
       value: 
-      objectReference: {fileID: 325266242080287080, guid: 9a202c35dda29de4d84f99d565f242b6, type: 3}
+      objectReference: {fileID: 21300000, guid: a03f99239706ae14d86c5fcffbe4905e, type: 3}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[0].message
-      value: "Isso foi incr\xEDvel!"
+      value: "Isso foi incr\xEDvel! N\xF3s conseguimos!"
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[1].actorId
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
-      propertyPath: messages.Array.data[1].message
-      value: "N\xF3s conseguimos!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
-      propertyPath: messages.Array.data[2].message
-      value: "Eu n\xE3o acredito!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
-      propertyPath: messages.Array.data[3].actorId
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[1].message
+      value: "Eu n\xE3o acredito! H\xE1 meses tent\xE1vamos rastrear X0... E, de
+        repente, ele aparece na nossa frente!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[2].message
+      value: Isso foi muito perigoso!
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[3].actorId
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[3].message
-      value: "H\xE1 meses tent\xE1vamos rastrear X0... "
+      value: "Relaxe! N\xF3s conseguimos. Formamos uma boa dupla."
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[4].actorId
@@ -614,23 +619,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[4].message
-      value: E, de repente, ele aparece na nossa frente!
+      value: Sim, formamos.
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
-      propertyPath: messages.Array.data[5].message
-      value: Isso foi muito perigoso!
-      objectReference: {fileID: 0}
-    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
-      propertyPath: messages.Array.data[6].message
-      value: "Relaxe, BLU! N\xF3s conseguimos."
-      objectReference: {fileID: 0}
-    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
-      propertyPath: messages.Array.data[7].actorId
+      propertyPath: messages.Array.data[5].actorId
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[5].message
+      value: "Ent\xE3o... Quero te agradecer, BLU! Sem voc\xEA, eu jamais teria vivido
+        essa aventura."
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[6].actorId
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[6].message
+      value: Fico te devendo essa.
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[7].actorId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[7].message
-      value: Formamos uma boa dupla.
+      value: Hah! Digo o mesmo.
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[8].actorId
@@ -638,31 +652,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[8].message
-      value: Sim, formamos.
+      value: Hah! Digo o mesmo.
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[9].actorId
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[9].message
-      value: "Ent\xE3o..."
+      value: Hah! Digo o mesmo.
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[10].actorId
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[10].message
-      value: Quero te agradecer, BLU!
+      value: Hah! Digo o mesmo.
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[11].actorId
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[11].message
-      value: "Sem voc\xEA, eu jamais teria vivido essa aventura."
+      value: Hah! Digo o mesmo.
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[12].actorId
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[12].message
-      value: Fico te devendo essa.
+      value: Hah! Digo o mesmo.
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[13].actorId
@@ -1040,7 +1062,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1201449147}
-  - {fileID: 1507212468}
+  - {fileID: 1977531423}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1353,35 +1375,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorId: 0
-    message: Aqui.
+    message: Aqui. Acho que isso te pertence.
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   - actorId: 2
     message: PINKY devolve a pistola laser de BLU.
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
-  - actorId: 0
-    message: 'Acho que isso te pertence. '
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: ebc950829a90d5a4ebcfff9906715d17, type: 3}
   - actorId: 0
     message: "Haha, n\xE3o se preocupe! J\xE1 tinha feito isso antes."
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   - actorId: 1
-    message: Estou vendo, haha!
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
-  - actorId: 1
-    message: Obrigado.
+    message: Estou vendo, haha! Obrigado.
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   - actorId: 0
-    message: Bem...
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
-  - actorId: 0
-    message: "Vejo voc\xEA por a\xED!"
+    message: "Bem... Vejo voc\xEA por a\xED!"
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   actors:
   - name: PINKY
-    sprite: {fileID: 21300000, guid: e9b015c59c6f86248aa5a5be4637f525, type: 3}
+    sprite: {fileID: 21300000, guid: 3e343dc093d9ea442bdf32de80cbca56, type: 3}
     bonecoAnimado: {fileID: 0}
   - name: BLU
-    sprite: {fileID: 325266242080287080, guid: 9a202c35dda29de4d84f99d565f242b6, type: 3}
+    sprite: {fileID: 21300000, guid: a03f99239706ae14d86c5fcffbe4905e, type: 3}
     bonecoAnimado: {fileID: 0}
   - name: "DESAFIO CONCLU\xCDDO!"
     sprite: {fileID: 21300000, guid: d879eaf488a7e504a983ba579c80c46a, type: 3}
@@ -1413,11 +1426,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.50698066, y: 1.8974229}
   m_EdgeRadius: 0
---- !u!224 &1507212468 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
-  m_PrefabInstance: {fileID: 1942860279}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1667039014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,7 +1544,7 @@ MonoBehaviour:
     message: "Aqui eu sou BLU, 32\xBA l\xEDder da Epic Wings..."
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   - actorId: 1
-    message: 'Mas eu gostaria muito de saber quem BLU pode ser em outros lugares. '
+    message: Mas eu gostaria muito de saber quem BLU pode ser em outros lugares.
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   - actorId: 1
     message: Posso te acompanhar nessa jornada?
@@ -1548,10 +1556,7 @@ MonoBehaviour:
     message: Eu sei pilotar naves.
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   - actorId: 0
-    message: "Agora voc\xEA me convenceu, haha!"
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
-  - actorId: 0
-    message: Vamos!
+    message: "Agora voc\xEA me convenceu, haha! Vamos!"
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   - actorId: 1
     message: "(Eu sinto que isso \xE9 s\xF3 o come\xE7o.)"
@@ -1564,10 +1569,10 @@ MonoBehaviour:
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   actors:
   - name: PINKY
-    sprite: {fileID: 21300000, guid: e9b015c59c6f86248aa5a5be4637f525, type: 3}
+    sprite: {fileID: 21300000, guid: 3e343dc093d9ea442bdf32de80cbca56, type: 3}
     bonecoAnimado: {fileID: 0}
   - name: BLU
-    sprite: {fileID: 325266242080287080, guid: 9a202c35dda29de4d84f99d565f242b6, type: 3}
+    sprite: {fileID: 21300000, guid: a03f99239706ae14d86c5fcffbe4905e, type: 3}
     bonecoAnimado: {fileID: 0}
   messagesSFX: []
 --- !u!61 &1667039019
@@ -1643,10 +1648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorId: 0
-    message: Sabe...
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
-  - actorId: 0
-    message: "Eu vim de um mundo cor de rosa, onde s\xF3 eu existia."
+    message: "Sabe... Eu vim de um mundo cor de rosa, onde s\xF3 eu existia."
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   - actorId: 0
     message: "Um mundo sem naves, esta\xE7\xF5es espaciais ou estrelas\u2026"
@@ -1665,17 +1667,14 @@ MonoBehaviour:
     message: ...
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   - actorId: 0
-    message: "Apenas seja voc\xEA mesmo, BLU, e nada ser\xE1 imposs\xEDvel."
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
-  - actorId: 0
-    message: Boa sorte!
+    message: "Apenas seja voc\xEA mesmo, BLU, e nada ser\xE1 imposs\xEDvel. Boa sorte!"
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
   actors:
   - name: PINKY
-    sprite: {fileID: 21300000, guid: e9b015c59c6f86248aa5a5be4637f525, type: 3}
+    sprite: {fileID: 21300000, guid: 3e343dc093d9ea442bdf32de80cbca56, type: 3}
     bonecoAnimado: {fileID: 0}
   - name: BLU
-    sprite: {fileID: 325266242080287080, guid: 9a202c35dda29de4d84f99d565f242b6, type: 3}
+    sprite: {fileID: 21300000, guid: a03f99239706ae14d86c5fcffbe4905e, type: 3}
     bonecoAnimado: {fileID: 0}
   messagesSFX: []
 --- !u!61 &1770877738
@@ -1830,123 +1829,108 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a354499b39e3fab47978f8d58b5f8e61, type: 3}
---- !u!1001 &1942860279
+--- !u!1001 &1934880291
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 1166022952}
     m_Modifications:
-    - target: {fileID: 343978048375234842, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -28.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 343978048375234842, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 13.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056328, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286209, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_Name
       value: DialogueBox
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056332, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
-      propertyPath: isNaveFinalBlue
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056332, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
-      propertyPath: IsNaveCinematicEnd
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -342.12
+      value: -385.9671
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 106.5749
+      value: 96.3692
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 60.21739
+      value: 60
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347397056335, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+    - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2759269347571557296, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -23.6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f246de4b30132b546b10b4c7b40b508e, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
+--- !u!224 &1977531423 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
+  m_PrefabInstance: {fileID: 1934880291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1979567283
 GameObject:
   m_ObjectHideFlags: 0
