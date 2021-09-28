@@ -35,7 +35,7 @@ public class EnemyCav : MonoBehaviour
         }
         if (other.gameObject.layer == 16)
         {
-            transform.rotation = Quaternion.AngleAxis(180, Vector3.zero);
+            transform.rotation = Quaternion.AngleAxis(180, Vector3.down);
             //Quaternion AngleAxis(float angle, Vector3 axis);
             //transform.rotation = Quaternion.Euler(0, -180f, 0);
             Debug.Log("desflipa lobo wuf wuf");
