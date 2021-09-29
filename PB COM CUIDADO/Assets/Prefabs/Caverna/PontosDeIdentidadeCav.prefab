@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8500925936012132317}
   - component: {fileID: 3180193686541007686}
   - component: {fileID: 4461501466518857862}
+  - component: {fileID: 465097170}
   m_Layer: 6
   m_Name: PontosDeIdentidadeCav
   m_TagString: Untagged
@@ -75,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a6f9e7f653e58164bb6e249de571aa9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3bb10b2a8396efe468050819ff4b4b9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.31, y: 0.3}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -110,7 +111,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4493755121161822097}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -148,5 +149,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6394215cb0c6e4da55648693c471a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coletaSFX: {fileID: 8300000, guid: 66683915d9b1b784fa097d248c82a822, type: 3}
-  volumeColeta: 0.75
+  coletaSFX: {fileID: 8300000, guid: f187289ae6791cc4e832a51769404bfe, type: 3}
+  volumeColeta: 0.635
+--- !u!95 &465097170
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493755121161822097}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8ed13af698702e46bebb3c2ee45da4c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
