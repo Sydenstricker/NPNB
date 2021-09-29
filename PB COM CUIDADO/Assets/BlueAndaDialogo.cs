@@ -7,7 +7,7 @@ public class BlueAndaDialogo : MonoBehaviour
     private Rigidbody2D body;
     private Animator blueAnimator;
     private float contaTempo = 0f;
-    private bool DiegoForgiveMe = false;
+    [SerializeField] float velocidade = 2.5f;
     [SerializeField] private bool estaAndando = false;
     [SerializeField] float limiteAndar = 0f;
     [SerializeField] float delayBlueCorrer = 0f;
@@ -23,9 +23,8 @@ public class BlueAndaDialogo : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
-        if(estaAndando == true && DiegoForgiveMe == false )
+    {        
+        if(estaAndando)
         {
             contaTempo++;
             blueAnimator.SetBool("andar", true);
@@ -36,14 +35,26 @@ public class BlueAndaDialogo : MonoBehaviour
             blueAnimator.SetBool("andar", false);
             ParaBlue();
             contaTempo = 0;
-        }      
+        }
+        if (DialogueCutsceneManager.isActive == true)
+        {
+            ParaBlue();
+        }
+        if (DialogueCutsceneManager.isActive == false)
+        {
+            AndaBlue();
+        }
     }
-    public void AndaNaveFinal()
+    private void ParaBlue()
     {
-        //body.velocity = new Vector2(5, 0);
-        estaAndando = true;
-        DiegoForgiveMe = true;
-
+        body.velocity = new Vector2(0, 0);
+        blueAnimator.SetFloat("Velocidade", 0);
+        //pinkyAnimator.SetBool("andando", false);
+    }
+    public void AndaBlue()
+    {
+        body.velocity = new Vector2(velocidade, body.velocity.y);
+        blueAnimator.SetFloat("Velocidade", body.velocity.x);
     }
     public void AndaBlueESQ()
     {
@@ -72,11 +83,11 @@ public class BlueAndaDialogo : MonoBehaviour
         body.velocity = new Vector2(-5, 0);
         estaAndando = true;
     }
-    private void ParaBlue()
-    {
-        body.velocity = new Vector2(0, 0);
-        estaAndando = false;
-    }
+    //private void ParaBlue()
+    //{
+       // body.velocity = new Vector2(0, 0);
+     //   estaAndando = false;
+   // }
     
     private void OnCollisionEnter2D(Collision2D collision)
     {

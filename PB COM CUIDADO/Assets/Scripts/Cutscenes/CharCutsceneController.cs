@@ -24,9 +24,7 @@ public class CharCutsceneController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        //GetComponent<DialogueCutsceneManager>().ativaExclamacao);
-        //FindObjectOfType<DialogueCutsceneManager>().ativaExclamacao);
+    {        
         if (estaAndando == true)
         {
             contaTempo++;
@@ -68,43 +66,29 @@ public class CharCutsceneController : MonoBehaviour
     {
         pinkyAnimator.SetTrigger("EntraFase");
         Debug.Log("Corre menina");
-    }
-    public void TrofeuNave()
-    {
-        pinkyAnimator.SetTrigger("TrofeuNave");
-       
-    }
-    public void ExclamacaoTutorial()
+    }    
+    public void ExclamacaoPinky()
     {
         pinkyAnimator.SetTrigger("exclamacao");
         Debug.Log("animacao exclamacao");        
-    }
-    public void ExclamacaoNave()
-    {
-        pinkyAnimator.SetTrigger("exclamacao Nave");
-        Debug.Log("animacao exclamacao");
-    }
-    public void OlhaTrasNave()
-    {
-        transform.rotation = Quaternion.AngleAxis(180, Vector3.zero);
-    }
-    
-    public void OlhaAtrasTutorial()
+    }    
+     
+    public void OlhaAtrasPinky()
     {
         pinkyAnimator.SetTrigger("olhaTras");
         Debug.Log("animacao olha para tras");
     }
-    public void TrofeuTutorial()
+    public void TrofeuPinky()
     {
         pinkyAnimator.SetTrigger("Trofeu");
         Debug.Log("animacao trofeu");
     }
-    public void CheckTutorial()
+    public void CheckPinky()
     {
         pinkyAnimator.SetTrigger("check");
         Debug.Log("animacao check");
     }
-    public void PuloDuroTutorial()
+    public void PuloDuroPinky()
     {
         pinkyAnimator.SetTrigger("puloDuro");
         Debug.Log("animacao pulo Duro");        

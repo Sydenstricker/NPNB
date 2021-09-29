@@ -13,8 +13,12 @@ public class DialogueCutsceneManager : MonoBehaviour
     public RectTransform backgroundBox;
     private bool ativaExclamacao = false;
     private bool mandouTrigger = false;
-    [SerializeField] bool isNaveFinalBlue = false;
-    
+    private bool bBlueNaveFinal = false;
+    [SerializeField] bool isNaveDialogoFinal = false;
+    [SerializeField] bool isNaveDialogoInicio = false;
+    [SerializeField] bool isCaveDialogoFinal = false;
+    [SerializeField] bool isCaveDialogoInicio = false;
+
     //public Animator PinkyAnimator;
 
     Message[] currentMessages;
@@ -28,8 +32,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     //[SerializeField] AudioClip [] messageSFX;
     //[SerializeField] AudioClip questCompleta;
     //[SerializeField] AudioClip dialogo6;
-    private int contadorDialogo = 0;
-    
+    private int contadorDialogo = 0;   
 
         public void OpenDialogue(Message[] messages, Actor[] actors)
     {
@@ -38,14 +41,11 @@ public class DialogueCutsceneManager : MonoBehaviour
         //currentSFX = messages;
         activeMessage = 0;
         //activeSFX = 0;
-
         isActive = true;
         
         Debug.Log("Started conversation! Loaded messages: " + messages.Length);
         DisplayMessage();
-
-        backgroundBox.LeanScale(Vector3.one, 0.5f);
-        
+        backgroundBox.LeanScale(Vector3.one, 0.5f);        
     }
 
     void DisplayMessage()
@@ -59,7 +59,6 @@ public class DialogueCutsceneManager : MonoBehaviour
         actorName.text = actorToDisplay.name;
         //actorAnimator = actorToDisplay.bonecoAnimado; 
         actorImage.sprite = actorToDisplay.sprite;        
-
         AnimateTextColor();
     }
 
@@ -73,123 +72,128 @@ public class DialogueCutsceneManager : MonoBehaviour
             DisplayMessage();
             //PlayDialogueSFX();
             contadorDialogo++;
-        }
-       
+        }       
         else {
             Debug.Log("Conversation ended!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
             isActive = false;
-        }
-            
-    }
-      
+        }            
+    }     
 
     void AnimateTextColor()
     {
         LeanTween.textAlpha(messageText.rectTransform, 0, 0);
         LeanTween.textAlpha(messageText.rectTransform, 1, 0.5f);
-    }
-
-    // Start is called before the first frame update
+    }    
     void Start()
     {
         backgroundBox.transform.localScale = Vector3.zero;
         //PinkyAnimator = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
+    }        
     void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Return) && isActive == true)
         {
             NextMessage();
         }
 
-        //Nave
-        if (isNaveFinalBlue == true)
+        if (isNaveDialogoFinal && bBlueNaveFinal == false)
         {
-            FindObjectOfType<BlueAndaDialogo>().AndaNaveFinal();
+            FindObjectOfType<BlueAndaDialogo>().AndaBlue();
             mandouTrigger = true;
-        }
-
-        if (contadorDialogo == 1 && mandouTrigger == false  && isNaveFinalBlue ==false)
-        {
-            FindObjectOfType<CharCutsceneController>().ExclamacaoNave();
-            FindObjectOfType<BlueAndaDialogo>().AndaBlueESQ();
-            mandouTrigger = true;
+            bBlueNaveFinal = true;
             
         }
-
-        if (contadorDialogo == 27 && mandouTrigger == false && Input.GetKeyDown(KeyCode.Return) && isNaveFinalBlue == false)
+        
+        if (contadorDialogo == 0 && mandouTrigger == false)
         {
-            FindObjectOfType<BlueAndaDialogo>().CorreDireita();
-            FindObjectOfType<CharCutsceneController>().CorreNavePink();
-            mandouTrigger = true;
+            if(isCaveDialogoInicio)
+            {
+                FindObjectOfType<CharCutsceneController>().OlhaAtrasPinky();
+                mandouTrigger = true;
+            }
         }
-
+                      
+       if (contadorDialogo == 1 && mandouTrigger == false)
+        {
+            if(isCaveDialogoInicio)
+            {
+                FindObjectOfType<CharCutsceneController>().PuloDuroPinky();
+                mandouTrigger = true;
+            }
+            if (isNaveDialogoInicio)
+            {
+                FindObjectOfType<CharCutsceneController>().ExclamacaoPinky();
+                FindObjectOfType<BlueAndaDialogo>().AndaBlueESQ();
+                mandouTrigger = true;                
+            }
+            if (isCaveDialogoFinal)
+            {
+                FindObjectOfType<CharCutsceneController>().TrofeuPinky();
+                mandouTrigger = true;
+            }
+        }                       
         //Exclamação Caverna
         if (contadorDialogo == 2 && mandouTrigger == false && ativaExclamacao == false)
         {
-            FindObjectOfType<CharCutsceneController>().ExclamacaoTutorial();            
+            FindObjectOfType<CharCutsceneController>().ExclamacaoPinky();            
             mandouTrigger = true;
             ativaExclamacao = true;
         }
-        
-        //Olha pra trás Caverna
-        if (contadorDialogo == 0 && mandouTrigger == false)
+        //Old man procura Caverna
+        if (contadorDialogo == 3)
         {
-            FindObjectOfType<CharCutsceneController>().OlhaAtrasTutorial();
-            mandouTrigger = true;
+            if(isCaveDialogoInicio)
+            {
+                FindObjectOfType<AnciaoScript>().AnciaoProcurando();
+            }         
         }
-        
-        //Pula Caverna
-       if (contadorDialogo == 1 && mandouTrigger == false)
+        //Old man ativa portal Caverna
+        if (contadorDialogo == 6 && mandouTrigger == false)
         {
-            FindObjectOfType<CharCutsceneController>().PuloDuroTutorial();
-            mandouTrigger = true;
-        }          
-
-        //Pula Blu
-        if (contadorDialogo == 18 && mandouTrigger == false && isNaveFinalBlue == false)
-        {
-            FindObjectOfType<BlueAndaDialogo>().PulaBlue();
-            mandouTrigger = true;
+            if (isCaveDialogoFinal)
+            {
+                FindObjectOfType<AnciaoScript>().AnciaoAtivaPortal();
+                mandouTrigger = true;
+            }
+           
+            if(isCaveDialogoFinal)
+            {
+                FindObjectOfType<PortalTriggerPlayer>().VelhoAtivaPortal();
+            }
         }
 
        //CheckCaverna
        if (contadorDialogo == 13 && mandouTrigger == false)
         {
-            FindObjectOfType<CharCutsceneController>().CheckTutorial();
-            mandouTrigger = true;
-        }
-
-        //Troféu Caverna
-        if (contadorDialogo == 1 && mandouTrigger == false)
-        {
-            FindObjectOfType<CharCutsceneController>().TrofeuTutorial();
-            mandouTrigger = true;
-        }
-        
-        //Old man ativa portal Caverna
-        if (contadorDialogo == 6 && mandouTrigger == false)
-        {
-            FindObjectOfType<PortalTriggerPlayer>().VelhoAtivaPortal();
-            FindObjectOfType<AnciaoScript>().AnciaoAtivaPortal();
+            FindObjectOfType<CharCutsceneController>().CheckPinky();
             mandouTrigger = true;
         }
         
         //Troféu Nave
         if (contadorDialogo == 14 && mandouTrigger == false)
         {
-            FindObjectOfType<CharCutsceneController>().TrofeuNave();
-            mandouTrigger = true;
+            if(isNaveDialogoFinal)
+            {
+                FindObjectOfType<CharCutsceneController>().TrofeuPinky();
+                mandouTrigger = true;
+            }
         }        
-
-        //Old man procura Caverna
-        if (contadorDialogo == 3)
+        //Pula Blu
+        if (contadorDialogo == 18 && mandouTrigger == false)
         {
-            FindObjectOfType<AnciaoScript>().AnciaoProcurando();
+            if (isNaveDialogoInicio)
+            {
+                FindObjectOfType<BlueAndaDialogo>().PulaBlue();
+                mandouTrigger = true;
+            }            
+        }             
+
+        if (contadorDialogo == 27 && mandouTrigger == false && Input.GetKeyDown(KeyCode.Return) && isNaveDialogoFinal == false)
+        {
+            FindObjectOfType<BlueAndaDialogo>().CorreDireita();
+            FindObjectOfType<CharCutsceneController>().CorreNavePink();
+            mandouTrigger = true;
         }
     }
 }
