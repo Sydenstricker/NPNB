@@ -7,6 +7,7 @@ public class BlueAndaDialogo : MonoBehaviour
     private Rigidbody2D body;
     private Animator blueAnimator;
     private float contaTempo = 0f;
+    private bool naoSeMova = false;
     [SerializeField] float velocidade = 2.5f;
     [SerializeField] private bool estaAndando = false;
     [SerializeField] float limiteAndar = 0f;
@@ -40,21 +41,24 @@ public class BlueAndaDialogo : MonoBehaviour
         {
             ParaBlue();
         }
-        if (DialogueCutsceneManager.isActive == false)
+        if (DialogueCutsceneManager.isActive == false && naoSeMova == false)
         {
             AndaBlue();
         }
     }
-    private void ParaBlue()
+    public void NAOSEMOVEBlue()
+    {
+        naoSeMova = true;
+    }
+    public void ParaBlue()
     {
         body.velocity = new Vector2(0, 0);
-        blueAnimator.SetFloat("Velocidade", 0);
-        //pinkyAnimator.SetBool("andando", false);
-    }
+        blueAnimator.SetBool("andar", false);        
+    } 
     public void AndaBlue()
     {
         body.velocity = new Vector2(velocidade, body.velocity.y);
-        blueAnimator.SetFloat("Velocidade", body.velocity.x);
+        blueAnimator.SetBool("andar", true);
     }
     public void AndaBlueESQ()
     {
@@ -83,12 +87,15 @@ public class BlueAndaDialogo : MonoBehaviour
         body.velocity = new Vector2(-5, 0);
         estaAndando = true;
     }
-    //private void ParaBlue()
-    //{
-       // body.velocity = new Vector2(0, 0);
-     //   estaAndando = false;
-   // }
-    
+   public void OlhaTrasBlue()
+    {
+        blueAnimator.SetBool("isOlhandoTras", true);
+    }
+    public void OlhaFrenteBlue()
+    {
+        blueAnimator.SetBool("isOlhandoTras", false);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 4)

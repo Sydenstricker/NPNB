@@ -44,8 +44,7 @@ public class CharCutsceneController : MonoBehaviour
         if (DialogueCutsceneManager.isActive == false)
         {
             AndaPinkTutorial();
-        }
-       
+        }     
 
     }
     
@@ -78,6 +77,16 @@ public class CharCutsceneController : MonoBehaviour
         pinkyAnimator.SetTrigger("olhaTras");
         Debug.Log("animacao olha para tras");
     }
+    public void OlhaAtrasFixoONPinky()
+    {
+        pinkyAnimator.SetBool("isOlhandoTras", true);
+        Debug.Log("animacao olha para tras");
+    }
+    public void OlhaAtrasFixoOFFPinky()
+    {
+        pinkyAnimator.SetBool("isOlhandoTras", false);
+        Debug.Log("animacao olha para tras");
+    }
     public void TrofeuPinky()
     {
         pinkyAnimator.SetTrigger("Trofeu");
@@ -93,7 +102,7 @@ public class CharCutsceneController : MonoBehaviour
         pinkyAnimator.SetTrigger("puloDuro");
         Debug.Log("animacao pulo Duro");        
     }
-    public void CorreNavePink()
+    public void CorrePink()
     {
         pinkyAnimator.SetTrigger("correr");        
     }

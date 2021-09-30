@@ -66,11 +66,10 @@ public class DialogueCutsceneManager : MonoBehaviour
     {
         mandouTrigger = false;
         activeMessage++;
-        //activeSFX++;
+        
         if (activeMessage < currentMessages.Length)
         {
             DisplayMessage();
-            //PlayDialogueSFX();
             contadorDialogo++;
         }       
         else {
@@ -87,8 +86,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     }    
     void Start()
     {
-        backgroundBox.transform.localScale = Vector3.zero;
-        //PinkyAnimator = GetComponent<Animator>();
+        backgroundBox.transform.localScale = Vector3.zero;        
     }        
     void Update()
     {
@@ -101,16 +99,19 @@ public class DialogueCutsceneManager : MonoBehaviour
         {
             FindObjectOfType<BlueAndaDialogo>().AndaBlue();
             mandouTrigger = true;
-            bBlueNaveFinal = true;
-            
+            bBlueNaveFinal = true;            
         }
         
-        if (contadorDialogo == 0 && mandouTrigger == false)
+        if (contadorDialogo == 0 )
         {
             if(isCaveDialogoInicio)
             {
                 FindObjectOfType<CharCutsceneController>().OlhaAtrasPinky();
                 mandouTrigger = true;
+            }
+            if (isNaveDialogoFinal)
+            {
+                FindObjectOfType<BlueAndaDialogo>().OlhaTrasBlue();
             }
         }
                       
@@ -127,9 +128,11 @@ public class DialogueCutsceneManager : MonoBehaviour
                 FindObjectOfType<BlueAndaDialogo>().AndaBlueESQ();
                 mandouTrigger = true;                
             }
+            
+            
             if (isCaveDialogoFinal)
             {
-                FindObjectOfType<CharCutsceneController>().TrofeuPinky();
+                FindObjectOfType<CharCutsceneController>().TrofeuPinky();                
                 mandouTrigger = true;
             }
         }                       
@@ -161,24 +164,64 @@ public class DialogueCutsceneManager : MonoBehaviour
             {
                 FindObjectOfType<PortalTriggerPlayer>().VelhoAtivaPortal();
             }
+            
         }
-
-       //CheckCaverna
-       if (contadorDialogo == 13 && mandouTrigger == false)
-        {
-            FindObjectOfType<CharCutsceneController>().CheckPinky();
-            mandouTrigger = true;
-        }
-        
-        //Troféu Nave
-        if (contadorDialogo == 14 && mandouTrigger == false)
+        if(contadorDialogo == 7 && mandouTrigger == false)
         {
             if(isNaveDialogoFinal)
             {
-                FindObjectOfType<CharCutsceneController>().TrofeuPinky();
+                FindObjectOfType<BlueAndaDialogo>().NAOSEMOVEBlue();
                 mandouTrigger = true;
             }
-        }        
+            
+        }
+        if (contadorDialogo == 8 && mandouTrigger == false)
+        {
+            if (isNaveDialogoFinal)
+            {
+                FindObjectOfType<CharCutsceneController>().TrofeuPinky();
+                FindObjectOfType<BlueAndaDialogo>().OlhaFrenteBlue();
+                FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoONPinky();
+                FindObjectOfType<BlueAndaDialogo>().ParaBlue();
+                mandouTrigger = true;
+            }
+        }
+        if (contadorDialogo == 11 && mandouTrigger == false)
+        {
+            if (isNaveDialogoFinal)
+            {
+                FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoOFFPinky();
+                mandouTrigger = true;
+            }
+        }
+        if (contadorDialogo == 12 && mandouTrigger == false)
+        {
+            if (isNaveDialogoFinal)
+            {
+                FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoONPinky();
+                mandouTrigger = true;
+            }
+        }
+        //CheckCaverna
+        if (contadorDialogo == 13 && mandouTrigger == false)
+        {
+            if(isCaveDialogoInicio)
+            {
+                FindObjectOfType<CharCutsceneController>().CheckPinky();
+                mandouTrigger = true;
+            }
+        }             
+        
+        if (contadorDialogo == 17 && mandouTrigger == false)
+        {
+            if (isNaveDialogoFinal)
+            {
+                FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoOFFPinky();
+                FindObjectOfType<CharCutsceneController>().CorrePink();
+                mandouTrigger = true;
+            }
+        }
+
         //Pula Blu
         if (contadorDialogo == 18 && mandouTrigger == false)
         {
@@ -186,14 +229,31 @@ public class DialogueCutsceneManager : MonoBehaviour
             {
                 FindObjectOfType<BlueAndaDialogo>().PulaBlue();
                 mandouTrigger = true;
-            }            
-        }             
-
-        if (contadorDialogo == 27 && mandouTrigger == false && Input.GetKeyDown(KeyCode.Return) && isNaveDialogoFinal == false)
+            }           
+            if (isNaveDialogoFinal)
+            {
+                FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoONPinky();
+                mandouTrigger = true;
+            }
+        }
+        if (contadorDialogo == 26 && mandouTrigger == false)
         {
-            FindObjectOfType<BlueAndaDialogo>().CorreDireita();
-            FindObjectOfType<CharCutsceneController>().CorreNavePink();
-            mandouTrigger = true;
+            if (isNaveDialogoFinal)
+            {
+                FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoOFFPinky();
+                FindObjectOfType<CharCutsceneController>().CorrePink();
+                mandouTrigger = true;
+            }
+        }
+
+        if (contadorDialogo == 27 && mandouTrigger == false && Input.GetKeyDown(KeyCode.Return) )
+        {
+            if(isNaveDialogoInicio)
+            {
+                FindObjectOfType<BlueAndaDialogo>().CorreDireita();
+                FindObjectOfType<CharCutsceneController>().CorrePink();
+                mandouTrigger = true;
+            }
         }
     }
 }
