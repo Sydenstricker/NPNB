@@ -179,10 +179,11 @@ public class DialogueCutsceneManager : MonoBehaviour
         {
             if (isNaveDialogoFinal)
             {
+                FindObjectOfType<PortalNaveFim>().AtivaPortalNaveFim();
                 FindObjectOfType<CharCutsceneController>().TrofeuPinky();
                 FindObjectOfType<BlueAndaDialogo>().OlhaFrenteBlue();
                 FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoONPinky();
-                FindObjectOfType<BlueAndaDialogo>().ParaBlue();
+                //FindObjectOfType<BlueAndaDialogo>().ParaBlue();
                 mandouTrigger = true;
             }
         }
@@ -199,6 +200,7 @@ public class DialogueCutsceneManager : MonoBehaviour
             if (isNaveDialogoFinal)
             {
                 FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoONPinky();
+                
                 mandouTrigger = true;
             }
         }
@@ -218,6 +220,7 @@ public class DialogueCutsceneManager : MonoBehaviour
             {
                 FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoOFFPinky();
                 FindObjectOfType<CharCutsceneController>().CorrePink();
+                FindObjectOfType<BlueAndaDialogo>().AndaBlue();
                 mandouTrigger = true;
             }
         }
@@ -242,6 +245,7 @@ public class DialogueCutsceneManager : MonoBehaviour
             {
                 FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoOFFPinky();
                 FindObjectOfType<CharCutsceneController>().CorrePink();
+                FindObjectOfType<BlueAndaDialogo>().AndaBlue();
                 mandouTrigger = true;
             }
         }
