@@ -74,7 +74,7 @@ public class PlayerCav : MonoBehaviour
                 
             }
 
-            if (grounded && (puloCount == 0) && footIsGrounded )
+            if (grounded && (puloCount == 0))
             {
                 animator.SetTrigger("Pulando");
                

@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
                 gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
             }
 
-            if (grounded && (puloCount == 0) && footIsGrounded)
+            if (grounded && (puloCount == 0))
             {
                 animator.SetTrigger("Pulando");
                 body.velocity = new Vector2(body.velocity.x, pulo);
