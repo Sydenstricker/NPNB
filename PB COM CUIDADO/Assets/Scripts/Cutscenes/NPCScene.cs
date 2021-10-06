@@ -12,11 +12,9 @@ public class NPCScene : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") == true)
         {
             trigger.StartDialogue();
-            Destroy(gameObject.GetComponent<Collider2D>());                      
+            Destroy(gameObject.GetComponent<Collider2D>());                  
 
-        }
-            
-    }   
-           
+        }            
+    }              
 }
        

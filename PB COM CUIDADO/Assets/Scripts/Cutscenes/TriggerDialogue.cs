@@ -9,29 +9,24 @@ public class TriggerDialogue : MonoBehaviour
     public Actor[] actors;
     public AudioClip[] messagesSFX;  
 
-
     public void StartDialogue()
     {
         FindObjectOfType<DialogueCutsceneManager>().OpenDialogue(messages, actors);
-    }  
-    
+    }      
 }
 [System.Serializable]
 public class Message
 {    
     public int actorId;
     public string message;
-    public AudioClip messageSFX;
-    
+    public AudioClip messageSFX;    
 }
 [System.Serializable]
 public class Actor
 {
     public string name;
-    //public Animator animacaoDialogo;
     public Sprite sprite;
-    public Animator bonecoAnimado;
-  
+    public Animator bonecoAnimado;  
 }
 
 

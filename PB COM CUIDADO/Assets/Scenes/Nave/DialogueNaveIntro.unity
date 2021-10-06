@@ -150,6 +150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portais Cav Dialogo Intro
       objectReference: {fileID: 0}
+    - target: {fileID: 8291881133026776213, guid: 3390ee6ebde2eba40a9535759aebcc87, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8291881133026776214, guid: 3390ee6ebde2eba40a9535759aebcc87, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -347,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a26abead4d8657640b29f8b1bbaa1b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocidade: 2.5
   estaAndando: 0
   limiteAndar: 1800
   delayBlueCorrer: 1.8
@@ -573,6 +578,22 @@ PrefabInstance:
     - target: {fileID: 912970754478286209, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_Name
       value: DialogueBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 912970754478286213, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
+      propertyPath: messageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    - target: {fileID: 912970754478286213, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
+      propertyPath: isCaveDialogoFinal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 912970754478286213, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
+      propertyPath: isNaveDialogoFinal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 912970754478286213, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
+      propertyPath: isCaveDialogoInicio
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 912970754478286213, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: isNaveDialogoInicio
@@ -1535,6 +1556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal Fade
       objectReference: {fileID: 0}
+    - target: {fileID: 6613138066442023448, guid: 7a50055d76625264bb8a0c1a79efb3ab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a50055d76625264bb8a0c1a79efb3ab, type: 3}
 --- !u!1 &1979567283
@@ -1887,8 +1912,16 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499642, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1413879
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499642, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499642, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.size
@@ -1995,6 +2028,10 @@ PrefabInstance:
     - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: messages.Array.data[12].message
       value: 'Espere por mim! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499645, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 405434327082499646, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: m_RootOrder

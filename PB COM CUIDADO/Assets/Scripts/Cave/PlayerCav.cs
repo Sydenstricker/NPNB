@@ -64,7 +64,7 @@ public class PlayerCav : MonoBehaviour
         {
             if ((puloCount == 1) && (puloDouble == true))
             {
-                animator.SetTrigger("Pulando");
+                animator.SetTrigger("PULODUPLO");
                 
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloDouble = true; //no tutorial deixar false
