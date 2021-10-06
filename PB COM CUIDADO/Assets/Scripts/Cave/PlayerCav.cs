@@ -74,7 +74,7 @@ public class PlayerCav : MonoBehaviour
                 
             }
 
-            if (grounded && (puloCount == 0))
+            if (grounded && (puloCount == 0) )
             {
                 animator.SetTrigger("Pulando");
                
@@ -97,8 +97,9 @@ public class PlayerCav : MonoBehaviour
                 animator.SetTrigger("Deslizando");
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
-
-                
+                animator.SetBool("isGrounded", true);
+                grounded = true;
+                puloCount = 0;
 
 
 
@@ -147,11 +148,7 @@ public class PlayerCav : MonoBehaviour
             animator.SetBool("isGrounded", true);
             grounded = true;
             puloCount = 0;            
-        }
-        if (collision.gameObject.layer == 6)
-        {
-            return;
-        }
+        }        
     }
     
     private void AtivarBoxCollider()

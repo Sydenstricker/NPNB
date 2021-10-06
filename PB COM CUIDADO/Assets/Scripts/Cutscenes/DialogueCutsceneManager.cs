@@ -102,6 +102,7 @@ public class DialogueCutsceneManager : MonoBehaviour
             bBlueNaveFinal = true;            
         }
         
+
         if (contadorDialogo == 0 )
         {
             if(isCaveDialogoInicio)
@@ -127,8 +128,7 @@ public class DialogueCutsceneManager : MonoBehaviour
                 FindObjectOfType<CharCutsceneController>().ExclamacaoPinky();
                 FindObjectOfType<BlueAndaDialogo>().AndaBlueESQ();
                 mandouTrigger = true;                
-            }
-            
+            }        
             
             if (isCaveDialogoFinal)
             {

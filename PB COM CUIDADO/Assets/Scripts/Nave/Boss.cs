@@ -9,6 +9,7 @@ public class Boss : MonoBehaviour
     [SerializeField] int scoreValue = 150;
     private Animator animator;
     //public bool bossMorreu = false;
+    
 
     [Header("Inimigo Atirando")]
     float shotCounter;
@@ -53,27 +54,10 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-        CountDownAndShoot();        
+          
     }
     
-    private void CountDownAndShoot()
-    {
-        shotCounter -= Time.deltaTime;
-        if (shotCounter <= 0f)
-        {
-            Fire();
-            shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
-        }
-    }
-    private void Fire()
-    {
-        GameObject laser = Instantiate(
-            projectile,
-            transform.position,
-            Quaternion.identity) as GameObject;
-        laser.GetComponent<Rigidbody2D>().velocity = new Vector2(-projectileSpeed, 0);
-        AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position, shootSoundVolume);
-    }
+   
     private void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();

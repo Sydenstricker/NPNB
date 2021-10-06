@@ -7,6 +7,7 @@ public class ParalaxCAV : MonoBehaviour
     private float length, startpos;
     public GameObject cam;
     public float parallaxEffect = 0f;
+    
     void Start()
     {
         startpos = transform.position.x;

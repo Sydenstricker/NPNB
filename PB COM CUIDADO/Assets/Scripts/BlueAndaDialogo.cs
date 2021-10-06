@@ -62,8 +62,10 @@ public class BlueAndaDialogo : MonoBehaviour
     }
     public void AndaBlueESQ()
     {
-        body.velocity = new Vector2(-5, 0);
+        body.velocity = new Vector2(velocidade, 0);
+        blueAnimator.SetBool("andar", true);
         estaAndando = true;
+        naoSeMova = false;
     }
     public void CorreDireita()
     {
