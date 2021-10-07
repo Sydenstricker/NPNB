@@ -8,6 +8,7 @@ public class BlueAndaDialogo : MonoBehaviour
     private Animator blueAnimator;
     private float contaTempo = 0f;
     private bool naoSeMova = false;
+    private bool andaPELOAMORDEDEUS = false;
     [SerializeField] float velocidade = 2.5f;
     [SerializeField] private bool estaAndando = false;
     [SerializeField] float limiteAndar = 0f;
@@ -34,11 +35,20 @@ public class BlueAndaDialogo : MonoBehaviour
         {
             blueAnimator.SetBool("andar", false);
             ParaBlue();
+            andaPELOAMORDEDEUS = false;
             contaTempo = 0;
         }
         if (DialogueCutsceneManager.isActive == true)
         {
-            ParaBlue();
+            if(andaPELOAMORDEDEUS)
+            {
+                AndaBlue();
+            }
+            else
+            {
+                ParaBlue();
+            }
+           
         }
         if (DialogueCutsceneManager.isActive == false && naoSeMova == false )
         {
@@ -102,12 +112,17 @@ public class BlueAndaDialogo : MonoBehaviour
         blueAnimator.SetBool("isOlhandoTras", false);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 4)
         {
             ParaBlue();
+            andaPELOAMORDEDEUS = false;
         }
-    }  
+    }    
     
+    public void ANDAPELOAMORDEDEUS ()
+    {
+        andaPELOAMORDEDEUS = true;
+    }
 }

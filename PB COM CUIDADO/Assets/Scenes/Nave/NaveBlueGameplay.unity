@@ -986,7 +986,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1508517585
 PrefabInstance:
@@ -1484,6 +1484,10 @@ PrefabInstance:
     - target: {fileID: 6791901283950422550, guid: 5d3eac3c499c2c84995a451dbf397511, type: 3}
       propertyPath: m_Name
       value: coracao azul teste
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791901283950422550, guid: 5d3eac3c499c2c84995a451dbf397511, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d3eac3c499c2c84995a451dbf397511, type: 3}
@@ -2113,7 +2117,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2424,7 +2428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9221056251556926084, guid: e408eca913d29534eb7574f410925a96, type: 3}
       propertyPath: ptsSpawnBoss
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 9221056251556926084, guid: e408eca913d29534eb7574f410925a96, type: 3}
       propertyPath: startingWave

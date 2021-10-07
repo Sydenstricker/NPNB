@@ -127,8 +127,8 @@ public class DialogueCutsceneManager : MonoBehaviour
             if (isNaveDialogoInicio)
             {
                 FindObjectOfType<CharCutsceneController>().ExclamacaoPinky();
+                FindObjectOfType<BlueAndaDialogo>().ANDAPELOAMORDEDEUS();
                 FindObjectOfType<BlueAndaDialogo>().AndaBlueESQ();
-                //FindObjectOfType<BlueAndaDialogo>().CorreDireita();
                 mandouTrigger = true;                
             }        
             
