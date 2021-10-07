@@ -101,7 +101,8 @@ public class DialogueCutsceneManager : MonoBehaviour
             mandouTrigger = true;
             bBlueNaveFinal = true;            
         }
-        
+       
+
 
         if (contadorDialogo == 0 )
         {
@@ -127,6 +128,7 @@ public class DialogueCutsceneManager : MonoBehaviour
             {
                 FindObjectOfType<CharCutsceneController>().ExclamacaoPinky();
                 FindObjectOfType<BlueAndaDialogo>().AndaBlueESQ();
+                //FindObjectOfType<BlueAndaDialogo>().CorreDireita();
                 mandouTrigger = true;                
             }        
             

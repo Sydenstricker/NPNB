@@ -21,14 +21,13 @@ public class BlueAndaDialogo : MonoBehaviour
         blueAnimator = GetComponent<Animator>();
     }
 
-
-    // Update is called once per frame
     void Update()
     {        
         if(estaAndando)
         {
             contaTempo++;
             blueAnimator.SetBool("andar", true);
+            AndaBlueESQ();
             Debug.Log(contaTempo);
         }
         if(contaTempo >= limiteAndar)
@@ -41,11 +40,12 @@ public class BlueAndaDialogo : MonoBehaviour
         {
             ParaBlue();
         }
-        if (DialogueCutsceneManager.isActive == false && naoSeMova == false)
+        if (DialogueCutsceneManager.isActive == false && naoSeMova == false )
         {
             AndaBlue();
         }
     }
+
     public void NAOSEMOVEBlue()
     {
         naoSeMova = true;
@@ -53,19 +53,21 @@ public class BlueAndaDialogo : MonoBehaviour
     public void ParaBlue()
     {
         body.velocity = new Vector2(0, 0);
-        blueAnimator.SetBool("andar", false);        
+        blueAnimator.SetBool("andar", false);
+        
     } 
     public void AndaBlue()
     {
         body.velocity = new Vector2(velocidade, body.velocity.y);
         blueAnimator.SetBool("andar", true);
+        //naoSeMova = false; //AKI
     }
     public void AndaBlueESQ()
     {
         body.velocity = new Vector2(velocidade, 0);
         blueAnimator.SetBool("andar", true);
         estaAndando = true;
-        naoSeMova = false;
+        //naoSeMova = false;
     }
     public void CorreDireita()
     {
@@ -77,9 +79,11 @@ public class BlueAndaDialogo : MonoBehaviour
     }
     private IEnumerator CorreBlueDir()
     {
+        naoSeMova = true;
+        estaAndando = false;
         yield return new WaitForSeconds(delayBlueCorrer);
         transform.rotation = Quaternion.AngleAxis(180, Vector3.down);
-        body.velocity = new Vector2(3, 0);
+        body.velocity = new Vector2(-velocidade, 0);
         blueAnimator.SetBool("correr", true);
         Debug.Log("CORRE BLUE MEU FILHO");
     }

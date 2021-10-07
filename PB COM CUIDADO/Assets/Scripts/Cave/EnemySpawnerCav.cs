@@ -10,8 +10,7 @@ public class EnemySpawnerCav : MonoBehaviour
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        //GetComponent<Player>().pontosIDcoletados;
-        do
+       do
         {
             yield return StartCoroutine(SpawnAllWaves());
         }

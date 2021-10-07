@@ -6,6 +6,7 @@ public class coracaoAZul : MonoBehaviour
 {
     private Animator corAzul;
     private int vidaCoracapSpriteAzul = 200;
+    private bool playerMorreu = false;
     void Start()
     {
         corAzul = GetComponent<Animator>();
@@ -16,21 +17,21 @@ public class coracaoAZul : MonoBehaviour
     {
         PegaVidaNave();
 
-        if (vidaCoracapSpriteAzul >= 200)
+        if (vidaCoracapSpriteAzul >= 500)
         {
-            corAzul.SetFloat("vida", 200);
+            corAzul.SetInteger("vida",4);
         }
-        if (vidaCoracapSpriteAzul <= 120 && vidaCoracapSpriteAzul >= 40)
+        if ((vidaCoracapSpriteAzul <= 320) && (vidaCoracapSpriteAzul >= 240))
         {
-            corAzul.SetFloat("vida", 120);
+            corAzul.SetInteger("vida", 3);
         }
-        if (vidaCoracapSpriteAzul < 41 && vidaCoracapSpriteAzul >= 1)
+        if ((vidaCoracapSpriteAzul < 241) && (vidaCoracapSpriteAzul > 1))
         {
-            corAzul.SetFloat("vida", 40);
+            corAzul.SetInteger("vida", 2);
         }
-        if (vidaCoracapSpriteAzul < 1)
+        if ((vidaCoracapSpriteAzul < 1) || (playerMorreu))
         {
-            corAzul.SetFloat("vida", 0);
+            corAzul.SetInteger("vida", 1);
         }
 
 
@@ -38,6 +39,11 @@ public class coracaoAZul : MonoBehaviour
 
     private void PegaVidaNave()
     {
+        if (FindObjectOfType<Player>() == null )
+        {
+            playerMorreu = true;
+            return;
+        }
         vidaCoracapSpriteAzul = FindObjectOfType<Player>().GetHealth();
     }
 }
