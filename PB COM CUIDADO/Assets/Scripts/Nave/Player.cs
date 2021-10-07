@@ -92,11 +92,12 @@ public class Player : MonoBehaviour
     }
     private void Fire()
     {
-        if (Input.GetButtonDown("Fire1"))
+        //Fire1
+        if (Input.GetButtonDown("Jump"))
         {
            firingCoroutine = StartCoroutine(FireHoldingFire());
         }
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp("Jump"))
         {
            StopCoroutine(firingCoroutine);
         }
