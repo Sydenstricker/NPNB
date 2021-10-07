@@ -208,7 +208,11 @@ public class PlayerCav : MonoBehaviour
         velocidade = 0; pulo = 0;
         animator.SetTrigger("Morreu");
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
-        FindObjectOfType<Level>().LoadGameOverCav();
+        FindObjectOfType<GamePlayCavernaCanvas>().RestartGame();
+        //FindObjectOfType<GamePlayCavernaCanvas>().GetComponent<DeathMenu>().AtivaMenuMorteCavGameplay();
+        //FindObjectOfType<DeathMenu>().AtivaMenuMorteCavGameplay();
+        //FindObjectOfType<DeathMenu>().AtivaMenuMorteCavGameplay();
+        //FindObjectOfType<Level>().LoadGameOverCav();
     }
     public int GetHealth()
     {

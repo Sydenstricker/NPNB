@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class coracaoAZul : MonoBehaviour
 {
     private Animator corAzul;
@@ -33,10 +35,7 @@ public class coracaoAZul : MonoBehaviour
         {
             corAzul.SetInteger("vida", 1);
         }
-
-
     }
-
     private void PegaVidaNave()
     {
         if (FindObjectOfType<Player>() == null )
@@ -46,4 +45,6 @@ public class coracaoAZul : MonoBehaviour
         }
         vidaCoracapSpriteAzul = FindObjectOfType<Player>().GetHealth();
     }
+    
 }
+

@@ -90,7 +90,8 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetTrigger("Deslizando");
                 //gameObject.GetComponent<BoxCollider2D>().size = new Vector2 (0.01f,0.01f);
-                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                GetComponentInChildren<BoxCollider2D>().enabled = false;
+                //gameObject.GetComponent<BoxCollider2D>().enabled = false;
               
 
                 //body.velocity = new Vector2(body.velocity.x, pulo);

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class DeathMenu : MonoBehaviour
 {
     public string cena;
-
+    private int vidaPlayer;
     public void RestartGame()
     {
         FindObjectOfType<GameManager>().Restart();
@@ -16,5 +16,9 @@ public class DeathMenu : MonoBehaviour
     {
         SceneManager.LoadScene(cena);
     }
-
+    public void RestartGameCav()
+    {
+        Debug.Log("apertou butao restart");
+        FindObjectOfType<GamePlayCavernaCanvas>().RestartLevelCaverna();
+    }
 }
