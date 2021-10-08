@@ -11,7 +11,11 @@ public class DeathMenu : MonoBehaviour
     {
         FindObjectOfType<GameManager>().Restart();
     }
-
+    public void AbreSceneTut()
+    {
+        SceneManager.LoadScene("Tutorial");
+        
+    }
     public void VoltarMenu()
     {
         SceneManager.LoadScene(cena);
@@ -20,5 +24,9 @@ public class DeathMenu : MonoBehaviour
     {
         Debug.Log("apertou butao restart");
         FindObjectOfType<GamePlayCavernaCanvas>().RestartLevelCaverna();
+    }
+    public void NextScene()
+    {
+        SceneManager.LoadScene("DialogueCaveIntro");
     }
 }

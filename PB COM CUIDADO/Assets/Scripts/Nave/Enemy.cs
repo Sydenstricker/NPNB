@@ -10,8 +10,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] int chanceMaxSoltarPID = 100;
     [SerializeField] int chanceMinSoltarPID = 1;
     [SerializeField] int inimigosSoltamPI;
+    [SerializeField] bool isNaveBomber = false;
 
     [SerializeField] GameObject PIPrefab;
+    private Animator animator;
     //[SerializeField] GameObject spriteTomouDano; spawna sprite quando toma dano
 
     [Header("Inimigo Atirando")]
@@ -40,6 +42,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         CreateLaserParent();
         CreatePIParent();
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
@@ -98,6 +101,7 @@ public class Enemy : MonoBehaviour
        */ //spawna sprite quando toma dano
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
+        PiscaDano();
         if (health <= 0)
         {
             Morreu();
@@ -121,4 +125,13 @@ public class Enemy : MonoBehaviour
             PI.transform.parent = pontosIDParent.transform;
         }        
     }
+    private void PiscaDano()
+    {
+        if(isNaveBomber)
+        {
+            animator.SetTrigger("Ai");
+        }
+        
+    }
+
 }

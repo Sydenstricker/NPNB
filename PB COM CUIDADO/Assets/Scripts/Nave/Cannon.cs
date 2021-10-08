@@ -13,6 +13,7 @@ public class Cannon : MonoBehaviour
     [SerializeField] GameObject morteVFX;
     [SerializeField] float durationOfExplosion = 1f;
     [SerializeField] int pontosPorInimigo;
+    private bool isBossDead = false;
 
     [Header("Sons")]
     [SerializeField] AudioClip deathSFX;
@@ -43,7 +44,7 @@ public class Cannon : MonoBehaviour
     private void CountDownAndShoot()
     {
         shotCounter -= Time.deltaTime;
-        if (shotCounter <= 0f)
+        if (shotCounter <= 0f && isBossDead == false)
         {
             Fire();
             shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
@@ -51,8 +52,6 @@ public class Cannon : MonoBehaviour
     }
     private void Fire()
     {
-
-
         GameObject laser = Instantiate(
         projectile,
         transform.position,
@@ -60,5 +59,9 @@ public class Cannon : MonoBehaviour
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(-projectileSpeed, 0);
         AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position, shootSoundVolume);
 
+    }
+    public void CannonStopShooting()
+    {
+        isBossDead = true;
     }
 }

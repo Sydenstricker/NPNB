@@ -169,7 +169,11 @@ public class PlayerController : MonoBehaviour
             gameManager.AddPontos(10);
             soundManager.PlayAudio("moeda");
         }
-
+        if (other.tag == "MenuScoreTut")
+        {
+            Destroy(other.gameObject);
+            gameManager.HighScoreTut();
+        }
         if (other.gameObject.layer == 0)
         {
             footIsGrounded = true;

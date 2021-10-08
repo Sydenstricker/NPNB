@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
     [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
     [SerializeField] AudioClip shootSound;
     [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.25f;
+    [SerializeField] AudioClip danoBossSFX;
+    [SerializeField] [Range(0, 1)] float volumeDanoBoss = 0.75f;
+
 
     [Header("Projectile Shoot")]
     [SerializeField] GameObject laserPrefab;
@@ -50,6 +53,11 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.gameObject.CompareTag("Tiro Boss"))
+        {
+            TomouTiroBoss();
+            Debug.Log("tomou tiro boss");
+        }
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return;}
         TomarDano(damageDealer);
@@ -141,4 +149,29 @@ public class Player : MonoBehaviour
     {
         pontosIDcoletados++;
     }
+    private void TomouTiroBoss()
+    {
+        AudioSource.PlayClipAtPoint(danoBossSFX, Camera.main.transform.position, volumeDanoBoss);
+        StartCoroutine(TremePlayer(0.6f,0.1f));
+    }
+    IEnumerator TremePlayer(float duration, float magnetude)
+    {
+        Vector2 originalPos = transform.position;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            float x = Random.Range(-1f, 1f) * magnetude;
+            float y = Random.Range(-1f, 1f) * magnetude;
+
+            transform.position = new Vector2(x, y);
+
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+        transform.position = originalPos;
+        Debug.Log("efeito de tremer ao tomar tiro funcionou");
+    }
+    
 }

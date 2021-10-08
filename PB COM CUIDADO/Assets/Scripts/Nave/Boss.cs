@@ -8,6 +8,8 @@ public class Boss : MonoBehaviour
     [SerializeField] float health = 100f;
     [SerializeField] int scoreValue = 150;
     private Animator animator;
+    [SerializeField] GameObject explosoes;
+    [SerializeField] float vidaBossSegundaParte = 100f;
     //public bool bossMorreu = false;
     
 
@@ -54,7 +56,22 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-          
+          if (health == vidaBossSegundaParte)
+         {
+            return;
+         }
+        if (health == 0)
+        {
+            //explosoes = Instantiate(transform.localPosition, Quaternion.identity);
+            //Instantiate(explosoes, transform.localPosition, transform.localPosition);
+            Instantiate(explosoes);
+            Instantiate(explosoes);
+            Instantiate(explosoes);
+            Instantiate(explosoes);
+            Instantiate(explosoes);
+            Instantiate(explosoes);
+            Instantiate(explosoes);
+        }
     }
     
    
@@ -81,10 +98,29 @@ public class Boss : MonoBehaviour
     {
         //bossMorreu = true;
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
-        Destroy(gameObject);
-        GameObject explosion = Instantiate(morteVFX, transform.position, transform.rotation);
-        Destroy(explosion, durationOfExplosion);
+        animator.SetTrigger("Morreu");
+        ExplosoesFreneticas();
+        GetComponentInChildren<Cannon>().CannonStopShooting();
+        //Instantiate(GetComponentInChildren <[GameObject] >);
+      
+        //Destroy(gameObject);
+        //GameObject explosion = Instantiate(morteVFX, transform.position, transform.rotation);
+        //Destroy(explosion, durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
         FindObjectOfType<Level>().LoadCinematicaFinal();       
-    }       
+    }
+    private IEnumerator ExplosoesFreneticas()
+    {
+        /*    
+        var newEnemy = Instantiate(
+         waveConfig.GetEnemyPrefab(),
+         waveConfig.GetWaypoints()[0].transform.position,
+         Quaternion.identity);
+        newEnemy.transform.parent = enemyParent.transform;
+        newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
+        yield return new WaitForSeconds(1f);
+        */
+        yield return new WaitForSeconds(1f);
+
+    }
 }

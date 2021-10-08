@@ -53,6 +53,7 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Cave\GamePlayCavernaCanvas.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\NPCScene.cs" />
     <Compile Include="Assets\Scripts\PIDisplay.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTween.cs" />
@@ -145,7 +146,7 @@
     <Compile Include="Assets\Scripts\Cave\EnemyPathingCav.cs" />
     <Compile Include="Assets\Scripts\Tutorial\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Cave\MoedaCav.cs" />
-    <Compile Include="Assets\coracaoAZul.cs" />
+    <Compile Include="Assets\Scripts\Nave\coracaoAZul.cs" />
     <Compile Include="Assets\LeanTween\Framework\LTDescrOptional.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralEasingTypes.cs" />
     <Compile Include="Assets\Scripts\Nave\BossPathing.cs" />
@@ -156,7 +157,8 @@
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
     <Compile Include="Assets\Scripts\Nave\Player.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
-    <Compile Include="Assets\GamePlayCavernaCanvas.cs" />
+    <Compile Include="Assets\AtivaScoreMenuTut.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\ScoreMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
