@@ -156,13 +156,13 @@ public class Player : MonoBehaviour
     }
     IEnumerator TremePlayer(float duration, float magnetude)
     {
-        Vector2 originalPos = transform.position;
+        Vector2 originalPos = transform.localPosition;
         float elapsed = 0f;
 
         while (elapsed < duration)
         {
-            float x = Random.Range(-1f, 1f) * magnetude;
-            float y = Random.Range(-1f, 1f) * magnetude;
+            float x = originalPos.x +(Random.Range(-1f, 1f) * magnetude);
+            float y = originalPos.y + (Random.Range(-1f, 1f) * magnetude);
 
             transform.position = new Vector2(x, y);
 
