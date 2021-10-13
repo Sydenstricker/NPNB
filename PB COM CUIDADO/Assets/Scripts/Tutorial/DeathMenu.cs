@@ -23,7 +23,9 @@ public class DeathMenu : MonoBehaviour
     public void RestartGameCav()
     {
         Debug.Log("apertou butao restart");
-        FindObjectOfType<GamePlayCavernaCanvas>().RestartLevelCaverna();
+        FindObjectOfType<GameSession>().ResetGame();
+        SceneManager.LoadScene("CavernaGameplay");
+        //FindObjectOfType<GamePlayCavernaCanvas>().RestartLevelCaverna();
     }
     public void NextScene()
     {
