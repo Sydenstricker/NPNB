@@ -21953,6 +21953,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &498905254
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4561854376873557251, guid: 8b3008f1411edd74b9ed2d5d7d621073, type: 3}
+      propertyPath: m_Name
+      value: Game Session
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940452702893687519, guid: 8b3008f1411edd74b9ed2d5d7d621073, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940452702893687519, guid: 8b3008f1411edd74b9ed2d5d7d621073, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1545.0168
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940452702893687519, guid: 8b3008f1411edd74b9ed2d5d7d621073, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 409.35373
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940452702893687519, guid: 8b3008f1411edd74b9ed2d5d7d621073, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1537.9905
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940452702893687519, guid: 8b3008f1411edd74b9ed2d5d7d621073, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940452702893687519, guid: 8b3008f1411edd74b9ed2d5d7d621073, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940452702893687519, guid: 8b3008f1411edd74b9ed2d5d7d621073, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940452702893687519, guid: 8b3008f1411edd74b9ed2d5d7d621073, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940452702893687519, guid: 8b3008f1411edd74b9ed2d5d7d621073, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940452702893687519, guid: 8b3008f1411edd74b9ed2d5d7d621073, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940452702893687519, guid: 8b3008f1411edd74b9ed2d5d7d621073, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8b3008f1411edd74b9ed2d5d7d621073, type: 3}
 --- !u!1 &517116983
 GameObject:
   m_ObjectHideFlags: 0
@@ -57154,6 +57211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause
       objectReference: {fileID: 0}
+    - target: {fileID: 1602887593382327474, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1602887593382327475, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -57253,6 +57314,22 @@ PrefabInstance:
     - target: {fileID: 1602887593704634518, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: VoltaMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224275703971474378, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1466462513}
+    - target: {fileID: 4224275703971474378, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartLevelTut
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599948336387059053, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -49
+      objectReference: {fileID: 0}
+    - target: {fileID: 7412037887017433114, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}

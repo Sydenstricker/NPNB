@@ -39,4 +39,23 @@ public class LevelLoader : MonoBehaviour
     {
         QuitGame();
     }
+    public void RestartLevelTut()
+    {
+        FindObjectOfType<PauseMenu>().Resume();
+        FindObjectOfType<GameSession>().ResetGame();
+        SceneManager.LoadScene("Tutorial");
+    }
+    public void RestartLevelCav()
+    {
+        FindObjectOfType<PauseMenu>().Resume();
+        FindObjectOfType<GameSession>().ResetGame();
+        SceneManager.LoadScene("CavernaGameplay");
+    }
+    public void RestartLevelNave()
+    {
+        FindObjectOfType<PauseMenu>().Resume();
+        FindObjectOfType<GameSession>().ResetGame();
+        SceneManager.LoadScene("NaveBlueGameplay");
+    }
+
 }
