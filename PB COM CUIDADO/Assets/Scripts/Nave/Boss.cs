@@ -52,28 +52,7 @@ public class Boss : MonoBehaviour
     {
         yield return new WaitForSeconds(tempoIntroBoss);
         AudioSource.PlayClipAtPoint(introSFX, Camera.main.transform.position, volumeIntro);
-    }
-
-    void Update()
-    {
-          if (health == vidaBossSegundaParte)
-         {
-            return;
-         }
-        if (health == 0)
-        {
-            //explosoes = Instantiate(transform.localPosition, Quaternion.identity);
-            //Instantiate(explosoes, transform.localPosition, transform.localPosition);
-            Instantiate(explosoes);
-            Instantiate(explosoes);
-            Instantiate(explosoes);
-            Instantiate(explosoes);
-            Instantiate(explosoes);
-            Instantiate(explosoes);
-            Instantiate(explosoes);
-        }
-    }
-    
+    }          
    
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -111,16 +90,14 @@ public class Boss : MonoBehaviour
     }
     private IEnumerator ExplosoesFreneticas()
     {
-        /*    
-        var newEnemy = Instantiate(
-         waveConfig.GetEnemyPrefab(),
-         waveConfig.GetWaypoints()[0].transform.position,
-         Quaternion.identity);
-        newEnemy.transform.parent = enemyParent.transform;
-        newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
+
+        GetComponentInChildren<Animator>().SetTrigger("BossMorreu");
+         //transform.position,
+         //Quaternion.identity);
+        //newEnemy.transform.parent = enemyParent.transform;
+        //newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
         yield return new WaitForSeconds(1f);
-        */
-        yield return new WaitForSeconds(1f);
+       
 
     }
 }

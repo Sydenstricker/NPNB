@@ -9,7 +9,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] int scoreValue = 150;
     [SerializeField] int chanceMaxSoltarPID = 100;
     [SerializeField] int chanceMinSoltarPID = 1;
-    [SerializeField] int inimigosSoltamPI;
+    private int inimigosSoltamPI;
+    private int inimigosSoltamHP;
+    [SerializeField] int chanceMaxSoltarHP = 100;
+    [SerializeField] int chanceMinSoltarHP = 1;
     [SerializeField] bool isNaveBomber = false;
 
     [SerializeField] GameObject PIPrefab;
@@ -115,6 +118,7 @@ public class Enemy : MonoBehaviour
         Destroy(explosion, durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
         SpawnRandomPI();
+        SpawnRandomHP();
     }
     private void SpawnRandomPI()
     {
@@ -124,6 +128,15 @@ public class Enemy : MonoBehaviour
             GameObject PI = Instantiate(PIPrefab, transform.position, Quaternion.identity) as GameObject;
             PI.transform.parent = pontosIDParent.transform;
         }        
+    }
+    private void SpawnRandomHP()
+    {
+        inimigosSoltamHP = Random.Range(chanceMinSoltarHP, chanceMaxSoltarHP);
+        if (inimigosSoltamHP <= 10)
+        {
+            GameObject HP = Instantiate(PIPrefab, transform.position, Quaternion.identity) as GameObject;
+            //HP.transform.parent = pontosIDParent.transform;
+        }
     }
     private void PiscaDano()
     {
