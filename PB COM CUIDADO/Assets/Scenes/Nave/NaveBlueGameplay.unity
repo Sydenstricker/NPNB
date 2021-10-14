@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &79479419 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 810673893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &127355698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -144,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d318502c769034c40ba50a2e25066180, type: 3}
     - target: {fileID: 2878337594822490228, guid: 56d6e8ddb77cb0449874028348b5c46f, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2878337594822490228, guid: 56d6e8ddb77cb0449874028348b5c46f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -197,6 +202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 144050257}
+  - component: {fileID: 144050258}
   m_Layer: 0
   m_Name: BG SPRITE
   m_TagString: Untagged
@@ -216,9 +222,205 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1623340959}
+  - {fileID: 1588077596}
+  - {fileID: 1367303012}
+  - {fileID: 480750856}
+  - {fileID: 1470631447}
+  - {fileID: 79479419}
+  - {fileID: 1703410153}
+  - {fileID: 1279673812}
+  - {fileID: 964227703}
+  - {fileID: 2046417029}
+  - {fileID: 1211106440}
+  - {fileID: 603294384}
+  - {fileID: 1019114516}
+  - {fileID: 1377778421}
+  - {fileID: 1961438156}
+  - {fileID: 1406735967}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &144050258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144050256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bce172337d37a0644ba5c5776195e6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffect: 0.2
+  tempoSpawnaProxBG: 2
+  distanciaNovoBGx: 37.3
+  distanciaNovoBGy: 0
+  distanciaNovoBGz: 15.35053
+--- !u!1001 &178789412
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1905.1333
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+--- !u!1001 &185017076
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 286.57776
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
 --- !u!1 &185128736
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +554,262 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc08985bfeddce94984af7642032a061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &325727451
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 908.8555
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+--- !u!1001 &449393268
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1531.5778
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+--- !u!4 &480750856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 1464583917}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &603294384 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 1263798481}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &690454534
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1157.8555
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
 --- !u!1 &713501495
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,8 +842,90 @@ Transform:
   - {fileID: 811308978}
   - {fileID: 185128740}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &760230534
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1655.8555
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
 --- !u!1001 &768542234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -524,6 +1064,88 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1602887593382327474, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
   m_PrefabInstance: {fileID: 768542234}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &810673893
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 659.57776
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
 --- !u!1 &811308974
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,10 +1268,179 @@ Transform:
   m_Father: {fileID: 713501496}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1001 &827918487
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 784.57776
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
 --- !u!224 &832533308 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 52491347238059550, guid: 9ad5ca0df0ec0594b88ce3973ccc1e61, type: 3}
   m_PrefabInstance: {fileID: 52491347364295535}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &879018444
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1033.5778
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+--- !u!4 &964227703 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 879018444}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &985154711
 PrefabInstance:
@@ -760,6 +1551,93 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3c40ca4ebef56d48b5e2bad32b0b8b5, type: 3}
+--- !u!4 &1019114516 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 449393268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1140226434
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1282.8555
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
 --- !u!1 &1180278753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 52491348536560288, guid: 9ad5ca0df0ec0594b88ce3973ccc1e61, type: 3}
@@ -778,6 +1656,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 768542235}
+--- !u!4 &1211106440 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 1140226434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1218967170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -799,7 +1682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9126446829734504115, guid: 72206b974760b6f4fade1f1170269b9f, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9126446829734504115, guid: 72206b974760b6f4fade1f1170269b9f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -868,6 +1751,108 @@ MonoBehaviour:
   m_CropFrameX: 1
   m_CropFrameY: 1
   m_StretchFill: 1
+--- !u!1001 &1263798481
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1407.1333
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+--- !u!4 &1279673812 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 325727451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1367303012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 185017076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1377778421 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 760230534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1406735967 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 178789412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1463477344
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,8 +1900,95 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1464583917
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 410.85553
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+--- !u!4 &1470631447 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 1678107741}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1508517585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -930,7 +2002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6289796432806944265, guid: b8762e899948398408631066de83d8f0, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6289796432806944265, guid: b8762e899948398408631066de83d8f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -974,6 +2046,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8762e899948398408631066de83d8f0, type: 3}
+--- !u!4 &1588077596 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 2030379102}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1614773154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,13 +2115,182 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1623340959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
   m_PrefabInstance: {fileID: 2065138577200836638}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1678107741
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 535.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+--- !u!4 &1703410153 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 827918487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1753315819
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1780.8555
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
 --- !u!4 &1803821303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1346024641555245103, guid: 2cf26826ad903d840bcf20190d939a2d, type: 3}
@@ -1279,75 +2525,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d3eac3c499c2c84995a451dbf397511, type: 3}
---- !u!1001 &1908429834
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4493755121161822096, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822096, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822096, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822096, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.2762957
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822096, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.0073372126
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822096, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822096, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822096, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822096, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822096, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822096, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822096, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822096, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822097, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_Name
-      value: PontosDeIdentidade
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493755121161822099, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a6f9e7f653e58164bb6e249de571aa9a, type: 3}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
 --- !u!1 &1919848987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,7 +2555,7 @@ Transform:
   - {fileID: 2168985666083448569}
   - {fileID: 5306171762390755377}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1933882534
 GameObject:
@@ -1493,8 +2670,13 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1961438156 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 1753315819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2027088743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,6 +2799,93 @@ Transform:
   m_Father: {fileID: 713501496}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2030379102
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 144050257}
+    m_Modifications:
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: parallaxEffect
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBG
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGx
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: distanciaNovoBGz
+      value: 15.35053
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: tempoSpawnaProxBG
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 161.57776
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2347317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.350529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065138577811871413, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+      propertyPath: m_Name
+      value: BG Sprite Forgive me Diego (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+--- !u!4 &2046417029 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
+  m_PrefabInstance: {fileID: 690454534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2046721766 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2878337594822490224, guid: 56d6e8ddb77cb0449874028348b5c46f, type: 3}
@@ -1851,7 +3120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 52491347238059550, guid: 9ad5ca0df0ec0594b88ce3973ccc1e61, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 52491347238059550, guid: 9ad5ca0df0ec0594b88ce3973ccc1e61, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2217,7 +3486,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1668670603065029939, guid: 79a47229a8725304ab419703e8bdc74e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1668670603065029939, guid: 79a47229a8725304ab419703e8bdc74e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2344,7 +3613,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG Sprite Forgive me Diego
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2065138577811871408, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
 --- !u!4 &2168985666083448569 stripped
 Transform:
@@ -2360,7 +3630,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1695497260925479599, guid: 00ffbeab1b4fd95419b54ba41aceb9e2, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1695497260925479599, guid: 00ffbeab1b4fd95419b54ba41aceb9e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2487,7 +3757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3813210283755598563, guid: aa34a4b0d810ef04bbf8a955a51b4896, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3813210283755598563, guid: aa34a4b0d810ef04bbf8a955a51b4896, type: 3}
       propertyPath: m_LocalScale.y
@@ -2657,7 +3927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9221056251556926091, guid: e408eca913d29534eb7574f410925a96, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9221056251556926091, guid: e408eca913d29534eb7574f410925a96, type: 3}
       propertyPath: m_LocalPosition.x

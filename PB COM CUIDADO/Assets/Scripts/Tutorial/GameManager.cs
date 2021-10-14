@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] int pontosMaxColetaveisTut = 0;
     private int pontos;
     private GameObject player;
+    [SerializeField] private GameObject playerCAV;
     private Vector2 playerInicio;
+    [SerializeField] private bool isTutorial = false;
 
     public Text pontosTxt;
     public Text pontosTxtMenu;
@@ -17,12 +19,16 @@ public class GameManager : MonoBehaviour
 
     public DeathMenu deathMenu;
     public ScoreMenu scoremenu;
+    public ScoreMenu piMenu;
     
     void Start()
     {
-        pontos = 0;
-        player = GameObject.Find("PlayerTut");
-        playerInicio = player.transform.position;
+        if (isTutorial)
+        {
+            pontos = 0;
+            player = GameObject.Find("PlayerTut");
+            playerInicio = player.transform.position;
+        }
     }
 
     public void AddPontos(int valor) {
@@ -41,6 +47,16 @@ public class GameManager : MonoBehaviour
     {
         player.SetActive(false);
         scoremenu.gameObject.SetActive(true);
+    }
+    public void HighScoreCav()
+    {
+        scoremenu.gameObject.SetActive(true);
+        playerCAV.SetActive(false);
+    }
+    public void PIMenuCav()
+    {
+        piMenu.gameObject.SetActive(true);
+        playerCAV.SetActive(false);
     }
 
     public void Restart() {

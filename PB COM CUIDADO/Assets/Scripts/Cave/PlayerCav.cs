@@ -14,8 +14,10 @@ public class PlayerCav : MonoBehaviour
     [SerializeField] AudioClip deathSFX;
     [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
     
+
     [SerializeField] private bool puloDouble = false;
     [SerializeField] private int puloCount = 0;
+    [SerializeField] GameManager gameManager;
     private Rigidbody2D body;
     private Animator animator;
     public float velocidade = 5;
@@ -94,12 +96,12 @@ public class PlayerCav : MonoBehaviour
         {
             if (grounded && footIsGrounded == true)
             {
+                puloCount = 0;
                 animator.SetTrigger("Deslizando");
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
                 animator.SetBool("isGrounded", true);
                 grounded = true;
-                puloCount = 0;
 
 
 
@@ -113,6 +115,21 @@ public class PlayerCav : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.tag == "MenuScoreCav" && pontosIDcoletados >= 3 )
+        {
+            Debug.Log("abriu menu de score");
+            gameManager.HighScoreCav();
+            Destroy(other.gameObject);         
+            
+        }
+        if (other.tag == "MenuScoreCav" && pontosIDcoletados < 3)
+        {
+            Destroy(other.gameObject);
+            gameManager.PIMenuCav();
+            Debug.Log("Abriu menu PI Insuficientes");
+
+
+        }
         if (other.gameObject.layer == 6)
         {
             return;

@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameSession : MonoBehaviour
 {
     int score = 0;
+    int piScore = 0;
 
     private void Awake()
     {
@@ -29,7 +30,15 @@ public class GameSession : MonoBehaviour
     {
         return score;
     }
-    
+    public int GetPiScore()
+    {
+        return piScore;
+    }
+    public void AddToPIScore(int scoreValue)
+    {
+        //piScore = FindObjectOfType<PlayerCav>().GetPI();
+        piScore += scoreValue;
+    }
     public void AddToScore(int scoreValue)
     {
         score += scoreValue;

@@ -173,7 +173,8 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(other.gameObject);
             gameManager.HighScoreTut();
-        }
+        }       
+
         if (other.gameObject.layer == 0)
         {
             footIsGrounded = true;

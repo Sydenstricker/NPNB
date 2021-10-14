@@ -25,6 +25,7 @@ public class Stalker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(start){
             var targetPosition = FindObjectOfType<PlayerCav>().gameObject.transform.position;
             var movementThisFrame = velMorcegoStalker * Time.deltaTime;
