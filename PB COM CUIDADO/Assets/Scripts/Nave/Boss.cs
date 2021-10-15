@@ -10,8 +10,33 @@ public class Boss : MonoBehaviour
     private Animator animator;
     [SerializeField] GameObject explosoes;
     [SerializeField] float vidaBossSegundaParte = 100f;
+    public GameObject Explosao1;
+    public GameObject Explosao2;
+    public GameObject Explosao3;
+    public GameObject Explosao4;
+    public GameObject Explosao5;
+    public GameObject Explosao6;
+    public GameObject Explosao7;
+    public GameObject Explosao8;
+    public GameObject Explosao9;
+    public GameObject Explosao10;
+    public GameObject Explosao11;
+    public GameObject Explosao12;
+    public GameObject Explosao13;
+    public GameObject Explosao14;
+    public GameObject Explosao15;
+    public GameObject Explosao16;
+    public GameObject Explosao17;
+    public GameObject Explosao18;
+    public GameObject Explosao19;
+    public GameObject Explosao20;
+    public GameObject Explosao21;
+    //public List<GameObject> explosoesMorte;
+    //[SerializeField] GameObject[] explosoesMorte;
+    //public GameObject[] listaExplosoesBoss;
+    //private GameObject explosoesChild;
     //public bool bossMorreu = false;
-    
+
 
     [Header("Inimigo Atirando")]
     float shotCounter;
@@ -40,7 +65,7 @@ public class Boss : MonoBehaviour
     void Start()
     {
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
-        SomChefePutissimo();
+        SomChefePutissimo();       
     }
         
     private void SomChefePutissimo()
@@ -61,6 +86,7 @@ public class Boss : MonoBehaviour
         TomarDano(damageDealer);
         animator.SetTrigger("Ai");        
     }
+    
 
     private void TomarDano(DamageDealer damageDealer)
     {
@@ -78,26 +104,67 @@ public class Boss : MonoBehaviour
         //bossMorreu = true;
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
         animator.SetTrigger("Morreu");
-        ExplosoesFreneticas();
+        ExplosoesFreneticas(0.3f);
+       
         GetComponentInChildren<Cannon>().CannonStopShooting();
+        StartCoroutine(ExplosoesFreneticas(0.3f));
         //Instantiate(GetComponentInChildren <[GameObject] >);
-      
+
         //Destroy(gameObject);
         //GameObject explosion = Instantiate(morteVFX, transform.position, transform.rotation);
         //Destroy(explosion, durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
         FindObjectOfType<Level>().LoadCinematicaFinal();       
     }
-    private IEnumerator ExplosoesFreneticas()
-    {
+    
 
-        GetComponentInChildren<Animator>().SetTrigger("BossMorreu");
-         //transform.position,
-         //Quaternion.identity);
-        //newEnemy.transform.parent = enemyParent.transform;
-        //newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
-        yield return new WaitForSeconds(1f);
-       
+    private IEnumerator ExplosoesFreneticas(float intervaloExplosoes)
+    {
+        Explosao1.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao2.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao3.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao4.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao5.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao5.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao6.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao7.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao8.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao9.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao10.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao11.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao12.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao13.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao14.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao15.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao16.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao17.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao18.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao19.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao20.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+        Explosao21.SetActive(true);
+        yield return new WaitForSeconds(intervaloExplosoes);
+
 
     }
 }
