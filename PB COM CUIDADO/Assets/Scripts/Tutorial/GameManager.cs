@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] int pontosMaxColetaveisTut = 0;
-    [SerializeField] int pontosMaxColetaveisCav = 0;
     private int pontos;
     private GameObject player;
     [SerializeField] private GameObject playerCAV;
@@ -35,7 +34,7 @@ public class GameManager : MonoBehaviour
         pontos += valor;
         pontosTxt.text = "" + pontos;
         pontosTxtMenu.text =  pontos + ("/") + pontosMaxColetaveisTut;
-        pontosTxtScore.text = pontos + ("/") + pontosMaxColetaveisTut;       
+        pontosTxtScore.text = pontos + ("/") + pontosMaxColetaveisTut;   
 
     }
 

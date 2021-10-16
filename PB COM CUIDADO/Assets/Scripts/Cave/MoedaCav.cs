@@ -10,8 +10,12 @@ public class MoedaCav : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D other)
     {
-        AudioSource.PlayClipAtPoint(coletaSFX, Camera.main.transform.position, volumeColeta);
-        FindObjectOfType<GameSession>().AddToScore(scoreValue);
-        Destroy(gameObject);
+
+        if (other.CompareTag("Player")) {
+            AudioSource.PlayClipAtPoint(coletaSFX, Camera.main.transform.position, volumeColeta);
+            FindObjectOfType<GameSession>().AddToScore(scoreValue);
+            Destroy(gameObject);
+        }
+        
     }
 }
