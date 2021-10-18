@@ -114,10 +114,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   scoreValue: 150
-  chanceMaxSoltarPID: 100
-  chanceMinSoltarPID: 9
-  inimigosSoltamPI: 11
+  chanceMaxSoltarPID: 200
+  chanceMinSoltarPID: 1
+  chanceMaxSoltarHP: 100
+  chanceMinSoltarHP: 1
+  isNaveBomber: 0
   PIPrefab: {fileID: 4493755121161822097, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
+  HPPrefab: {fileID: 4493755121161822097, guid: ec3872d1df9207a4791ba4a6333d3a37, type: 3}
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
   projectile: {fileID: 1636617385442240539, guid: 94aaed75082211247b853608008f9c4c, type: 3}

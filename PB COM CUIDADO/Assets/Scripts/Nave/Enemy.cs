@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] bool isNaveBomber = false;
 
     [SerializeField] GameObject PIPrefab;
+    [SerializeField] GameObject HPPrefab;
     private Animator animator;
     //[SerializeField] GameObject spriteTomouDano; spawna sprite quando toma dano
 
@@ -123,7 +124,7 @@ public class Enemy : MonoBehaviour
     private void SpawnRandomPI()
     {
         inimigosSoltamPI = Random.Range(chanceMinSoltarPID,chanceMaxSoltarPID);
-        if (inimigosSoltamPI <= 10)
+        if (inimigosSoltamPI <= 5)
         {
             GameObject PI = Instantiate(PIPrefab, transform.position, Quaternion.identity) as GameObject;
             PI.transform.parent = pontosIDParent.transform;
@@ -132,10 +133,10 @@ public class Enemy : MonoBehaviour
     private void SpawnRandomHP()
     {
         inimigosSoltamHP = Random.Range(chanceMinSoltarHP, chanceMaxSoltarHP);
-        if (inimigosSoltamHP <= 10)
+        if (inimigosSoltamHP <= 5)
         {
-            GameObject HP = Instantiate(PIPrefab, transform.position, Quaternion.identity) as GameObject;
-            //HP.transform.parent = pontosIDParent.transform;
+            GameObject HP = Instantiate(HPPrefab, transform.position, Quaternion.identity) as GameObject;
+            HP.transform.parent = pontosIDParent.transform;
         }
     }
     private void PiscaDano()

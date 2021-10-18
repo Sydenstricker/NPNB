@@ -20,6 +20,18 @@ public class Player : MonoBehaviour
     [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.25f;
     [SerializeField] AudioClip danoBossSFX;
     [SerializeField] [Range(0, 1)] float volumeDanoBoss = 0.75f;
+    [SerializeField] AudioClip danoShot1;
+    [SerializeField] [Range(0, 1)] float volumeShot1 = 0.75f;
+    [SerializeField] AudioClip danoShot2;
+    [SerializeField] [Range(0, 1)] float volumeShot2 = 0.75f;
+    [SerializeField] AudioClip danoShot3;
+    [SerializeField] [Range(0, 1)] float volumeShot3 = 0.75f;
+    [SerializeField] AudioClip danoShot4;
+    [SerializeField] [Range(0, 1)] float volumeShot4 = 0.75f;
+    [SerializeField] AudioClip danoShot5;
+    [SerializeField] [Range(0, 1)] float volumeShot5 = 0.75f;
+    [SerializeField] AudioClip danoShot6;
+    [SerializeField] [Range(0, 1)] float volumeShot6 = 0.75f;
 
 
     [Header("Projectile Shoot")]
@@ -58,6 +70,13 @@ public class Player : MonoBehaviour
             TomouTiroBoss();
             Debug.Log("tomou tiro boss");
         }
+        if (other.gameObject.CompareTag("shot1"))     { TomouTiroShot1();  }
+        if (other.gameObject.CompareTag("shot2"))     { TomouTiroShot2();  }
+        if (other.gameObject.CompareTag("shot3"))     { TomouTiroShot3();  }
+        if (other.gameObject.CompareTag("shot4"))     { TomouTiroShot4();  }
+        if (other.gameObject.CompareTag("shot5"))     { TomouTiroShot5();  }
+        if (other.gameObject.CompareTag("shot6"))     { TomouTiroShot6();  }
+        
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return;}
         TomarDano(damageDealer);
@@ -148,6 +167,30 @@ public class Player : MonoBehaviour
     public void PontosdeID()
     {
         pontosIDcoletados++;
+    }
+    private void TomouTiroShot1()
+    {
+        AudioSource.PlayClipAtPoint(danoShot1, Camera.main.transform.position, volumeShot1);        
+    }
+    private void TomouTiroShot2()
+    {
+        AudioSource.PlayClipAtPoint(danoShot2, Camera.main.transform.position, volumeShot2);
+    }
+    private void TomouTiroShot3()
+    {
+        AudioSource.PlayClipAtPoint(danoShot3, Camera.main.transform.position, volumeShot3);
+    }
+    private void TomouTiroShot4()
+    {
+        AudioSource.PlayClipAtPoint(danoShot4, Camera.main.transform.position, volumeShot4);
+    }
+    private void TomouTiroShot5()
+    {
+        AudioSource.PlayClipAtPoint(danoShot5, Camera.main.transform.position, volumeShot5);
+    }
+    private void TomouTiroShot6()
+    {
+        AudioSource.PlayClipAtPoint(danoShot6, Camera.main.transform.position, volumeShot6);
     }
     private void TomouTiroBoss()
     {

@@ -114,13 +114,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   scoreValue: 150
-  chanceMaxSoltarPID: 100
+  chanceMaxSoltarPID: 200
   chanceMinSoltarPID: 1
-  inimigosSoltamPI: 15
+  chanceMaxSoltarHP: 100
+  chanceMinSoltarHP: 1
+  isNaveBomber: 0
   PIPrefab: {fileID: 4493755121161822097, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
+  HPPrefab: {fileID: 4493755121161822097, guid: ec3872d1df9207a4791ba4a6333d3a37, type: 3}
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
-  projectile: {fileID: 1636617385442240539, guid: 94aaed75082211247b853608008f9c4c, type: 3}
+  projectile: {fileID: 1636617385442240539, guid: 18021567071af0f44b09f57663ec9a4f, type: 3}
   projectileSpeed: 10
   morteVFX: {fileID: 4726755263343360560, guid: 9d5fc06af234e7244870127e8bb866ec, type: 3}
   durationOfExplosion: 1
@@ -146,7 +149,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5142858, y: 1.1428572}
+    oldSize: {x: 2.9333334, y: 1.3333334}
     newSize: {x: 1.03, y: 0.84}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

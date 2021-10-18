@@ -18,13 +18,17 @@ public class DamageDealer : MonoBehaviour
     }
     public void Hit()
     {
-        if (gameObject.CompareTag("Tiro Boss"))
-        {
-            tiroBoss.SetTrigger("acertou");
-            Debug.Log("tiro do Boss acertou");
-        }
+        if (gameObject.CompareTag("Tiro Boss")) {  tiroBoss.SetTrigger("acertou"); return; }         
+        if (gameObject.CompareTag("shot1"))     {  tiroBoss.SetTrigger("acertou"); return; }
+        if (gameObject.CompareTag("shot2"))     {  tiroBoss.SetTrigger("acertou"); return; }
+        if (gameObject.CompareTag("shot3"))     {  tiroBoss.SetTrigger("acertou"); return; }
+        if (gameObject.CompareTag("shot4"))     {  tiroBoss.SetTrigger("acertou"); return; }
+        if (gameObject.CompareTag("shot5"))     {  tiroBoss.SetTrigger("acertou"); return; }
+        if (gameObject.CompareTag("shot6"))     {  tiroBoss.SetTrigger("acertou"); return; }
         else
+        {
             Destroy(gameObject);
+        }
     }
     public void PedraCaiFeliz()
     {
