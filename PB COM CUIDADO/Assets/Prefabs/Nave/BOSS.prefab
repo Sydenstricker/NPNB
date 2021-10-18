@@ -1505,7 +1505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c550c5e4af6971046ad6718153819e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
   health: 50000
   scoreValue: 5000
   explosoes: {fileID: 7747228945836049614, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
@@ -1531,6 +1530,8 @@ MonoBehaviour:
   Explosao19: {fileID: 6620139488602710844}
   Explosao20: {fileID: 4352186901880115541}
   Explosao21: {fileID: 5023555647757697473}
+  healthBarBoss: {fileID: 1308076888381513484, guid: 63e019a02f2f454439eef44a38c58334, type: 3}
+  currentHealthBoss: 0
   minTimeBetweenShots: 3
   maxTimeBetweenShots: 5
   projectile: {fileID: 1636617385442240539, guid: 1754293bba2984749b2004b84211b331, type: 3}

@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class VidaBossNaveUI : MonoBehaviour
 {
     public GameObject vidaBossUI;
+    public HealthBar healthBarBoss;
     
 
     public void AtivaVidaBoss()
@@ -12,6 +14,11 @@ public class VidaBossNaveUI : MonoBehaviour
         vidaBossUI.SetActive(true);
     }
 
+    public HealthBar EstaHealthBar(HealthBar healthBarBoss)
+    {
+        Debug.Log(healthBarBoss);
+        return  healthBarBoss;
+    }
     public int PegaVidaBoss(int health)
     {
         FindObjectOfType<Boss>().AtualizaVidaBoss(health);

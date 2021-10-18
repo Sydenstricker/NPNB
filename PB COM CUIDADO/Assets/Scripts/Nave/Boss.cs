@@ -32,8 +32,10 @@ public class Boss : MonoBehaviour
     public GameObject Explosao19;
     public GameObject Explosao20;
     public GameObject Explosao21;
+
+    
     public HealthBar healthBarBoss;
-    public int currentHealth;
+    public int currentHealthBoss;
 
     //public List<GameObject> explosoesMorte;
     //[SerializeField] GameObject[] explosoesMorte;
@@ -71,11 +73,19 @@ public class Boss : MonoBehaviour
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
         AtivaUIBoss();
         PegaVidaCoracao();
-        SomChefePutissimo();       
+        SomChefePutissimo();  
+        
     }
-    private void PegaVidaCoracao()
+    public void PegaVidaCoracao()
     {
-        currentHealth = health;
+        //HealthBar.FindObjectOfType<VidaBossNaveUI>().EstaHealthBar(healthBarBoss);
+        //healthBarBoss = HealthBar.FindObjectOfType<VidaBossNaveUI>().EstaHealthBar(healthBarBoss); 
+        //FindObjectOfType<VidaBossNaveUI>().EstaHealthBar(healthBarBoss);
+        //GameObject.Find(GamneControlerNave).GetComponentInChildren(VidaBossNaveUI)().
+        //GameObject.Find(GameplayCanvas).GetComponent<VidaBossNaveUI>().EstaHealthBar(healthBarBoss);
+        FindObjectOfType<VidaBossNaveUI>().EstaHealthBar(healthBarBoss);
+        //healthBarBoss = GetComponent<VidaBossNaveUI>().EstaHealthBar(healthBarBoss); 
+        currentHealthBoss = health;
         healthBarBoss.SetMaxHealth(health);
     }
 
@@ -86,6 +96,7 @@ public class Boss : MonoBehaviour
     private void AtivaUIBoss()
     {
         FindObjectOfType<VidaBossNaveUI>().AtivaVidaBoss();
+        
         
     }
    
@@ -109,8 +120,8 @@ public class Boss : MonoBehaviour
         if (damageDealer == null) { return; }
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
-        currentHealth = health;
-        healthBarBoss.SetHealth(currentHealth);
+        currentHealthBoss = health;
+        healthBarBoss.SetHealth(currentHealthBoss);
         
         if (health <= 0)
         {

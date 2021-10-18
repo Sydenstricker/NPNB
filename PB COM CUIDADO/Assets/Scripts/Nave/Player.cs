@@ -79,7 +79,8 @@ public class Player : MonoBehaviour
         
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return;}
-        TomarDano(damageDealer);
+        TomarDano(damageDealer);    
+        
             
     }
     
