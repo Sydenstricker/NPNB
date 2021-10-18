@@ -5,7 +5,8 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     [Header("Inimigo Configs")]
-    [SerializeField] float health = 100f;
+    
+    [SerializeField] int health = 100;
     [SerializeField] int scoreValue = 150;
     private Animator animator;
     [SerializeField] GameObject explosoes;
@@ -31,6 +32,9 @@ public class Boss : MonoBehaviour
     public GameObject Explosao19;
     public GameObject Explosao20;
     public GameObject Explosao21;
+    public HealthBar healthBarBoss;
+    public int currentHealth;
+
     //public List<GameObject> explosoesMorte;
     //[SerializeField] GameObject[] explosoesMorte;
     //public GameObject[] listaExplosoesBoss;
@@ -65,12 +69,24 @@ public class Boss : MonoBehaviour
     void Start()
     {
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
+        AtivaUIBoss();
+        PegaVidaCoracao();
         SomChefePutissimo();       
     }
-        
+    private void PegaVidaCoracao()
+    {
+        currentHealth = health;
+        healthBarBoss.SetMaxHealth(health);
+    }
+
     private void SomChefePutissimo()
     {
         StartCoroutine((IEnumerator)WaitAndLoad());        
+    }
+    private void AtivaUIBoss()
+    {
+        FindObjectOfType<VidaBossNaveUI>().AtivaVidaBoss();
+        
     }
    
     IEnumerator WaitAndLoad()
@@ -93,6 +109,9 @@ public class Boss : MonoBehaviour
         if (damageDealer == null) { return; }
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
+        currentHealth = health;
+        healthBarBoss.SetHealth(currentHealth);
+        
         if (health <= 0)
         {
             BossMorreu();            
@@ -164,7 +183,10 @@ public class Boss : MonoBehaviour
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao21.SetActive(true);
         yield return new WaitForSeconds(intervaloExplosoes);
-
-
     }
+    public int AtualizaVidaBoss(int health)
+    {
+        return health;
+    }
+
 }
