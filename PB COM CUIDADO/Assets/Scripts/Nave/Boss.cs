@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class Boss : MonoBehaviour
     public GameObject Explosao20;
     public GameObject Explosao21;
 
-    
+    public Slider bossSlider;
     public HealthBar healthBarBoss;
     public int currentHealthBoss;
 
@@ -70,8 +71,12 @@ public class Boss : MonoBehaviour
     }
     void Start()
     {
-        shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
         AtivaUIBoss();
+        bossSlider = GameObject.Find("BossSlider").GetComponent<Slider>();
+        bossSlider.maxValue = health;
+        //bossSlider.value = 50;
+        bossSlider.minValue = 0;
+        shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
         PegaVidaCoracao();
         SomChefePutissimo();  
         
@@ -83,6 +88,7 @@ public class Boss : MonoBehaviour
         //FindObjectOfType<VidaBossNaveUI>().EstaHealthBar(healthBarBoss);
         //GameObject.Find(GamneControlerNave).GetComponentInChildren(VidaBossNaveUI)().
         //GameObject.Find(GameplayCanvas).GetComponent<VidaBossNaveUI>().EstaHealthBar(healthBarBoss);
+        //GameObject.Find(VidaBossNaveUI).GetComponentInChildren(healthBarBoss);
         FindObjectOfType<VidaBossNaveUI>().EstaHealthBar(healthBarBoss);
         //healthBarBoss = GetComponent<VidaBossNaveUI>().EstaHealthBar(healthBarBoss); 
         currentHealthBoss = health;
@@ -122,7 +128,10 @@ public class Boss : MonoBehaviour
         damageDealer.Hit();
         currentHealthBoss = health;
         healthBarBoss.SetHealth(currentHealthBoss);
-        
+        bossSlider.value = currentHealthBoss;
+
+
+
         if (health <= 0)
         {
             BossMorreu();            

@@ -7,10 +7,7 @@ public class HealthBar : MonoBehaviour
 {
     public Slider slider;
 
-    private void Start()
-    {
-        slider = FindObjectOfType<Boss>().healthBarBoss.slider;
-    }
+   
 
     public void SetHealth(int health)
     {
