@@ -23,6 +23,7 @@ public class PlayerCav : MonoBehaviour
     public float velocidade = 5;
     public float pulo = 8;
     public bool grounded;
+    public float contatempoCAV;
 
     [SerializeField] private bool footIsGrounded = false;
    
@@ -44,13 +45,15 @@ public class PlayerCav : MonoBehaviour
         animator = GetComponent<Animator>();
     }
     void Start()
-    {        
+    {
+        contatempoCAV = 0;
         PegaVidaCoracao();
         body = GetComponent<Rigidbody2D>();        
     }
 
     void Update()
     {
+        ContatempoUpdateCAV();
         SetUpMoveBoundry();
         Move();
 
@@ -267,5 +270,13 @@ public class PlayerCav : MonoBehaviour
     public void PontosdeID()
     {
         pontosIDcoletados++;
+    }
+    public float TempoDuracaoCAV()
+    {
+        return contatempoCAV;
+    }
+    private void ContatempoUpdateCAV()
+    {
+        contatempoCAV += Time.deltaTime;
     }
 }

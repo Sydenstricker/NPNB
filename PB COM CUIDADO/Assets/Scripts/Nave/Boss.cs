@@ -128,6 +128,7 @@ public class Boss : MonoBehaviour
     {
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
         animator.SetTrigger("Morreu");
+        FindObjectOfType<GameManager>().HighScoreNave();
        
         GetComponentInChildren<Cannon>().CannonStopShooting();
         StartCoroutine(ExplosoesFreneticas(0.3f));

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool podeSlide = false;
     [SerializeField] bool podePular = false;
     [SerializeField] private bool footIsGrounded = false;
+    public float contatempoTUT;
 
 
     [SerializeField] GameManager gameManager;
@@ -24,12 +25,15 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        contatempoTUT = 0f;
+        
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
     void Update()
     {
+        ContatempoUpdate();
         // Movimento runner
         body.velocity = new Vector2(velocidade, body.velocity.y);
         
@@ -208,6 +212,14 @@ public class PlayerController : MonoBehaviour
     {
         body.velocity = new Vector2(velocidade, body.velocity.y);
         animator.SetFloat("Velocidade", body.velocity.x);
+    }
+    public float TempoDuracaoTUT()
+    {        
+        return contatempoTUT;
+    }
+    private void ContatempoUpdate()
+    {
+        contatempoTUT += Time.deltaTime;
     }
 
 }

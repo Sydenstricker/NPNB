@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] int health = 200;
     [SerializeField] GameObject deathVFX;
     [SerializeField] float durationOfExplosion = 1f;
+    private float contatempoNAVE = 0f;
    
     [Header("Player Audio")]
     [SerializeField] AudioClip deathSFX;
@@ -55,12 +56,14 @@ public class Player : MonoBehaviour
     public int pontosIDcoletados;
     void Start()
     {
+        contatempoNAVE = 0f;
         SetUpMoveBoundry();
         PegaVidaCoracao();
     }
        
     void Update()
     {
+        ContaTempoNaveUpdate();
         Move();
         Fire();        
     }
@@ -118,6 +121,14 @@ public class Player : MonoBehaviour
     public int GetPI()
     {
         return pontosIDcoletados;
+    }
+    public float GetTempo()
+    {
+        return contatempoNAVE;
+    }
+    private void ContaTempoNaveUpdate()
+    {
+        contatempoNAVE += Time.deltaTime;
     }
     private void Fire()
     {

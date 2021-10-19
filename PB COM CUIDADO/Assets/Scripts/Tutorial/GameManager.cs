@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    
     [SerializeField] int pontosMaxColetaveisTut = 0;
     private int pontos;
     private GameObject player;
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour
     public DeathMenu deathMenu;
     public ScoreMenu scoremenu;
     public ScoreMenu piMenu;
+
+    private float contadorTempoTUT = 0;
     
     void Start()
     {
@@ -27,9 +30,10 @@ public class GameManager : MonoBehaviour
             pontos = 0;
             player = GameObject.Find("PlayerTut");
             playerInicio = player.transform.position;
+            contadorTempoTUT = 0;
         }
     }
-
+   
     public void AddPontos(int valor) {
         pontos += valor;
         pontosTxt.text = "" + pontos;
@@ -45,13 +49,29 @@ public class GameManager : MonoBehaviour
     }
     public void HighScoreTut()
     {
-        player.SetActive(false);
         scoremenu.gameObject.SetActive(true);
+        AdicionaScoreNoPlayerDataTUT();
+        AdicionaTempoNoPlayerDataTUT();
+        player.SetActive(false);
+        FindObjectOfType<PlayerData>().NaoDestroiPlayerData();
     }
     public void HighScoreCav()
     {
         scoremenu.gameObject.SetActive(true);
+        AdicionaScoreNoPlayerDataCAV();
+        AdicionaPINoPlayerDataCAV();
+        AdicionaTempoNoPlayerDataCAV();
+        AdicionaVIDANoPlayerDataCAV();
         playerCAV.SetActive(false);
+
+    }
+    public void HighScoreNave()
+    {
+        AdicionaScoreNoPlayerDataNAVE();
+        AdicionaPINoPlayerDataNAVE();
+        AdicionaTempoNoPlayerDataNAVE();
+
+        
     }
     public void PIMenuCav()
     {
@@ -68,5 +88,45 @@ public class GameManager : MonoBehaviour
         pontosTxt.text = "" + pontos;
         pontosTxtMenu.text = "High score: " + pontos;
     }
-    
+    public void AdicionaScoreNoPlayerDataTUT()
+    {
+        FindObjectOfType<PlayerData>().pontosObtidosTUT = pontos;
+    }
+    public void AdicionaScoreNoPlayerDataCAV()
+    {
+        FindObjectOfType<PlayerData>().pontosObtidosCAV = FindObjectOfType<GameSession>().GetScore();
+    }
+    public void AdicionaScoreNoPlayerDataNAVE()
+    {
+        FindObjectOfType<PlayerData>().pontosObtidosNAVE = FindObjectOfType<GameSession>().GetScore();
+    }
+    public void AdicionaPINoPlayerDataCAV()
+    {
+        FindObjectOfType<PlayerData>().PIcoletadosCAV = FindObjectOfType<PlayerCav>().GetPI();
+    }
+    public void AdicionaPINoPlayerDataNAVE()
+    {
+        FindObjectOfType<PlayerData>().PIcoletadosNAVE = FindObjectOfType<Player>().GetPI();
+    }
+    public void AdicionaVIDANoPlayerDataCAV()
+    {
+        FindObjectOfType<PlayerData>().vidaCAV = FindObjectOfType<PlayerCav>().GetHealth();
+    }
+    public void AdicionaVIDANoPlayerDataNAVE()
+    {
+        FindObjectOfType<PlayerData>().vidaNAVE = FindObjectOfType<Player>().GetHealth();
+    }
+    public void AdicionaTempoNoPlayerDataTUT()
+    {
+        FindObjectOfType<PlayerData>().tempoPorFaseTUT = FindObjectOfType<PlayerController>().TempoDuracaoTUT();
+    }
+    public void AdicionaTempoNoPlayerDataCAV()
+    {
+        FindObjectOfType<PlayerData>().tempoPorFaseCAV = FindObjectOfType<PlayerCav>().TempoDuracaoCAV();
+    }
+    public void AdicionaTempoNoPlayerDataNAVE()
+    {
+        FindObjectOfType<PlayerData>().tempoPorFaseNAVE = FindObjectOfType<Player>().GetTempo();
+    }
+
 }

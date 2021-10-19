@@ -16,6 +16,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
+
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
@@ -50,6 +51,11 @@ public class LevelLoader : MonoBehaviour
         FindObjectOfType<PauseMenu>().Resume();
         FindObjectOfType<GameSession>().ResetGame();
         SceneManager.LoadScene("CavernaGameplay");
+    }
+    public void TerminouFaseCavernaGameplay()
+    {
+        //FindObjectOfType<GameManager>().
+        SceneManager.LoadScene("DialogueCaveEnd");
     }
     public void RestartLevelNave()
     {
