@@ -70,8 +70,7 @@ public class GameManager : MonoBehaviour
         AdicionaScoreNoPlayerDataNAVE();
         AdicionaPINoPlayerDataNAVE();
         AdicionaTempoNoPlayerDataNAVE();
-
-        
+        AdicionaVIDANoPlayerDataNAVE();        
     }
     public void PIMenuCav()
     {
