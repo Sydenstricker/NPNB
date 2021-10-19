@@ -7,6 +7,7 @@ public class BossPathing : MonoBehaviour
     BossConfig bossConfig;
     List<Transform> bosspoints;
     int bosspointIndex = 0;
+    private bool isBossPuto = false;
 
     void Start()
     {
@@ -17,7 +18,8 @@ public class BossPathing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (isBossPuto) { MovePuto(); }
+        else Move();        
     }
 
     public void SetBossConfig(BossConfig bossConfig)
@@ -35,12 +37,35 @@ public class BossPathing : MonoBehaviour
             if (transform.position == targetPosition)
             {
                 bosspointIndex++;
-
             }
         }
+        
         else
         {
-            Destroy(gameObject);
+            bosspointIndex = 0;
         }
     }
+    private void MovePuto()
+    {
+        if (bosspointIndex <= bosspoints.Count - 1)
+        {
+            var targetPosition = bosspoints[bosspointIndex].transform.position;
+            var movementThisFrame = bossConfig.GetMoveSpeedBossPuto() * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
+            if (transform.position == targetPosition)
+            {
+                bosspointIndex++;
+            }
+        }
+
+        else
+        {
+            bosspointIndex = 0;
+        }
+    }
+    public void BossIsPuto()
+    {
+        isBossPuto = true;        
+    }
+   
 }

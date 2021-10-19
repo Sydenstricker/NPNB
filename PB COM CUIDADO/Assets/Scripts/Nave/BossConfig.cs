@@ -11,7 +11,9 @@ public class BossConfig : ScriptableObject
     [SerializeField] float spawnRandomFactor = 0.3f;
     [SerializeField] int numberOfEnemies = 5;
     [SerializeField] float moveSpeed = 2f;
+    [SerializeField] float bossPutoVelocidade = 8f;
 
+   
     public GameObject GetEnemyPrefab() { return enemyPrefab; }
     public List<Transform> GetWaypoints()
     {
@@ -27,5 +29,5 @@ public class BossConfig : ScriptableObject
     public float GetSpawnRandomFactor() { return spawnRandomFactor; }
     public int GetNumberOfEnemies() { return numberOfEnemies; }
     public float GetMoveSpeed() { return moveSpeed; }
-
+    public float GetMoveSpeedBossPuto()  { return bossPutoVelocidade; }
 }

@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
 
     Coroutine firingCoroutine;
 
+    [Header("NAO MEXER UI Player")]
     //os 2 sao pra barra do coracao
     public HealthBar healthBar;
     public int currentHealth;

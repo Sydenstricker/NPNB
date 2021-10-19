@@ -5,13 +5,22 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
-    [Header("Inimigo Configs")]
+    [Header("Boss Configs")]
     
-    [SerializeField] int health = 100;
-    [SerializeField] int scoreValue = 150;
-    private Animator animator;
+    [SerializeField] int health = 10000;
+    [SerializeField] int vidaBossFicaPuto = 5000;
+    [SerializeField] int scoreValue = 150;    
+    private Animator animator;    
+
+    [Header("Sons")]
+    [SerializeField] AudioClip explosoesfreneticasSFX;
+    [SerializeField] [Range(0, 1)] float volumeExplosoes = 0.75f;
+    [SerializeField] AudioClip introSFX;
+    [SerializeField] [Range(0, 1)] float volumeIntro = 0.75f;
+    [SerializeField] float tempoIntroBoss = 2f;
+
+    [Header("Explosoes Configs")]
     [SerializeField] GameObject explosoes;
-    [SerializeField] float vidaBossSegundaParte = 100f;
     public GameObject Explosao1;
     public GameObject Explosao2;
     public GameObject Explosao3;
@@ -34,35 +43,11 @@ public class Boss : MonoBehaviour
     public GameObject Explosao20;
     public GameObject Explosao21;
 
+    [Header("NAO MEXER Boss UI ")]
     public Slider bossSlider;
     public HealthBar healthBarBoss;
-    public int currentHealthBoss;
-
-    //public List<GameObject> explosoesMorte;
-    //[SerializeField] GameObject[] explosoesMorte;
-    //public GameObject[] listaExplosoesBoss;
-    //private GameObject explosoesChild;
-    //public bool bossMorreu = false;
-
-
-    [Header("Inimigo Atirando")]
-    float shotCounter;
-    [SerializeField] float minTimeBetweenShots = 0.2f;
-    [SerializeField] float maxTimeBetweenShots = 3f;
-    [SerializeField] GameObject projectile;
-    [SerializeField] float projectileSpeed = 10f;
-    [SerializeField] GameObject morteVFX;
-    [SerializeField] float durationOfExplosion = 1f;
-    [SerializeField] int pontosPorInimigo;
-        
-    [Header("Sons")]
-    [SerializeField] AudioClip deathSFX;
-    [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
-    [SerializeField] AudioClip shootSound;
-    [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.25f;
-    [SerializeField] AudioClip introSFX;
-    [SerializeField] [Range(0, 1)] float volumeIntro = 0.75f;
-    [SerializeField] float tempoIntroBoss = 2f;
+    public int currentHealthBoss;  
+    
       
 
     private void Awake()
@@ -72,25 +57,21 @@ public class Boss : MonoBehaviour
     void Start()
     {
         AtivaUIBoss();
+        AjustaUIBossComBOSSInstanciado();
+        PegaVidaCoracao();
+        SomChefePutissimo();
+    }
+
+    private void AjustaUIBossComBOSSInstanciado()
+    {
         bossSlider = GameObject.Find("BossSlider").GetComponent<Slider>();
         bossSlider.maxValue = health;
-        //bossSlider.value = 50;
         bossSlider.minValue = 0;
-        shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
-        PegaVidaCoracao();
-        SomChefePutissimo();  
-        
     }
+
     public void PegaVidaCoracao()
     {
-        //HealthBar.FindObjectOfType<VidaBossNaveUI>().EstaHealthBar(healthBarBoss);
-        //healthBarBoss = HealthBar.FindObjectOfType<VidaBossNaveUI>().EstaHealthBar(healthBarBoss); 
-        //FindObjectOfType<VidaBossNaveUI>().EstaHealthBar(healthBarBoss);
-        //GameObject.Find(GamneControlerNave).GetComponentInChildren(VidaBossNaveUI)().
-        //GameObject.Find(GameplayCanvas).GetComponent<VidaBossNaveUI>().EstaHealthBar(healthBarBoss);
-        //GameObject.Find(VidaBossNaveUI).GetComponentInChildren(healthBarBoss);
         FindObjectOfType<VidaBossNaveUI>().EstaHealthBar(healthBarBoss);
-        //healthBarBoss = GetComponent<VidaBossNaveUI>().EstaHealthBar(healthBarBoss); 
         currentHealthBoss = health;
         healthBarBoss.SetMaxHealth(health);
     }
@@ -101,9 +82,7 @@ public class Boss : MonoBehaviour
     }
     private void AtivaUIBoss()
     {
-        FindObjectOfType<VidaBossNaveUI>().AtivaVidaBoss();
-        
-        
+        FindObjectOfType<VidaBossNaveUI>().AtivaVidaBoss();     
     }
    
     IEnumerator WaitAndLoad()
@@ -130,29 +109,29 @@ public class Boss : MonoBehaviour
         healthBarBoss.SetHealth(currentHealthBoss);
         bossSlider.value = currentHealthBoss;
 
-
-
+        if (health == vidaBossFicaPuto)
+        {
+            BossFicouPutoInvocaMinionsParaAjudar();           
+        }
         if (health <= 0)
         {
             BossMorreu();            
         }               
     }
 
+    private void BossFicouPutoInvocaMinionsParaAjudar()
+    {
+        FindObjectOfType<EnemySpawner>().InvocaReforçosBOSS();
+        FindObjectOfType<BossPathing>().BossIsPuto();
+    }
        private void BossMorreu()
     {
-        //bossMorreu = true;
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
         animator.SetTrigger("Morreu");
-        ExplosoesFreneticas(0.3f);
        
         GetComponentInChildren<Cannon>().CannonStopShooting();
         StartCoroutine(ExplosoesFreneticas(0.3f));
-        //Instantiate(GetComponentInChildren <[GameObject] >);
-
-        //Destroy(gameObject);
-        //GameObject explosion = Instantiate(morteVFX, transform.position, transform.rotation);
-        //Destroy(explosion, durationOfExplosion);
-        AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
+               
         FindObjectOfType<Level>().LoadCinematicaFinal();       
     }
     
@@ -160,48 +139,70 @@ public class Boss : MonoBehaviour
     private IEnumerator ExplosoesFreneticas(float intervaloExplosoes)
     {
         Explosao1.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao2.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao3.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao4.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao5.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao5.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao6.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao7.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao8.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao9.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao10.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao11.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao12.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao13.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao14.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao15.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao16.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao17.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao18.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao19.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao20.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
         Explosao21.SetActive(true);
+        AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeExplosoes);
         yield return new WaitForSeconds(intervaloExplosoes);
     }
     public int AtualizaVidaBoss(int health)

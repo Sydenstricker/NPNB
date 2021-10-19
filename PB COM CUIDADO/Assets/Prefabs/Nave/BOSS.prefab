@@ -47,16 +47,8 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   projectile: {fileID: 1636617385442240539, guid: 1754293bba2984749b2004b84211b331, type: 3}
   projectileSpeed: 10
-  morteVFX: {fileID: 0}
-  durationOfExplosion: 1
-  pontosPorInimigo: 0
-  deathSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
-  volumeMorte: 0.75
-  shootSound: {fileID: 8300000, guid: 26e63b2db28e0ea46aed87e70a0029e9, type: 3}
-  shootSoundVolume: 0.25
-  introSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
-  volumeIntro: 0.75
-  tempoIntroBoss: 0
+  shootSound: {fileID: 8300000, guid: c7876c43c4ceeae4881ff85aa0a7dbb6, type: 3}
+  shootSoundVolume: 0.899
 --- !u!1 &508046368755362866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,10 +1497,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c550c5e4af6971046ad6718153819e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50000
+  health: 10000
+  vidaBossFicaPuto: 5000
   scoreValue: 5000
+  explosoesfreneticasSFX: {fileID: 8300000, guid: a93e746da016b7c4c91408aa307f8761, type: 3}
+  volumeExplosoes: 0.477
+  introSFX: {fileID: 8300000, guid: 66683915d9b1b784fa097d248c82a822, type: 3}
+  volumeIntro: 0.518
+  tempoIntroBoss: 2.2
   explosoes: {fileID: 7747228945836049614, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
-  vidaBossSegundaParte: 100
   Explosao1: {fileID: 7035470642638751014}
   Explosao2: {fileID: 7389382107136224731}
   Explosao3: {fileID: 2339079617976917969}
@@ -1530,22 +1527,9 @@ MonoBehaviour:
   Explosao19: {fileID: 6620139488602710844}
   Explosao20: {fileID: 4352186901880115541}
   Explosao21: {fileID: 5023555647757697473}
+  bossSlider: {fileID: 0}
   healthBarBoss: {fileID: 282354533627950804, guid: 63e019a02f2f454439eef44a38c58334, type: 3}
   currentHealthBoss: 0
-  minTimeBetweenShots: 3
-  maxTimeBetweenShots: 5
-  projectile: {fileID: 1636617385442240539, guid: 1754293bba2984749b2004b84211b331, type: 3}
-  projectileSpeed: 10
-  morteVFX: {fileID: 4726755263343360560, guid: 9d5fc06af234e7244870127e8bb866ec, type: 3}
-  durationOfExplosion: 10
-  pontosPorInimigo: 0
-  deathSFX: {fileID: 8300000, guid: 92b32033d74928b46b88cc07b38c2279, type: 3}
-  volumeMorte: 0.75
-  shootSound: {fileID: 8300000, guid: e27c04a7d57212d409d91e1ab6f6052c, type: 3}
-  shootSoundVolume: 0.25
-  introSFX: {fileID: 8300000, guid: 66683915d9b1b784fa097d248c82a822, type: 3}
-  volumeIntro: 0.518
-  tempoIntroBoss: 2.2
 --- !u!50 &8346251223810393288
 Rigidbody2D:
   serializedVersion: 4
