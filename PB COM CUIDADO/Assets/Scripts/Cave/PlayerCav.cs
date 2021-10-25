@@ -13,7 +13,31 @@ public class PlayerCav : MonoBehaviour
     [Header("Player Audio")]
     [SerializeField] AudioClip deathSFX;
     [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
-    
+    [SerializeField] AudioClip pulo1SFX;
+    [SerializeField] [Range(0, 1)] float volumePulo1 = 0.75f;
+    [SerializeField] AudioClip pulo2SFX;
+    [SerializeField] [Range(0, 1)] float volumePulo2 = 0.75f;
+    [SerializeField] AudioClip pulo3SFX;
+    [SerializeField] [Range(0, 1)] float volumePulo3 = 0.75f;
+    [SerializeField] AudioClip pulo4SFX;
+    [SerializeField] [Range(0, 1)] float volumePulo4 = 0.75f;
+    [SerializeField] AudioClip puloDuplo1SFX;
+    [SerializeField] [Range(0, 1)] float volumePuloDuplo1 = 0.75f;
+    [SerializeField] AudioClip puloDuplo2SFX;
+    [SerializeField] [Range(0, 1)] float volumePuloDuplo2 = 0.75f;
+    [SerializeField] AudioClip puloDuplo3SFX;
+    [SerializeField] [Range(0, 1)] float volumePuloDuplo3 = 0.75f;
+    [SerializeField] AudioClip puloDuplo4SFX;
+    [SerializeField] [Range(0, 1)] float volumePuloDuplo4 = 0.75f;
+    [SerializeField] AudioClip slideSFX;
+    [SerializeField] [Range(0, 1)] float volumeSlide = 0.75f;
+    [SerializeField] AudioClip dano1SFX;
+    [SerializeField] [Range(0, 1)] float volumeDano1 = 0.75f;
+    [SerializeField] AudioClip dano2SFX;
+    [SerializeField] [Range(0, 1)] float volumeDano2 = 0.75f;
+    [SerializeField] AudioClip dano3SFX;
+    [SerializeField] [Range(0, 1)] float volumeDano3 = 0.75f;
+
 
     [SerializeField] private bool puloDouble = false;
     [SerializeField] private int puloCount = 0;
@@ -48,7 +72,8 @@ public class PlayerCav : MonoBehaviour
     {
         contatempoCAV = 0;
         PegaVidaCoracao();
-        body = GetComponent<Rigidbody2D>();        
+        body = GetComponent<Rigidbody2D>();
+               
     }
 
     void Update()
@@ -76,6 +101,7 @@ public class PlayerCav : MonoBehaviour
                 puloCount = 0;
                 Debug.Log("Pulo Doble funcionou");
                 animator.SetBool("isGrounded",false) ;
+                PuloDuploSFX1(); //fazer random no array
                 
             }
 
@@ -88,9 +114,7 @@ public class PlayerCav : MonoBehaviour
                 grounded = false;
                 footIsGrounded = false;
                 animator.SetBool("isGrounded", false);
-                
-
-                //soundManager.PlayAudio("pulo");
+                PuloSFX1();     // fazer random no array    
             }
 
         }
@@ -105,12 +129,7 @@ public class PlayerCav : MonoBehaviour
                 gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
                 animator.SetBool("isGrounded", true);
                 grounded = true;
-
-
-
-                //body.velocity = new Vector2(body.velocity.x, pulo);
-                //puloCount++;
-                //soundManager.PlayAudio("pulo");
+                SlideSFX();
             }
 
           
@@ -199,6 +218,7 @@ public class PlayerCav : MonoBehaviour
     private void TomarDano(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
+        Dano1SFX();
         if (damageDealer.gameObject.layer == 12)
         {
             damageDealer.PedraCaiFeliz();
@@ -279,4 +299,53 @@ public class PlayerCav : MonoBehaviour
     {
         contatempoCAV += Time.deltaTime;
     }
+    private void PuloDuploSFX1()
+    {
+        AudioSource.PlayClipAtPoint(puloDuplo1SFX, Camera.main.transform.position, volumePuloDuplo1);
+    }
+    private void PuloDuploSFX2()
+    {
+        AudioSource.PlayClipAtPoint(puloDuplo2SFX, Camera.main.transform.position, volumePuloDuplo2);
+    }
+    private void PuloDuploSFX3()
+    {
+        AudioSource.PlayClipAtPoint(puloDuplo3SFX, Camera.main.transform.position, volumePuloDuplo3);
+    }
+    private void PuloDuploSFX4()
+    {
+        AudioSource.PlayClipAtPoint(puloDuplo4SFX, Camera.main.transform.position, volumePuloDuplo4);
+    }
+    private void PuloSFX1()
+    {
+        AudioSource.PlayClipAtPoint(pulo1SFX, Camera.main.transform.position, volumePulo1);
+    }
+    private void PuloSFX2()
+    {
+        AudioSource.PlayClipAtPoint(pulo2SFX, Camera.main.transform.position, volumePulo2);
+    }
+    private void PuloSFX3()
+    {
+        AudioSource.PlayClipAtPoint(pulo3SFX, Camera.main.transform.position, volumePulo3);
+    }
+    private void PuloSFX4()
+    {
+        AudioSource.PlayClipAtPoint(pulo4SFX, Camera.main.transform.position, volumePulo4);
+    }
+    private void SlideSFX()
+    {
+        AudioSource.PlayClipAtPoint(slideSFX, Camera.main.transform.position, volumeSlide);
+    }
+    private void Dano1SFX()
+    {
+        AudioSource.PlayClipAtPoint(dano1SFX, Camera.main.transform.position, volumeDano1);
+    }
+    private void Dano2SFX()
+    {
+        AudioSource.PlayClipAtPoint(dano2SFX, Camera.main.transform.position, volumeDano2);
+    }
+    private void Dano3SFX()
+    {
+        AudioSource.PlayClipAtPoint(dano3SFX, Camera.main.transform.position, volumeDano3);
+    }
+    
 }
