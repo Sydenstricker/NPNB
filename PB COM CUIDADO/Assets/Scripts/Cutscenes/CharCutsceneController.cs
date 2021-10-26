@@ -3,9 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CharCutsceneController : MonoBehaviour
 {
+    [Header("SFX Cinematic")]
+    [SerializeField] AudioClip andaSFX;
+    [SerializeField] [Range(0, 1)] float volumeAnda = 0.75f;
+    [SerializeField] AudioClip correSFX;
+    [SerializeField] [Range(0, 1)] float volumeCorre = 0.75f;
 
+    [Header("Outros Configs")]
     [SerializeField] float velocity = 10f;
     private Rigidbody2D body;
     private Animator pinkyAnimator;
@@ -13,6 +20,9 @@ public class CharCutsceneController : MonoBehaviour
     private bool estaAndando = false;
     [SerializeField] float limiteAndar = 0f;
     [SerializeField] float delayBlueCorrer = 0f;
+    private bool isCorrendoSFX = true;
+    private bool isAndandoSFX = true;
+       
 
 
     // Start is called before the first frame update
@@ -58,6 +68,12 @@ public class CharCutsceneController : MonoBehaviour
     {
         body.velocity = new Vector2(velocity, body.velocity.y);
         pinkyAnimator.SetFloat("Velocidade", body.velocity.x);
+        if(isAndandoSFX)
+        {
+            AudioSource.PlayClipAtPoint(andaSFX, Camera.main.transform.position, volumeAnda);
+            isAndandoSFX = false;
+            isCorrendoSFX = true;
+        }
     }
 
     //Animações
@@ -104,7 +120,13 @@ public class CharCutsceneController : MonoBehaviour
     }
     public void CorrePink()
     {
-        pinkyAnimator.SetTrigger("correr");        
+        pinkyAnimator.SetTrigger("correr");
+        if(isCorrendoSFX)
+        {
+            AudioSource.PlayClipAtPoint(correSFX, Camera.main.transform.position, volumeCorre);
+            isCorrendoSFX = false;
+            isAndandoSFX = true;
+        }
     }
 }
 

@@ -308,42 +308,42 @@ public class PlayerCav : MonoBehaviour
     }
     private void PuloDuploSFX1()
     {
-        Debug.Log("puloDuplo 1");
+        Debug.Log("puloDuplo 1SFX");
         AudioSource.PlayClipAtPoint(puloDuplo1SFX, Camera.main.transform.position, volumePuloDuplo1);
     }
     private void PuloDuploSFX2()
     {
-        Debug.Log("puloDuplo 2");
+        Debug.Log("puloDuplo 2SFX");
         AudioSource.PlayClipAtPoint(puloDuplo2SFX, Camera.main.transform.position, volumePuloDuplo2);
     }
     private void PuloDuploSFX3()
     {
-        Debug.Log("puloDuplo 3");
+        Debug.Log("puloDuplo 3SFX");
         AudioSource.PlayClipAtPoint(puloDuplo3SFX, Camera.main.transform.position, volumePuloDuplo3);
     }
     private void PuloDuploSFX4()
     {
-        Debug.Log("puloDuplo 4");
+        Debug.Log("puloDuplo 4SFX");
         AudioSource.PlayClipAtPoint(puloDuplo4SFX, Camera.main.transform.position, volumePuloDuplo4);
     }
     private void PuloSFX1()
     {
-        Debug.Log("pulo 1");
+        Debug.Log("pulo 1SFX");
         AudioSource.PlayClipAtPoint(pulo1SFX, Camera.main.transform.position, volumePulo1);
     }
     private void PuloSFX2()
     {
-        Debug.Log("pulo 2");
+        Debug.Log("pulo 2SFX");
         AudioSource.PlayClipAtPoint(pulo2SFX, Camera.main.transform.position, volumePulo2);
     }
     private void PuloSFX3()
     {
-        Debug.Log("pulo 3");
+        Debug.Log("pulo 3SFX");
         AudioSource.PlayClipAtPoint(pulo3SFX, Camera.main.transform.position, volumePulo3);
     }
     private void PuloSFX4()
     {
-        Debug.Log("pulo 4");
+        Debug.Log("pulo 4SFX");
         AudioSource.PlayClipAtPoint(pulo4SFX, Camera.main.transform.position, volumePulo4);
     }
     private void SlideSFX()
