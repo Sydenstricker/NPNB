@@ -15,8 +15,8 @@ public class Boss : MonoBehaviour
     [Header("Sons")]
     [SerializeField] AudioClip explosoesfreneticasSFX;
     [SerializeField] [Range(0, 1)] float volumeExplosoes = 0.75f;
-    [SerializeField] AudioClip introSFX;
-    [SerializeField] [Range(0, 1)] float volumeIntro = 0.75f;
+    [SerializeField] AudioClip BossPutoMusic;
+    [SerializeField] [Range(0, 1)] float volumeBossPutoMusic = 0.75f;
     [SerializeField] float tempoIntroBoss = 2f;
 
     [Header("Explosoes Configs")]
@@ -46,7 +46,8 @@ public class Boss : MonoBehaviour
     [Header("NAO MEXER Boss UI ")]
     public Slider bossSlider;
     public HealthBar healthBarBoss;
-    public int currentHealthBoss;  
+    public int currentHealthBoss;
+    PolygonCollider2D polygonCollider2D;
     
       
 
@@ -56,6 +57,7 @@ public class Boss : MonoBehaviour
     }
     void Start()
     {
+        polygonCollider2D = GetComponent<PolygonCollider2D>();
         AtivaUIBoss();
         AjustaUIBossComBOSSInstanciado();
         PegaVidaCoracao();
@@ -87,8 +89,9 @@ public class Boss : MonoBehaviour
    
     IEnumerator WaitAndLoad()
     {
+        FindObjectOfType<MusicPlayer>().BossSpawnouParaMusicaFase();
+        AudioSource.PlayClipAtPoint(BossPutoMusic, Camera.main.transform.position, volumeBossPutoMusic);
         yield return new WaitForSeconds(tempoIntroBoss);
-        AudioSource.PlayClipAtPoint(introSFX, Camera.main.transform.position, volumeIntro);
     }          
    
     private void OnTriggerEnter2D(Collider2D other)
@@ -128,9 +131,9 @@ public class Boss : MonoBehaviour
     {
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
         animator.SetTrigger("Morreu");
-        FindObjectOfType<GameManager>().HighScoreNave();
-       
+        FindObjectOfType<GameManager>().HighScoreNave();       
         GetComponentInChildren<Cannon>().CannonStopShooting();
+        polygonCollider2D.enabled = false;
         StartCoroutine(ExplosoesFreneticas(0.3f));
                
         FindObjectOfType<Level>().LoadCinematicaFinal();       

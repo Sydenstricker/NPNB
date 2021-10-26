@@ -16,6 +16,6 @@ public class pegatemponavePlayerData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = FindObjectOfType<PlayerData>().tempoPorFaseNAVE.ToString();
+        scoreText.text = FindObjectOfType<PlayerData>().tempoPorFaseNAVE.ToString("F2");
     }
 }

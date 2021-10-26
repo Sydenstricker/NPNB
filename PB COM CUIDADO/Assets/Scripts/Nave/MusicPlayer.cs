@@ -24,6 +24,10 @@ public class MusicPlayer : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+    public void BossSpawnouParaMusicaFase()
+    {
+        Destroy(gameObject);
+    }
     /*private void Update()
     {
         ativarDestruirGO = FindObjectsOfType<Boss>().Length;
