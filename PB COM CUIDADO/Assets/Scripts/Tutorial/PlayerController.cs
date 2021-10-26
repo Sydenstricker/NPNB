@@ -73,11 +73,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("Grounded", false);
                 gameObject.GetComponent<BoxCollider2D>().enabled = true;
                 gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-                var randomizadorPuloDuplo = Random.Range(0, 3);
-                if (randomizadorPuloDuplo == 0) { PuloDuploSFX1(); }
-                if (randomizadorPuloDuplo == 1) { PuloDuploSFX2(); }
-                if (randomizadorPuloDuplo == 2) { PuloDuploSFX3(); }
-                if (randomizadorPuloDuplo == 3) { PuloDuploSFX4(); }
+                RandomizaSFXPuloDuplo();
             }
 
             if (grounded && (puloCount == 0))
@@ -90,11 +86,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("Grounded", false);
                 gameObject.GetComponent<BoxCollider2D>().enabled = true;
                 gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-                var randomizadorPulo = Random.Range(0, 3);
-                if (randomizadorPulo == 0) { PuloSFX1(); }
-                if (randomizadorPulo == 1) { PuloSFX2(); }
-                if (randomizadorPulo == 2) { PuloSFX3(); }
-                if (randomizadorPulo == 3) { PuloSFX4(); }
+                RandomizaPuloSFX();
                 //soundManager.PlayAudio("pulo");
             }
             //if (podePular == true)
@@ -150,6 +142,24 @@ public class PlayerController : MonoBehaviour
             AndaPinkTutorial();
         }
 
+    }
+
+    private void RandomizaSFXPuloDuplo()
+    {
+        var randomizadorPuloDuplo = Random.Range(0, 4);
+        if (randomizadorPuloDuplo == 0) { PuloDuploSFX1(); }
+        if (randomizadorPuloDuplo == 1) { PuloDuploSFX2(); }
+        if (randomizadorPuloDuplo == 2) { PuloDuploSFX3(); }
+        if (randomizadorPuloDuplo == 3) { PuloDuploSFX4(); }
+    }
+
+    private void RandomizaPuloSFX()
+    {
+        var randomizadorPulo = Random.Range(0, 4);
+        if (randomizadorPulo == 0) { PuloSFX1(); }
+        if (randomizadorPulo == 1) { PuloSFX2(); }
+        if (randomizadorPulo == 2) { PuloSFX3(); }
+        if (randomizadorPulo == 3) { PuloSFX4(); }
     }
 
     private void AtivarCapsuleCollider()

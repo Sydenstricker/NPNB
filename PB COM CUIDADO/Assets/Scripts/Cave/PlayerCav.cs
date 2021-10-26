@@ -51,7 +51,6 @@ public class PlayerCav : MonoBehaviour
 
     [SerializeField] private bool footIsGrounded = false;
    
-
     //os 2 sao pra barra do coracao
     public HealthBar healthBar;
     public int currentHealth;
@@ -72,8 +71,7 @@ public class PlayerCav : MonoBehaviour
     {
         contatempoCAV = 0;
         PegaVidaCoracao();
-        body = GetComponent<Rigidbody2D>();
-               
+        body = GetComponent<Rigidbody2D>();               
     }
 
     void Update()
@@ -94,37 +92,29 @@ public class PlayerCav : MonoBehaviour
         {
             if ((puloCount == 1) && (puloDouble == true))
             {
+                FinalSlideEvitaBugsColliders();
                 animator.SetTrigger("PULODUPLO");
-                
+
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloDouble = true; //no tutorial deixar false
                 puloCount = 0;
                 Debug.Log("Pulo Doble funcionou");
-                animator.SetBool("isGrounded",false) ;
-                var randomizadorPuloDuplo = Random.Range(0, 3);
-                if (randomizadorPuloDuplo == 0) { PuloDuploSFX1();}
-                if (randomizadorPuloDuplo == 1) { PuloDuploSFX2(); }
-                if (randomizadorPuloDuplo == 2) { PuloDuploSFX3(); }
-                if (randomizadorPuloDuplo == 3) { PuloDuploSFX4(); }             
-                
+                animator.SetBool("isGrounded", false);
+                RandomizaSFXPuloDuplo();
             }
 
-            if (grounded && (puloCount == 0) )
+            if (grounded && (puloCount == 0) && footIsGrounded)
             {
+                FinalSlideEvitaBugsColliders();
                 animator.SetTrigger("Pulando");
-               
+
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloCount++;
                 grounded = false;
                 footIsGrounded = false;
                 animator.SetBool("isGrounded", false);
-                var randomizadorPulo = Random.Range(0, 3);
-                if (randomizadorPulo == 0) { PuloSFX1(); }
-                if (randomizadorPulo == 1) { PuloSFX2(); }
-                if (randomizadorPulo == 2) { PuloSFX3(); }
-                if (randomizadorPulo == 3) { PuloSFX4(); }
+                RandomizaSFXPulo();
             }
-
         }
 
         if ( Input.GetButtonDown("Slide"))
@@ -133,16 +123,16 @@ public class PlayerCav : MonoBehaviour
             {
                 puloCount = 0;
                 animator.SetTrigger("Deslizando");
-                gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 animator.SetBool("isGrounded", true);
                 grounded = true;
                 SlideSFX();
-            }
-
-          
+            }          
         }       
     }
+    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "MenuScoreCav" && pontosIDcoletados >= 3 )
@@ -157,8 +147,6 @@ public class PlayerCav : MonoBehaviour
             Destroy(other.gameObject);
             gameManager.PIMenuCav();
             Debug.Log("Abriu menu PI Insuficientes");
-
-
         }
         if (other.gameObject.layer == 6)
         {
@@ -183,6 +171,11 @@ public class PlayerCav : MonoBehaviour
         Debug.Log("Desativou foot is Grounded");
     }
 
+    private void FinalSlideEvitaBugsColliders()
+    {
+        gameObject.GetComponent<BoxCollider2D>().enabled = true ;
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+    }
     private void FinalPuloIsGrounded()
     {
         return;
@@ -197,27 +190,7 @@ public class PlayerCav : MonoBehaviour
             puloCount = 0;            
         }        
     }
-    
-    private void AtivarBoxCollider()
-    {
-        gameObject.GetComponent<BoxCollider2D>().enabled = true;
-        Physics2D.gravity = new Vector2(0, -10);
-        pulo = 9f;
-    }
-
-    private void AtivarCapsuleCollider()
-    {
-        gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
-        Physics2D.gravity = new Vector2(0, -10);
-        pulo = 9f;
-    }
-
-    private void DestivarCapsuleCollider()
-    {
-        gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-        Physics2D.gravity = new Vector2(0, -10);
-        pulo = 9f;
-    }
+      
     private void PegaVidaCoracao()
     {
         currentHealth = health;
@@ -226,10 +199,7 @@ public class PlayerCav : MonoBehaviour
     private void TomarDano(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
-        var randomizadorDano = Random.Range(0,2);
-        if (randomizadorDano == 0) { Dano1SFX(); }
-        if (randomizadorDano == 1) { Dano2SFX(); }
-        if (randomizadorDano == 2) { Dano3SFX(); }
+        RandomizaDanoSFX();
         if (damageDealer.gameObject.layer == 12)
         {
             damageDealer.PedraCaiFeliz();
@@ -238,11 +208,11 @@ public class PlayerCav : MonoBehaviour
         {
             damageDealer.Hit();
         }
-            
+
         //currenthealth é a vida da barra com coraçao, health era ref em string
         currentHealth = health;
         healthBar.SetHealth(currentHealth);
-                
+
         if (health <= 0)
         {
             PlayerMorreu();
@@ -251,10 +221,35 @@ public class PlayerCav : MonoBehaviour
         else
         {
             animator.SetTrigger("AiAi");
-            //animator.SetBool("Ai", true);
         }
         return;
     }
+
+    private void RandomizaDanoSFX()
+    {
+        var randomizadorDano = Random.Range(0, 3);
+        if (randomizadorDano == 0) { Dano1SFX(); Debug.Log("dano1SFX"); }
+        if (randomizadorDano == 1) { Dano2SFX(); Debug.Log("dano2SFX"); }
+        if (randomizadorDano == 2) { Dano3SFX(); Debug.Log("dano3SFX"); }
+    }
+    private void RandomizaSFXPuloDuplo()
+    {
+        var randomizadorPuloDuplo = Random.Range(0, 4);
+        if (randomizadorPuloDuplo == 0) { PuloDuploSFX1(); }
+        if (randomizadorPuloDuplo == 1) { PuloDuploSFX2(); }
+        if (randomizadorPuloDuplo == 2) { PuloDuploSFX3(); }
+        if (randomizadorPuloDuplo == 3) { PuloDuploSFX4(); }
+    }
+
+    private void RandomizaSFXPulo()
+    {
+        var randomizadorPulo = Random.Range(0, 4);
+        if (randomizadorPulo == 0) { PuloSFX1(); }
+        if (randomizadorPulo == 1) { PuloSFX2(); }
+        if (randomizadorPulo == 2) { PuloSFX3(); }
+        if (randomizadorPulo == 3) { PuloSFX4(); }
+    }
+
     private void PlayerMorreu()
     {
         velocidade = 0; pulo = 0;
