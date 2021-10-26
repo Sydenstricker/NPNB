@@ -67,13 +67,7 @@ public class CharCutsceneController : MonoBehaviour
     private void AndaPinkTutorial()
     {
         body.velocity = new Vector2(velocity, body.velocity.y);
-        pinkyAnimator.SetFloat("Velocidade", body.velocity.x);
-        if(isAndandoSFX)
-        {
-            AudioSource.PlayClipAtPoint(andaSFX, Camera.main.transform.position, volumeAnda);
-            isAndandoSFX = false;
-            isCorrendoSFX = true;
-        }
+        pinkyAnimator.SetFloat("Velocidade", body.velocity.x);       
     }
 
     //Animações
@@ -120,13 +114,7 @@ public class CharCutsceneController : MonoBehaviour
     }
     public void CorrePink()
     {
-        pinkyAnimator.SetTrigger("correr");
-        if(isCorrendoSFX)
-        {
-            AudioSource.PlayClipAtPoint(correSFX, Camera.main.transform.position, volumeCorre);
-            isCorrendoSFX = false;
-            isAndandoSFX = true;
-        }
+        pinkyAnimator.SetTrigger("correr");       
     }
 }
 

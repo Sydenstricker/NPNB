@@ -48,8 +48,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        contatempoTUT = 0f;
-        
+        contatempoTUT = 0f;        
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -65,45 +64,29 @@ public class PlayerController : MonoBehaviour
         {
             if ((puloCount == 1) && (puloDouble == true))
             {
-                animator.SetTrigger("Pulando");
+                FinalSlideEvitaBugs();
+                animator.SetTrigger("PULODUPLO");
+
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloDouble = true; //no tutorial deixar false
                 puloCount = 0;
                 Debug.Log("Pulo Doble funcionou");
                 animator.SetBool("Grounded", false);
-                gameObject.GetComponent<BoxCollider2D>().enabled = true;
-                gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
                 RandomizaSFXPuloDuplo();
             }
 
-            if (grounded && (puloCount == 0))
+            if (grounded && (puloCount == 0) && footIsGrounded)
             {
+                FinalSlideEvitaBugs();
                 animator.SetTrigger("Pulando");
+
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloCount++;
                 grounded = false;
                 footIsGrounded = false;
                 animator.SetBool("Grounded", false);
-                gameObject.GetComponent<BoxCollider2D>().enabled = true;
-                gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
                 RandomizaPuloSFX();
-                //soundManager.PlayAudio("pulo");
-            }
-            //if (podePular == true)
-            {
-                //animator.SetTrigger("Pulando");
-                //body.velocity = new Vector2(body.velocity.x, pulo);
-                //puloCount++;
-                //soundManager.PlayAudio("pulo");
-            }
-            //if ((puloDouble = true) && (puloCount < 2))
-            {
-               // animator.SetTrigger("Pulando");
-                //body.velocity = new Vector2(body.velocity.x, pulo);
-                //puloCount++;
-                //soundManager.PlayAudio("pulo");
-            }
-                        
+            }                                  
         }
 
         if (Input.GetButtonDown("Restart"))
@@ -115,17 +98,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Slide"))
         {
             if (grounded && podeSlide == true)
-            {
+            {                
+                puloCount = 0;
                 animator.SetTrigger("Deslizando");
+                gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                animator.SetBool("Grounded", true);
+                grounded = true;
                 SlideSFX();
-                //gameObject.GetComponent<BoxCollider2D>().size = new Vector2 (0.01f,0.01f);
-                GetComponentInChildren<BoxCollider2D>().enabled = false;
-                //gameObject.GetComponent<BoxCollider2D>().enabled = false;
-              
-
-                //body.velocity = new Vector2(body.velocity.x, pulo);
-                //puloCount++;
-                //soundManager.PlayAudio("pulo");
             }
         }
         // Animação
@@ -141,7 +121,12 @@ public class PlayerController : MonoBehaviour
         {
             AndaPinkTutorial();
         }
+    }
 
+    private void FinalSlideEvitaBugs()
+    {
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
     }
 
     private void RandomizaSFXPuloDuplo()
@@ -161,20 +146,7 @@ public class PlayerController : MonoBehaviour
         if (randomizadorPulo == 2) { PuloSFX3(); }
         if (randomizadorPulo == 3) { PuloSFX4(); }
     }
-
-    private void AtivarCapsuleCollider()
-    {
-        gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
-        Physics2D.gravity = new Vector2(0, -10);
-        pulo = 9f;
-    }
-
-    private void DestivarCapsuleCollider()
-    {
-        gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
-        Physics2D.gravity = new Vector2(0, -10);
-        pulo = 9f;
-    }
+        
     //Colisão
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -200,13 +172,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
             grounded = false;
-    }
-    private void AtivarBoxColliderTut()
-    {
-        gameObject.GetComponent<BoxCollider2D>().size = new Vector2(1f, 2f);
-        gameObject.GetComponent<BoxCollider2D>().enabled = true;
-        Physics2D.gravity = new Vector2(0, -10);
-    }
+    }    
 
     //Triggers
     void OnTriggerEnter2D(Collider2D other)
@@ -239,8 +205,7 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "PuloDuplo")
         {
             Destroy(other.gameObject);
-            puloDouble = true;
-            //soundManager.PlayAudio("puloduplo");
+            puloDouble = true;            
         }
         if (other.tag == "SomMorreuTut")
         {
