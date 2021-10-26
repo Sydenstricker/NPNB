@@ -101,7 +101,11 @@ public class PlayerCav : MonoBehaviour
                 puloCount = 0;
                 Debug.Log("Pulo Doble funcionou");
                 animator.SetBool("isGrounded",false) ;
-                PuloDuploSFX1(); //fazer random no array
+                var randomizadorPuloDuplo = Random.Range(0, 3);
+                if (randomizadorPuloDuplo == 0) { PuloDuploSFX1();}
+                if (randomizadorPuloDuplo == 1) { PuloDuploSFX2(); }
+                if (randomizadorPuloDuplo == 2) { PuloDuploSFX3(); }
+                if (randomizadorPuloDuplo == 3) { PuloDuploSFX4(); }             
                 
             }
 
@@ -114,7 +118,11 @@ public class PlayerCav : MonoBehaviour
                 grounded = false;
                 footIsGrounded = false;
                 animator.SetBool("isGrounded", false);
-                PuloSFX1();     // fazer random no array    
+                var randomizadorPulo = Random.Range(0, 3);
+                if (randomizadorPulo == 0) { PuloSFX1(); }
+                if (randomizadorPulo == 1) { PuloSFX2(); }
+                if (randomizadorPulo == 2) { PuloSFX3(); }
+                if (randomizadorPulo == 3) { PuloSFX4(); }
             }
 
         }
@@ -218,7 +226,10 @@ public class PlayerCav : MonoBehaviour
     private void TomarDano(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
-        Dano1SFX();
+        var randomizadorDano = Random.Range(0,2);
+        if (randomizadorDano == 0) { Dano1SFX(); }
+        if (randomizadorDano == 1) { Dano2SFX(); }
+        if (randomizadorDano == 2) { Dano3SFX(); }
         if (damageDealer.gameObject.layer == 12)
         {
             damageDealer.PedraCaiFeliz();
@@ -234,7 +245,8 @@ public class PlayerCav : MonoBehaviour
                 
         if (health <= 0)
         {
-            PlayerMorreu();            
+            PlayerMorreu();
+            return;
         }
         else
         {
@@ -301,34 +313,42 @@ public class PlayerCav : MonoBehaviour
     }
     private void PuloDuploSFX1()
     {
+        Debug.Log("puloDuplo 1");
         AudioSource.PlayClipAtPoint(puloDuplo1SFX, Camera.main.transform.position, volumePuloDuplo1);
     }
     private void PuloDuploSFX2()
     {
+        Debug.Log("puloDuplo 2");
         AudioSource.PlayClipAtPoint(puloDuplo2SFX, Camera.main.transform.position, volumePuloDuplo2);
     }
     private void PuloDuploSFX3()
     {
+        Debug.Log("puloDuplo 3");
         AudioSource.PlayClipAtPoint(puloDuplo3SFX, Camera.main.transform.position, volumePuloDuplo3);
     }
     private void PuloDuploSFX4()
     {
+        Debug.Log("puloDuplo 4");
         AudioSource.PlayClipAtPoint(puloDuplo4SFX, Camera.main.transform.position, volumePuloDuplo4);
     }
     private void PuloSFX1()
     {
+        Debug.Log("pulo 1");
         AudioSource.PlayClipAtPoint(pulo1SFX, Camera.main.transform.position, volumePulo1);
     }
     private void PuloSFX2()
     {
+        Debug.Log("pulo 2");
         AudioSource.PlayClipAtPoint(pulo2SFX, Camera.main.transform.position, volumePulo2);
     }
     private void PuloSFX3()
     {
+        Debug.Log("pulo 3");
         AudioSource.PlayClipAtPoint(pulo3SFX, Camera.main.transform.position, volumePulo3);
     }
     private void PuloSFX4()
     {
+        Debug.Log("pulo 4");
         AudioSource.PlayClipAtPoint(pulo4SFX, Camera.main.transform.position, volumePulo4);
     }
     private void SlideSFX()
