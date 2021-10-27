@@ -29,7 +29,6 @@ public class BlueAndaDialogo : MonoBehaviour
             contaTempo++;
             blueAnimator.SetBool("andar", true);
             AndaBlueESQ();
-            Debug.Log(contaTempo);
         }
         if(contaTempo >= limiteAndar)
         {
@@ -63,21 +62,18 @@ public class BlueAndaDialogo : MonoBehaviour
     public void ParaBlue()
     {
         body.velocity = new Vector2(0, 0);
-        blueAnimator.SetBool("andar", false);
-        
+        blueAnimator.SetBool("andar", false);        
     } 
     public void AndaBlue()
     {
         body.velocity = new Vector2(velocidade, body.velocity.y);
         blueAnimator.SetBool("andar", true);
-        //naoSeMova = false; //AKI
     }
     public void AndaBlueESQ()
     {
         body.velocity = new Vector2(velocidade, 0);
         blueAnimator.SetBool("andar", true);
-        estaAndando = true;
-        //naoSeMova = false;
+        estaAndando = true;        
     }
     public void CorreDireita()
     {
@@ -94,8 +90,7 @@ public class BlueAndaDialogo : MonoBehaviour
         yield return new WaitForSeconds(delayBlueCorrer);
         transform.rotation = Quaternion.AngleAxis(180, Vector3.down);
         body.velocity = new Vector2(-velocidade, 0);
-        blueAnimator.SetBool("correr", true);
-        Debug.Log("CORRE BLUE MEU FILHO");
+        blueAnimator.SetBool("correr", true);        
     }
 
     public void CorreNaveFinal()

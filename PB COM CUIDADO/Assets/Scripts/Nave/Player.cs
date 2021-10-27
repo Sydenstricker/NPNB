@@ -83,8 +83,7 @@ public class Player : MonoBehaviour
         
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return;}
-        TomarDano(damageDealer);    
-        
+        TomarDano(damageDealer);        
             
     }
     
@@ -226,8 +225,6 @@ public class Player : MonoBehaviour
 
             yield return null;
         }
-        transform.position = originalPos;
-        Debug.Log("efeito de tremer ao tomar tiro funcionou");
-    }
-    
+        transform.position = originalPos;        
+    }    
 }

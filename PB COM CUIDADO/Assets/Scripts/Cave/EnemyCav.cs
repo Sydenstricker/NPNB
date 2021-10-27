@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class EnemyCav : MonoBehaviour
 {
-
     private Animator animator;
     private Rigidbody2D rigidBody2D;
     [SerializeField] private bool isMorcegoStalker = false;
-    [SerializeField] private float velMorcegoStalker = 10f;
-    //[SerializeField] GameObject spriteTomouDano; spawna sprite quando toma dano
+    [SerializeField] private float velMorcegoStalker = 10f;    
        
     void Start()
     {
@@ -23,22 +21,14 @@ public class EnemyCav : MonoBehaviour
         {
             animator.SetTrigger("VoaMorcego");
             MovimentaMorcegoDiagonal();
-            //transform.position = new Vector3(-0.01f,-0.05f,0);
-            //PerseguePlayer();
         }
         if (other.gameObject.layer == 15)
         {
-            transform.rotation = Quaternion.AngleAxis(0, Vector3.down);
-            //Quaternion AngleAxis(float angle, Vector3 axis);
-            //transform.rotation = Quaternion.Euler(0, -180f, 0);
-            Debug.Log("flipa lobo wuf wuf");
+            transform.rotation = Quaternion.AngleAxis(0, Vector3.down);           
         }
         if (other.gameObject.layer == 16)
         {
             transform.rotation = Quaternion.AngleAxis(180, Vector3.down);
-            //Quaternion AngleAxis(float angle, Vector3 axis);
-            //transform.rotation = Quaternion.Euler(0, -180f, 0);
-            Debug.Log("desflipa lobo wuf wuf");
         }
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }        
@@ -48,10 +38,7 @@ public class EnemyCav : MonoBehaviour
     {
         if (collision.gameObject.layer == 15)
         {
-            //transform.rotation = Quaternion.AngleAxis(180, Vector3.zero);
-            //Quaternion AngleAxis(float angle, Vector3 axis);
-            //transform.rotation = Quaternion.Euler(0, -180f, 0);
-            Debug.Log("gira lobo wuf wuf");
+            return;
         }
     }
     private void MovimentaMorcegoDiagonal()
@@ -59,9 +46,7 @@ public class EnemyCav : MonoBehaviour
         var targetPosition = FindObjectOfType<PlayerCav>().gameObject.transform.position;
         var movementThisFrame = velMorcegoStalker * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
-
-        //transform.position = new Vector2(-0.1f, -0.1f);
-        Debug.Log("Morcego persegue Player loucamente");        
+     
     }
 
     private void PerseguePlayer()

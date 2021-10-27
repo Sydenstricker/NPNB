@@ -20,14 +20,12 @@ public class MorcegoEsquerda : MonoBehaviour
         if (pegaPlayer == true)
         {
             AndaLobo();
-        }
-       
+        }       
     }
 
     private void AndaLobo()
     {
         lobo.velocity = new Vector2(sedeDeSangue, 0);
-        Debug.Log("lobo esta sedento por sangue");
     }
     public void AtivaAndarLobo()
     {

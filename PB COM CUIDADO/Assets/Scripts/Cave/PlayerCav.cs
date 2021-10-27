@@ -80,12 +80,10 @@ public class PlayerCav : MonoBehaviour
         SetUpMoveBoundry();
         Move();
 
-
         if (Input.GetButtonDown("Restart"))
         {
             SceneManager.LoadScene("CavernaGameplay");
             FindObjectOfType<GameSession>().ResetGame();
-            Debug.Log("deu bug socorr");
         }
 
         if ( Input.GetButtonDown("Jump") )
@@ -98,7 +96,6 @@ public class PlayerCav : MonoBehaviour
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloDouble = true; //no tutorial deixar false
                 puloCount = 0;
-                Debug.Log("Pulo Doble funcionou");
                 animator.SetBool("isGrounded", false);
                 RandomizaSFXPuloDuplo();
             }
@@ -131,13 +128,11 @@ public class PlayerCav : MonoBehaviour
             }          
         }       
     }
-    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "MenuScoreCav" && pontosIDcoletados >= 3 )
         {
-            Debug.Log("abriu menu de score");
             gameManager.HighScoreCav();
             Destroy(other.gameObject);         
             
@@ -145,8 +140,7 @@ public class PlayerCav : MonoBehaviour
         if (other.tag == "MenuScoreCav" && pontosIDcoletados < 3)
         {
             Destroy(other.gameObject);
-            gameManager.PIMenuCav();
-            Debug.Log("Abriu menu PI Insuficientes");
+            gameManager.PIMenuCav();           
         }
         if (other.gameObject.layer == 6)
         {
@@ -168,7 +162,6 @@ public class PlayerCav : MonoBehaviour
     private void DesativaFoot()
     {
         this.footIsGrounded = false;
-        Debug.Log("Desativou foot is Grounded");
     }
 
     private void FinalSlideEvitaBugsColliders()
@@ -228,9 +221,9 @@ public class PlayerCav : MonoBehaviour
     private void RandomizaDanoSFX()
     {
         var randomizadorDano = Random.Range(0, 3);
-        if (randomizadorDano == 0) { Dano1SFX(); Debug.Log("dano1SFX"); }
-        if (randomizadorDano == 1) { Dano2SFX(); Debug.Log("dano2SFX"); }
-        if (randomizadorDano == 2) { Dano3SFX(); Debug.Log("dano3SFX"); }
+        if (randomizadorDano == 0) { Dano1SFX(); }
+        if (randomizadorDano == 1) { Dano2SFX(); }
+        if (randomizadorDano == 2) { Dano3SFX(); }
     }
     private void RandomizaSFXPuloDuplo()
     {
@@ -255,11 +248,7 @@ public class PlayerCav : MonoBehaviour
         velocidade = 0; pulo = 0;
         animator.SetTrigger("Morreu");
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
-        FindObjectOfType<GamePlayCavernaCanvas>().RestartGame();
-        //FindObjectOfType<GamePlayCavernaCanvas>().GetComponent<DeathMenu>().AtivaMenuMorteCavGameplay();
-        //FindObjectOfType<DeathMenu>().AtivaMenuMorteCavGameplay();
-        //FindObjectOfType<DeathMenu>().AtivaMenuMorteCavGameplay();
-        //FindObjectOfType<Level>().LoadGameOverCav();
+        FindObjectOfType<GamePlayCavernaCanvas>().RestartGame();        
     }
     public int GetHealth()
     {
@@ -308,42 +297,34 @@ public class PlayerCav : MonoBehaviour
     }
     private void PuloDuploSFX1()
     {
-        Debug.Log("puloDuplo 1SFX");
         AudioSource.PlayClipAtPoint(puloDuplo1SFX, Camera.main.transform.position, volumePuloDuplo1);
     }
     private void PuloDuploSFX2()
     {
-        Debug.Log("puloDuplo 2SFX");
         AudioSource.PlayClipAtPoint(puloDuplo2SFX, Camera.main.transform.position, volumePuloDuplo2);
     }
     private void PuloDuploSFX3()
     {
-        Debug.Log("puloDuplo 3SFX");
         AudioSource.PlayClipAtPoint(puloDuplo3SFX, Camera.main.transform.position, volumePuloDuplo3);
     }
     private void PuloDuploSFX4()
     {
-        Debug.Log("puloDuplo 4SFX");
         AudioSource.PlayClipAtPoint(puloDuplo4SFX, Camera.main.transform.position, volumePuloDuplo4);
     }
     private void PuloSFX1()
     {
-        Debug.Log("pulo 1SFX");
         AudioSource.PlayClipAtPoint(pulo1SFX, Camera.main.transform.position, volumePulo1);
     }
     private void PuloSFX2()
     {
-        Debug.Log("pulo 2SFX");
         AudioSource.PlayClipAtPoint(pulo2SFX, Camera.main.transform.position, volumePulo2);
     }
     private void PuloSFX3()
     {
-        Debug.Log("pulo 3SFX");
         AudioSource.PlayClipAtPoint(pulo3SFX, Camera.main.transform.position, volumePulo3);
     }
     private void PuloSFX4()
     {
-        Debug.Log("pulo 4SFX");
         AudioSource.PlayClipAtPoint(pulo4SFX, Camera.main.transform.position, volumePulo4);
     }
     private void SlideSFX()
@@ -361,6 +342,5 @@ public class PlayerCav : MonoBehaviour
     private void Dano3SFX()
     {
         AudioSource.PlayClipAtPoint(dano3SFX, Camera.main.transform.position, volumeDano3);
-    }
-    
+    }    
 }

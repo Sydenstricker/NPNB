@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool footIsGrounded = false;
     public float contatempoTUT;
 
-
     [SerializeField] GameManager gameManager;
     [SerializeField] SoundManager soundManager;
     private Rigidbody2D body;
@@ -70,7 +69,6 @@ public class PlayerController : MonoBehaviour
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloDouble = true; //no tutorial deixar false
                 puloCount = 0;
-                Debug.Log("Pulo Doble funcionou");
                 animator.SetBool("Grounded", false);
                 RandomizaSFXPuloDuplo();
             }
@@ -234,42 +232,34 @@ public class PlayerController : MonoBehaviour
     }
     private void PuloDuploSFX1()
     {
-        Debug.Log("puloDuplo 1");
         AudioSource.PlayClipAtPoint(puloDuplo1SFX, Camera.main.transform.position, volumePuloDuplo1);
     }
     private void PuloDuploSFX2()
     {
-        Debug.Log("puloDuplo 2");
         AudioSource.PlayClipAtPoint(puloDuplo2SFX, Camera.main.transform.position, volumePuloDuplo2);
     }
     private void PuloDuploSFX3()
     {
-        Debug.Log("puloDuplo 3");
         AudioSource.PlayClipAtPoint(puloDuplo3SFX, Camera.main.transform.position, volumePuloDuplo3);
     }
     private void PuloDuploSFX4()
     {
-        Debug.Log("puloDuplo 4");
         AudioSource.PlayClipAtPoint(puloDuplo4SFX, Camera.main.transform.position, volumePuloDuplo4);
     }
     private void PuloSFX1()
     {
-        Debug.Log("pulo 1");
         AudioSource.PlayClipAtPoint(pulo1SFX, Camera.main.transform.position, volumePulo1);
     }
     private void PuloSFX2()
     {
-        Debug.Log("pulo 2");
         AudioSource.PlayClipAtPoint(pulo2SFX, Camera.main.transform.position, volumePulo2);
     }
     private void PuloSFX3()
     {
-        Debug.Log("pulo 3");
         AudioSource.PlayClipAtPoint(pulo3SFX, Camera.main.transform.position, volumePulo3);
     }
     private void PuloSFX4()
     {
-        Debug.Log("pulo 4");
         AudioSource.PlayClipAtPoint(pulo4SFX, Camera.main.transform.position, volumePulo4);
     }
     private void SlideSFX()

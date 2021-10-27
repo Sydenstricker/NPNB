@@ -24,26 +24,18 @@ public class DialogueCutsceneManager : MonoBehaviour
     Message[] currentMessages;
     Actor[] currentActors;
     
-    //AudioClip[] currentSFX;
+   
     int activeMessage = 0;
-    //int activeSFX = 0;
-    public static bool isActive = false;
-
-    //[SerializeField] AudioClip [] messageSFX;
-    //[SerializeField] AudioClip questCompleta;
-    //[SerializeField] AudioClip dialogo6;
+    public static bool isActive = false;       
     private int contadorDialogo = 0;   
 
         public void OpenDialogue(Message[] messages, Actor[] actors)
     {
         currentMessages = messages;
         currentActors = actors;
-        //currentSFX = messages;
         activeMessage = 0;
-        //activeSFX = 0;
-        isActive = true;
+        isActive = true;      
         
-        Debug.Log("Started conversation! Loaded messages: " + messages.Length);
         DisplayMessage();
         backgroundBox.LeanScale(Vector3.one, 0.5f);        
     }
@@ -56,8 +48,7 @@ public class DialogueCutsceneManager : MonoBehaviour
         AudioSource.PlayClipAtPoint(messageSFX, Camera.main.transform.position, 0.6f);
                 
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
-        actorName.text = actorToDisplay.name;
-        //actorAnimator = actorToDisplay.bonecoAnimado; 
+        actorName.text = actorToDisplay.name;        
         actorImage.sprite = actorToDisplay.sprite;        
         AnimateTextColor();
     }
@@ -73,12 +64,10 @@ public class DialogueCutsceneManager : MonoBehaviour
             contadorDialogo++;
         }       
         else {
-            Debug.Log("Conversation ended!");
             backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
             isActive = false;
         }            
     }     
-
     void AnimateTextColor()
     {
         LeanTween.textAlpha(messageText.rectTransform, 0, 0);
@@ -100,9 +89,7 @@ public class DialogueCutsceneManager : MonoBehaviour
             FindObjectOfType<BlueAndaDialogo>().AndaBlue();
             mandouTrigger = true;
             bBlueNaveFinal = true;            
-        }
-       
-
+        }     
 
         if (contadorDialogo == 0 )
         {
@@ -174,8 +161,7 @@ public class DialogueCutsceneManager : MonoBehaviour
             {
                 FindObjectOfType<BlueAndaDialogo>().NAOSEMOVEBlue();
                 mandouTrigger = true;
-            }
-            
+            }            
         }
         if (contadorDialogo == 8 && mandouTrigger == false)
         {
@@ -184,8 +170,7 @@ public class DialogueCutsceneManager : MonoBehaviour
                 FindObjectOfType<PortalNaveFim>().AtivaPortalNaveFim();
                 FindObjectOfType<CharCutsceneController>().TrofeuPinky();
                 FindObjectOfType<BlueAndaDialogo>().OlhaFrenteBlue();
-                FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoONPinky();
-                //FindObjectOfType<BlueAndaDialogo>().ParaBlue();
+                FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoONPinky();                
                 mandouTrigger = true;
             }
         }
@@ -201,8 +186,7 @@ public class DialogueCutsceneManager : MonoBehaviour
         {
             if (isNaveDialogoFinal)
             {
-                FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoONPinky();
-                
+                FindObjectOfType<CharCutsceneController>().OlhaAtrasFixoONPinky();                
                 mandouTrigger = true;
             }
         }
