@@ -8,10 +8,14 @@ public class ScoreDisplayCav : MonoBehaviour
 {
     Text scoreText;
     GameSession gameSession;
-    void Start()
+    private void Awake()
     {
         scoreText = GetComponent<Text>();
         gameSession = FindObjectOfType<GameSession>();
+    }
+    void Start()
+    {
+       
     }
 
     // Update is called once per frame
