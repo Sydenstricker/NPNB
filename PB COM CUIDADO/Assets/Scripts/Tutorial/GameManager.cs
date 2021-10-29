@@ -42,13 +42,15 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void RestartGame() {
-    player.SetActive(false);
-    deathMenu.gameObject.SetActive(true);
-        
+    public void RestartGame() 
+    {
+        player.SetActive(false);
+        Cursor.visible = true;
+        deathMenu.gameObject.SetActive(true);        
     }
     public void HighScoreTut()
     {
+        Cursor.visible = true;
         scoremenu.gameObject.SetActive(true);
         AdicionaScoreNoPlayerDataTUT();
         AdicionaTempoNoPlayerDataTUT();
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour
     }
     public void HighScoreCav()
     {
+        Cursor.visible = true;
         scoremenu.gameObject.SetActive(true);
         AdicionaScoreNoPlayerDataCAV();
         AdicionaPINoPlayerDataCAV();
@@ -67,6 +70,7 @@ public class GameManager : MonoBehaviour
     }
     public void HighScoreNave()
     {
+        Cursor.visible = true;
         AdicionaScoreNoPlayerDataNAVE();
         AdicionaPINoPlayerDataNAVE();
         AdicionaTempoNoPlayerDataNAVE();
@@ -74,11 +78,14 @@ public class GameManager : MonoBehaviour
     }
     public void PIMenuCav()
     {
+        Cursor.visible = true;
         piMenu.gameObject.SetActive(true);
         playerCAV.SetActive(false);
     }
 
-    public void Restart() {
+    public void Restart() 
+    {
+        Cursor.visible = true;
         deathMenu.gameObject.SetActive(false);
         scoremenu.gameObject.SetActive(false);
         player.transform.position = playerInicio;

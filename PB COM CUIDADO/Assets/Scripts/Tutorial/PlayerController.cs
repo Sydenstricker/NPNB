@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        DesligaMouse();
         contatempoTUT = 0f;        
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -95,7 +96,7 @@ public class PlayerController : MonoBehaviour
         // Deslizar
         if (Input.GetButtonDown("Slide"))
         {
-            if (grounded && podeSlide == true)
+            if (grounded && podeSlide && footIsGrounded)
             {                
                 puloCount = 0;
                 animator.SetTrigger("Deslizando");
@@ -148,12 +149,7 @@ public class PlayerController : MonoBehaviour
     //Colisão
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 0)
-        {
-            animator.SetBool("Grounded", true);
-            grounded = true;
-            puloCount = 0;
-        }
+       
         switch (collision.gameObject.tag)
         {
             
@@ -175,6 +171,12 @@ public class PlayerController : MonoBehaviour
     //Triggers
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.layer == 0)
+        {
+            animator.SetBool("Grounded", true);
+            grounded = true;
+            puloCount = 0;
+        }
         if (other.tag == "Moeda")
         {
             Destroy(other.gameObject);
@@ -266,5 +268,14 @@ public class PlayerController : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(slideSFX, Camera.main.transform.position, volumeSlide);
     }  
+
+    private void DesligaMouse()
+    {
+       Cursor.visible = false;
+    }
+    private void LigaMouse()
+    {
+        Cursor.visible = true;
+    }
 
 }

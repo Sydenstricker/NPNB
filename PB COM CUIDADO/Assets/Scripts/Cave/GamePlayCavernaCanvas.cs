@@ -9,6 +9,7 @@ public class GamePlayCavernaCanvas : MonoBehaviour
 
     public void RestartGame()
     {
+        Cursor.visible = true;
         deathMenu.gameObject.SetActive(true);
     }
     public void RestartLevelCaverna()

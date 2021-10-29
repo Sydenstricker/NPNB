@@ -25,6 +25,7 @@ public class CharCutsceneController : MonoBehaviour
           
     void Start()
     {
+        Cursor.visible = false;
         body = GetComponent<Rigidbody2D>();
         pinkyAnimator = GetComponent<Animator>();     
     }       

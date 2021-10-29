@@ -56,6 +56,7 @@ public class Player : MonoBehaviour
     public int pontosIDcoletados;
     void Start()
     {
+        Cursor.visible = false;
         contatempoNAVE = 0f;
         SetUpMoveBoundry();
         PegaVidaCoracao();
