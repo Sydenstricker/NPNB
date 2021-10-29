@@ -108,6 +108,7 @@ public class Player : MonoBehaviour
     }    
     private void PlayerMorreu()
     {
+        
         Destroy(gameObject);
         GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(explosion,durationOfExplosion);
