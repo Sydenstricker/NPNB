@@ -20,7 +20,7 @@ public class Boss : MonoBehaviour
     [SerializeField] float tempoIntroBoss = 2f;
 
     [Header("Explosoes Configs")]
-    [SerializeField] GameObject explosoes;
+    //[SerializeField] GameObject explosoes;
     public GameObject Explosao1;
     public GameObject Explosao2;
     public GameObject Explosao3;
@@ -42,6 +42,17 @@ public class Boss : MonoBehaviour
     public GameObject Explosao19;
     public GameObject Explosao20;
     public GameObject Explosao21;
+
+    [Header("Canhoes Puto Forgive me Diego")]
+    [SerializeField] public GameObject canhaoPuto1;
+    [SerializeField] public GameObject canhaoPuto2;
+    [SerializeField] public GameObject canhaoPuto3;
+    [SerializeField] public GameObject canhaoPuto4;
+    [SerializeField] public GameObject canhaoPuto5;
+    [SerializeField] public GameObject canhaoPuto6;
+    [SerializeField] public GameObject canhaoPuto7;
+    [SerializeField] public GameObject canhaoPuto8;
+
 
     [Header("NAO MEXER Boss UI ")]
     public Slider bossSlider;
@@ -126,9 +137,11 @@ public class Boss : MonoBehaviour
     {
         FindObjectOfType<EnemySpawner>().InvocaReforçosBOSS();
         FindObjectOfType<BossPathing>().BossIsPuto();
+        StartCoroutine(AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(0.2f));
     }
        private void BossMorreu()
     {
+        StartCoroutine(DesativaCanhoesPutosEncimaBossAtirandoPewPewPew(0));
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
         animator.SetTrigger("Morreu");
         FindObjectOfType<GameManager>().HighScoreNave();       
@@ -138,7 +151,51 @@ public class Boss : MonoBehaviour
                
         FindObjectOfType<Level>().LoadCinematicaFinal();       
     }
-    
+
+    private IEnumerator AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(float intervaloAcionamentoCannons)
+    {
+        intervaloAcionamentoCannons = 0.1f;
+        canhaoPuto1.SetActive(true);
+        yield return new WaitForSeconds(intervaloAcionamentoCannons);
+        canhaoPuto2.SetActive(true);
+        yield return new WaitForSeconds(intervaloAcionamentoCannons);
+        canhaoPuto3.SetActive(true);
+        yield return new WaitForSeconds(intervaloAcionamentoCannons);
+        canhaoPuto4.SetActive(true);
+        yield return new WaitForSeconds(intervaloAcionamentoCannons);
+        canhaoPuto5.SetActive(true);
+        yield return new WaitForSeconds(intervaloAcionamentoCannons);
+        canhaoPuto6.SetActive(true);
+        yield return new WaitForSeconds(intervaloAcionamentoCannons);
+        canhaoPuto7.SetActive(true);
+        yield return new WaitForSeconds(intervaloAcionamentoCannons);
+        canhaoPuto8.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(DesativaCanhoesPutosEncimaBossAtirandoPewPewPew(0));
+        yield return new WaitForSeconds(10);
+        StartCoroutine(AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(intervaloAcionamentoCannons));
+
+    }
+    private IEnumerator DesativaCanhoesPutosEncimaBossAtirandoPewPewPew(float intervaloAcionamentoCannons)
+    {
+        canhaoPuto1.SetActive(false);
+        yield return new WaitForSeconds(0);
+        canhaoPuto2.SetActive(false);
+        yield return new WaitForSeconds(0);
+        canhaoPuto3.SetActive(false);
+        yield return new WaitForSeconds(0);
+        canhaoPuto4.SetActive(false);
+        yield return new WaitForSeconds(0);
+        canhaoPuto5.SetActive(false);
+        yield return new WaitForSeconds(0);
+        canhaoPuto6.SetActive(false);
+        yield return new WaitForSeconds(0);
+        canhaoPuto7.SetActive(false);
+        yield return new WaitForSeconds(0);
+        canhaoPuto8.SetActive(false);
+        yield return new WaitForSeconds(0);
+    }
+
 
     private IEnumerator ExplosoesFreneticas(float intervaloExplosoes)
     {
