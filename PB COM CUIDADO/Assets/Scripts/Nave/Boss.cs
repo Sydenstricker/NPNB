@@ -137,7 +137,7 @@ public class Boss : MonoBehaviour
     {
         FindObjectOfType<EnemySpawner>().InvocaReforçosBOSS();
         FindObjectOfType<BossPathing>().BossIsPuto();
-        StartCoroutine(AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(0.2f));
+        StartCoroutine(AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(0.1f));
     }
        private void BossMorreu()
     {
@@ -147,14 +147,13 @@ public class Boss : MonoBehaviour
         FindObjectOfType<GameManager>().HighScoreNave();       
         GetComponentInChildren<Cannon>().CannonStopShooting();
         polygonCollider2D.enabled = false;
-        StartCoroutine(ExplosoesFreneticas(0.3f));
-               
+        StartCoroutine(ExplosoesFreneticas(0.3f));               
         FindObjectOfType<Level>().LoadCinematicaFinal();       
     }
 
     private IEnumerator AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(float intervaloAcionamentoCannons)
     {
-        intervaloAcionamentoCannons = 0.1f;
+        
         canhaoPuto1.SetActive(true);
         yield return new WaitForSeconds(intervaloAcionamentoCannons);
         canhaoPuto2.SetActive(true);
@@ -170,7 +169,7 @@ public class Boss : MonoBehaviour
         canhaoPuto7.SetActive(true);
         yield return new WaitForSeconds(intervaloAcionamentoCannons);
         canhaoPuto8.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.7f);
         StartCoroutine(DesativaCanhoesPutosEncimaBossAtirandoPewPewPew(0));
         yield return new WaitForSeconds(10);
         StartCoroutine(AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(intervaloAcionamentoCannons));
