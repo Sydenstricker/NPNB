@@ -12,9 +12,10 @@ public class MoedaCav : MonoBehaviour
     {
 
         if (other.CompareTag("Player")) {
+            Destroy(gameObject);
             AudioSource.PlayClipAtPoint(coletaSFX, Camera.main.transform.position, volumeColeta);
             FindObjectOfType<GameSession>().AddToScore(scoreValue);
-            Destroy(gameObject);
+            
         }
         
     }
