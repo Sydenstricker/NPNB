@@ -16,7 +16,6 @@ public class VidaBossNaveUI : MonoBehaviour
 
     public HealthBar EstaHealthBar(HealthBar healthBarBoss)
     {
-        Debug.Log(healthBarBoss);
         return  healthBarBoss;
     }
     public int PegaVidaBoss(int health)

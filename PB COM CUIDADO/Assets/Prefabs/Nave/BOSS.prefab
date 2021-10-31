@@ -49,6 +49,104 @@ MonoBehaviour:
   projectileSpeed: 10
   shootSound: {fileID: 8300000, guid: c7876c43c4ceeae4881ff85aa0a7dbb6, type: 3}
   shootSoundVolume: 0.899
+--- !u!1 &352085442628489629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1387355915267443262}
+  - component: {fileID: 2928389431604326364}
+  m_Layer: 0
+  m_Name: Canhao puto encima 8 pew pew pew pew
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1387355915267443262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352085442628489629}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4, y: 1.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 459704458146970440}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2928389431604326364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352085442628489629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41941ee68f3f935488ff93854591b9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 0.2
+  projectile: {fileID: 1636617385442240539, guid: 1754293bba2984749b2004b84211b331, type: 3}
+  projectileSpeed: 20
+  shootSound: {fileID: 8300000, guid: c7876c43c4ceeae4881ff85aa0a7dbb6, type: 3}
+  shootSoundVolume: 0.899
+--- !u!1 &464948384783734769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2452175771425949662}
+  - component: {fileID: 3378401691986142914}
+  m_Layer: 0
+  m_Name: Canhao puto encima 8 pew pew pew pew (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2452175771425949662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464948384783734769}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.02, y: 0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 459704458146970440}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3378401691986142914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464948384783734769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41941ee68f3f935488ff93854591b9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 0.2
+  projectile: {fileID: 1636617385442240539, guid: 1754293bba2984749b2004b84211b331, type: 3}
+  projectileSpeed: 20
+  shootSound: {fileID: 8300000, guid: c7876c43c4ceeae4881ff85aa0a7dbb6, type: 3}
+  shootSoundVolume: 0.899
 --- !u!1 &508046368755362866
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +177,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 14
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1207677869288210441
 SpriteRenderer:
@@ -181,7 +279,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 15
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5781207682003917841
 SpriteRenderer:
@@ -253,6 +351,55 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &879149094932771510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4437815339564817417}
+  - component: {fileID: 8882308051595466368}
+  m_Layer: 0
+  m_Name: Canhao puto encima 8 pew pew pew pew (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4437815339564817417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879149094932771510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.59, y: 1.67, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 459704458146970440}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8882308051595466368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879149094932771510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41941ee68f3f935488ff93854591b9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 0.2
+  projectile: {fileID: 1636617385442240539, guid: 1754293bba2984749b2004b84211b331, type: 3}
+  projectileSpeed: 20
+  shootSound: {fileID: 8300000, guid: c7876c43c4ceeae4881ff85aa0a7dbb6, type: 3}
+  shootSoundVolume: 0.899
 --- !u!1 &994139583463372456
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +430,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 10
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2597349607158782443
 SpriteRenderer:
@@ -385,7 +532,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 4
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5657514769911995276
 SpriteRenderer:
@@ -487,7 +634,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 9
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &934627579281085853
 SpriteRenderer:
@@ -589,7 +736,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 3
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3307881075110545013
 SpriteRenderer:
@@ -661,6 +808,55 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &3279540220275117889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3603848124224059828}
+  - component: {fileID: 5999482718320385104}
+  m_Layer: 0
+  m_Name: Canhao puto encima 8 pew pew pew pew (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3603848124224059828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279540220275117889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.9, y: 0.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 459704458146970440}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5999482718320385104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279540220275117889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41941ee68f3f935488ff93854591b9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 0.2
+  projectile: {fileID: 1636617385442240539, guid: 1754293bba2984749b2004b84211b331, type: 3}
+  projectileSpeed: 20
+  shootSound: {fileID: 8300000, guid: c7876c43c4ceeae4881ff85aa0a7dbb6, type: 3}
+  shootSoundVolume: 0.899
 --- !u!1 &4285126811537130580
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +887,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 13
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7134595378418342498
 SpriteRenderer:
@@ -763,6 +959,55 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &4344900225713860684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3560198349871236525}
+  - component: {fileID: 859397109402993215}
+  m_Layer: 0
+  m_Name: Canhao puto encima 8 pew pew pew pew (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3560198349871236525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4344900225713860684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8, y: 0.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 459704458146970440}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &859397109402993215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4344900225713860684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41941ee68f3f935488ff93854591b9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 0.2
+  projectile: {fileID: 1636617385442240539, guid: 1754293bba2984749b2004b84211b331, type: 3}
+  projectileSpeed: 20
+  shootSound: {fileID: 8300000, guid: c7876c43c4ceeae4881ff85aa0a7dbb6, type: 3}
+  shootSoundVolume: 0.899
 --- !u!1 &4352186901880115541
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +1038,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 20
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1446552932576116052
 SpriteRenderer:
@@ -895,7 +1140,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 18
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &542084724105584386
 SpriteRenderer:
@@ -997,7 +1242,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 21
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4640558893872041278
 SpriteRenderer:
@@ -1099,7 +1344,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 16
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7600663604889909816
 SpriteRenderer:
@@ -1201,7 +1446,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 12
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3336700974116730071
 SpriteRenderer:
@@ -1303,7 +1548,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 8
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6826631044645999858
 SpriteRenderer:
@@ -1410,6 +1655,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3739801269011802101}
+  - {fileID: 1387355915267443262}
+  - {fileID: 4437815339564817417}
+  - {fileID: 4158987128043766601}
+  - {fileID: 3256690056196757516}
+  - {fileID: 3560198349871236525}
+  - {fileID: 5303564242986329571}
+  - {fileID: 3603848124224059828}
+  - {fileID: 2452175771425949662}
   - {fileID: 4484146246732936252}
   - {fileID: 6206658110840207288}
   - {fileID: 7679949506127138114}
@@ -1502,12 +1755,9 @@ MonoBehaviour:
   scoreValue: 5000
   explosoesfreneticasSFX: {fileID: 8300000, guid: a93e746da016b7c4c91408aa307f8761, type: 3}
   volumeExplosoes: 0.477
-  introSFX: {fileID: 8300000, guid: dcabf10b54d82164cacfef1c8d26c735, type: 3}
-  volumeIntro: 0.518
   BossPutoMusic: {fileID: 8300000, guid: dcabf10b54d82164cacfef1c8d26c735, type: 3}
   volumeBossPutoMusic: 0.75
   tempoIntroBoss: 2.2
-  explosoes: {fileID: 7747228945836049614, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
   Explosao1: {fileID: 7035470642638751014}
   Explosao2: {fileID: 7389382107136224731}
   Explosao3: {fileID: 2339079617976917969}
@@ -1529,6 +1779,14 @@ MonoBehaviour:
   Explosao19: {fileID: 6620139488602710844}
   Explosao20: {fileID: 4352186901880115541}
   Explosao21: {fileID: 5023555647757697473}
+  canhaoPuto1: {fileID: 352085442628489629}
+  canhaoPuto2: {fileID: 879149094932771510}
+  canhaoPuto3: {fileID: 8964086215087017648}
+  canhaoPuto4: {fileID: 6985771193601147350}
+  canhaoPuto5: {fileID: 4344900225713860684}
+  canhaoPuto6: {fileID: 8107402026964739284}
+  canhaoPuto7: {fileID: 3279540220275117889}
+  canhaoPuto8: {fileID: 464948384783734769}
   bossSlider: {fileID: 0}
   healthBarBoss: {fileID: 282354533627950804, guid: 63e019a02f2f454439eef44a38c58334, type: 3}
   currentHealthBoss: 0
@@ -1697,7 +1955,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 19
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4727383093405497452
 SpriteRenderer:
@@ -1799,7 +2057,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 6
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4638763702652546079
 SpriteRenderer:
@@ -1871,6 +2129,55 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &6985771193601147350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3256690056196757516}
+  - component: {fileID: 299931803803532608}
+  m_Layer: 0
+  m_Name: Canhao puto encima 8 pew pew pew pew (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3256690056196757516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6985771193601147350}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.76, y: 1.16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 459704458146970440}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &299931803803532608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6985771193601147350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41941ee68f3f935488ff93854591b9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 0.2
+  projectile: {fileID: 1636617385442240539, guid: 1754293bba2984749b2004b84211b331, type: 3}
+  projectileSpeed: 20
+  shootSound: {fileID: 8300000, guid: c7876c43c4ceeae4881ff85aa0a7dbb6, type: 3}
+  shootSoundVolume: 0.899
 --- !u!1 &7035470642638751014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,7 +2208,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 1
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6518295031041184608
 SpriteRenderer:
@@ -2003,7 +2310,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 2
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7366309398190346231
 SpriteRenderer:
@@ -2105,7 +2412,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 17
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &827087681241381302
 SpriteRenderer:
@@ -2177,6 +2484,55 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &8107402026964739284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5303564242986329571}
+  - component: {fileID: 3529013694213088462}
+  m_Layer: 0
+  m_Name: Canhao puto encima 8 pew pew pew pew (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5303564242986329571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8107402026964739284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.84, y: 0.68, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 459704458146970440}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3529013694213088462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8107402026964739284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41941ee68f3f935488ff93854591b9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 0.2
+  projectile: {fileID: 1636617385442240539, guid: 1754293bba2984749b2004b84211b331, type: 3}
+  projectileSpeed: 20
+  shootSound: {fileID: 8300000, guid: c7876c43c4ceeae4881ff85aa0a7dbb6, type: 3}
+  shootSoundVolume: 0.899
 --- !u!1 &8311154512337495130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,7 +2563,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 5
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7919900844940814856
 SpriteRenderer:
@@ -2309,7 +2665,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 11
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1186680515632415379
 SpriteRenderer:
@@ -2381,6 +2737,55 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &8964086215087017648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4158987128043766601}
+  - component: {fileID: 3635479267890352273}
+  m_Layer: 0
+  m_Name: Canhao puto encima 8 pew pew pew pew (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4158987128043766601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964086215087017648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.64, y: 1.42, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 459704458146970440}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3635479267890352273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964086215087017648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41941ee68f3f935488ff93854591b9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 0.2
+  projectile: {fileID: 1636617385442240539, guid: 1754293bba2984749b2004b84211b331, type: 3}
+  projectileSpeed: 20
+  shootSound: {fileID: 8300000, guid: c7876c43c4ceeae4881ff85aa0a7dbb6, type: 3}
+  shootSoundVolume: 0.899
 --- !u!1 &9136201493687695809
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,7 +2816,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459704458146970440}
-  m_RootOrder: 7
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1947201617397960925
 SpriteRenderer:

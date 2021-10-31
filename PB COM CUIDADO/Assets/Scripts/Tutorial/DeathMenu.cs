@@ -31,4 +31,8 @@ public class DeathMenu : MonoBehaviour
     {
         SceneManager.LoadScene("DialogueCaveIntro");
     }
+    public void QuitGame()
+    {
+        QuitGame();
+    }
 }

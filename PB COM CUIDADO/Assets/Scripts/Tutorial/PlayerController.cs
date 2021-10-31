@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool footIsGrounded = false;
     public float contatempoTUT;
 
-
     [SerializeField] GameManager gameManager;
     [SerializeField] SoundManager soundManager;
     private Rigidbody2D body;
@@ -48,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        DesligaMouse();
         contatempoTUT = 0f;        
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -70,7 +70,6 @@ public class PlayerController : MonoBehaviour
                 body.velocity = new Vector2(body.velocity.x, pulo);
                 puloDouble = true; //no tutorial deixar false
                 puloCount = 0;
-                Debug.Log("Pulo Doble funcionou");
                 animator.SetBool("Grounded", false);
                 RandomizaSFXPuloDuplo();
             }
@@ -97,7 +96,7 @@ public class PlayerController : MonoBehaviour
         // Deslizar
         if (Input.GetButtonDown("Slide"))
         {
-            if (grounded && podeSlide == true)
+            if (grounded && podeSlide && footIsGrounded)
             {                
                 puloCount = 0;
                 animator.SetTrigger("Deslizando");
@@ -150,12 +149,7 @@ public class PlayerController : MonoBehaviour
     //Colisão
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 0)
-        {
-            animator.SetBool("Grounded", true);
-            grounded = true;
-            puloCount = 0;
-        }
+       
         switch (collision.gameObject.tag)
         {
             
@@ -177,6 +171,12 @@ public class PlayerController : MonoBehaviour
     //Triggers
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.layer == 0)
+        {
+            animator.SetBool("Grounded", true);
+            grounded = true;
+            puloCount = 0;
+        }
         if (other.tag == "Moeda")
         {
             Destroy(other.gameObject);
@@ -234,47 +234,48 @@ public class PlayerController : MonoBehaviour
     }
     private void PuloDuploSFX1()
     {
-        Debug.Log("puloDuplo 1");
         AudioSource.PlayClipAtPoint(puloDuplo1SFX, Camera.main.transform.position, volumePuloDuplo1);
     }
     private void PuloDuploSFX2()
     {
-        Debug.Log("puloDuplo 2");
         AudioSource.PlayClipAtPoint(puloDuplo2SFX, Camera.main.transform.position, volumePuloDuplo2);
     }
     private void PuloDuploSFX3()
     {
-        Debug.Log("puloDuplo 3");
         AudioSource.PlayClipAtPoint(puloDuplo3SFX, Camera.main.transform.position, volumePuloDuplo3);
     }
     private void PuloDuploSFX4()
     {
-        Debug.Log("puloDuplo 4");
         AudioSource.PlayClipAtPoint(puloDuplo4SFX, Camera.main.transform.position, volumePuloDuplo4);
     }
     private void PuloSFX1()
     {
-        Debug.Log("pulo 1");
         AudioSource.PlayClipAtPoint(pulo1SFX, Camera.main.transform.position, volumePulo1);
     }
     private void PuloSFX2()
     {
-        Debug.Log("pulo 2");
         AudioSource.PlayClipAtPoint(pulo2SFX, Camera.main.transform.position, volumePulo2);
     }
     private void PuloSFX3()
     {
-        Debug.Log("pulo 3");
         AudioSource.PlayClipAtPoint(pulo3SFX, Camera.main.transform.position, volumePulo3);
     }
     private void PuloSFX4()
     {
-        Debug.Log("pulo 4");
         AudioSource.PlayClipAtPoint(pulo4SFX, Camera.main.transform.position, volumePulo4);
     }
     private void SlideSFX()
     {
         AudioSource.PlayClipAtPoint(slideSFX, Camera.main.transform.position, volumeSlide);
     }  
+
+    private void DesligaMouse()
+    {
+       Cursor.visible = false;
+    }
+    private void LigaMouse()
+    {
+        Cursor.visible = true;
+    }
 
 }

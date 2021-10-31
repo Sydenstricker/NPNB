@@ -22,17 +22,14 @@ public class CharCutsceneController : MonoBehaviour
     [SerializeField] float delayBlueCorrer = 0f;
     private bool isCorrendoSFX = true;
     private bool isAndandoSFX = true;
-       
-
-
-    // Start is called before the first frame update
+          
     void Start()
     {
+        Cursor.visible = false;
         body = GetComponent<Rigidbody2D>();
         pinkyAnimator = GetComponent<Animator>();     
     }       
 
-    // Update is called once per frame
     void Update()
     {        
         if (estaAndando == true)
@@ -55,14 +52,11 @@ public class CharCutsceneController : MonoBehaviour
         {
             AndaPinkTutorial();
         }     
-
-    }
-    
+    }    
     private void ParaPinkTutorial()
     {
         body.velocity = new Vector2(0, 0);
         pinkyAnimator.SetFloat("Velocidade", 0);
-        //pinkyAnimator.SetBool("andando", false);
     }
     private void AndaPinkTutorial()
     {
@@ -73,44 +67,36 @@ public class CharCutsceneController : MonoBehaviour
     //Animações
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        pinkyAnimator.SetTrigger("EntraFase");
-        Debug.Log("Corre menina");
+        pinkyAnimator.SetTrigger("EntraFase");        
     }    
     public void ExclamacaoPinky()
     {
         pinkyAnimator.SetTrigger("exclamacao");
-        Debug.Log("animacao exclamacao");        
     }    
      
     public void OlhaAtrasPinky()
     {
         pinkyAnimator.SetTrigger("olhaTras");
-        Debug.Log("animacao olha para tras");
     }
     public void OlhaAtrasFixoONPinky()
     {
         pinkyAnimator.SetBool("isOlhandoTras", true);
-        Debug.Log("animacao olha para tras");
     }
     public void OlhaAtrasFixoOFFPinky()
     {
         pinkyAnimator.SetBool("isOlhandoTras", false);
-        Debug.Log("animacao olha para tras");
     }
     public void TrofeuPinky()
     {
         pinkyAnimator.SetTrigger("Trofeu");
-        Debug.Log("animacao trofeu");
     }
     public void CheckPinky()
     {
         pinkyAnimator.SetTrigger("check");
-        Debug.Log("animacao check");
     }
     public void PuloDuroPinky()
     {
         pinkyAnimator.SetTrigger("puloDuro");
-        Debug.Log("animacao pulo Duro");        
     }
     public void CorrePink()
     {

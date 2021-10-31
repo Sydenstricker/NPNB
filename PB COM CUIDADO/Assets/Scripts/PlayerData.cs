@@ -4,6 +4,24 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
+    private void Awake()
+    {
+        SetUpSingleton();
+    }
+
+    private void SetUpSingleton()
+    {
+        int numberGameSessions = FindObjectsOfType<PlayerData>().Length;
+        if (numberGameSessions > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+
+    }
     [Header("TUT")]
     public int pontosObtidosTUT;
     public float tempoPorFaseTUT;
@@ -18,7 +36,7 @@ public class PlayerData : MonoBehaviour
     public int PIcoletadosNAVE;
     public int pontosObtidosNAVE;
     public int vidaNAVE;
-    public float tempoPorFaseNAVE;
+    public float tempoPorFaseNAVE;    
     
     public void NaoDestroiPlayerData()
     {

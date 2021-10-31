@@ -56,6 +56,7 @@ public class Player : MonoBehaviour
     public int pontosIDcoletados;
     void Start()
     {
+        Cursor.visible = false;
         contatempoNAVE = 0f;
         SetUpMoveBoundry();
         PegaVidaCoracao();
@@ -83,8 +84,7 @@ public class Player : MonoBehaviour
         
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return;}
-        TomarDano(damageDealer);    
-        
+        TomarDano(damageDealer);        
             
     }
     
@@ -108,6 +108,7 @@ public class Player : MonoBehaviour
     }    
     private void PlayerMorreu()
     {
+        
         Destroy(gameObject);
         GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(explosion,durationOfExplosion);
@@ -226,8 +227,6 @@ public class Player : MonoBehaviour
 
             yield return null;
         }
-        transform.position = originalPos;
-        Debug.Log("efeito de tremer ao tomar tiro funcionou");
-    }
-    
+        transform.position = originalPos;        
+    }    
 }

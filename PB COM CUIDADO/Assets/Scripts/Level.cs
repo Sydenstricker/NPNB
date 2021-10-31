@@ -43,6 +43,7 @@ public class Level : MonoBehaviour
     IEnumerator WaitAndLoad()
     {
         yield return new WaitForSeconds(delayGameOver);
+        Cursor.visible = true;
         SceneManager.LoadScene("NaveBlueGameOver");
 
     }

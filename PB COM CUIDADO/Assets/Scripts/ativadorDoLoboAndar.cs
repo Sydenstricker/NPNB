@@ -8,10 +8,7 @@ public class ativadorDoLoboAndar : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GetComponentInChildren<MorcegoEsquerda>().AtivaAndarLobo();
-            //FindObjectOfType<MorcegoEsquerda>().AtivaAndarLobo();
-            Debug.Log("corre cachorro");
-        }
-        
+            GetComponentInChildren<MorcegoEsquerda>().AtivaAndarLobo();            
+        }        
     }
 }
