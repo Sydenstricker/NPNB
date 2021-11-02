@@ -98,7 +98,7 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(bossConfig.GetTimeBetweenSpawns());
         }
     }
-    public void InvocaReforçosBOSS()
+    public void InvocaReforcosBOSS()
     {
         StartCoroutine(SpawnAllWaves());
     }
