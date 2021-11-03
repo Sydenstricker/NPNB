@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 7245225033657616785}
   - component: {fileID: 1739123703556607803}
   - component: {fileID: -4276455288876568558}
-  - component: {fileID: 7944459279002542270}
   - component: {fileID: -8050114806327008689}
   - component: {fileID: 4764726036606199784}
   - component: {fileID: -2587063552731430688}
+  - component: {fileID: 5844478605188106841}
   m_Layer: 9
   m_Name: Nave Big
   m_TagString: Untagged
@@ -132,32 +132,6 @@ MonoBehaviour:
   volumeMorte: 0.75
   shootSound: {fileID: 8300000, guid: de8168152acc1414a959be71980d281d, type: 3}
   shootSoundVolume: 0.25
---- !u!61 &7944459279002542270
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8521707023408420462}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.911111, y: 2.7777777}
-    newSize: {x: 1.03, y: 0.84}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.03, y: 0.84}
-  m_EdgeRadius: 0
 --- !u!50 &-8050114806327008689
 Rigidbody2D:
   serializedVersion: 4
@@ -211,3 +185,56 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &5844478605188106841
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8521707023408420462}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.911111, y: 2.7777777}
+    newSize: {x: 1.03, y: 0.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.2444445, y: -0.65555555}
+      - {x: 1.1333333, y: -0.56666666}
+      - {x: 1.488889, y: -0.21111111}
+      - {x: 1.6, y: -0.011111111}
+      - {x: 1.5777779, y: 0.3}
+      - {x: 1.9111111, y: 0.67777777}
+      - {x: 1.9111111, y: 1.0111111}
+      - {x: 1.7777778, y: 1.0555556}
+      - {x: 1.3555555, y: 0.9444445}
+      - {x: 1.3555555, y: 1.1444445}
+      - {x: 1.3333334, y: 1.1888889}
+      - {x: 1.1333333, y: 1.1888889}
+      - {x: 0.5777778, y: 0.9888889}
+      - {x: 0.08888889, y: 0.9666667}
+      - {x: -0.08888889, y: 1.0111111}
+      - {x: -0.8888889, y: 0.8777778}
+      - {x: -1.5333334, y: 0.23333333}
+      - {x: -1.7333333, y: -0.2777778}
+      - {x: -1.7333333, y: -0.7444445}
+      - {x: -1.7111112, y: -0.8555556}
+      - {x: -1.6666667, y: -0.9666667}
+      - {x: -1.1333333, y: -1.1444445}
+      - {x: -1.0222223, y: -1.1888889}
+      - {x: -0.7111111, y: -1.1888889}
+      - {x: -0.35555556, y: -1.1}
+      - {x: 0.44444445, y: -0.8555556}
+      - {x: 0.9111111, y: -1.1}
+      - {x: 1.2222222, y: -1.0333333}
