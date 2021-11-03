@@ -133,12 +133,14 @@ public class PlayerCav : MonoBehaviour
     {
         if (other.tag == "MenuScoreCav" && pontosIDcoletados >= 3 )
         {
+            FindObjectOfType<cameraMovCav>().AtivaGlitchScore();
             gameManager.HighScoreCav();
             Destroy(other.gameObject);         
             
         }
         if (other.tag == "MenuScoreCav" && pontosIDcoletados < 3)
         {
+            FindObjectOfType<cameraMovCav>().AtivaGlitchScore();
             Destroy(other.gameObject);
             gameManager.PIMenuCav();           
         }

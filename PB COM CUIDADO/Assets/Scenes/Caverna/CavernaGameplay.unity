@@ -12019,6 +12019,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1533992619}
     - target: {fileID: 1524614377408897032, guid: 5caeb499ca5fb134888ba711e3738264, type: 3}
+      propertyPath: isCaverna
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524614377408897032, guid: 5caeb499ca5fb134888ba711e3738264, type: 3}
       propertyPath: playerCAV
       value: 
       objectReference: {fileID: 1990263575}
@@ -100424,7 +100428,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.1216724, g: 0.13305557, b: 0.1509434, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -113310,7 +113314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3054316724796161447, guid: ac9134c8595b3714fa621e650a2f4e5f, type: 3}
       propertyPath: health
-      value: 100
+      value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 3054316724796161447, guid: ac9134c8595b3714fa621e650a2f4e5f, type: 3}
       propertyPath: healthBar
@@ -113551,7 +113555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7843520464763278983, guid: 1f37c50552c301b4589e2519c3a4c6a5, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0.4745098
       objectReference: {fileID: 0}
     - target: {fileID: 7843520464958446099, guid: 1f37c50552c301b4589e2519c3a4c6a5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -114340,6 +114344,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 8188207f7efc74541a43c64f4417cc08, type: 3}
+    - target: {fileID: 9150183968512359695, guid: d6587103b65986f4081021ca982bff6f, type: 3}
+      propertyPath: m_Color.a
+      value: 0.5137255
+      objectReference: {fileID: 0}
     - target: {fileID: 9150183968707260827, guid: d6587103b65986f4081021ca982bff6f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -115246,15 +115254,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7105366148608295689, guid: 3acca9618f439a14897d89c54c2d7f07, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.7924528
+      value: 0.084905684
       objectReference: {fileID: 0}
     - target: {fileID: 7105366148608295689, guid: 3acca9618f439a14897d89c54c2d7f07, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.64374214
+      value: 0.07639675
       objectReference: {fileID: 0}
     - target: {fileID: 7105366148608295689, guid: 3acca9618f439a14897d89c54c2d7f07, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.056069765
+      value: 0.04280884
       objectReference: {fileID: 0}
     - target: {fileID: 7105366148608295689, guid: 3acca9618f439a14897d89c54c2d7f07, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
