@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,9 +53,6 @@
     <UnityVersion>2020.3.21f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Scripts\Cave\GamePlayCavernaCanvas.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\NPCScene.cs" />
     <Compile Include="Assets\Scripts\PIDisplay.cs" />
@@ -67,7 +64,7 @@
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Main Menu\IntroTutorial.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
-    <Compile Include="Assets\Kino\Glitch\DigitalGlitch.cs" />
+    <Compile Include="Assets\Scripts\Kino\Glitch\DigitalGlitch.cs" />
     <Compile Include="Assets\Scripts\Stalker.cs" />
     <Compile Include="Assets\Scripts\BlueAndaDialogo.cs" />
     <Compile Include="Assets\Scripts\Tutorial\DeathMenu.cs" />
@@ -139,7 +136,7 @@
     <Compile Include="Assets\Scripts\Nave\SpawnerRandom.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
     <Compile Include="Assets\Scripts\QuestComplete.cs" />
-    <Compile Include="Assets\Effects\GlitchEffect.cs" />
+    <Compile Include="Assets\Scripts\Effects\GlitchEffect.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\TestingZLegacy.cs" />
     <Compile Include="Assets\Scripts\Tutorial\GameManager.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline2d.cs" />
@@ -174,7 +171,7 @@
     <Compile Include="Assets\Scripts\Nave\BossPathing.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSequencer.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\Kino\Glitch\AnalogGlitch.cs" />
+    <Compile Include="Assets\Scripts\Kino\Glitch\AnalogGlitch.cs" />
     <Compile Include="Assets\LeanTween\Examples\Archived\OldGUIExamplesCS.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
@@ -200,10 +197,10 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\Effects\GlitchShader.shader" />
+    <None Include="Assets\Scripts\Effects\GlitchShader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\Kino\Glitch\Shader\DigitalGlitch.shader" />
-    <None Include="Assets\Kino\Glitch\Shader\AnalogGlitch.shader" />
+    <None Include="Assets\Scripts\Kino\Glitch\Shader\DigitalGlitch.shader" />
+    <None Include="Assets\Scripts\Kino\Glitch\Shader\AnalogGlitch.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\LeanTween\Examples\Archived\2dUnlitWithFade.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />

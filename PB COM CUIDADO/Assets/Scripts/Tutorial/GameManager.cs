@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject playerCAV;
     private Vector2 playerInicio;
     [SerializeField] private bool isTutorial = false;
+    [SerializeField] private bool isCaverna = false;
 
     public Text pontosTxt;
     public Text pontosTxtMenu;
@@ -27,10 +28,17 @@ public class GameManager : MonoBehaviour
     {
         if (isTutorial)
         {
+            FindObjectOfType<CameraController>().DesativaGlitchMorte();
+            FindObjectOfType<CameraController>().DesativaGlitchScore();
             pontos = 0;
             player = GameObject.Find("PlayerTut");
             playerInicio = player.transform.position;
             contadorTempoTUT = 0;
+        }
+        if (isCaverna)
+        {
+            FindObjectOfType<cameraMovCav>().DesativaGlitchMorte();
+            FindObjectOfType<cameraMovCav>().DesativaGlitchScore();
         }
     }
    
@@ -44,12 +52,15 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame() 
     {
+        FindObjectOfType<CameraController>().AtivaGlitchMorte();
+        FindObjectOfType<cameraMovCav>().AtivaGlitchMorte();
         player.SetActive(false);
         Cursor.visible = true;
         deathMenu.gameObject.SetActive(true);        
     }
     public void HighScoreTut()
     {
+        FindObjectOfType<CameraController>().AtivaGlitchScore();
         Cursor.visible = true;
         scoremenu.gameObject.SetActive(true);
         AdicionaScoreNoPlayerDataTUT();
@@ -59,6 +70,7 @@ public class GameManager : MonoBehaviour
     }
     public void HighScoreCav()
     {
+        FindObjectOfType<cameraMovCav>().AtivaGlitchScore();
         Cursor.visible = true;
         scoremenu.gameObject.SetActive(true);
         AdicionaScoreNoPlayerDataCAV();
