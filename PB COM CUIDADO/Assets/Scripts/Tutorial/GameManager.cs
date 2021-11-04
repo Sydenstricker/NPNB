@@ -52,8 +52,14 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame() 
     {
-        FindObjectOfType<CameraController>().AtivaGlitchMorte();
-        FindObjectOfType<cameraMovCav>().AtivaGlitchMorte();
+        if(isTutorial)
+        {
+            FindObjectOfType<CameraController>().AtivaGlitchMorte();
+        }
+        if(isCaverna)
+        {
+            FindObjectOfType<cameraMovCav>().AtivaGlitchMorte();
+        }
         player.SetActive(false);
         Cursor.visible = true;
         deathMenu.gameObject.SetActive(true);        

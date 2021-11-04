@@ -5,6 +5,7 @@ using UnityEngine;
 public class PortalTriggerPlayer : MonoBehaviour
 {
     private Animator animator;
+    [SerializeField] bool isTutorial = false;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -14,6 +15,10 @@ public class PortalTriggerPlayer : MonoBehaviour
         if (other.tag == "Player")
         {
             animator.SetTrigger("AbrePortal");
+            if(isTutorial)
+            {
+                return;
+            }
             animator.SetTrigger("NaveFim");
         }
     }
