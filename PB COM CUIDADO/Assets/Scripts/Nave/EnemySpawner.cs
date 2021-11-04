@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] bool isEndless = false;
     [SerializeField] int ptsSpawnBoss = 5;
     private bool spawnoBoss = false;
+    public bool bossIsCallingBackUp = false;
 
     //Organizador Inspector
     GameObject enemyParent;
@@ -100,7 +101,8 @@ public class EnemySpawner : MonoBehaviour
     }
     public void InvocaReforcosBOSS()
     {
-        StartCoroutine(SpawnAllWaves());
+        StartCoroutine(SpawnAllWaves()); // mexer aki no asteroide
+        bossIsCallingBackUp = true;
     }
 }
 

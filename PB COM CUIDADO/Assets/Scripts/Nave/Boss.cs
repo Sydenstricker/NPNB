@@ -10,6 +10,7 @@ public class Boss : MonoBehaviour
     [SerializeField] int health = 10000;
     [SerializeField] int vidaBossFicaPuto = 5000;
     [SerializeField] int scoreValue = 150;
+    [SerializeField] float delayUIFilipeFicouAssustadoVei = 2.2f;
     private Animator animator;
 
     [Header("Sons")]
@@ -44,8 +45,7 @@ public class Boss : MonoBehaviour
     {
         polygonCollider2D = GetComponent<PolygonCollider2D>();
         AtivaUIBoss();
-        AjustaUIBossComBOSSInstanciado();
-        PegaVidaCoracao();
+        
         SomChefePutissimo();
     }
 
@@ -69,7 +69,14 @@ public class Boss : MonoBehaviour
     }
     private void AtivaUIBoss()
     {
+        StartCoroutine(DelayBarraVidaBossUI());
+    }
+    private IEnumerator DelayBarraVidaBossUI()
+    {
+        yield return new WaitForSeconds(delayUIFilipeFicouAssustadoVei); 
         FindObjectOfType<VidaBossNaveUI>().AtivaVidaBoss();
+        AjustaUIBossComBOSSInstanciado();
+        PegaVidaCoracao();
     }
 
     IEnumerator WaitAndLoad()
@@ -115,7 +122,7 @@ public class Boss : MonoBehaviour
     }
     private void BossMorreu()
     {
-        StartCoroutine(DesativaCanhoesPutosEncimaBossAtirandoPewPewPew(0));
+        StartCoroutine(DesativaCanhoesPutosEncimaBossAtirandoPewPewPew(0.1f));
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
         animator.SetTrigger("Morreu");
         FindObjectOfType<GameManager>().HighScoreNave();
@@ -131,7 +138,6 @@ public class Boss : MonoBehaviour
         foreach (Transform child in canhoesPuto.transform)
         {
             child.gameObject.SetActive(true);
-            AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeTiroCanhao);
             yield return new WaitForSeconds(intervaloAcionamentoCannons);
         }
         yield return new WaitForSeconds(0.7f);
@@ -145,7 +151,6 @@ public class Boss : MonoBehaviour
         foreach (Transform child in canhoesPuto.transform)
         {
             child.gameObject.SetActive(false);
-            AudioSource.PlayClipAtPoint(explosoesfreneticasSFX, Camera.main.transform.position, volumeTiroCanhao);
             yield return new WaitForSeconds(intervaloAcionamentoCannons);
         }
     }

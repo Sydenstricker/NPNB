@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
    
     GameObject pontosIDParent;
     const string PI_PARENT_NAME = "Pontos de ID";
+    
 
 
     void Start()
@@ -123,12 +124,16 @@ public class Enemy : MonoBehaviour
     }
     private void SpawnRandomPI()
     {
-        inimigosSoltamPI = Random.Range(chanceMinSoltarPID,chanceMaxSoltarPID);
-        if (inimigosSoltamPI <= 5)
+        do
         {
-            GameObject PI = Instantiate(PIPrefab, transform.position, Quaternion.identity) as GameObject;
-            PI.transform.parent = pontosIDParent.transform;
-        }        
+            inimigosSoltamPI = Random.Range(chanceMinSoltarPID, chanceMaxSoltarPID);
+            if (inimigosSoltamPI <= 5)
+            {
+                GameObject PI = Instantiate(PIPrefab, transform.position, Quaternion.identity) as GameObject;
+                PI.transform.parent = pontosIDParent.transform;
+            }
+        }
+        while (FindObjectOfType<EnemySpawner>().bossIsCallingBackUp == false);
     }
     private void SpawnRandomHP()
     {
@@ -146,6 +151,6 @@ public class Enemy : MonoBehaviour
             animator.SetTrigger("Ai");
         }
         
-    }
+    }  
 
 }
