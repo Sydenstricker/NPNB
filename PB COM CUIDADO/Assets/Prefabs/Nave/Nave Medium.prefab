@@ -33,7 +33,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6364787522191377967}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -119,6 +120,7 @@ MonoBehaviour:
   chanceMaxSoltarHP: 100
   chanceMinSoltarHP: 1
   isNaveBomber: 0
+  explosaoAnimacao: {fileID: 7747228945836049614, guid: 6999684354a111a43b2875fe434da791, type: 3}
   PIPrefab: {fileID: 4493755121161822097, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
   HPPrefab: {fileID: 4493755121161822097, guid: ec3872d1df9207a4791ba4a6333d3a37, type: 3}
   minTimeBetweenShots: 0.2
@@ -231,3 +233,69 @@ PolygonCollider2D:
       - {x: 1.0833334, y: -0.25}
       - {x: 1.3000001, y: -0.16666667}
       - {x: 1.4166667, y: 0.06666667}
+--- !u!1001 &3735712983647568620
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4225588118928698343}
+    m_Modifications:
+    - target: {fileID: 7747228945836049603, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747228945836049603, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747228945836049603, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747228945836049603, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747228945836049603, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747228945836049603, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747228945836049603, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747228945836049603, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747228945836049603, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747228945836049603, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747228945836049603, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747228945836049614, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+      propertyPath: m_Name
+      value: Explosao
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747228945836049614, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+--- !u!4 &6364787522191377967 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7747228945836049603, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
+  m_PrefabInstance: {fileID: 3735712983647568620}
+  m_PrefabAsset: {fileID: 0}

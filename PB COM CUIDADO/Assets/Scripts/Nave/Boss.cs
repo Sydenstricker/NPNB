@@ -12,6 +12,7 @@ public class Boss : MonoBehaviour
     [SerializeField] int scoreValue = 150;
     [SerializeField] float delayUIFilipeFicouAssustadoVei = 2.2f;
     private Animator animator;
+    public bool seExplodamMinionsCanalhas = false;
 
     [Header("Sons")]
     [SerializeField] AudioClip explosoesfreneticasSFX;
@@ -44,8 +45,8 @@ public class Boss : MonoBehaviour
     void Start()
     {
         polygonCollider2D = GetComponent<PolygonCollider2D>();
-        AtivaUIBoss();
-        
+        polygonCollider2D.enabled = false;
+        AtivaUIBoss();        
         SomChefePutissimo();
     }
 
@@ -73,10 +74,11 @@ public class Boss : MonoBehaviour
     }
     private IEnumerator DelayBarraVidaBossUI()
     {
-        yield return new WaitForSeconds(delayUIFilipeFicouAssustadoVei); 
+        yield return new WaitForSeconds(delayUIFilipeFicouAssustadoVei);
         FindObjectOfType<VidaBossNaveUI>().AtivaVidaBoss();
         AjustaUIBossComBOSSInstanciado();
         PegaVidaCoracao();
+        polygonCollider2D.enabled = true;
     }
 
     IEnumerator WaitAndLoad()
@@ -122,6 +124,7 @@ public class Boss : MonoBehaviour
     }
     private void BossMorreu()
     {
+        BossMorreuSeExplodamMinionsCanalhasBoomBoomBoom();
         StartCoroutine(DesativaCanhoesPutosEncimaBossAtirandoPewPewPew(0.1f));
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
         animator.SetTrigger("Morreu");
@@ -169,6 +172,16 @@ public class Boss : MonoBehaviour
     public int AtualizaVidaBoss(int health)
     {
         return health;
+    }
+
+    private void BossMorreuSeExplodamMinionsCanalhasBoomBoomBoom()
+    {
+        seExplodamMinionsCanalhas = true;
+        FindObjectOfType<Enemy>().PapaiBossMorreuEstouTristeVouMeExplodir();
+    }
+    public bool VamosSeExplodir()
+    {
+        return seExplodamMinionsCanalhas;
     }
 
 }

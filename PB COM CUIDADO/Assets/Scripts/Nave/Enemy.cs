@@ -15,10 +15,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] int chanceMinSoltarHP = 1;
     [SerializeField] bool isNaveBomber = false;
 
+    [SerializeField] GameObject explosaoAnimacao;
     [SerializeField] GameObject PIPrefab;
     [SerializeField] GameObject HPPrefab;
     private Animator animator;
     //[SerializeField] GameObject spriteTomouDano; spawna sprite quando toma dano
+    private bool estouComMedoWhileLoop = false;
 
     [Header("Inimigo Atirando")]
     float shotCounter;
@@ -29,6 +31,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject morteVFX;
     [SerializeField] float durationOfExplosion =1f;
     [SerializeField] int pontosPorInimigo;
+    private bool papaiBossMorreuEstouTristeVouMeExplodir = false;
+    private bool semMeteoroPlz = true;
 
     [Header("Sons")]   
     [SerializeField] AudioClip deathSFX;
@@ -55,6 +59,16 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         CountDownAndShoot();
+        papaiBossMorreuEstouTristeVouMeExplodir = FindObjectOfType<Boss>().VamosSeExplodir();
+        if(papaiBossMorreuEstouTristeVouMeExplodir && semMeteoroPlz)
+        {
+            GameObject laser = Instantiate(
+            explosaoAnimacao,
+            transform.position,
+            Quaternion.identity) as GameObject;
+            this.explosaoAnimacao.SetActive(true);
+            semMeteoroPlz = false;
+        }
     }
     private void CreatePIParent()
     {
@@ -112,6 +126,7 @@ public class Enemy : MonoBehaviour
             Morreu();
         }
     }    
+
     private void Morreu()
     {
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
@@ -124,16 +139,14 @@ public class Enemy : MonoBehaviour
     }
     private void SpawnRandomPI()
     {
-        do
         {
             inimigosSoltamPI = Random.Range(chanceMinSoltarPID, chanceMaxSoltarPID);
-            if (inimigosSoltamPI <= 5)
+            if (inimigosSoltamPI <= 5 && estouComMedoWhileLoop == false)
             {
                 GameObject PI = Instantiate(PIPrefab, transform.position, Quaternion.identity) as GameObject;
                 PI.transform.parent = pontosIDParent.transform;
             }
-        }
-        while (FindObjectOfType<EnemySpawner>().bossIsCallingBackUp == false);
+        }       
     }
     private void SpawnRandomHP()
     {
@@ -152,5 +165,13 @@ public class Enemy : MonoBehaviour
         }
         
     }  
+    public void DesativaDropPIBossPuto()
+    {
+        estouComMedoWhileLoop = true;
+    }
 
+    public void PapaiBossMorreuEstouTristeVouMeExplodir()
+    {
+        papaiBossMorreuEstouTristeVouMeExplodir = true;
+    }
 }

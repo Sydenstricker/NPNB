@@ -102,7 +102,7 @@ public class EnemySpawner : MonoBehaviour
     public void InvocaReforcosBOSS()
     {
         StartCoroutine(SpawnAllWaves()); // mexer aki no asteroide
-        bossIsCallingBackUp = true;
+        FindObjectOfType<Enemy>().DesativaDropPIBossPuto();
     }
 }
 

@@ -153,4 +153,5 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<PlayerData>().tempoPorFaseNAVE = FindObjectOfType<Player>().GetTempo();
     }
 
+    
 }
