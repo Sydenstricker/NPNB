@@ -3381,7 +3381,7 @@ MonoBehaviour:
   - actorId: 0
     message: Aceito seu desafio!
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
-  - actorId: 4
+  - actorId: 2
     message: "PINKY conhece mais sobre si mesma atrav\xE9s da coleta dos PONTOS DE
       IDENTIDADE nas fases."
     messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
@@ -3411,9 +3411,6 @@ MonoBehaviour:
     bonecoAnimado: {fileID: 0}
   - name: TUTORIAL
     sprite: {fileID: 21300000, guid: 4f90fdf24b4bb794fadae07209f5f824, type: 3}
-    bonecoAnimado: {fileID: 0}
-  - name: TUTORIAL
-    sprite: {fileID: 21300000, guid: bc890ea41938d1c45bdde66bb88033bb, type: 3}
     bonecoAnimado: {fileID: 0}
   messagesSFX: []
 --- !u!95 &569168727
@@ -9700,7 +9697,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.5625, y: 0.0625, z: 0.5625, w: 0.625}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2, y: 2.75}
     newSize: {x: 2, y: 2.75}

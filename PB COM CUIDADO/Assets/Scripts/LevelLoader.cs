@@ -38,7 +38,7 @@ public class LevelLoader : MonoBehaviour
     }
     public void QuitGame()
     {
-        QuitGame();
+        Application.Quit();
     }
     public void RestartLevelTut()
     {
