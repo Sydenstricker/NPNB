@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int chanceMaxSoltarHP = 100;
     [SerializeField] int chanceMinSoltarHP = 1;
     [SerializeField] bool isNaveBomber = false;
+    [SerializeField] bool isNaveTutorial = false;
 
     [SerializeField] GameObject explosaoAnimacao;
     [SerializeField] GameObject PIPrefab;
@@ -133,6 +134,7 @@ public class Enemy : MonoBehaviour
 
     private void Morreu()
     {
+        if(isNaveTutorial) { FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial(); }
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
         Destroy(gameObject);
         GameObject explosion = Instantiate(morteVFX, transform.position, transform.rotation);

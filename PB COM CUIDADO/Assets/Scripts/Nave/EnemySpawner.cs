@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] int ptsSpawnBoss = 5;
     private bool spawnoBoss = false;
     public bool bossIsCallingBackUp = false;
-    public bool terminouTutorial = false;
+    private bool terminouTutorial = false;
     private bool terminouTutorialUmaVez = true;
 
     //Organizador Inspector
@@ -111,6 +111,10 @@ public class EnemySpawner : MonoBehaviour
     {
         StartCoroutine(SpawnAllWaves()); // mexer aki no asteroide
         FindObjectOfType<Enemy>().DesativaDropPIBossPuto();
+    }
+    public void NaveTutorialMorreuStartarEnemyWave()
+    {
+        terminouTutorial = true;
     }
 }
 
