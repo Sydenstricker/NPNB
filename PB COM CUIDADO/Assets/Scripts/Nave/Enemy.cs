@@ -33,6 +33,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int pontosPorInimigo;
     private bool papaiBossMorreuEstouTristeVouMeExplodir = false;
     private bool semMeteoroPlz = true;
+    private PolygonCollider2D polygonCollider2D;
 
     [Header("Sons")]   
     [SerializeField] AudioClip deathSFX;
@@ -55,20 +56,28 @@ public class Enemy : MonoBehaviour
         CreateLaserParent();
         CreatePIParent();
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
+        polygonCollider2D = GetComponent<PolygonCollider2D>();
     }
     void Update()
     {
         CountDownAndShoot();
-        papaiBossMorreuEstouTristeVouMeExplodir = FindObjectOfType<Boss>().VamosSeExplodir();
-        if(papaiBossMorreuEstouTristeVouMeExplodir && semMeteoroPlz)
+        if (!FindObjectOfType<Boss>())
         {
-            GameObject laser = Instantiate(
-            explosaoAnimacao,
-            transform.position,
-            Quaternion.identity) as GameObject;
-            this.explosaoAnimacao.SetActive(true);
-            semMeteoroPlz = false;
+            return;
         }
+        papaiBossMorreuEstouTristeVouMeExplodir = FindObjectOfType<Boss>().VamosSeExplodir();
+        if (papaiBossMorreuEstouTristeVouMeExplodir && semMeteoroPlz)
+        {
+            StartCoroutine(MinionsSeExplodemDelay(3f));
+        }
+    }
+    private IEnumerator MinionsSeExplodemDelay(float tempoSomeMinions)
+    {
+        animator.SetTrigger("Morreu");
+        polygonCollider2D.enabled = false;
+
+        semMeteoroPlz = false;
+        yield return new WaitForSeconds(tempoSomeMinions);
     }
     private void CreatePIParent()
     {
