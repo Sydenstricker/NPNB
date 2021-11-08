@@ -12,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] int ptsSpawnBoss = 5;
     private bool spawnoBoss = false;
     public bool bossIsCallingBackUp = false;
+    public bool terminouTutorial = false;
+    private bool terminouTutorialUmaVez = true;
 
     //Organizador Inspector
     GameObject enemyParent;
@@ -19,7 +21,8 @@ public class EnemySpawner : MonoBehaviour
 
 
     // Start is called before the first frame update
-    IEnumerator Start()
+    
+    IEnumerator AcabouTutorial()
     {
         CreateEnemyParent();
         do
@@ -41,6 +44,11 @@ public class EnemySpawner : MonoBehaviour
     private void Update()
     {
         if (FindObjectOfType<Player>() == null) { return; }
+        if (terminouTutorial && terminouTutorialUmaVez)
+        { 
+            StartCoroutine(AcabouTutorial());
+            terminouTutorialUmaVez = false;
+        }
 
         if (spawnoBoss == false && FindObjectOfType<Player>().pontosIDcoletados >= ptsSpawnBoss)
         {

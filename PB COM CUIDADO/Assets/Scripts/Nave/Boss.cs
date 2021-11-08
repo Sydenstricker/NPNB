@@ -124,6 +124,7 @@ public class Boss : MonoBehaviour
     }
     private void BossMorreu()
     {
+        StopAllCoroutines(); // grosseiro, se der pepino ajustar aki
         BossMorreuSeExplodamMinionsCanalhasBoomBoomBoom();
         StartCoroutine(DesativaCanhoesPutosEncimaBossAtirandoPewPewPew(0.1f));
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
