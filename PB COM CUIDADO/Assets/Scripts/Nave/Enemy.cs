@@ -52,11 +52,11 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        polygonCollider2D = GetComponent<PolygonCollider2D>();
         animator = GetComponent<Animator>();
         CreateLaserParent();
         CreatePIParent();
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
-        polygonCollider2D = GetComponent<PolygonCollider2D>();
     }
     void Update()
     {
@@ -68,6 +68,7 @@ public class Enemy : MonoBehaviour
         papaiBossMorreuEstouTristeVouMeExplodir = FindObjectOfType<Boss>().VamosSeExplodir();
         if (papaiBossMorreuEstouTristeVouMeExplodir && semMeteoroPlz)
         {
+            shotCounter = 9999999999f;
             StartCoroutine(MinionsSeExplodemDelay(3f));
         }
     }
@@ -75,7 +76,6 @@ public class Enemy : MonoBehaviour
     {
         animator.SetTrigger("Morreu");
         polygonCollider2D.enabled = false;
-
         semMeteoroPlz = false;
         yield return new WaitForSeconds(tempoSomeMinions);
     }
@@ -122,11 +122,6 @@ public class Enemy : MonoBehaviour
     }
     private void TomarDano(DamageDealer damageDealer)
     {
-       /* GameObject laser = Instantiate(
-            spriteTomouDano,
-            transform.position,
-            Quaternion.identity) as GameObject;
-       */ //spawna sprite quando toma dano
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
         PiscaDano();
