@@ -20,6 +20,11 @@ public class StationTutorialSaiDeCena : MonoBehaviour
         velocidadeSaideCena = 0.005f;
         podeAndarPlataformaTut = true;
     }
+    public void NaoTiraPlataformaCenaTutorial()
+    {
+        velocidadeSaideCena = 0f;
+        podeAndarPlataformaTut = false;
+    }
 
     private void AndaPlataforma()
     {

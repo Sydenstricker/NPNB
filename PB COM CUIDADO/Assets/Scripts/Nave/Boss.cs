@@ -134,7 +134,8 @@ public class Boss : MonoBehaviour
         GetComponentInChildren<Cannon>().CannonStopShooting();
         polygonCollider2D.enabled = false;
         StartCoroutine(ExplosoesFreneticas(0.3f));
-        FindObjectOfType<Level>().LoadCinematicaFinal();
+        FindObjectOfType<GamePlayNaveCanvas>().AtivaScoreMenuNave();
+        //FindObjectOfType<Level>().LoadCinematicaFinal();
     }
 
     private IEnumerator AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(float intervaloAcionamentoCannons)

@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameisPaused = true;
 
     public GameObject pauseMenuUI;
+    [SerializeField] bool isNave = false;
 
 
     // Update is called once per frame
@@ -33,6 +34,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameisPaused = false;
         Cursor.visible = false;
+        if(isNave)
+        {
+            FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial();
+        }
     }
 
     public void Pause()
@@ -41,5 +46,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameisPaused = true;
         Cursor.visible = true;
+        if(isNave)
+        {
+            FindObjectOfType<StationTutorialSaiDeCena>().NaoTiraPlataformaCenaTutorial();
+        }
     }
 }

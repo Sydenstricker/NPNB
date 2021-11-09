@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject deathVFX;
     [SerializeField] float durationOfExplosion = 1f;
     private float contatempoNAVE = 0f;
+    PolygonCollider2D polygonCollider2D;
    
     [Header("Player Audio")]
     [SerializeField] AudioClip deathSFX;
@@ -56,6 +57,7 @@ public class Player : MonoBehaviour
     public int pontosIDcoletados;
     void Start()
     {
+        polygonCollider2D = GetComponent<PolygonCollider2D>();
         Cursor.visible = false;
         contatempoNAVE = 0f;
         SetUpMoveBoundry();
@@ -113,7 +115,8 @@ public class Player : MonoBehaviour
         GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(explosion,durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
-        FindObjectOfType<Level>().LoadGameOver();
+        FindObjectOfType<GamePlayNaveCanvas>().RestartGame();
+        //FindObjectOfType<Level>().LoadGameOver();
     }
     public int GetHealth()
     {
@@ -228,5 +231,9 @@ public class Player : MonoBehaviour
             yield return null;
         }
         transform.position = originalPos;        
-    }    
+    }   
+    public void PlayerVenceuFicaImortal()
+    {
+        polygonCollider2D.enabled = false;
+    }
 }

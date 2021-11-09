@@ -25,5 +25,6 @@ public class ScoreMenu : MonoBehaviour
     {
         SceneManager.LoadScene("DialogueCaveIntro");
     }
+    
 }
 

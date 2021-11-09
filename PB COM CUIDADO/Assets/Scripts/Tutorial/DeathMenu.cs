@@ -27,6 +27,11 @@ public class DeathMenu : MonoBehaviour
         SceneManager.LoadScene("CavernaGameplay");
         //FindObjectOfType<GamePlayCavernaCanvas>().RestartLevelCaverna();
     }
+    public void RestartGameNave()
+    {
+        FindObjectOfType<GameSession>().ResetGame();
+        SceneManager.LoadScene("NaveBlueGameplay");
+    }
     public void NextScene()
     {
         SceneManager.LoadScene("DialogueCaveIntro");
