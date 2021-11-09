@@ -34,7 +34,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameisPaused = false;
         Cursor.visible = false;
-        if(isNave)
+        if(isNave &&!FindObjectOfType<naveInimigoTutorial>())
         {
             FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial();
         }

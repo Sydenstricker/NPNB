@@ -51,6 +51,11 @@ public class Level : MonoBehaviour
     {
         StartCoroutine((IEnumerator)DelayCinematicaFinal());
     }
+    public void LoadCinematicaFinalSemDelay()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("DialogueNaveEnd");
+    }
     IEnumerator DelayCinematicaFinal()
     {
         yield return new WaitForSeconds(delayCinematicaFinal);        

@@ -1140,6 +1140,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0f8630d6b2dc004e94cc2a4ce7ffdc6, type: 3}
+--- !u!114 &418828385 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4179524434194199805, guid: 72206b974760b6f4fade1f1170269b9f, type: 3}
+  m_PrefabInstance: {fileID: 1218967170}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6452e23ec54d144f84a2da0fc21015d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &449393268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2325,6 +2336,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
   m_PrefabInstance: {fileID: 449393268}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1029460449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3103347754517619309, guid: b0f8630d6b2dc004e94cc2a4ce7ffdc6, type: 3}
+  m_PrefabInstance: {fileID: 414188389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1029460457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029460449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1249f09e03272664e86c7c25ec1184d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1043154972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4975,6 +5003,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartLevelNave
       objectReference: {fileID: 0}
+    - target: {fileID: 2563425717988776100, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2563425717988776101, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4994,10 +5026,14 @@ PrefabInstance:
     - target: {fileID: 2563425717988776102, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1815625511}
+      objectReference: {fileID: 418828385}
     - target: {fileID: 2563425717988776102, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadNextLevel
+      value: LoadCinematicaFinalSemDelay
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563425717988776102, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Level, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2798645131686142494, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_IsActive
