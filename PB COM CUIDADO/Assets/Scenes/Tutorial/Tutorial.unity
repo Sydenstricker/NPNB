@@ -55310,6 +55310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1251506666}
+  isNave: 0
 --- !u!1 &1735462488
 GameObject:
   m_ObjectHideFlags: 0
@@ -57576,6 +57577,10 @@ PrefabInstance:
       value: -9.1912
       objectReference: {fileID: 0}
     - target: {fileID: 954217346267233302, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
+      propertyPath: m_Text
+      value: "RECOME\xC7AR\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 954217346267233302, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 4
       objectReference: {fileID: 0}
@@ -57719,6 +57724,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: VoltaMainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1602887594049390522, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 342.7534
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602887594049390522, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602887594049390523, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
+      propertyPath: m_Text
+      value: PAUSADO
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602887594474114896, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
+      propertyPath: m_Text
+      value: Aperte ESC para continuar
+      objectReference: {fileID: 0}
     - target: {fileID: 1602887594474114896, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 16
@@ -57730,6 +57751,12 @@ PrefabInstance:
     - target: {fileID: 1602887594487803535, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602887595026959672, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
+      propertyPath: m_Text
+      value: 'SAIR
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1602887595026959672, guid: 5d60e3ed4cf52554bb55df9622277667, type: 3}
       propertyPath: m_FontData.m_Alignment
@@ -62226,7 +62253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3207778214450738361, guid: 69583c6b604b64b49a0891ad4f04adf5, type: 3}
       propertyPath: m_Text
-      value: CONTINUE
+      value: CONTINUAR
       objectReference: {fileID: 0}
     - target: {fileID: 4375727268113785721, guid: 69583c6b604b64b49a0891ad4f04adf5, type: 3}
       propertyPath: m_Name
@@ -62238,7 +62265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4624564525189395526, guid: 69583c6b604b64b49a0891ad4f04adf5, type: 3}
       propertyPath: m_Text
-      value: HIGH SCORE
+      value: SCORE TOTAL
       objectReference: {fileID: 0}
     - target: {fileID: 4624564525189395527, guid: 69583c6b604b64b49a0891ad4f04adf5, type: 3}
       propertyPath: m_RootOrder
@@ -62436,6 +62463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Score
       objectReference: {fileID: 0}
+    - target: {fileID: 4624564526892358737, guid: 69583c6b604b64b49a0891ad4f04adf5, type: 3}
+      propertyPath: m_Text
+      value: "RECOME\xC7AR"
+      objectReference: {fileID: 0}
     - target: {fileID: 4624564527147940908, guid: 69583c6b604b64b49a0891ad4f04adf5, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -89.999985
@@ -62511,6 +62542,10 @@ PrefabInstance:
     - target: {fileID: 7307978680182454703, guid: 69583c6b604b64b49a0891ad4f04adf5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: LevelLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933756008278666056, guid: 69583c6b604b64b49a0891ad4f04adf5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8032871434738750694, guid: 69583c6b604b64b49a0891ad4f04adf5, type: 3}
       propertyPath: m_RootOrder
@@ -63081,6 +63116,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7087975827519920175, guid: 7163deaeb66c12c489502ef8dc5129a9, type: 3}
+      propertyPath: m_Text
+      value: "VOC\xCA MORREU!"
+      objectReference: {fileID: 0}
     - target: {fileID: 7087975827824795102, guid: 7163deaeb66c12c489502ef8dc5129a9, type: 3}
       propertyPath: m_Name
       value: DeathMenu
@@ -63242,15 +63281,43 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7087975828723944467, guid: 7163deaeb66c12c489502ef8dc5129a9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087975828723944467, guid: 7163deaeb66c12c489502ef8dc5129a9, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087975828723944467, guid: 7163deaeb66c12c489502ef8dc5129a9, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7087975828723944467, guid: 7163deaeb66c12c489502ef8dc5129a9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7087975828723944476, guid: 7163deaeb66c12c489502ef8dc5129a9, type: 3}
+      propertyPath: m_Text
+      value: SAIR
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087975828723944476, guid: 7163deaeb66c12c489502ef8dc5129a9, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087975828887351352, guid: 7163deaeb66c12c489502ef8dc5129a9, type: 3}
+      propertyPath: m_Text
+      value: "RECOME\xC7AR"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087975828887351359, guid: 7163deaeb66c12c489502ef8dc5129a9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7087975828887351359, guid: 7163deaeb66c12c489502ef8dc5129a9, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087975828887351359, guid: 7163deaeb66c12c489502ef8dc5129a9, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7087975828887351359, guid: 7163deaeb66c12c489502ef8dc5129a9, type: 3}
