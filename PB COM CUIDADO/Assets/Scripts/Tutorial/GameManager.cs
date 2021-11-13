@@ -67,11 +67,7 @@ public class GameManager : MonoBehaviour
         {
             FindObjectOfType<cameraMovCav>().AtivaGlitchMorte();
         }
-        if(isNave)
-        {
-            FindObjectOfType<cameraNaveGlitch>().AtivaGlitchMorte();
-            Time.timeScale = 0f;
-        }
+        
         player.SetActive(false);        
         Cursor.visible = true;
         deathMenu.gameObject.SetActive(true);      

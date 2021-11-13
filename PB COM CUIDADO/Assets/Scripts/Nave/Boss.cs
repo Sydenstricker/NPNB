@@ -135,6 +135,7 @@ public class Boss : MonoBehaviour
         polygonCollider2D.enabled = false;
         StartCoroutine(ExplosoesFreneticas(0.3f));
         FindObjectOfType<GamePlayNaveCanvas>().AtivaScoreMenuNave();
+        FindObjectOfType<VidaBossNaveUI>().DesativaVidaBoss();
         //FindObjectOfType<Level>().LoadCinematicaFinal();
     }
 

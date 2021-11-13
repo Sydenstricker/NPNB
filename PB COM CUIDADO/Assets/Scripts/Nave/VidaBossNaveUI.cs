@@ -13,6 +13,10 @@ public class VidaBossNaveUI : MonoBehaviour
     {
         vidaBossUI.SetActive(true);
     }
+    public void DesativaVidaBoss()
+    {
+        vidaBossUI.SetActive(false);
+    }
 
     public HealthBar EstaHealthBar(HealthBar healthBarBoss)
     {

@@ -11,6 +11,7 @@ public class GamePlayNaveCanvas : MonoBehaviour
     public void RestartGame()
     {
         Cursor.visible = true;
+        Time.timeScale = 0.05f;
         //FindObjectOfType<cameraMovCav>().AtivaGlitchMorte(); concertar efeito glitch
         deathMenu.gameObject.SetActive(true);
     }
