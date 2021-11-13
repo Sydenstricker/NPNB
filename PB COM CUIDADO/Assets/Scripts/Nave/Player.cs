@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
         contatempoNAVE = 0f;
         SetUpMoveBoundry();
         PegaVidaCoracao();
+        Time.timeScale = 1f;
     }
        
     void Update()
