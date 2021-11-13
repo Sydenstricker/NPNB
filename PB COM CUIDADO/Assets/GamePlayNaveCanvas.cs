@@ -21,7 +21,7 @@ public class GamePlayNaveCanvas : MonoBehaviour
     }
     public void AtivaScoreMenuNave()
     {
-        Time.timeScale = 0.05f;
+        Time.timeScale = 0.1f;
         Cursor.visible = true;
         scoreMenuNave.gameObject.SetActive(true);
     }
