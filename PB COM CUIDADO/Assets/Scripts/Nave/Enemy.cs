@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int chanceMinSoltarHP = 1;
     [SerializeField] bool isNaveBomber = false;
     [SerializeField] bool isNaveTutorial = false;
+    private bool inimigoSoltaPI = false;
 
     [SerializeField] GameObject explosaoAnimacao;
     [SerializeField] GameObject PIPrefab;
@@ -144,20 +145,19 @@ public class Enemy : MonoBehaviour
         SpawnRandomHP();
     }
     private void SpawnRandomPI()
-    {
+    {        
+        inimigosSoltamPI = Random.Range(chanceMinSoltarPID, chanceMaxSoltarPID);
+        if (inimigosSoltamPI <= 5 && estouComMedoWhileLoop == false)
         {
-            inimigosSoltamPI = Random.Range(chanceMinSoltarPID, chanceMaxSoltarPID);
-            if (inimigosSoltamPI <= 5 && estouComMedoWhileLoop == false)
-            {
-                GameObject PI = Instantiate(PIPrefab, transform.position, Quaternion.identity) as GameObject;
-                PI.transform.parent = pontosIDParent.transform;
-            }
-        }       
+            GameObject PI = Instantiate(PIPrefab, transform.position, Quaternion.identity) as GameObject;
+            PI.transform.parent = pontosIDParent.transform;
+        }
+              
     }
     private void SpawnRandomHP()
     {
         inimigosSoltamHP = Random.Range(chanceMinSoltarHP, chanceMaxSoltarHP);
-        if (inimigosSoltamHP <= 5)
+        if ((inimigosSoltamHP <= 5) && (inimigoSoltaPI = false))
         {
             GameObject HP = Instantiate(HPPrefab, transform.position, Quaternion.identity) as GameObject;
             HP.transform.parent = pontosIDParent.transform;
@@ -179,5 +179,9 @@ public class Enemy : MonoBehaviour
     public void PapaiBossMorreuEstouTristeVouMeExplodir()
     {
         papaiBossMorreuEstouTristeVouMeExplodir = true;
+    }
+    public void MinionsBossNaoSpawnaPI()
+    {
+        inimigoSoltaPI = true;
     }
 }
