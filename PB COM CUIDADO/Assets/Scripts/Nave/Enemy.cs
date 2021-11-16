@@ -184,4 +184,5 @@ public class Enemy : MonoBehaviour
     {
         inimigoSoltaPI = true;
     }
+   
 }
