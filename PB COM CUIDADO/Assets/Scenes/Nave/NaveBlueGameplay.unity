@@ -5751,7 +5751,15 @@ PrefabInstance:
     - target: {fileID: 2563425717705833652, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1815625511}
+      objectReference: {fileID: 4555264278427526051}
+    - target: {fileID: 2563425717705833652, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGameNave
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563425717705833652, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeathMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2563425717988776101, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5772,6 +5780,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 418828385}
+    - target: {fileID: 2563425718295771352, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_Text
+      value: "RECOME\xC7AR"
+      objectReference: {fileID: 0}
     - target: {fileID: 4555264276458403854, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5787,7 +5799,15 @@ PrefabInstance:
     - target: {fileID: 4555264277107323233, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1815625511}
+      objectReference: {fileID: 4555264278427526051}
+    - target: {fileID: 4555264277107323233, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGameNave
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555264277107323233, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeathMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4555264277318031981, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_Name
       value: GameplayCanvas
@@ -5884,8 +5904,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5456642985579429521, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4555264278427526051}
+    - target: {fileID: 5456642985579429521, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGameNave
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456642985579429521, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeathMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+--- !u!114 &4555264278427526051 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5456642987533735709, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+  m_PrefabInstance: {fileID: 4555264278427526050}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfa12e44e105f44d896a746cea63aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5306171762390755377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2136267394167104846, guid: 9ed94ee0f8d88b14d88771ade485990e, type: 3}

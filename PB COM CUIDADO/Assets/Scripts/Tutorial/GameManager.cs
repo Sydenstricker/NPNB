@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private int pontos;
     private GameObject player;
     [SerializeField] private GameObject playerCAV;
-    [SerializeField] private GameObject playerNAVE;
+    //[SerializeField] private GameObject playerNAVE;
     private Vector2 playerInicio;
     [SerializeField] private bool isTutorial = false;
     [SerializeField] private bool isCaverna = false;
@@ -97,13 +97,12 @@ public class GameManager : MonoBehaviour
     }
     public void HighScoreNave()
     {
-        FindObjectOfType<cameraNaveGlitch>().AtivaGlitchScore();
         Cursor.visible = true;
         AdicionaScoreNoPlayerDataNAVE();
         AdicionaPINoPlayerDataNAVE();
         AdicionaTempoNoPlayerDataNAVE();
         AdicionaVIDANoPlayerDataNAVE();
-        playerNAVE.SetActive(false);
+        //playerNAVE.SetActive(false);
     }
     public void PIMenuCav()
     {
@@ -163,6 +162,4 @@ public class GameManager : MonoBehaviour
     {
         FindObjectOfType<PlayerData>().tempoPorFaseNAVE = FindObjectOfType<Player>().GetTempo();
     }
-
-    
 }

@@ -111,12 +111,10 @@ public class Player : MonoBehaviour
     }    
     private void PlayerMorreu()
     {
-        
         Destroy(gameObject);
         GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(explosion,durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
-        FindObjectOfType<cameraNaveGlitch>().AtivaGlitchMorte();
         FindObjectOfType<GamePlayNaveCanvas>().RestartGame();
         //FindObjectOfType<Level>().LoadGameOver();
     }

@@ -10,10 +10,15 @@ public class GamePlayNaveCanvas : MonoBehaviour
 
     public void RestartGame()
     {
+        StartCoroutine("DeathMenuCo");
         Cursor.visible = true;
-        Time.timeScale = 0.05f;
-        //FindObjectOfType<cameraMovCav>().AtivaGlitchMorte(); concertar efeito glitch
+        Time.timeScale = 0.05f;               
+    }
+    private IEnumerator DeathMenuCo()
+    {
+        yield return new WaitForSeconds(.1f);
         deathMenu.gameObject.SetActive(true);
+        FindObjectOfType<cameraNaveGlitch>().AtivaGlitchMorte(); //consertar efeito glitch 
     }
     public void RestartLevelCaverna()
     {
@@ -21,8 +26,14 @@ public class GamePlayNaveCanvas : MonoBehaviour
     }
     public void AtivaScoreMenuNave()
     {
-        Time.timeScale = 0.1f;
+        StartCoroutine("HighScoreCo");
+        Time.timeScale = 0.05f;
         Cursor.visible = true;
+    }
+    private IEnumerator HighScoreCo()
+    {
+        yield return new WaitForSeconds(.5f);
         scoreMenuNave.gameObject.SetActive(true);
+        FindObjectOfType<cameraNaveGlitch>().AtivaGlitchScore();
     }
 }
