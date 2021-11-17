@@ -29,7 +29,7 @@ public class SoundManager : MonoBehaviour
 
     private void SetUpSingleton()
     {
-        int numberGameSessions = FindObjectsOfType<PlayerData>().Length;
+        int numberGameSessions = FindObjectsOfType<SoundManager>().Length;
         if (numberGameSessions > 1)
         {
             Destroy(gameObject);
@@ -52,8 +52,11 @@ public class SoundManager : MonoBehaviour
         else if (nome == "pulo")
             AudioSource.PlayClipAtPoint(pulo, Camera.main.transform.position, volumePulo);
         //audio.PlayOneShot(pulo);
-        else if (nome == "startgame")
-            AudioSource.PlayClipAtPoint(startgame, Camera.main.transform.position, volumeStartGame);
+        else if (nome == "StartGame")
+             {
+                 AudioSource.PlayClipAtPoint(startgame, Camera.main.transform.position, volumeStartGame);
+                 Debug.Log("tocou botao start");
+             }
         //audio.PlayOneShot(startgame);
         else if (nome == "quitgame")
             AudioSource.PlayClipAtPoint(quitgame, Camera.main.transform.position, volumeQuitGame);

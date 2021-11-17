@@ -42,7 +42,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8d3914943005dee4ab31a432cfaef44c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -141,8 +141,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moeda: {fileID: 8300000, guid: 7bedec8f9aa64944396f6e9e3ef81aac, type: 3}
+  volumeMoeda: 0.75
   pulo: {fileID: 8300000, guid: 713307d9fdd339647b88b4446272df90, type: 3}
+  volumePulo: 0.75
   startgame: {fileID: 8300000, guid: bde755c910a64f144b8d7b402692c823, type: 3}
+  volumeStartGame: 1
   quitgame: {fileID: 8300000, guid: c92606a5013c8604abc45f75e8b96d8a, type: 3}
-  puloduplo: {fileID: 0}
-  obstaculocolission: {fileID: 0}
+  volumeQuitGame: 0.75
+  puloduplo: {fileID: 8300000, guid: ee31e2f9349e976438744d1b9ae0d01b, type: 3}
+  volumePuloDuplo: 0.75
+  portalEntra: {fileID: 8300000, guid: ab073eb4e5624a24a94c29020995a097, type: 3}
+  volumePortalEntra: 0.75
+  portalSai: {fileID: 8300000, guid: 04407eb070893ff43aa9f14976c7ebc8, type: 3}
+  volumePortalSai: 0.75
+  deathMenu: {fileID: 8300000, guid: 13eba64f5b46f564d9e5485087fd6364, type: 3}
+  volumeDeathMenu: 0.75
