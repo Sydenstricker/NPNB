@@ -125,7 +125,7 @@ public class Boss : MonoBehaviour
         FindObjectOfType<EnemySpawner>().InvocaReforcosBOSS();
         FindObjectOfType<BossPathing>().BossIsPuto();
         FindObjectOfType<Enemy>().MinionsBossNaoSpawnaPI();
-        StartCoroutine(DelayTirosCanhoesPuto(3f));        
+        StartCoroutine(DelayTirosCanhoesPuto(1f));        
     }
     private void BossMorreu()
     {
