@@ -135,7 +135,11 @@ public class Enemy : MonoBehaviour
 
     private void Morreu()
     {
-        if(isNaveTutorial) { FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial(); }
+        if(isNaveTutorial) 
+        {
+            FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial(); 
+            FindObjectOfType<PauseMenu>().NaveTutorialMorreu();
+        }
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
         Destroy(gameObject);
         GameObject explosion = Instantiate(morteVFX, transform.position, transform.rotation);

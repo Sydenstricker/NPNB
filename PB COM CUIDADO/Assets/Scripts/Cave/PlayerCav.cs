@@ -175,6 +175,14 @@ public class PlayerCav : MonoBehaviour
         //gameObject.GetComponent<BoxCollider2D>().enabled = true ;
         //gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
     }
+    private void DesativaRigidBody()
+    {
+        Destroy(body); //seria legal desligar
+    }
+    private void AtivaRigidBody()
+    {
+        gameObject.AddComponent<Rigidbody>(); // erro polygon collider, caos
+    }
     private void FinalPuloIsGrounded()
     {
         return;

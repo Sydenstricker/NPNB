@@ -5,6 +5,7 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     // Start is called before the first frame update
+    private bool naveTutorialMorreu = false;
 
     public static bool GameisPaused = true;
 
@@ -35,7 +36,7 @@ public class PauseMenu : MonoBehaviour
         GameisPaused = false;
         Cursor.visible = false;
         if(!FindObjectOfType<StationTutorialSaiDeCena>()) { return; }
-        if(isNave &&!FindObjectOfType<naveInimigoTutorial>())
+        if(isNave && naveTutorialMorreu == true)
         {
             FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial();
         }
@@ -47,9 +48,18 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameisPaused = true;
         Cursor.visible = true;
-        if(isNave)
+        if (isNave && naveTutorialMorreu == false)
         {
             FindObjectOfType<StationTutorialSaiDeCena>().NaoTiraPlataformaCenaTutorial();
         }
+        if (isNave && naveTutorialMorreu == true)
+        {
+            FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial();
+        }
     }
+    public void NaveTutorialMorreu ()
+    {
+        naveTutorialMorreu = true;
+    }
+
 }
