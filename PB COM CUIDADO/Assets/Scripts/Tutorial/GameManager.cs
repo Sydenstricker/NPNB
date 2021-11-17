@@ -68,9 +68,10 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<cameraMovCav>().AtivaGlitchMorte();
         }
         
+        FindObjectOfType<SoundManager>().TocaDeathMenu();
         player.SetActive(false);        
         Cursor.visible = true;
-        deathMenu.gameObject.SetActive(true);      
+        deathMenu.gameObject.SetActive(true); 
 
     }
     public void HighScoreTut()

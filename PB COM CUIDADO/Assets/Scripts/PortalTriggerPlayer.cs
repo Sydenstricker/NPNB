@@ -17,9 +17,11 @@ public class PortalTriggerPlayer : MonoBehaviour
             animator.SetTrigger("AbrePortal");
             if(isTutorial)
             {
+                FindObjectOfType<SoundManager>().TocaPortalFecha();
                 return;
             }
             animator.SetTrigger("NaveFim");
+            FindObjectOfType<SoundManager>().TocaPortalFecha();
         }
     }
     public void VelhoAtivaPortal()
