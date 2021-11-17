@@ -11,7 +11,7 @@ public class MoedaCav : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.CompareTag("Player") ) {
+        if (other.CompareTag("PlayerColl") ) {
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(coletaSFX, Camera.main.transform.position, volumeColeta);
             FindObjectOfType<GameSession>().AddToScore(scoreValue);

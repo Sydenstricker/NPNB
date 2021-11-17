@@ -120,8 +120,10 @@ public class PlayerCav : MonoBehaviour
             {
                 puloCount = 0;
                 animator.SetTrigger("Deslizando");
-                gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
-                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                //gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+                GameObject.Find("PlayerCollCav").GetComponent<CapsuleCollider2D>().enabled = true;
+                GameObject.Find("PlayerCollCav").GetComponent<BoxCollider2D>().enabled = false;
+                //gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 animator.SetBool("isGrounded", true);
                 grounded = true;
                 SlideSFX();
@@ -168,8 +170,10 @@ public class PlayerCav : MonoBehaviour
 
     private void FinalSlideEvitaBugsColliders()
     {
-        gameObject.GetComponent<BoxCollider2D>().enabled = true ;
-        gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+        GameObject.Find("PlayerCollCav").GetComponent<BoxCollider2D>().enabled = true;
+        GameObject.Find("PlayerCollCav").GetComponent<CapsuleCollider2D>().enabled = false;
+        //gameObject.GetComponent<BoxCollider2D>().enabled = true ;
+        //gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
     }
     private void FinalPuloIsGrounded()
     {

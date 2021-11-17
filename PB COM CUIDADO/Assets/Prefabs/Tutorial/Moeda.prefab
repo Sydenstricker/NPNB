@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2384517277293935913}
   - component: {fileID: 2873323736628816798}
   - component: {fileID: 1977453681491373655}
-  m_Layer: 0
+  - component: {fileID: 77089133}
+  m_Layer: 1
   m_Name: Moeda
   m_TagString: Moeda
   m_Icon: {fileID: 0}
@@ -119,3 +120,18 @@ CircleCollider2D:
   m_Offset: {x: -0.04478591, y: -0.023600204}
   serializedVersion: 2
   m_Radius: 0.45481738
+--- !u!114 &77089133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832333213484553626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75697ac6a0116054baaea0442ce50991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coletaSFX: {fileID: 8300000, guid: f1229d8f92efb524381d3c97594f9b30, type: 3}
+  volumeColeta: 0.75
+  scoreValue: 10

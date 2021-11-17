@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1045539570214910453}
   - component: {fileID: 7706220060263149148}
   m_Layer: 0
-  m_Name: Collits
-  m_TagString: Untagged
+  m_Name: PlayerColl
+  m_TagString: PlayerColl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.407135}
+  m_Offset: {x: 0, y: -0.28921998}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.8142698}
+  m_Size: {x: 1, y: 2.0501}
   m_EdgeRadius: 0
 --- !u!70 &7706220060263149148
 CapsuleCollider2D:
@@ -87,9 +87,7 @@ GameObject:
   - component: {fileID: 5556787647614046834}
   - component: {fileID: 5556787647614046839}
   - component: {fileID: 5556787647614046838}
-  - component: {fileID: 5556787647614046835}
   - component: {fileID: 162985907}
-  - component: {fileID: 162985908}
   m_Layer: 0
   m_Name: PlayerTut
   m_TagString: Player
@@ -207,26 +205,26 @@ MonoBehaviour:
   soundManager: {fileID: 0}
   puloDouble: 0
   puloCount: 0
-  deathSFX: {fileID: 0}
-  volumeMorte: 0.75
-  pulo1SFX: {fileID: 0}
-  volumePulo1: 0.75
-  pulo2SFX: {fileID: 0}
-  volumePulo2: 0.75
-  pulo3SFX: {fileID: 0}
-  volumePulo3: 0.75
-  pulo4SFX: {fileID: 0}
-  volumePulo4: 0.75
-  puloDuplo1SFX: {fileID: 0}
-  volumePuloDuplo1: 0.75
-  puloDuplo2SFX: {fileID: 0}
-  volumePuloDuplo2: 0.75
-  puloDuplo3SFX: {fileID: 0}
-  volumePuloDuplo3: 0.75
-  puloDuplo4SFX: {fileID: 0}
-  volumePuloDuplo4: 0.75
-  slideSFX: {fileID: 0}
-  volumeSlide: 0.75
+  deathSFX: {fileID: 8300000, guid: 2fca62b57fc22e540bb451d105d62be5, type: 3}
+  volumeMorte: 0.15
+  pulo1SFX: {fileID: 8300000, guid: 54a2b7d7774cca8419dc6b86909a850a, type: 3}
+  volumePulo1: 0.15
+  pulo2SFX: {fileID: 8300000, guid: 8a5ba15e5d4761644bc38cd14f730b89, type: 3}
+  volumePulo2: 0.15
+  pulo3SFX: {fileID: 8300000, guid: 510b9f74629fc7d45afb5e4310933bc9, type: 3}
+  volumePulo3: 0.15
+  pulo4SFX: {fileID: 8300000, guid: 8fd013bc56deea746b9c64599d0b1bf1, type: 3}
+  volumePulo4: 0.15
+  puloDuplo1SFX: {fileID: 8300000, guid: 847c8a3cd75583e4594472ac56a29019, type: 3}
+  volumePuloDuplo1: 0.15
+  puloDuplo2SFX: {fileID: 8300000, guid: 3f501b18d44719e42bf80f396414e384, type: 3}
+  volumePuloDuplo2: 0.15
+  puloDuplo3SFX: {fileID: 8300000, guid: d6e2052b6cd62ce4fb6938da43d7eff8, type: 3}
+  volumePuloDuplo3: 0.15
+  puloDuplo4SFX: {fileID: 8300000, guid: d6b5d822255731545a11ca7629cb27c7, type: 3}
+  volumePuloDuplo4: 0.15
+  slideSFX: {fileID: 8300000, guid: 988288c6897f8b94c840539b00cad043, type: 3}
+  volumeSlide: 0.15
 --- !u!95 &5556787647614046838
 Animator:
   serializedVersion: 3
@@ -246,32 +244,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &5556787647614046835
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5556787647614046828}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 9aa5be55d523c974782a5d1204931041, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.036005437, y: -0.26925668}
-  m_SpriteTilingProperty:
-    border: {x: 0.5625, y: 0.0625, z: 0.5625, w: 0.625}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2.75}
-    newSize: {x: 0.63, y: 0.92}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2.054071}
-  m_EdgeRadius: 0
 --- !u!60 &162985907
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -297,24 +269,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.11443654, y: -1.3030248}
-      - {x: -0.32881153, y: -1.3322164}
-      - {x: 0.17171735, y: -1.3150641}
-      - {x: 0.2512403, y: -1.3227834}
-      - {x: 0.34258103, y: -1.3128996}
---- !u!70 &162985908
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5556787647614046828}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.18, y: -0.89}
-  m_Size: {x: 2, y: 0.86}
-  m_Direction: 1
+    - - {x: -1.1113389, y: -1.2538587}
+      - {x: -1.1122746, y: -1.2908965}
+      - {x: -1.1287254, y: -1.4042107}
+      - {x: -0.8752848, y: -1.3857764}
+      - {x: -0.32642025, y: -1.4045016}
+      - {x: 0.01231873, y: -1.4133677}
+      - {x: 0.43198544, y: -1.4039701}
+      - {x: 0.4385188, y: -1.3164477}
+      - {x: 0.4425458, y: -1.2883579}
+      - {x: 0.45279157, y: -1.2945913}
+      - {x: 0.44682112, y: -1.2580527}

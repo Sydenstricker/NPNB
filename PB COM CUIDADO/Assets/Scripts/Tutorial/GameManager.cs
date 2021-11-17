@@ -80,8 +80,8 @@ public class GameManager : MonoBehaviour
         scoremenu.gameObject.SetActive(true);
         AdicionaScoreNoPlayerDataTUT();
         AdicionaTempoNoPlayerDataTUT();
-        player.SetActive(false);
         FindObjectOfType<PlayerData>().NaoDestroiPlayerData();
+        player.SetActive(false);
     }
     public void HighScoreCav()
     {

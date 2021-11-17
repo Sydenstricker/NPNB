@@ -100,8 +100,10 @@ public class PlayerController : MonoBehaviour
             {                
                 puloCount = 0;
                 animator.SetTrigger("Deslizando");
-                gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
-                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                //gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+                GameObject.Find("PlayerColl").GetComponent<CapsuleCollider2D>().enabled = true;
+                GameObject.Find("PlayerColl").GetComponent<BoxCollider2D>().enabled = false;
+                //gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 animator.SetBool("Grounded", true);
                 grounded = true;
                 SlideSFX();
@@ -124,8 +126,10 @@ public class PlayerController : MonoBehaviour
 
     private void FinalSlideEvitaBugs()
     {
-        gameObject.GetComponent<BoxCollider2D>().enabled = true;
-        gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+        GameObject.Find("PlayerColl").GetComponent<BoxCollider2D>().enabled = true;
+        GameObject.Find("PlayerColl").GetComponent<CapsuleCollider2D>().enabled = false;
+        //gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        //gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
     }
 
     private void RandomizaSFXPuloDuplo()
@@ -177,12 +181,13 @@ public class PlayerController : MonoBehaviour
             grounded = true;
             puloCount = 0;
         }
-        if (other.tag == "Moeda")
+        /*if (other.tag == "Moeda")
         {
             Destroy(other.gameObject);
             gameManager.AddPontos(10);
             soundManager.PlayAudio("moeda");
         }
+        */
         if (other.tag == "MenuScoreTut")
         {
             Destroy(other.gameObject);
