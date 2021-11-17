@@ -1517,8 +1517,8 @@ GameObject:
   - component: {fileID: 644489702}
   - component: {fileID: 644489701}
   - component: {fileID: 644489704}
-  - component: {fileID: 644489703}
   - component: {fileID: 644489705}
+  - component: {fileID: 644489706}
   m_Layer: 0
   m_Name: Station Tutorial
   m_TagString: Plataforma Tutorial
@@ -1597,7 +1597,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!60 &644489703
+--- !u!50 &644489704
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644489700}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1000000
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!114 &644489705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644489700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281a6d66e967840469184aecf36db6b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeSaideCena: 0
+--- !u!60 &644489706
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1729,40 +1763,6 @@ PolygonCollider2D:
       - {x: -0.5625, y: -1.8125}
     - - {x: 0.5625, y: -1.8125}
       - {x: 0.3125, y: -1.8125}
---- !u!50 &644489704
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644489700}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &644489705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644489700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 281a6d66e967840469184aecf36db6b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadeSaideCena: 0
 --- !u!1 &670031782
 GameObject:
   m_ObjectHideFlags: 0
@@ -2712,23 +2712,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2065138577811871411, guid: 2634795f722fc7645885fa3eac08eaa2, type: 3}
   m_PrefabInstance: {fileID: 449393268}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1029460449 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3103347754517619309, guid: b0f8630d6b2dc004e94cc2a4ce7ffdc6, type: 3}
-  m_PrefabInstance: {fileID: 414188389}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1029460457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1029460449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1249f09e03272664e86c7c25ec1184d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1043154972
 PrefabInstance:
   m_ObjectHideFlags: 0

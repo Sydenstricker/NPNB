@@ -28,7 +28,7 @@ public class StationTutorialSaiDeCena : MonoBehaviour
 
     private void AndaPlataforma()
     {
-            transform.position = new Vector2(-velocidadeX, transform.position.y);        
+            transform.position = new Vector2(-1.16f - velocidadeX, transform.position.y);        
     }
 
 }

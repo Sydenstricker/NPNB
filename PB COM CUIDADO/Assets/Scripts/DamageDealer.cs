@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageDealer : MonoBehaviour
 {
     private Animator tiroBoss;
-    
+    [SerializeField] bool ehParaDesaparecerQuandoMorre = false;
     [SerializeField] int damage = 100;
 
     private void Start()
@@ -25,6 +25,7 @@ public class DamageDealer : MonoBehaviour
         if (gameObject.CompareTag("shot4"))     {  tiroBoss.SetTrigger("acertou"); return; }
         if (gameObject.CompareTag("shot5"))     {  tiroBoss.SetTrigger("acertou"); return; }
         if (gameObject.CompareTag("shot6"))     {  tiroBoss.SetTrigger("acertou"); return; }
+        if (ehParaDesaparecerQuandoMorre) {return;}
         else
         {
             Destroy(gameObject);
