@@ -21,6 +21,8 @@ public class Boss : MonoBehaviour
     [SerializeField] [Range(0, 1)] float volumeBossPutoMusic = 0.75f;
     [SerializeField] [Range(0, 1)] float volumeTiroCanhao = 0.75f;
     [SerializeField] float tempoIntroBoss = 2f;
+    [SerializeField] AudioClip bossPutoSFX;
+    [SerializeField] [Range(0, 1)] float volumeBossPuto = 0.75f;
 
     [Header("Explosoes Configs")]
     
@@ -118,11 +120,12 @@ public class Boss : MonoBehaviour
 
     private void BossFicouPutoInvocaMinionsParaAjudar()
     {
+        AudioSource.PlayClipAtPoint(bossPutoSFX, Camera.main.transform.position, volumeBossPuto);
         FindObjectOfType<trocaCor>().BossPutoVidaVermelha();
         FindObjectOfType<EnemySpawner>().InvocaReforcosBOSS();
         FindObjectOfType<BossPathing>().BossIsPuto();
         FindObjectOfType<Enemy>().MinionsBossNaoSpawnaPI();
-        StartCoroutine(AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(0.1f));
+        StartCoroutine(DelayTirosCanhoesPuto(3f));        
     }
     private void BossMorreu()
     {
@@ -140,8 +143,13 @@ public class Boss : MonoBehaviour
         //FindObjectOfType<Level>().LoadCinematicaFinal();
     }
 
-    private IEnumerator AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(float intervaloAcionamentoCannons)
+    private IEnumerator DelayTirosCanhoesPuto(float delay)
     {
+        yield return new WaitForSecondsRealtime(delay);
+        StartCoroutine(AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(0.1f));
+    }
+    private IEnumerator AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(float intervaloAcionamentoCannons)
+    {      
 
         foreach (Transform child in canhoesPuto.transform)
         {
