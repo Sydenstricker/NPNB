@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2065138577811871411}
   - component: {fileID: 2065138577811871410}
-  - component: {fileID: 2065138577811871408}
+  - component: {fileID: 438494524}
   m_Layer: 0
   m_Name: BG Sprite Forgive me Diego
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2065138577811871413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6.25, y: 6.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,14 +76,14 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 1
   m_Size: {x: 20, y: 1.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2065138577811871408
+--- !u!114 &438494524
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,8 +92,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2065138577811871413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce172337d37a0644ba5c5776195e6c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f7407e6b0a7e1d4492992a06a7664f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffect: 1
-  tempoSpawnaProxBG: 2
+  vaiTestar: 0

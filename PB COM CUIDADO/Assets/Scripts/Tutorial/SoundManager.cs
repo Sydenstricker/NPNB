@@ -74,6 +74,7 @@ public class SoundManager : MonoBehaviour
     }
     public void TocaPortalFecha()
     {
+        
         audio.PlayOneShot(portalSai);
     }
     public void TocaDeathMenu()
