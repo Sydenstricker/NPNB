@@ -29720,7 +29720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972349936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 105.843216, y: 7.6960964, z: -43.314484}
+  m_LocalPosition: {x: 105.843216, y: 7.6960964, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 596063063}
@@ -47915,7 +47915,7 @@ GameObject:
   - component: {fileID: 1726799894}
   - component: {fileID: 1726799893}
   - component: {fileID: 1726799892}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Tetto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63232,11 +63232,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1045539570214910453, guid: db80494e4af0b994080416b1d3f25343, type: 3}
       propertyPath: m_Size.x
-      value: 0.30425495
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045539570214910453, guid: db80494e4af0b994080416b1d3f25343, type: 3}
+      propertyPath: m_Size.y
+      value: 1.8748252
       objectReference: {fileID: 0}
     - target: {fileID: 1045539570214910453, guid: db80494e4af0b994080416b1d3f25343, type: 3}
       propertyPath: m_Offset.x
-      value: -0.34787253
+      value: -0.030000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045539570214910453, guid: db80494e4af0b994080416b1d3f25343, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.3768574
       objectReference: {fileID: 0}
     - target: {fileID: 5556787647614046828, guid: db80494e4af0b994080416b1d3f25343, type: 3}
       propertyPath: m_Name
@@ -63286,6 +63294,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5556787647614046834, guid: db80494e4af0b994080416b1d3f25343, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 9aa5be55d523c974782a5d1204931041, type: 2}
     - target: {fileID: 5556787647614046839, guid: db80494e4af0b994080416b1d3f25343, type: 3}
       propertyPath: gameManager
       value: 
@@ -63294,6 +63306,14 @@ PrefabInstance:
       propertyPath: soundManager
       value: 
       objectReference: {fileID: 1917963212}
+    - target: {fileID: 7706220060263149148, guid: db80494e4af0b994080416b1d3f25343, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7706220060263149148, guid: db80494e4af0b994080416b1d3f25343, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db80494e4af0b994080416b1d3f25343, type: 3}
 --- !u!1001 &6245370876878921486

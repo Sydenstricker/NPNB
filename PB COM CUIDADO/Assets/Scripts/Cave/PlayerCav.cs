@@ -133,6 +133,13 @@ public class PlayerCav : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.layer == 13)
+        {
+            animator.SetBool("isGrounded", true);
+            grounded = true;
+            puloCount = 0;
+        }
+
         if (other.tag == "MenuScoreCav" && pontosIDcoletados >= 3 )
         {
             FindObjectOfType<cameraMovCav>().AtivaGlitchScore();
@@ -188,15 +195,6 @@ public class PlayerCav : MonoBehaviour
         return;
     }
     
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == 13)
-        {
-            animator.SetBool("isGrounded", true);
-            grounded = true;
-            puloCount = 0;            
-        }        
-    }
       
     private void PegaVidaCoracao()
     {
