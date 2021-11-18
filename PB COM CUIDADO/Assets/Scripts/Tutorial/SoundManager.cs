@@ -53,13 +53,13 @@ public class SoundManager : MonoBehaviour
             AudioSource.PlayClipAtPoint(pulo, Camera.main.transform.position, volumePulo);
         //audio.PlayOneShot(pulo);
         else if (nome == "StartGame")
-             {
-                 AudioSource.PlayClipAtPoint(startgame, Camera.main.transform.position, volumeStartGame);
-                 Debug.Log("tocou botao start");
-             }
-        //audio.PlayOneShot(startgame);
+        {
+            AudioSource.PlayClipAtPoint(startgame, Camera.main.transform.position, volumeStartGame); // nao passa para outra scene
+            Debug.Log("tocou botao start");
+            audio.PlayOneShot(startgame); // passa para outra scene
+        }
         else if (nome == "quitgame")
-            AudioSource.PlayClipAtPoint(quitgame, Camera.main.transform.position, volumeQuitGame);
+            audio.PlayOneShot(quitgame);
         //audio.PlayOneShot(quitgame);
         else if (nome == "puloduplo")
             AudioSource.PlayClipAtPoint(puloduplo, Camera.main.transform.position, volumePuloDuplo);
@@ -67,10 +67,10 @@ public class SoundManager : MonoBehaviour
         else if (nome == "portalentra")
             AudioSource.PlayClipAtPoint(portalEntra, Camera.main.transform.position, volumePortalEntra);
         //audio.PlayOneShot(portalEntra);
-        else if (nome =="portalfecha")
+        else if (nome == "portalfecha")
             AudioSource.PlayClipAtPoint(portalSai, Camera.main.transform.position, volumePortalSai);
         //audio.PlayOneShot(portalSai);
-        else if (nome =="deathMenu")
+        else if (nome == "deathMenu")
             AudioSource.PlayClipAtPoint(deathMenu, Camera.main.transform.position, volumeDeathMenu);
     }
     public void TocaPortalFecha()
