@@ -6,18 +6,18 @@ public class EnemySpawnerCav : MonoBehaviour
     [SerializeField] List<WaveConfig> waveConfig;
     [SerializeField] int startingWave = 0;
     [SerializeField] bool isEndless = false;
-    
+
     // Start is called before the first frame update
     IEnumerator Start()
     {
-       do
+        do
         {
             yield return StartCoroutine(SpawnAllWaves());
         }
         while (isEndless);
     }
-   
-    
+
+
     private IEnumerator SpawnAllWaves()
     {
         for (int waveIndex = startingWave; waveIndex < waveConfig.Count; waveIndex++)
@@ -38,7 +38,7 @@ public class EnemySpawnerCav : MonoBehaviour
             newEnemy.GetComponent<EnemyPathingCav>().SetWaveConfig(waveConfig);
             yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
         }
-    }   
+    }
 }
 
 

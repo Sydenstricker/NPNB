@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,7 +11,7 @@ public class GamePlayNaveCanvas : MonoBehaviour
     {
         StartCoroutine("DeathMenuCo");
         Cursor.visible = true;
-        Time.timeScale = 0.05f;               
+        Time.timeScale = 0.05f;
     }
     private IEnumerator DeathMenuCo()
     {

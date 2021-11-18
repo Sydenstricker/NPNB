@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
@@ -8,11 +6,13 @@ public class MainMenu : MonoBehaviour
     public string cena;
     public SoundManager soundManager;
 
-    public void StartGame(){
+    public void StartGame()
+    {
         //soundManager.PlayAudio("startgame");
         SceneManager.LoadScene("Tutorial");
     }
-    public void QuitGame(){
+    public void QuitGame()
+    {
         Application.Quit();
 
     }

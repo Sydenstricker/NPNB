@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ativadorDoLoboAndar : MonoBehaviour
@@ -8,7 +6,7 @@ public class ativadorDoLoboAndar : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GetComponentInChildren<MorcegoEsquerda>().AtivaAndarLobo();            
-        }        
+            GetComponentInChildren<MorcegoEsquerda>().AtivaAndarLobo();
+        }
     }
 }

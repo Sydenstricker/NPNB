@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
@@ -10,9 +7,9 @@ public class MusicPlayer : MonoBehaviour
     void Awake()
     {
         //Singleton pra musica nao ficar resetando quando muda scene
-        SetUpSingleton();        
+        SetUpSingleton();
     }
-    
+
     private void SetUpSingleton()
     {
         if (FindObjectsOfType(GetType()).Length > 1)
@@ -46,5 +43,5 @@ public class MusicPlayer : MonoBehaviour
         Destroy(gameObject);
     }
     */
-   
+
 }

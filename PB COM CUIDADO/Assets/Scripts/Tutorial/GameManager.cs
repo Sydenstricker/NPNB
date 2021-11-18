@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    
+
     [SerializeField] int pontosMaxColetaveisTut = 0;
     private int pontos;
     private GameObject player;
@@ -25,7 +23,7 @@ public class GameManager : MonoBehaviour
     public ScoreMenu piMenu;
 
     private float contadorTempoTUT = 0;
-    
+
     void Start()
     {
         if (isTutorial)
@@ -48,30 +46,31 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<cameraNaveGlitch>().DesativaGlitchScore();
         }
     }
-   
-    public void AddPontos(int valor) {
+
+    public void AddPontos(int valor)
+    {
         pontos += valor;
         pontosTxt.text = "" + pontos;
-        pontosTxtMenu.text =  pontos + ("/") + pontosMaxColetaveisTut;
-        pontosTxtScore.text = pontos + ("/") + pontosMaxColetaveisTut;   
+        pontosTxtMenu.text = pontos + ("/") + pontosMaxColetaveisTut;
+        pontosTxtScore.text = pontos + ("/") + pontosMaxColetaveisTut;
 
     }
 
-    public void RestartGame() 
+    public void RestartGame()
     {
-        if(isTutorial)
+        if (isTutorial)
         {
             FindObjectOfType<CameraController>().AtivaGlitchMorte();
         }
-        if(isCaverna)
+        if (isCaverna)
         {
             FindObjectOfType<cameraMovCav>().AtivaGlitchMorte();
         }
-        
+
         FindObjectOfType<SoundManager>().TocaDeathMenu();
-        player.SetActive(false);        
+        player.SetActive(false);
         Cursor.visible = true;
-        deathMenu.gameObject.SetActive(true); 
+        deathMenu.gameObject.SetActive(true);
 
     }
     public void HighScoreTut()
@@ -112,7 +111,7 @@ public class GameManager : MonoBehaviour
         playerCAV.SetActive(false);
     }
 
-    public void Restart() 
+    public void Restart()
     {
         Cursor.visible = true;
         deathMenu.gameObject.SetActive(false);

@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -14,7 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] float durationOfExplosion = 1f;
     private float contatempoNAVE = 0f;
     PolygonCollider2D polygonCollider2D;
-   
+
     [Header("Player Audio")]
     [SerializeField] AudioClip deathSFX;
     [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
@@ -64,33 +62,33 @@ public class Player : MonoBehaviour
         PegaVidaCoracao();
         Time.timeScale = 1f;
     }
-       
+
     void Update()
     {
         ContaTempoNaveUpdate();
         Move();
-        Fire();        
+        Fire();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Tiro Boss"))
+        if (other.gameObject.CompareTag("Tiro Boss"))
         {
             TomouTiroBoss();
             Debug.Log("tomou tiro boss");
         }
-        if (other.gameObject.CompareTag("shot1"))     { TomouTiroShot1();  }
-        if (other.gameObject.CompareTag("shot2"))     { TomouTiroShot2();  }
-        if (other.gameObject.CompareTag("shot3"))     { TomouTiroShot3();  }
-        if (other.gameObject.CompareTag("shot4"))     { TomouTiroShot4();  }
-        if (other.gameObject.CompareTag("shot5"))     { TomouTiroShot5();  }
-        if (other.gameObject.CompareTag("shot6"))     { TomouTiroShot6();  }
-        
+        if (other.gameObject.CompareTag("shot1")) { TomouTiroShot1(); }
+        if (other.gameObject.CompareTag("shot2")) { TomouTiroShot2(); }
+        if (other.gameObject.CompareTag("shot3")) { TomouTiroShot3(); }
+        if (other.gameObject.CompareTag("shot4")) { TomouTiroShot4(); }
+        if (other.gameObject.CompareTag("shot5")) { TomouTiroShot5(); }
+        if (other.gameObject.CompareTag("shot6")) { TomouTiroShot6(); }
+
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
-        if (!damageDealer) { return;}
-        TomarDano(damageDealer);        
-            
+        if (!damageDealer) { return; }
+        TomarDano(damageDealer);
+
     }
-    
+
     private void PegaVidaCoracao()
     {
         currentHealth = health;
@@ -108,12 +106,12 @@ public class Player : MonoBehaviour
         {
             PlayerMorreu();
         }
-    }    
+    }
     private void PlayerMorreu()
     {
         Destroy(gameObject);
         GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
-        Destroy(explosion,durationOfExplosion);
+        Destroy(explosion, durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
         FindObjectOfType<GamePlayNaveCanvas>().RestartGame();
         //FindObjectOfType<Level>().LoadGameOver();
@@ -139,25 +137,25 @@ public class Player : MonoBehaviour
         //Fire1
         if (Input.GetButtonDown("Jump"))
         {
-           firingCoroutine = StartCoroutine(FireHoldingFire());
+            firingCoroutine = StartCoroutine(FireHoldingFire());
         }
         if (Input.GetButtonUp("Jump"))
         {
-           StopCoroutine(firingCoroutine);
+            StopCoroutine(firingCoroutine);
         }
-    }   
+    }
     private void Move()
     {
-       
-        var deltaY = Input.GetAxis("Vertical") * (Time.deltaTime) *velCimaBaixo;
-        var newYPos = Mathf.Clamp(transform.position.y + deltaY,(yMin),yMax);
+
+        var deltaY = Input.GetAxis("Vertical") * (Time.deltaTime) * velCimaBaixo;
+        var newYPos = Mathf.Clamp(transform.position.y + deltaY, (yMin), yMax);
 
         var deltaX = Input.GetAxis("Horizontal") * (Time.deltaTime) * velEsqDir;
-        var newXPos = Mathf.Clamp(transform.position.x + deltaX,xMin,xMax);
-    
+        var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
+
 
         //jogador anda para cima/baixo
-        transform.position = new Vector2(newXPos , transform.position.y);
+        transform.position = new Vector2(newXPos, transform.position.y);
 
         //player anda direita/esquerda
         transform.position = new Vector2(transform.position.x, newYPos);
@@ -187,7 +185,7 @@ public class Player : MonoBehaviour
     }
     private void TomouTiroShot1()
     {
-        AudioSource.PlayClipAtPoint(danoShot1, Camera.main.transform.position, volumeShot1);        
+        AudioSource.PlayClipAtPoint(danoShot1, Camera.main.transform.position, volumeShot1);
     }
     private void TomouTiroShot2()
     {
@@ -212,7 +210,7 @@ public class Player : MonoBehaviour
     private void TomouTiroBoss()
     {
         AudioSource.PlayClipAtPoint(danoBossSFX, Camera.main.transform.position, volumeDanoBoss);
-        StartCoroutine(TremePlayer(0.6f,0.1f));
+        StartCoroutine(TremePlayer(0.6f, 0.1f));
     }
     IEnumerator TremePlayer(float duration, float magnetude)
     {
@@ -221,7 +219,7 @@ public class Player : MonoBehaviour
 
         while (elapsed < duration)
         {
-            float x = originalPos.x +(Random.Range(-1f, 1f) * magnetude);
+            float x = originalPos.x + (Random.Range(-1f, 1f) * magnetude);
             float y = originalPos.y + (Random.Range(-1f, 1f) * magnetude);
 
             transform.position = new Vector2(x, y);
@@ -230,8 +228,8 @@ public class Player : MonoBehaviour
 
             yield return null;
         }
-        transform.position = originalPos;        
-    }   
+        transform.position = originalPos;
+    }
     public void PlayerVenceuFicaImortal()
     {
         polygonCollider2D.enabled = false;

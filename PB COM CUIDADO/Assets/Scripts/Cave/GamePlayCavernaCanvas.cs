@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GamePlayCavernaCanvas : MonoBehaviour
 {
-    public DeathMenu deathMenu;    
+    public DeathMenu deathMenu;
 
     public void RestartGame()
     {
@@ -15,6 +13,6 @@ public class GamePlayCavernaCanvas : MonoBehaviour
     }
     public void RestartLevelCaverna()
     {
-        SceneManager.LoadScene("CavernaGameplay");       
+        SceneManager.LoadScene("CavernaGameplay");
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Cannon : MonoBehaviour
@@ -14,15 +12,15 @@ public class Cannon : MonoBehaviour
 
     [Header("Sons")]
     [SerializeField] AudioClip shootSound;
-    [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.25f;    
-   
+    [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.25f;
+
 
     private Animator animator;
     private void Awake()
     {
         animator = GetComponent<Animator>();
     }
-    
+
     // Update is called once per frame
     void Update()
     {

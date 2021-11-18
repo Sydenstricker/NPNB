@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 //using TMPro; usa texto normal mesmo
@@ -15,7 +13,7 @@ public class ScoreDisplayCav : MonoBehaviour
     }
     void Start()
     {
-       
+
     }
 
     // Update is called once per frame

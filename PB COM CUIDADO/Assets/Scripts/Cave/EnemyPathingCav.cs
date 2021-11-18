@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,7 +31,7 @@ public class EnemyPathingCav : MonoBehaviour
             var targetPosition = waypoints[waypointIndex].transform.position;
             var movementThisFrame = waveConfig.GetMoveSpeed() * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
-            if (transform.position == targetPosition )
+            if (transform.position == targetPosition)
             {
                 waypointIndex++;
                 //transform.rotation = Quaternion.Euler(0, - 180f, 0);
@@ -41,7 +40,7 @@ public class EnemyPathingCav : MonoBehaviour
         }
         else
         {
-            waypointIndex = 0;            
+            waypointIndex = 0;
         }
     }
 }

@@ -6,20 +6,20 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    
+
     public Text nameText;
     public Text dialogueText;
-    public Animator animator;    
-    private Queue<string> sentences;    
+    public Animator animator;
+    private Queue<string> sentences;
 
     void Start()
     {
-        sentences = new Queue<string>();        
+        sentences = new Queue<string>();
     }
-    public void StartDialogue (Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
-        nameText.text = dialogue.name;       
+        nameText.text = dialogue.name;
         sentences.Clear();
         foreach (string sentence in dialogue.sentences)
         {
@@ -27,11 +27,11 @@ public class DialogueManager : MonoBehaviour
         }
         DisplayNextSentence();
     }
-    public void DisplayNextSentence ()
+    public void DisplayNextSentence()
     {
-        
+
         if (sentences.Count == 0)
-        {            
+        {
             EndDialogue();
             return;
         }
@@ -39,8 +39,8 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
-    
-    IEnumerator TypeSentence (string sentence)
+
+    IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
@@ -48,11 +48,11 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return null;
         }
-        
+
     }
 
     void EndDialogue()
-    {        
+    {
         animator.SetBool("IsOpen", false);
     }
 }

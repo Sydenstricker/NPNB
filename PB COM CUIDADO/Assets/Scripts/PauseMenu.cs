@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
@@ -35,8 +33,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameisPaused = false;
         Cursor.visible = false;
-        if(!FindObjectOfType<StationTutorialSaiDeCena>()) { return; }
-        if(isNave && naveTutorialMorreu == true)
+        if (!FindObjectOfType<StationTutorialSaiDeCena>()) { return; }
+        if (isNave && naveTutorialMorreu == true)
         {
             FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial();
         }
@@ -57,7 +55,7 @@ public class PauseMenu : MonoBehaviour
             FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial();
         }
     }
-    public void NaveTutorialMorreu ()
+    public void NaveTutorialMorreu()
     {
         naveTutorialMorreu = true;
     }

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,14 +11,14 @@ public class Level : MonoBehaviour
 
     public void LoadNextScene()
     {
-        
+
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
-       
-      //  SceneManager.LoadScene(1);
-       // SceneManager.LoadScene("NaveBlueGameplay");
+
+        //  SceneManager.LoadScene(1);
+        // SceneManager.LoadScene("NaveBlueGameplay");
     }
-   
+
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
@@ -37,9 +36,9 @@ public class Level : MonoBehaviour
     }
     public void LoadGameOver()
     {
-       StartCoroutine((IEnumerator)WaitAndLoad());        
+        StartCoroutine((IEnumerator)WaitAndLoad());
     }
-    
+
     IEnumerator WaitAndLoad()
     {
         yield return new WaitForSeconds(delayGameOver);
@@ -58,13 +57,13 @@ public class Level : MonoBehaviour
     }
     IEnumerator DelayCinematicaFinal()
     {
-        yield return new WaitForSeconds(delayCinematicaFinal);        
+        yield return new WaitForSeconds(delayCinematicaFinal);
         SceneManager.LoadScene("DialogueNaveEnd");
 
     }
     public void QuitGame()
     {
         Application.Quit();
-    
+
     }
 }

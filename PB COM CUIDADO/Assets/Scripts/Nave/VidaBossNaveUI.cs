@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -7,7 +5,7 @@ public class VidaBossNaveUI : MonoBehaviour
 {
     public GameObject vidaBossUI;
     public HealthBar healthBarBoss;
-    
+
 
     public void AtivaVidaBoss()
     {
@@ -20,7 +18,7 @@ public class VidaBossNaveUI : MonoBehaviour
 
     public HealthBar EstaHealthBar(HealthBar healthBarBoss)
     {
-        return  healthBarBoss;
+        return healthBarBoss;
     }
     public int PegaVidaBoss(int health)
     {

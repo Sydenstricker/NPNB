@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +12,7 @@ public class BossConfig : ScriptableObject
     [SerializeField] float moveSpeed = 2f;
     [SerializeField] float bossPutoVelocidade = 8f;
 
-   
+
     public GameObject GetEnemyPrefab() { return enemyPrefab; }
     public List<Transform> GetWaypoints()
     {
@@ -29,5 +28,5 @@ public class BossConfig : ScriptableObject
     public float GetSpawnRandomFactor() { return spawnRandomFactor; }
     public int GetNumberOfEnemies() { return numberOfEnemies; }
     public float GetMoveSpeed() { return moveSpeed; }
-    public float GetMoveSpeedBossPuto()  { return bossPutoVelocidade; }
+    public float GetMoveSpeedBossPuto() { return bossPutoVelocidade; }
 }

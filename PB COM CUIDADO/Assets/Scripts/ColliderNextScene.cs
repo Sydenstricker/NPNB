@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ColliderNextScene : MonoBehaviour
@@ -17,22 +16,22 @@ public class ColliderNextScene : MonoBehaviour
             audioS.Stop();
         }
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == 9)
             return;
         else
             StopAllAudio();
-            StopAllCoroutines();
-            //FindObjectOfType<BolaPretaEntra>().AtivaBolaPreta();
-            StartCoroutine(ProxSceneCollider());
-            //CACETE FOI PORRA
-            //GetComponent<BolaPretaEntra>().AtivaBolaPreta();
-            //GetComponent<BolaPretaEntra>().bolaPreta.SetTrigger("EntraBola");)
-        
-        
-       
+        StopAllCoroutines();
+        //FindObjectOfType<BolaPretaEntra>().AtivaBolaPreta();
+        StartCoroutine(ProxSceneCollider());
+        //CACETE FOI PORRA
+        //GetComponent<BolaPretaEntra>().AtivaBolaPreta();
+        //GetComponent<BolaPretaEntra>().bolaPreta.SetTrigger("EntraBola");)
+
+
+
         //FindObjectOfType<BolaPretaEntra>().AtivaBolaPreta;
     }
     IEnumerator ProxSceneCollider()
@@ -41,5 +40,5 @@ public class ColliderNextScene : MonoBehaviour
         FindObjectOfType<SceneLoader>().LoadNextScene();
         //AudioSource.PlayClipAtPoint(introSFX, Camera.main.transform.position, volumeIntro);
     }
-    
- }
+
+}

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BlueAndaDialogo : MonoBehaviour
@@ -13,7 +12,7 @@ public class BlueAndaDialogo : MonoBehaviour
     [SerializeField] private bool estaAndando = false;
     [SerializeField] float limiteAndar = 0f;
     [SerializeField] float delayBlueCorrer = 0f;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,14 +22,14 @@ public class BlueAndaDialogo : MonoBehaviour
     }
 
     void Update()
-    {        
-        if(estaAndando)
+    {
+        if (estaAndando)
         {
             contaTempo++;
             blueAnimator.SetBool("andar", true);
             AndaBlueESQ();
         }
-        if(contaTempo >= limiteAndar)
+        if (contaTempo >= limiteAndar)
         {
             blueAnimator.SetBool("andar", false);
             ParaBlue();
@@ -39,7 +38,7 @@ public class BlueAndaDialogo : MonoBehaviour
         }
         if (DialogueCutsceneManager.isActive == true)
         {
-            if(andaPELOAMORDEDEUS)
+            if (andaPELOAMORDEDEUS)
             {
                 AndaBlue();
             }
@@ -47,9 +46,9 @@ public class BlueAndaDialogo : MonoBehaviour
             {
                 ParaBlue();
             }
-           
+
         }
-        if (DialogueCutsceneManager.isActive == false && naoSeMova == false )
+        if (DialogueCutsceneManager.isActive == false && naoSeMova == false)
         {
             AndaBlue();
         }
@@ -62,8 +61,8 @@ public class BlueAndaDialogo : MonoBehaviour
     public void ParaBlue()
     {
         body.velocity = new Vector2(0, 0);
-        blueAnimator.SetBool("andar", false);        
-    } 
+        blueAnimator.SetBool("andar", false);
+    }
     public void AndaBlue()
     {
         body.velocity = new Vector2(velocidade, body.velocity.y);
@@ -73,11 +72,11 @@ public class BlueAndaDialogo : MonoBehaviour
     {
         body.velocity = new Vector2(velocidade, 0);
         blueAnimator.SetBool("andar", true);
-        estaAndando = true;        
+        estaAndando = true;
     }
     public void CorreDireita()
     {
-        StartCoroutine((IEnumerator) CorreBlueDir());        
+        StartCoroutine((IEnumerator)CorreBlueDir());
     }
     public void PulaBlue()
     {
@@ -90,7 +89,7 @@ public class BlueAndaDialogo : MonoBehaviour
         yield return new WaitForSeconds(delayBlueCorrer);
         transform.rotation = Quaternion.AngleAxis(180, Vector3.down);
         body.velocity = new Vector2(-velocidade, 0);
-        blueAnimator.SetBool("correr", true);        
+        blueAnimator.SetBool("correr", true);
     }
 
     public void CorreNaveFinal()
@@ -98,7 +97,7 @@ public class BlueAndaDialogo : MonoBehaviour
         body.velocity = new Vector2(-5, 0);
         estaAndando = true;
     }
-   public void OlhaTrasBlue()
+    public void OlhaTrasBlue()
     {
         blueAnimator.SetBool("isOlhandoTras", true);
     }
@@ -114,9 +113,9 @@ public class BlueAndaDialogo : MonoBehaviour
             ParaBlue();
             andaPELOAMORDEDEUS = false;
         }
-    }    
-    
-    public void ANDAPELOAMORDEDEUS ()
+    }
+
+    public void ANDAPELOAMORDEDEUS()
     {
         andaPELOAMORDEDEUS = true;
     }

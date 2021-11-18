@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
@@ -10,7 +8,7 @@ public class DialogManager : MonoBehaviour
     private string[] linhas;
     private int linhaAtual;
     private PlayerController player;
-    private float oldVelocidade; 
+    private float oldVelocidade;
 
     void Start()
     {
@@ -34,13 +32,15 @@ public class DialogManager : MonoBehaviour
         if (!panel.activeInHierarchy) return;
         textBox.text = linhas[linhaAtual];
 
-        if (Input.GetKeyDown(KeyCode.Return)) {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
             linhaAtual++;
-            if (linhaAtual >= 2) {
+            if (linhaAtual >= 2)
+            {
                 panel.SetActive(false);
                 player.velocidade = oldVelocidade;
 
             }
-        } 
+        }
     }
 }

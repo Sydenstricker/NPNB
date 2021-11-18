@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerCavTest : MonoBehaviour
-{  
+{
     [Header("Player Config")]
     [SerializeField] float velCimaBaixo = 10f;
     [SerializeField] float velEsqDir = 10f;
     [SerializeField] int health = 200;
-   
+
     [Header("Player Audio")]
     [SerializeField] AudioClip deathSFX;
     [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
-    
+
     [SerializeField] private bool puloDouble = false;
     [SerializeField] private int puloCount = 0;
     private Rigidbody2D body;
@@ -23,7 +21,7 @@ public class PlayerCavTest : MonoBehaviour
     public bool grounded;
 
     [SerializeField] private bool footIsGrounded = false;
-   
+
 
     //os 2 sao pra barra do coracao
     public HealthBar healthBar;
@@ -33,7 +31,7 @@ public class PlayerCavTest : MonoBehaviour
     float xMax;
     float yMin;
     float yMax;
-       
+
     //PI
     public int pontosIDcoletados;
 
@@ -42,9 +40,9 @@ public class PlayerCavTest : MonoBehaviour
         animator = GetComponent<Animator>();
     }
     void Start()
-    {        
+    {
         PegaVidaCoracao();
-        body = GetComponent<Rigidbody2D>();        
+        body = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -59,7 +57,7 @@ public class PlayerCavTest : MonoBehaviour
             Debug.Log("deu bug socorr");
         }
 
-        if ( Input.GetButtonDown("Jump") )
+        if (Input.GetButtonDown("Jump"))
         {
             if ((puloCount == 1) && (puloDouble == true))
             {
@@ -68,10 +66,10 @@ public class PlayerCavTest : MonoBehaviour
                 puloDouble = true; //no tutorial deixar false
                 puloCount = 0;
                 Debug.Log("Pulo Doble funcionou");
-                animator.SetBool("isGrounded",false) ;
+                animator.SetBool("isGrounded", false);
             }
 
-            if (grounded && (puloCount == 0) && footIsGrounded )
+            if (grounded && (puloCount == 0) && footIsGrounded)
             {
                 animator.SetTrigger("Pulando");
                 body.velocity = new Vector2(body.velocity.x, pulo);
@@ -80,21 +78,21 @@ public class PlayerCavTest : MonoBehaviour
                 footIsGrounded = false;
                 animator.SetBool("isGrounded", false);
                 //soundManager.PlayAudio("pulo");
-            }            
+            }
         }
 
-        if ( Input.GetButtonDown("Slide"))
+        if (Input.GetButtonDown("Slide"))
         {
             if (grounded && footIsGrounded == true)
             {
                 animator.SetTrigger("Deslizando");
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
-               
+
                 //body.velocity = new Vector2(body.velocity.x, pulo);
                 //puloCount++;
                 //soundManager.PlayAudio("pulo");
             }
-        }       
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -112,7 +110,7 @@ public class PlayerCavTest : MonoBehaviour
         }
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
-        TomarDano(damageDealer);           
+        TomarDano(damageDealer);
     }
 
     private void DesativaFoot()
@@ -125,21 +123,21 @@ public class PlayerCavTest : MonoBehaviour
     {
         return;
     }
-    
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 13)
         {
             animator.SetBool("isGrounded", true);
             grounded = true;
-            puloCount = 0;            
+            puloCount = 0;
         }
         if (collision.gameObject.layer == 6)
         {
             return;
         }
     }
-    
+
     private void AtivarBoxCollider()
     {
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
@@ -147,7 +145,7 @@ public class PlayerCavTest : MonoBehaviour
         pulo = 9f;
     }
 
-    
+
     private void PegaVidaCoracao()
     {
         currentHealth = health;
@@ -164,14 +162,14 @@ public class PlayerCavTest : MonoBehaviour
         {
             damageDealer.Hit();
         }
-            
+
         //currenthealth é a vida da barra com coraçao, health era ref em string
         currentHealth = health;
         healthBar.SetHealth(currentHealth);
-                
+
         if (health <= 0)
         {
-            PlayerMorreu();            
+            PlayerMorreu();
         }
         else
         {
@@ -194,7 +192,7 @@ public class PlayerCavTest : MonoBehaviour
     public int GetPI()
     {
         return pontosIDcoletados;
-    }    
+    }
     private void Move()
     {
         // Movimento runner
@@ -210,7 +208,7 @@ public class PlayerCavTest : MonoBehaviour
         transform.position = new Vector2(newXPos, transform.position.y);
 
         //player anda direita/esquerda
-        transform.position = new Vector2(transform.position.x, newYPos);                
+        transform.position = new Vector2(transform.position.x, newYPos);
     }
     private void SetUpMoveBoundry()
     {

@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerCav : MonoBehaviour
-{  
+{
     [Header("Player Config")]
     [SerializeField] float velCimaBaixo = 10f;
     [SerializeField] float velEsqDir = 10f;
     [SerializeField] int health = 200;
-   
+
     [Header("Player Audio")]
     [SerializeField] AudioClip deathSFX;
     [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
@@ -50,7 +48,7 @@ public class PlayerCav : MonoBehaviour
     public float contatempoCAV;
 
     [SerializeField] private bool footIsGrounded = false;
-   
+
     //os 2 sao pra barra do coracao
     public HealthBar healthBar;
     public int currentHealth;
@@ -59,7 +57,7 @@ public class PlayerCav : MonoBehaviour
     float xMax;
     float yMin;
     float yMax;
-       
+
     //PI
     public int pontosIDcoletados;
 
@@ -71,7 +69,7 @@ public class PlayerCav : MonoBehaviour
     {
         contatempoCAV = 0;
         PegaVidaCoracao();
-        body = GetComponent<Rigidbody2D>();               
+        body = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -86,7 +84,7 @@ public class PlayerCav : MonoBehaviour
             FindObjectOfType<GameSession>().ResetGame();
         }
 
-        if ( Input.GetButtonDown("Jump") )
+        if (Input.GetButtonDown("Jump"))
         {
             if ((puloCount == 1) && (puloDouble == true))
             {
@@ -114,7 +112,7 @@ public class PlayerCav : MonoBehaviour
             }
         }
 
-        if ( Input.GetButtonDown("Slide"))
+        if (Input.GetButtonDown("Slide"))
         {
             if (grounded && footIsGrounded == true)
             {
@@ -127,8 +125,8 @@ public class PlayerCav : MonoBehaviour
                 animator.SetBool("isGrounded", true);
                 grounded = true;
                 SlideSFX();
-            }          
-        }       
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -140,18 +138,18 @@ public class PlayerCav : MonoBehaviour
             puloCount = 0;
         }
 
-        if (other.tag == "MenuScoreCav" && pontosIDcoletados >= 3 )
+        if (other.tag == "MenuScoreCav" && pontosIDcoletados >= 3)
         {
             FindObjectOfType<cameraMovCav>().AtivaGlitchScore();
             gameManager.HighScoreCav();
-            Destroy(other.gameObject);         
-            
+            Destroy(other.gameObject);
+
         }
         if (other.tag == "MenuScoreCav" && pontosIDcoletados < 3)
         {
             FindObjectOfType<cameraMovCav>().AtivaGlitchScore();
             Destroy(other.gameObject);
-            gameManager.PIMenuCav();           
+            gameManager.PIMenuCav();
         }
         if (other.gameObject.layer == 6)
         {
@@ -167,7 +165,7 @@ public class PlayerCav : MonoBehaviour
         }
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
-        TomarDano(damageDealer);           
+        TomarDano(damageDealer);
     }
 
     private void DesativaFoot()
@@ -194,8 +192,8 @@ public class PlayerCav : MonoBehaviour
     {
         return;
     }
-    
-      
+
+
     private void PegaVidaCoracao()
     {
         currentHealth = health;
@@ -260,7 +258,7 @@ public class PlayerCav : MonoBehaviour
         velocidade = 0; pulo = 0;
         animator.SetTrigger("Morreu");
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
-        FindObjectOfType<GamePlayCavernaCanvas>().RestartGame();        
+        FindObjectOfType<GamePlayCavernaCanvas>().RestartGame();
     }
     public int GetHealth()
     {
@@ -269,7 +267,7 @@ public class PlayerCav : MonoBehaviour
     public int GetPI()
     {
         return pontosIDcoletados;
-    }    
+    }
     private void Move()
     {
         // Movimento runner
@@ -285,7 +283,7 @@ public class PlayerCav : MonoBehaviour
         transform.position = new Vector2(newXPos, transform.position.y);
 
         //player anda direita/esquerda
-        transform.position = new Vector2(transform.position.x, newYPos);                
+        transform.position = new Vector2(transform.position.x, newYPos);
     }
     private void SetUpMoveBoundry()
     {
@@ -354,5 +352,5 @@ public class PlayerCav : MonoBehaviour
     private void Dano3SFX()
     {
         AudioSource.PlayClipAtPoint(dano3SFX, Camera.main.transform.position, volumeDano3);
-    }    
+    }
 }

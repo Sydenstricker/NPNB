@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +6,7 @@ public class EnemyPathing : MonoBehaviour
     WaveConfig waveConfig;
     List<Transform> waypoints;
     int waypointIndex = 0;
-    
+
     void Start()
     {
         waypoints = waveConfig.GetWaypoints();
@@ -24,7 +23,7 @@ public class EnemyPathing : MonoBehaviour
     {
         this.waveConfig = waveConfig;
     }
-    
+
     private void Move()
     {
         if (waypointIndex <= waypoints.Count - 1)
@@ -36,7 +35,7 @@ public class EnemyPathing : MonoBehaviour
             {
                 waypointIndex++;
 
-            }        
+            }
         }
         else
         {

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MorcegoEsquerda : MonoBehaviour
@@ -20,7 +18,7 @@ public class MorcegoEsquerda : MonoBehaviour
         if (pegaPlayer == true)
         {
             AndaLobo();
-        }       
+        }
     }
 
     private void AndaLobo()

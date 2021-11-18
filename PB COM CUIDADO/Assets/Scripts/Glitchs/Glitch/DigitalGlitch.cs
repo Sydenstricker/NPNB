@@ -34,7 +34,8 @@ namespace Kino
         [SerializeField, Range(0, 1)]
         float _intensity = 0;
 
-        public float intensity {
+        public float intensity
+        {
             get { return _intensity; }
             set { _intensity = value; }
         }

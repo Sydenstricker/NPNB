@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
@@ -8,7 +6,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip moeda;
     [SerializeField] [Range(0, 1)] float volumeMoeda = 0.75f;
     public AudioClip pulo;
-    [SerializeField] [Range(0, 1)] float volumePulo= 0.75f;
+    [SerializeField] [Range(0, 1)] float volumePulo = 0.75f;
     public AudioClip startgame;
     [SerializeField] [Range(0, 1)] float volumeStartGame = 0.75f;
     public AudioClip quitgame;
@@ -45,7 +43,8 @@ public class SoundManager : MonoBehaviour
         audio = GetComponent<AudioSource>();
     }
 
-    public void PlayAudio(string nome){
+    public void PlayAudio(string nome)
+    {
         if (nome == "moeda")
             AudioSource.PlayClipAtPoint(moeda, Camera.main.transform.position, volumeMoeda);
         //audio.PlayOneShot(moeda);
@@ -65,8 +64,8 @@ public class SoundManager : MonoBehaviour
             AudioSource.PlayClipAtPoint(puloduplo, Camera.main.transform.position, volumePuloDuplo);
         //audio.PlayOneShot(puloduplo);
         else if (nome == "portalentra")
-            AudioSource.PlayClipAtPoint(portalEntra, Camera.main.transform.position, volumePortalEntra);
-        //audio.PlayOneShot(portalEntra);
+            //AudioSource.PlayClipAtPoint(portalEntra, Camera.main.transform.position, volumePortalEntra);
+            audio.PlayOneShot(portalEntra);
         else if (nome == "portalfecha")
             AudioSource.PlayClipAtPoint(portalSai, Camera.main.transform.position, volumePortalSai);
         //audio.PlayOneShot(portalSai);

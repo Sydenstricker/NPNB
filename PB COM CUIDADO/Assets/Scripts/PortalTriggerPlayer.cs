@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PortalTriggerPlayer : MonoBehaviour
@@ -15,7 +13,7 @@ public class PortalTriggerPlayer : MonoBehaviour
         if (other.tag == "Player")
         {
             animator.SetTrigger("AbrePortal");
-            if(isTutorial)
+            if (isTutorial)
             {
                 FindObjectOfType<SoundManager>().TocaPortalFecha();
                 return;

@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ScoreMenu : MonoBehaviour
 {
-    
+
     private int vidaPlayer;
     public void RestartGame()
-    {        
-        FindObjectOfType<GameManager>().Restart();        
+    {
+        FindObjectOfType<GameManager>().Restart();
     }
     public void AbreSceneTut()
     {
@@ -25,6 +23,6 @@ public class ScoreMenu : MonoBehaviour
     {
         SceneManager.LoadScene("DialogueCaveIntro");
     }
-    
+
 }
 

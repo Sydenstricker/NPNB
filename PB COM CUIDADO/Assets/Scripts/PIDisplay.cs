@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +10,7 @@ public class PIDisplay : MonoBehaviour
         piText = GetComponent<Text>();
         player = FindObjectOfType<Player>();
     }
-        
+
     void Update()
     {
         //piText.text = player.GetPI().ToString();

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerData : MonoBehaviour
@@ -36,8 +34,8 @@ public class PlayerData : MonoBehaviour
     public int PIcoletadosNAVE;
     public int pontosObtidosNAVE;
     public int vidaNAVE;
-    public float tempoPorFaseNAVE;    
-    
+    public float tempoPorFaseNAVE;
+
     public void NaoDestroiPlayerData()
     {
         DontDestroyOnLoad(this);

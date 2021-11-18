@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Computadores : MonoBehaviour
@@ -12,5 +10,5 @@ public class Computadores : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(computadores, Camera.main.transform.position, volumeComputadores);
         }
-    }    
+    }
 }

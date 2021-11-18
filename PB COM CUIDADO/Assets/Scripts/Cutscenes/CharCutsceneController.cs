@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -22,16 +19,16 @@ public class CharCutsceneController : MonoBehaviour
     [SerializeField] float delayBlueCorrer = 0f;
     private bool isCorrendoSFX = true;
     private bool isAndandoSFX = true;
-          
+
     void Start()
     {
         Cursor.visible = false;
         body = GetComponent<Rigidbody2D>();
-        pinkyAnimator = GetComponent<Animator>();     
-    }       
+        pinkyAnimator = GetComponent<Animator>();
+    }
 
     void Update()
-    {        
+    {
         if (estaAndando == true)
         {
             contaTempo++;
@@ -51,8 +48,8 @@ public class CharCutsceneController : MonoBehaviour
         if (DialogueCutsceneManager.isActive == false)
         {
             AndaPinkTutorial();
-        }     
-    }    
+        }
+    }
     private void ParaPinkTutorial()
     {
         body.velocity = new Vector2(0, 0);
@@ -61,19 +58,19 @@ public class CharCutsceneController : MonoBehaviour
     private void AndaPinkTutorial()
     {
         body.velocity = new Vector2(velocity, body.velocity.y);
-        pinkyAnimator.SetFloat("Velocidade", body.velocity.x);       
+        pinkyAnimator.SetFloat("Velocidade", body.velocity.x);
     }
 
     //Animações
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        pinkyAnimator.SetTrigger("EntraFase");        
-    }    
+        pinkyAnimator.SetTrigger("EntraFase");
+    }
     public void ExclamacaoPinky()
     {
         pinkyAnimator.SetTrigger("exclamacao");
-    }    
-     
+    }
+
     public void OlhaAtrasPinky()
     {
         pinkyAnimator.SetTrigger("olhaTras");
@@ -100,7 +97,7 @@ public class CharCutsceneController : MonoBehaviour
     }
     public void CorrePink()
     {
-        pinkyAnimator.SetTrigger("correr");       
+        pinkyAnimator.SetTrigger("correr");
     }
 }
 

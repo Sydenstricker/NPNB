@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -31,25 +30,25 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject projectile;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] GameObject morteVFX;
-    [SerializeField] float durationOfExplosion =1f;
+    [SerializeField] float durationOfExplosion = 1f;
     [SerializeField] int pontosPorInimigo;
     private bool papaiBossMorreuEstouTristeVouMeExplodir = false;
     private bool semMeteoroPlz = true;
     private PolygonCollider2D polygonCollider2D;
 
-    [Header("Sons")]   
+    [Header("Sons")]
     [SerializeField] AudioClip deathSFX;
-    [SerializeField] [Range(0,1)] float volumeMorte = 0.75f;
+    [SerializeField] [Range(0, 1)] float volumeMorte = 0.75f;
     [SerializeField] AudioClip shootSound;
     [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.25f;
 
     //Organizador Inspector
     GameObject laserParent;
     const string LASER_PARENT_NAME = "Laser";
-   
+
     GameObject pontosIDParent;
     const string PI_PARENT_NAME = "Pontos de ID";
-    
+
 
 
     void Start()
@@ -88,9 +87,9 @@ public class Enemy : MonoBehaviour
         {
             pontosIDParent = new GameObject(PI_PARENT_NAME);
         }
-    }       
+    }
     private void CreateLaserParent()
-    {       
+    {
         laserParent = GameObject.Find(LASER_PARENT_NAME);
         if (!laserParent)
         {
@@ -120,7 +119,7 @@ public class Enemy : MonoBehaviour
     {
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
-        TomarDano(damageDealer);        
+        TomarDano(damageDealer);
     }
     private void TomarDano(DamageDealer damageDealer)
     {
@@ -131,13 +130,13 @@ public class Enemy : MonoBehaviour
         {
             Morreu();
         }
-    }    
+    }
 
     private void Morreu()
     {
-        if(isNaveTutorial) 
+        if (isNaveTutorial)
         {
-            FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial(); 
+            FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial();
             FindObjectOfType<PauseMenu>().NaveTutorialMorreu();
         }
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
@@ -149,14 +148,14 @@ public class Enemy : MonoBehaviour
         SpawnRandomHP();
     }
     private void SpawnRandomPI()
-    {        
+    {
         inimigosSoltamPI = Random.Range(chanceMinSoltarPID, chanceMaxSoltarPID);
         if (inimigosSoltamPI <= 5 && estouComMedoWhileLoop == false)
         {
             GameObject PI = Instantiate(PIPrefab, transform.position, Quaternion.identity) as GameObject;
             PI.transform.parent = pontosIDParent.transform;
         }
-              
+
     }
     private void SpawnRandomHP()
     {
@@ -169,12 +168,12 @@ public class Enemy : MonoBehaviour
     }
     private void PiscaDano()
     {
-        if(isNaveBomber)
+        if (isNaveBomber)
         {
             animator.SetTrigger("Ai");
         }
-        
-    }  
+
+    }
     public void DesativaDropPIBossPuto()
     {
         estouComMedoWhileLoop = true;
@@ -188,5 +187,5 @@ public class Enemy : MonoBehaviour
     {
         inimigoSoltaPI = true;
     }
-   
+
 }

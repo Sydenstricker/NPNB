@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -21,7 +19,7 @@ public class coracaoAZul : MonoBehaviour
 
         if (vidaCoracapSpriteAzul >= 500)
         {
-            corAzul.SetInteger("vida",4);
+            corAzul.SetInteger("vida", 4);
         }
         if ((vidaCoracapSpriteAzul <= 320) && (vidaCoracapSpriteAzul >= 240))
         {
@@ -38,13 +36,13 @@ public class coracaoAZul : MonoBehaviour
     }
     private void PegaVidaNave()
     {
-        if (FindObjectOfType<Player>() == null )
+        if (FindObjectOfType<Player>() == null)
         {
             playerMorreu = true;
             return;
         }
         vidaCoracapSpriteAzul = FindObjectOfType<Player>().GetHealth();
     }
-    
+
 }
 

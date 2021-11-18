@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
 
 
     // Start is called before the first frame update
-    
+
     IEnumerator AcabouTutorial()
     {
         CreateEnemyParent();
@@ -45,7 +44,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if (FindObjectOfType<Player>() == null) { return; }
         if (terminouTutorial && terminouTutorialUmaVez)
-        { 
+        {
             StartCoroutine(AcabouTutorial());
             terminouTutorialUmaVez = false;
         }

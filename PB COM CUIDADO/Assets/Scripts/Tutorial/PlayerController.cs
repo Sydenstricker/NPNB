@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
@@ -43,12 +41,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] [Range(0, 1)] float volumePuloDuplo4 = 0.75f;
     [SerializeField] AudioClip slideSFX;
     [SerializeField] [Range(0, 1)] float volumeSlide = 0.75f;
-   
+
 
     void Start()
     {
         DesligaMouse();
-        contatempoTUT = 0f;        
+        contatempoTUT = 0f;
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -58,7 +56,7 @@ public class PlayerController : MonoBehaviour
         ContatempoUpdate();
         // Movimento runner
         body.velocity = new Vector2(velocidade, body.velocity.y);
-        
+
         // Pulo
         if (Input.GetButtonDown("Jump") && (podePular == true))
         {
@@ -85,19 +83,19 @@ public class PlayerController : MonoBehaviour
                 footIsGrounded = false;
                 animator.SetBool("Grounded", false);
                 RandomizaPuloSFX();
-            }                                  
+            }
         }
 
         if (Input.GetButtonDown("Restart"))
-            {
-                SceneManager.LoadScene("Tutorial");
-                Debug.Log("deu bug socorr");
-            }
+        {
+            SceneManager.LoadScene("Tutorial");
+            Debug.Log("deu bug socorr");
+        }
         // Deslizar
         if (Input.GetButtonDown("Slide"))
         {
             if (grounded && podeSlide && footIsGrounded)
-            {                
+            {
                 puloCount = 0;
                 animator.SetTrigger("Deslizando");
                 //gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
@@ -149,28 +147,28 @@ public class PlayerController : MonoBehaviour
         if (randomizadorPulo == 2) { PuloSFX3(); }
         if (randomizadorPulo == 3) { PuloSFX4(); }
     }
-        
+
     //Colisão
     void OnCollisionEnter2D(Collision2D collision)
     {
-       
+
         switch (collision.gameObject.tag)
         {
-            
+
             case "Dead":
             case "Obstaculo":
 
-                soundManager.PlayAudio("obstaculocolision");                
+                soundManager.PlayAudio("obstaculocolision");
                 gameManager.RestartGame();
                 break;
-        }         
+        }
 
     }
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 8)
             grounded = false;
-    }    
+    }
 
     //Triggers
     void OnTriggerEnter2D(Collider2D other)
@@ -192,7 +190,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(other.gameObject);
             gameManager.HighScoreTut();
-        }       
+        }
 
         if (other.gameObject.layer == 0)
         {
@@ -210,14 +208,14 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "PuloDuplo")
         {
             Destroy(other.gameObject);
-            puloDouble = true;            
+            puloDouble = true;
         }
         if (other.tag == "SomMorreuTut")
         {
             AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
         }
     }
-    
+
     //Parar e seguir no tutorial
     private void ParaPinkTutorial()
     {
@@ -230,7 +228,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Velocidade", body.velocity.x);
     }
     public float TempoDuracaoTUT()
-    {        
+    {
         return contatempoTUT;
     }
     private void ContatempoUpdate()
@@ -272,11 +270,11 @@ public class PlayerController : MonoBehaviour
     private void SlideSFX()
     {
         AudioSource.PlayClipAtPoint(slideSFX, Camera.main.transform.position, volumeSlide);
-    }  
+    }
 
     private void DesligaMouse()
     {
-       Cursor.visible = false;
+        Cursor.visible = false;
     }
     private void LigaMouse()
     {

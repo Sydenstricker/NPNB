@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TutorialController : MonoBehaviour
 {
@@ -11,9 +9,9 @@ public class TutorialController : MonoBehaviour
         if (other.tag == "Player")
         {
             FindObjectOfType<DialogManager>().StartDialog(file);
-            Destroy(gameObject.GetComponent<Collider2D>());        
-      
-        }        
+            Destroy(gameObject.GetComponent<Collider2D>());
+
+        }
     }
-  
+
 }

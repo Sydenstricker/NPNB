@@ -13,12 +13,12 @@ public class SpawnerRandom : MonoBehaviour
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        while (spawn) 
+        while (spawn)
         {
             yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));
             SpawnInimigo();
         }
-        
+
     }
     private void SpawnInimigo()
     {

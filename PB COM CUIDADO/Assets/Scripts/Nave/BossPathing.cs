@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,7 +18,7 @@ public class BossPathing : MonoBehaviour
     void Update()
     {
         if (isBossPuto) { MovePuto(); }
-        else Move();        
+        else Move();
     }
 
     public void SetBossConfig(BossConfig bossConfig)
@@ -39,7 +38,7 @@ public class BossPathing : MonoBehaviour
                 bosspointIndex++;
             }
         }
-        
+
         else
         {
             bosspointIndex = 0;
@@ -65,7 +64,7 @@ public class BossPathing : MonoBehaviour
     }
     public void BossIsPuto()
     {
-        isBossPuto = true;        
+        isBossPuto = true;
     }
-   
+
 }

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,11 +24,11 @@ public class Boss : MonoBehaviour
     [SerializeField] [Range(0, 1)] float volumeBossPuto = 0.75f;
 
     [Header("Explosoes Configs")]
-    
+
     public GameObject explosoes;
 
     [Header("Canhoes Puto")]
-    public GameObject canhoesPuto;   
+    public GameObject canhoesPuto;
 
 
     [Header("NAO MEXER Boss UI ")]
@@ -48,7 +47,7 @@ public class Boss : MonoBehaviour
     {
         polygonCollider2D = GetComponent<PolygonCollider2D>();
         polygonCollider2D.enabled = false;
-        AtivaUIBoss();        
+        AtivaUIBoss();
         SomChefePutissimo();
     }
 
@@ -125,7 +124,7 @@ public class Boss : MonoBehaviour
         FindObjectOfType<EnemySpawner>().InvocaReforcosBOSS();
         FindObjectOfType<BossPathing>().BossIsPuto();
         FindObjectOfType<Enemy>().MinionsBossNaoSpawnaPI();
-        StartCoroutine(DelayTirosCanhoesPuto(1f));        
+        StartCoroutine(DelayTirosCanhoesPuto(1f));
     }
     private void BossMorreu()
     {
@@ -149,7 +148,7 @@ public class Boss : MonoBehaviour
         StartCoroutine(AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(0.1f));
     }
     private IEnumerator AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(float intervaloAcionamentoCannons)
-    {      
+    {
 
         foreach (Transform child in canhoesPuto.transform)
         {
