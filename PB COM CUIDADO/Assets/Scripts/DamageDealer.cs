@@ -7,7 +7,7 @@ public class DamageDealer : MonoBehaviour
     [SerializeField] int damage = 100;
     [SerializeField] bool isLobo = false;
     [SerializeField] bool isMorcego = false;
-    [SerializeField] bool isHP = false;
+    [SerializeField] bool isHP = false;    
 
     private void Start()
     {
@@ -25,7 +25,12 @@ public class DamageDealer : MonoBehaviour
         if (gameObject.CompareTag("shot3")) { tiroBoss.SetTrigger("acertou"); return; }
         if (gameObject.CompareTag("shot4")) { tiroBoss.SetTrigger("acertou"); return; }
         if (gameObject.CompareTag("shot5")) { tiroBoss.SetTrigger("acertou"); return; }
-        if (gameObject.CompareTag("shot6")) { tiroBoss.SetTrigger("acertou"); return; }
+        if (gameObject.CompareTag("shot6"))
+        { 
+            tiroBoss.SetTrigger("acertou");
+            FindObjectOfType<SoundManager>().NaveBomberSFX();
+            return;
+        }
         if (ehParaDesaparecerQuandoMorre) 
         { 
             if(isLobo)   
@@ -44,7 +49,7 @@ public class DamageDealer : MonoBehaviour
         if(isMorcego)   
         {    
             FindObjectOfType<SoundManager>().MorcegoMorde(); 
-        }
+        }        
         else
         {
             Destroy(gameObject);

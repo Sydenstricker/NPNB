@@ -120,6 +120,7 @@ MonoBehaviour:
   chanceMaxSoltarHP: 100
   chanceMinSoltarHP: 1
   isNaveBomber: 1
+  isNaveTutorial: 0
   explosaoAnimacao: {fileID: 7747228945836049614, guid: 133ac99e2add2e2428c47533e60b4f3a, type: 3}
   PIPrefab: {fileID: 4493755121161822097, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
   HPPrefab: {fileID: 4493755121161822097, guid: ec3872d1df9207a4791ba4a6333d3a37, type: 3}
@@ -132,7 +133,7 @@ MonoBehaviour:
   pontosPorInimigo: 0
   deathSFX: {fileID: 8300000, guid: 92b32033d74928b46b88cc07b38c2279, type: 3}
   volumeMorte: 0.75
-  shootSound: {fileID: 8300000, guid: de8168152acc1414a959be71980d281d, type: 3}
+  shootSound: {fileID: 8300000, guid: e40887cce08fc4543afec96e8069ff9e, type: 3}
   shootSoundVolume: 0.25
 --- !u!50 &-8050114806327008689
 Rigidbody2D:
@@ -167,7 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34409c24467bb95409525bbe7c78f03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ehParaDesaparecerQuandoMorre: 0
   damage: 500
+  isLobo: 0
+  isMorcego: 0
+  isHP: 0
 --- !u!95 &-2587063552731430688
 Animator:
   serializedVersion: 3

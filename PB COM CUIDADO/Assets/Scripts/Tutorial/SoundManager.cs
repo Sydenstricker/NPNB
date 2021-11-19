@@ -28,6 +28,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip morcegoMorde;
     public AudioClip HPNaveSFX;
     [SerializeField][Range(0, 1)] float volumeHPNave = 0.75f;
+    public AudioClip naveBomberSFX;
+    public AudioClip naveSeExplode;
 
     private void Awake()
     {
@@ -114,5 +116,14 @@ public class SoundManager : MonoBehaviour
     {
         audio.PlayOneShot(HPNaveSFX);
     }
-
+    public void NaveBomberSFX()
+    {
+        audio.PlayOneShot(naveBomberSFX);
+        Debug.Log("nave bomber acertoiu");
+    }
+    public void NaveSeExplode()
+    {
+        AudioSource.PlayClipAtPoint(naveSeExplode, Camera.main.transform.position, volumeDeathMenu);
+        //audio.PlayOneShot(naveSeExplode);
+    }
 }

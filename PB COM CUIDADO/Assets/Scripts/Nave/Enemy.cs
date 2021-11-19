@@ -78,6 +78,7 @@ public class Enemy : MonoBehaviour
         animator.SetTrigger("Morreu");
         polygonCollider2D.enabled = false;
         semMeteoroPlz = false;
+        FindObjectOfType<SoundManager>().NaveSeExplode();
         yield return new WaitForSeconds(tempoSomeMinions);
     }
     private void CreatePIParent()
@@ -150,7 +151,7 @@ public class Enemy : MonoBehaviour
     private void SpawnRandomPI()
     {
         inimigosSoltamPI = Random.Range(chanceMinSoltarPID, chanceMaxSoltarPID);
-        if (inimigosSoltamPI <= 5 && estouComMedoWhileLoop == false)
+        if ( estouComMedoWhileLoop == false && inimigosSoltamPI <= 5 )
         {
             GameObject PI = Instantiate(PIPrefab, transform.position, Quaternion.identity) as GameObject;
             PI.transform.parent = pontosIDParent.transform;
@@ -160,7 +161,7 @@ public class Enemy : MonoBehaviour
     private void SpawnRandomHP()
     {
         inimigosSoltamHP = Random.Range(chanceMinSoltarHP, chanceMaxSoltarHP);
-        if ((inimigosSoltamHP <= 5) && (inimigoSoltaPI = false))
+        if ((inimigosSoltamHP <= 5) )
         {
             GameObject HP = Instantiate(HPPrefab, transform.position, Quaternion.identity) as GameObject;
             HP.transform.parent = pontosIDParent.transform;
