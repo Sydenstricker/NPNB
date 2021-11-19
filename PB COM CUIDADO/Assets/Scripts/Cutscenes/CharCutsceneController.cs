@@ -8,6 +8,7 @@ public class CharCutsceneController : MonoBehaviour
     [SerializeField] [Range(0, 1)] float volumeAnda = 0.75f;
     [SerializeField] AudioClip correSFX;
     [SerializeField] [Range(0, 1)] float volumeCorre = 0.75f;
+    private bool andou = false;
 
     [Header("Outros Configs")]
     [SerializeField] float velocity = 10f;
@@ -59,6 +60,11 @@ public class CharCutsceneController : MonoBehaviour
     {
         body.velocity = new Vector2(velocity, body.velocity.y);
         pinkyAnimator.SetFloat("Velocidade", body.velocity.x);
+        if(andou == false)
+        {
+            //AudioSource.PlayClipAtPoint(andaSFX,Camera.main.transform.position, volumeAnda); seria legal editar para o som dos passos serem sincronizados com a animação do Player. Nao vai rolar.
+            andou = true;
+        }
     }
 
     //Animações

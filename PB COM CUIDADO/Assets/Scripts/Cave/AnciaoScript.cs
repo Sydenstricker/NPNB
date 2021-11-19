@@ -16,5 +16,6 @@ public class AnciaoScript : MonoBehaviour
     public void AnciaoAtivaPortal()
     {
         animator.SetTrigger("trocaLado");
+        FindObjectOfType<SoundManager>().TocaPortalAbre();
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class PortalTriggerPlayer : MonoBehaviour
 {
     private Animator animator;
-    [SerializeField] bool isTutorial = false;
+    [SerializeField] bool isTutorial = false;    
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -17,7 +17,7 @@ public class PortalTriggerPlayer : MonoBehaviour
             {
                 FindObjectOfType<SoundManager>().TocaPortalFecha();
                 return;
-            }
+            }            
             animator.SetTrigger("NaveFim");
             FindObjectOfType<SoundManager>().TocaPortalFecha();
         }

@@ -3584,41 +3584,41 @@ MonoBehaviour:
   messages:
   - actorId: 0
     message: "Aqui est\xE1, senhor. Veja quem encontrou seu tesouro para voc\xEA."
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: c2ab035fe680d2e4a8dda813f5be2add, type: 3}
   - actorId: 2
     message: "PINKY devolve a B\xDASSOLA ao HOMEM."
-    messageSFX: {fileID: 8300000, guid: ebc950829a90d5a4ebcfff9906715d17, type: 3}
+    messageSFX: {fileID: 8300000, guid: 8881a865c45aaf4498dc4a3c92ba62ab, type: 3}
   - actorId: 1
     message: "Err\u2026 Acho que te devo desculpas. Confesso que te achei indefesa
       para um lugar como esse."
-    messageSFX: {fileID: 8300000, guid: 8b99d2d95b48b594eba13aba20b48fc0, type: 3}
+    messageSFX: {fileID: 8300000, guid: aa10d85dca6dfdf4f9268efc94f395e5, type: 3}
   - actorId: 3
     message: "De qualquer forma, obrigado por recuper\xE1-la. Me chamo DEEP."
-    messageSFX: {fileID: 8300000, guid: 5228f553e58db0841bcb42fbde1ef7ae, type: 3}
+    messageSFX: {fileID: 8300000, guid: 3ead2036d92c51742a67f88fa2099b9a, type: 3}
   - actorId: 0
     message: ... De nada, DEEP. Sou PINKY.
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: c2ab035fe680d2e4a8dda813f5be2add, type: 3}
   - actorId: 0
     message: "Agora me diga: como fa\xE7o para sair daqui? Tudo parece ser t\xE3o
       igual..."
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: ea3e25e85bdd5074da34cf3e8ddac188, type: 3}
   - actorId: 3
     message: "A b\xFAssola, meu tesouro... Ela mostra o caminho."
-    messageSFX: {fileID: 8300000, guid: 7fee01ce39a48444eb55392865210141, type: 3}
+    messageSFX: {fileID: 8300000, guid: 3ead2036d92c51742a67f88fa2099b9a, type: 3}
   - actorId: 3
     message: "Por mais que voc\xEA procure por algo, \xE0s vezes s\xF3 \xE9 poss\xEDvel
       encontr\xE1-lo com ajuda."
-    messageSFX: {fileID: 8300000, guid: 8b99d2d95b48b594eba13aba20b48fc0, type: 3}
+    messageSFX: {fileID: 8300000, guid: aa10d85dca6dfdf4f9268efc94f395e5, type: 3}
   - actorId: 0
     message: "(T\xE3o enigm\xE1tico\u2026)"
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: 7bf6bc268f1faba4ab2449eb389d0bc8, type: 3}
   - actorId: 3
     message: "V\xE1, minha jovem. Encontre seu pr\xF3prio caminho. Preciso reencontrar
       o meu. "
-    messageSFX: {fileID: 8300000, guid: 5228f553e58db0841bcb42fbde1ef7ae, type: 3}
+    messageSFX: {fileID: 8300000, guid: aa10d85dca6dfdf4f9268efc94f395e5, type: 3}
   - actorId: 0
     message: "Certo\u2026 At\xE9 mais!"
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: c2ab035fe680d2e4a8dda813f5be2add, type: 3}
   actors:
   - name: PINKY
     sprite: {fileID: 21300000, guid: 3e343dc093d9ea442bdf32de80cbca56, type: 3}
@@ -3858,7 +3858,8 @@ PrefabInstance:
       propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5667135238525356370, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
 --- !u!1 &720153451
 GameObject:
@@ -9413,6 +9414,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62e30024ca86e19409072212e0d4cf29, type: 3}
+--- !u!1001 &1383296975
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 244.11057
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 172.61807
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -110.875694
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552383, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_Name
+      value: Audio Source
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
 --- !u!1 &1434422465
 GameObject:
   m_ObjectHideFlags: 0

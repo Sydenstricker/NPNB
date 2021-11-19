@@ -81,4 +81,8 @@ public class SoundManager : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(deathMenu, Camera.main.transform.position, volumeDeathMenu);
     }
+    public void TocaPortalAbre()
+    {
+        audio.PlayOneShot(portalEntra);
+    }
 }

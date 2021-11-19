@@ -2057,6 +2057,107 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1627099873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8291881132109120302, guid: 3390ee6ebde2eba40a9535759aebcc87, type: 3}
+  m_PrefabInstance: {fileID: 64404045}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1627099875
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627099873}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 04407eb070893ff43aa9f14976c7ebc8, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1659996447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2334,60 +2435,60 @@ MonoBehaviour:
   messages:
   - actorId: 0
     message: "Eu n\xE3o acredito\u2026 N\xE3o acredito que eu estou no espa\xE7o!"
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: ea3e25e85bdd5074da34cf3e8ddac188, type: 3}
   - actorId: 1
     message: "Ei, voc\xEA a\xED!"
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: e7c54cf0166115149b088c73d7456c42, type: 3}
   - actorId: 1
     message: O que faz aqui?
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: ebfbd15056cdd934699ac0d419b951f1, type: 3}
   - actorId: 0
     message: "Ah, \xF3timo! Mais um cara insinuando que eu n\xE3o deveria estar aqui."
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: c2ab035fe680d2e4a8dda813f5be2add, type: 3}
   - actorId: 1
     message: "N\xE3o, n\xE3o \xE9 isso\u2026 S\xF3 est\xE1 na cara que voc\xEA n\xE3o
       nasceu em D.E.L.T.A."
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: ebfbd15056cdd934699ac0d419b951f1, type: 3}
   - actorId: 0
     message: D.E.L.T.A?
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: ea3e25e85bdd5074da34cf3e8ddac188, type: 3}
   - actorId: 1
     message: "Sim. A \xFAltima esta\xE7\xE3o espacial humana da Gal\xE1xia XY...
       Meu lar."
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: ebfbd15056cdd934699ac0d419b951f1, type: 3}
   - actorId: 0
     message: "Espere\u2026 Quer dizer que voc\xEA nasceu e cresceu nesse lugar incr\xEDvel?!"
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: c2ab035fe680d2e4a8dda813f5be2add, type: 3}
   - actorId: 1
     message: "N\xE3o \xE9 t\xE3o incr\xEDvel quanto parece, mas\u2026"
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: ebfbd15056cdd934699ac0d419b951f1, type: 3}
   - actorId: 2
     message: "A prop\xF3sito, voc\xEA n\xE3o parece ser uma inimiga. Muito prazer!
       Meu nome \xE9 BLU."
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: e7c54cf0166115149b088c73d7456c42, type: 3}
   - actorId: 0
     message: Me chamo PINKY, a inimiga.
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: ea3e25e85bdd5074da34cf3e8ddac188, type: 3}
   - actorId: 2
     message: "Haha, voc\xEA \xE9 engra\xE7ada. Mas ent\xE3o, o que faz em uma gal\xE1xia
       t\xE3o distante? "
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: e7c54cf0166115149b088c73d7456c42, type: 3}
   - actorId: 0
     message: Estou em busca de algo precioso para mim.
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: c2ab035fe680d2e4a8dda813f5be2add, type: 3}
   - actorId: 2
     message: E o que seria?
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: e7c54cf0166115149b088c73d7456c42, type: 3}
   - actorId: 0
     message: "Nem eu mesma sei, e \xE9 por isso que estou aqui para descobrir por
       mim mesma."
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: c2ab035fe680d2e4a8dda813f5be2add, type: 3}
   - actorId: 2
     message: "Ok\u2026"
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: e7c54cf0166115149b088c73d7456c42, type: 3}
   - actorId: 0
     message: Foi bom te conhecer, BLU, mas agora tenho que ir. Tchauzinho!
-    messageSFX: {fileID: 8300000, guid: 0190e874d5d9a1641823bd1861e85e51, type: 3}
+    messageSFX: {fileID: 8300000, guid: c2ab035fe680d2e4a8dda813f5be2add, type: 3}
   actors:
   - name: PINKY
     sprite: {fileID: 21300000, guid: 3e343dc093d9ea442bdf32de80cbca56, type: 3}
@@ -3202,6 +3303,54 @@ PrefabInstance:
       propertyPath: messages.Array.data[12].message
       value: 'Espere por mim! '
       objectReference: {fileID: 0}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[0].messageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e7c54cf0166115149b088c73d7456c42, type: 3}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[1].messageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: c2ab035fe680d2e4a8dda813f5be2add, type: 3}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[2].messageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e7c54cf0166115149b088c73d7456c42, type: 3}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[3].messageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: ea3e25e85bdd5074da34cf3e8ddac188, type: 3}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[4].messageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e7c54cf0166115149b088c73d7456c42, type: 3}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[5].messageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: c2ab035fe680d2e4a8dda813f5be2add, type: 3}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[6].messageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: ebfbd15056cdd934699ac0d419b951f1, type: 3}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[7].messageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: ea3e25e85bdd5074da34cf3e8ddac188, type: 3}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[8].messageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: ebfbd15056cdd934699ac0d419b951f1, type: 3}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[9].messageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: ebfbd15056cdd934699ac0d419b951f1, type: 3}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[10].messageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: ea3e25e85bdd5074da34cf3e8ddac188, type: 3}
+    - target: {fileID: 405434327082499644, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
+      propertyPath: messages.Array.data[11].messageSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e7c54cf0166115149b088c73d7456c42, type: 3}
     - target: {fileID: 405434327082499645, guid: 07e74809ceba9104fa30c6b6ff8ba2e3, type: 3}
       propertyPath: m_Constraints
       value: 4
