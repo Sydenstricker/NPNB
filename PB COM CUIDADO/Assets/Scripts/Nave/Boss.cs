@@ -22,6 +22,8 @@ public class Boss : MonoBehaviour
     [SerializeField] float tempoIntroBoss = 2f;
     [SerializeField] AudioClip bossPutoSFX;
     [SerializeField] [Range(0, 1)] float volumeBossPuto = 0.75f;
+    //public AudioClip tiroCanhaoNovo;
+    //[SerializeField] [Range(0, 1)] float volumeCanhaoNovo = 0.75f; SFX com antecipacao. Sem tempo.
 
     [Header("Explosoes Configs")]
 
@@ -149,7 +151,7 @@ public class Boss : MonoBehaviour
     }
     private IEnumerator AtivaCanhoesPutosEncimaBossAtirandoPewPewPew(float intervaloAcionamentoCannons)
     {
-
+        //AudioSource.PlayClipAtPoint(tiroCanhaoNovo, Camera.main.transform.position, volumeCanhaoNovo); tiro com antecipacao. Nao vai rolar agora.
         foreach (Transform child in canhoesPuto.transform)
         {
             child.gameObject.SetActive(true);

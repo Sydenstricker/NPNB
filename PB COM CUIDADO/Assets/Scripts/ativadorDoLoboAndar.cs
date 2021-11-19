@@ -6,7 +6,7 @@ public class ativadorDoLoboAndar : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GetComponentInChildren<MorcegoEsquerda>().AtivaAndarLobo();
+            GetComponentInChildren<MorcegoEsquerda>().AtivaAndarLobo();            
         }
     }
 }

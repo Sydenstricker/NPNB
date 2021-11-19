@@ -3,7 +3,9 @@ using UnityEngine;
 public class PortalTriggerPlayer : MonoBehaviour
 {
     private Animator animator;
-    [SerializeField] bool isTutorial = false;    
+    [SerializeField] bool isTutorial = false;
+    [SerializeField] bool isNaveFim = false;
+    [SerializeField] bool estamosSemTempo = false;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -17,9 +19,15 @@ public class PortalTriggerPlayer : MonoBehaviour
             {
                 FindObjectOfType<SoundManager>().TocaPortalFecha();
                 return;
-            }            
-            animator.SetTrigger("NaveFim");
-            FindObjectOfType<SoundManager>().TocaPortalFecha();
+            }   
+            if(isNaveFim)
+            {
+                animator.SetTrigger("NaveFim");
+            }
+            if(isNaveFim && estamosSemTempo)
+            {
+                FindObjectOfType<SoundManager>().TocaPortalFecha();
+            }
         }
     }
     public void VelhoAtivaPortal()

@@ -19,6 +19,15 @@ public class SoundManager : MonoBehaviour
     [SerializeField] [Range(0, 1)] float volumePortalSai = 0.75f;
     public AudioClip deathMenu;
     [SerializeField] [Range(0, 1)] float volumeDeathMenu = 0.75f;
+    public AudioClip loboRosna;
+    [SerializeField] [Range(0, 1)] float volumeLoboRosna = 0.75f;
+    public AudioClip loboMorde;
+    [SerializeField] [Range(0, 1)] float volumeLoboMorde = 0.75f;
+    public AudioClip morcegoRosna;
+    [SerializeField, Range(0, 1)] float volumeMorcegoRosna = 0.75f;
+    public AudioClip morcegoMorde;
+    public AudioClip HPNaveSFX;
+    [SerializeField][Range(0, 1)] float volumeHPNave = 0.75f;
 
     private void Awake()
     {
@@ -85,4 +94,25 @@ public class SoundManager : MonoBehaviour
     {
         audio.PlayOneShot(portalEntra);
     }
+    public void LoboRosna()
+    {
+        audio.PlayOneShot(loboRosna);
+    }
+    public void LoboMorde()
+    {
+        audio.PlayOneShot(loboMorde);
+    }
+    public void MorcegoRosna()
+    {
+        audio.PlayOneShot(morcegoRosna);
+    }
+    public void MorcegoMorde()
+    {
+        audio.PlayOneShot(morcegoMorde);
+    }
+    public void HPNave()
+    {
+        audio.PlayOneShot(HPNaveSFX);
+    }
+
 }
