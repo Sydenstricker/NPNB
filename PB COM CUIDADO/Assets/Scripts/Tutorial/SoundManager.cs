@@ -86,7 +86,7 @@ public class SoundManager : MonoBehaviour
     public void TocaPortalFecha()
     {
         
-        audio.PlayOneShot(portalSai);
+        audio.PlayOneShot(portalSai, volumePortalSai);
     }
     public void TocaDeathMenu()
     {
@@ -94,7 +94,7 @@ public class SoundManager : MonoBehaviour
     }
     public void TocaPortalAbre()
     {
-        audio.PlayOneShot(portalEntra);
+        audio.PlayOneShot(portalEntra, volumePortalEntra);
     }
     public void LoboRosna()
     {

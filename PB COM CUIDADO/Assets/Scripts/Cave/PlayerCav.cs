@@ -67,6 +67,7 @@ public class PlayerCav : MonoBehaviour
     }
     void Start()
     {
+        Cursor.visible = false;
         contatempoCAV = 0;
         PegaVidaCoracao();
         body = GetComponent<Rigidbody2D>();

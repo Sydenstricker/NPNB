@@ -36,6 +36,6 @@ public class DeathMenu : MonoBehaviour
     }
     public void QuitGame()
     {
-        QuitGame();
+        Application.Quit();
     }
 }
