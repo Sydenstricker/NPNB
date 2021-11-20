@@ -33,9 +33,16 @@ public class DamageDealer : MonoBehaviour
         }
         if (ehParaDesaparecerQuandoMorre) 
         { 
+            if (isMorcego)
+            {
+                FindObjectOfType<SoundManager>().MorcegoMorde();
+                Destroy(GetComponent<BoxCollider2D>());
+            }
             if(isLobo)   
             { 
-                FindObjectOfType<SoundManager>().LoboMorde();  
+                FindObjectOfType<SoundManager>().LoboMorde();
+                Destroy(GetComponent<BoxCollider2D>());
+                
             }
             if(isHP)    
             { 
@@ -45,15 +52,11 @@ public class DamageDealer : MonoBehaviour
             {    
                 return; 
             }
+
+            
+           
         }
-        if(isMorcego)   
-        {    
-            FindObjectOfType<SoundManager>().MorcegoMorde(); 
-        }        
-        else
-        {
-            Destroy(gameObject);
-        }
+       
     }
     public void PedraCaiFeliz()
     {
