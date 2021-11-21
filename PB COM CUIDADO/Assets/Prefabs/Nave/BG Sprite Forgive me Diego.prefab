@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2065138577811871411}
   - component: {fileID: 2065138577811871410}
   - component: {fileID: 438494524}
+  - component: {fileID: 1377286203}
   m_Layer: 0
   m_Name: BG Sprite Forgive me Diego
   m_TagString: Untagged
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: 2529421868162166258, guid: c3d623ccdb1939e499a05b035a98a54f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -96,3 +97,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tamanhoSprite: 0
+--- !u!114 &1377286203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065138577811871413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bce172337d37a0644ba5c5776195e6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxEffect: 1

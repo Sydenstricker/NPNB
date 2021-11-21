@@ -33,11 +33,16 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameisPaused = false;
         Cursor.visible = false;
-        if (!FindObjectOfType<StationTutorialSaiDeCena>()) { return; }
-        if (isNave && naveTutorialMorreu == true)
+        if (isNave)
         {
-            FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial();
+           FindObjectOfType<StationTutorialSaiDeCena>().NaoTiraPlataformaCenaTutorial();
+            if(naveTutorialMorreu)
+            {
+                FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial();
+            }
         }
+        
+        if (!FindObjectOfType<StationTutorialSaiDeCena>()) { return; }
     }
 
     public void Pause()
@@ -46,14 +51,11 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameisPaused = true;
         Cursor.visible = true;
-        if (isNave && naveTutorialMorreu == false)
+        if (isNave)
         {
             FindObjectOfType<StationTutorialSaiDeCena>().NaoTiraPlataformaCenaTutorial();
-        }
-        if (isNave && naveTutorialMorreu == true)
-        {
-            FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial();
-        }
+            if(naveTutorialMorreu) { FindObjectOfType<StationTutorialSaiDeCena>().NaoTiraPlataformaCenaTutorial(); }
+        }        
     }
     public void NaveTutorialMorreu()
     {
