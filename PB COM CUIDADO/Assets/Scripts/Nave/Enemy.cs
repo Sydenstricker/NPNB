@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int chanceMinSoltarHP = 1;
     [SerializeField] bool isNaveBomber = false;
     [SerializeField] bool isNaveTutorial = false;
+    [SerializeField] bool isTaxi = false;
     private bool inimigoSoltaPI = false;
 
     [SerializeField] GameObject explosaoAnimacao;
@@ -169,7 +170,7 @@ public class Enemy : MonoBehaviour
     }
     private void PiscaDano()
     {
-        if (isNaveBomber)
+        if (isNaveBomber || isTaxi)
         {
             animator.SetTrigger("Ai");
         }
