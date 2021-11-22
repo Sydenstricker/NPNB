@@ -17,7 +17,7 @@ public class GamePlayNaveCanvas : MonoBehaviour
     {
         yield return new WaitForSeconds(.1f);
         deathMenu.gameObject.SetActive(true);
-        FindObjectOfType<cameraNaveGlitch>().AtivaGlitchMorte(); //consertar efeito glitch 
+        //FindObjectOfType<cameraNaveGlitch>().AtivaGlitchMorte(); //consertar efeito glitch 
     }
     public void RestartLevelCaverna()
     {

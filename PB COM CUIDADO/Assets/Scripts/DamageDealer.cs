@@ -33,10 +33,12 @@ public class DamageDealer : MonoBehaviour
             FindObjectOfType<SoundManager>().NaveBomberSFX();
             return;
         }
-        if(isNave)
-        {
-            FindObjectOfType<Enemy>().PlayerSeExplodiuComigo();
-        }
+        if (gameObject.CompareTag("Nave"))
+            {
+                //FindObjectOfType<Enemy>().PlayerSeExplodiuComigo();
+                tiroBoss.SetTrigger("Morreu");
+                return;
+            }
         if (ehParaDesaparecerQuandoMorre) 
         { 
             if (isMorcego)
