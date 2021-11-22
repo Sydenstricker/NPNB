@@ -33,6 +33,6 @@ public class GamePlayNaveCanvas : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         scoreMenuNave.gameObject.SetActive(true);
-        FindObjectOfType<cameraNaveGlitch>().AtivaGlitchScore();
+        //FindObjectOfType<cameraNaveGlitch>().AtivaGlitchScore();
     }
 }

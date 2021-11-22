@@ -32,10 +32,13 @@ public class SoundManager : MonoBehaviour
     public AudioClip splash;
     [SerializeField, Range(0, 1)] float volumeSplash = 0.75f;
     public AudioClip morcegoMorde;
+    [SerializeField, Range(0, 1)] float volumeMorcegoMorde = 0.75f;
     public AudioClip HPNaveSFX;
     [SerializeField][Range(0, 1)] float volumeHPNave = 0.75f;
     public AudioClip naveBomberSFX;
+    [SerializeField] [Range(0, 1)] float volumeNaveBomber = 0.75f;
     public AudioClip naveSeExplode;
+    [SerializeField] [Range(0, 1)] float volumeNaveSeExplode = 0.75f;
 
     private void Awake()
     {
@@ -127,20 +130,20 @@ public class SoundManager : MonoBehaviour
     }
     public void MorcegoMorde()
     {
-        audio.PlayOneShot(morcegoMorde);
+        audio.PlayOneShot(morcegoMorde, volumeMorcegoMorde);
     }   
     public void HPNave()
     {
-        audio.PlayOneShot(HPNaveSFX);
+        audio.PlayOneShot(HPNaveSFX, volumeHPNave);
     }
     public void NaveBomberSFX()
     {
-        audio.PlayOneShot(naveBomberSFX);
+        audio.PlayOneShot(naveBomberSFX, volumeNaveBomber);
         Debug.Log("nave bomber acertoiu");
     }
     public void NaveSeExplode()
     {
-        AudioSource.PlayClipAtPoint(naveSeExplode, Camera.main.transform.position, volumeDeathMenu);
+        AudioSource.PlayClipAtPoint(naveSeExplode, Camera.main.transform.position, volumeNaveSeExplode);
         //audio.PlayOneShot(naveSeExplode);
     }
 }

@@ -15,7 +15,7 @@ public class StationTutorialSaiDeCena : MonoBehaviour
     }
     public void TiraPlataformaCenaTutorial()
     {
-        velocidadeSaideCena = 0.5f * (Time.deltaTime);
+        velocidadeSaideCena = 1.5f * (Time.deltaTime);
         podeAndarPlataformaTut = true;
     }
     public void NaoTiraPlataformaCenaTutorial()

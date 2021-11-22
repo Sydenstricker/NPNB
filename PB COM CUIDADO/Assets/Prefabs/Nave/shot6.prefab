@@ -104,7 +104,8 @@ MonoBehaviour:
   isLobo: 0
   isMorcego: 0
   isHP: 0
-  isNaveBomber: 1
+  isMataPlayer: 0
+  isNave: 0
 --- !u!50 &689057644969289584
 Rigidbody2D:
   serializedVersion: 4
@@ -168,7 +169,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.031490117}

@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 7245225033657616785}
   - component: {fileID: 1739123703556607803}
   - component: {fileID: -4276455288876568558}
-  - component: {fileID: 7944459279002542270}
   - component: {fileID: -8050114806327008689}
   - component: {fileID: 4764726036606199784}
   - component: {fileID: -3450183020873751381}
+  - component: {fileID: 3017125560695523582}
   m_Layer: 9
   m_Name: Asteroide
   m_TagString: Untagged
@@ -76,9 +76,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 99
   m_Sprite: {fileID: -7333588070920612072, guid: 5e247d0de2ed8f44d908e4e69c1e6e35, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -131,35 +131,9 @@ MonoBehaviour:
   durationOfExplosion: 1
   pontosPorInimigo: 0
   deathSFX: {fileID: 8300000, guid: 92b32033d74928b46b88cc07b38c2279, type: 3}
-  volumeMorte: 0.75
+  volumeMorte: 0.5
   shootSound: {fileID: 8300000, guid: e27c04a7d57212d409d91e1ab6f6052c, type: 3}
   shootSoundVolume: 0.25
---- !u!61 &7944459279002542270
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8521707023408420462}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6, y: 0.58}
-    newSize: {x: 1.03, y: 0.84}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.03, y: 0.84}
-  m_EdgeRadius: 0
 --- !u!50 &-8050114806327008689
 Rigidbody2D:
   serializedVersion: 4
@@ -194,10 +168,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ehParaDesaparecerQuandoMorre: 0
-  damage: 999999
+  damage: 9999
   isLobo: 0
   isMorcego: 0
   isHP: 0
+  isMataPlayer: 0
+  isNave: 0
 --- !u!114 &-3450183020873751381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,3 +187,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedOfSpin: 100
+--- !u!60 &3017125560695523582
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8521707023408420462}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.6, y: 0.58}
+    newSize: {x: 1.03, y: 0.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.116558455, y: 0.32039917}
+      - {x: -0.040426124, y: 0.2868087}
+      - {x: -0.09496799, y: 0.23561859}
+      - {x: -0.20110542, y: 0.14720759}
+      - {x: -0.2968087, y: 0.086808704}
+      - {x: -0.31550962, y: -0.049600434}
+      - {x: -0.2872348, y: -0.19298291}
+      - {x: -0.23404354, y: -0.27723482}
+      - {x: 0.09617417, y: -0.28042614}
+      - {x: 0.17652076, y: -0.18294305}
+      - {x: 0.2936174, y: -0.11766097}
+      - {x: 0.29999998, y: 0.17}
+      - {x: 0.24, y: 0.29}
