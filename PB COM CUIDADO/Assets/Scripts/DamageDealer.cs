@@ -7,7 +7,8 @@ public class DamageDealer : MonoBehaviour
     [SerializeField] int damage = 100;
     [SerializeField] bool isLobo = false;
     [SerializeField] bool isMorcego = false;
-    [SerializeField] bool isHP = false;    
+    [SerializeField] bool isHP = false;
+    [SerializeField] bool isMataPlayer = false;
 
     private void Start()
     {
@@ -41,12 +42,16 @@ public class DamageDealer : MonoBehaviour
             if(isLobo)   
             { 
                 FindObjectOfType<SoundManager>().LoboMorde();
-                Destroy(GetComponent<BoxCollider2D>());
+                //Destroy(GetComponent<BoxCollider2D>());
                 
             }
             if(isHP)    
             { 
                 FindObjectOfType<SoundManager>().HPNave();   
+            }
+            if(isMataPlayer)
+            {
+                Destroy(this);
             }
             else    
             {    

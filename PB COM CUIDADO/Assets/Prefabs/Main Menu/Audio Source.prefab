@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.266
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -140,26 +140,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b4fd5607dca77449487df1768da730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moeda: {fileID: 8300000, guid: 7bedec8f9aa64944396f6e9e3ef81aac, type: 3}
-  volumeMoeda: 0.75
-  pulo: {fileID: 8300000, guid: 713307d9fdd339647b88b4446272df90, type: 3}
-  volumePulo: 0.75
   startgame: {fileID: 8300000, guid: bde755c910a64f144b8d7b402692c823, type: 3}
-  volumeStartGame: 1
+  volumeStartGame: 0.5
   quitgame: {fileID: 8300000, guid: c92606a5013c8604abc45f75e8b96d8a, type: 3}
-  volumeQuitGame: 0.75
-  puloduplo: {fileID: 8300000, guid: ee31e2f9349e976438744d1b9ae0d01b, type: 3}
-  volumePuloDuplo: 0.75
+  volumeQuitGame: 0.5
   portalEntra: {fileID: 8300000, guid: ab073eb4e5624a24a94c29020995a097, type: 3}
   volumePortalEntra: 0.75
   portalSai: {fileID: 8300000, guid: 04407eb070893ff43aa9f14976c7ebc8, type: 3}
-  volumePortalSai: 0.75
+  volumePortalSai: 1
+  portalExplosion: {fileID: 8300000, guid: 9c37c5a51cdfc574795542df1a3f8aa1, type: 3}
+  volumePExplosion: 0.75
   deathMenu: {fileID: 8300000, guid: 13eba64f5b46f564d9e5485087fd6364, type: 3}
-  volumeDeathMenu: 0.188
+  volumeDeathMenu: 0.5
   loboRosna: {fileID: 8300000, guid: ae461c8fff5685746999cf768b44de17, type: 3}
-  volumeLoboRosna: 0.75
+  volumeLoboRosna: 0.3
   loboMorde: {fileID: 8300000, guid: d431a2c80dbff76428c1e9501497d18e, type: 3}
-  volumeLoboMorde: 0.75
-  morcegoRosna: {fileID: 8300000, guid: 01a209a620fa85b46823bffea57cdd5e, type: 3}
-  volumeMorcegoRosna: 0.75
+  volumeLoboMorde: 0.5
+  morcegoRosna: {fileID: 8300000, guid: 438c3c6c023bcf54e9d19c2e884801c0, type: 3}
+  volumeMorcegoRosna: 0.5
+  stalkerSound: {fileID: 8300000, guid: 2bf1ce93b5d599d41a461dd32ba8436e, type: 3}
+  volumeStalkerSound: 0.5
+  splash: {fileID: 8300000, guid: 51d4f21536f97064992fee9cb16acaac, type: 3}
+  volumeSplash: 0.5
   morcegoMorde: {fileID: 8300000, guid: 4f1d32910d6d3e24f9a9191886d3a32e, type: 3}
+  HPNaveSFX: {fileID: 8300000, guid: 90239bd99f1c9af4fa43bd5ec05e5a74, type: 3}
+  volumeHPNave: 0.75
+  naveBomberSFX: {fileID: 8300000, guid: 0c2dd859c1432584484112f3e0494d85, type: 3}
+  naveSeExplode: {fileID: 8300000, guid: 256e0b794330cef428cdcb85f6a4b8c6, type: 3}
