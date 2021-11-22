@@ -9,6 +9,7 @@ public class DamageDealer : MonoBehaviour
     [SerializeField] bool isMorcego = false;
     [SerializeField] bool isHP = false;
     [SerializeField] bool isMataPlayer = false;
+    [SerializeField] bool isNave = false;
 
     private void Start()
     {
@@ -31,6 +32,10 @@ public class DamageDealer : MonoBehaviour
             tiroBoss.SetTrigger("acertou");
             FindObjectOfType<SoundManager>().NaveBomberSFX();
             return;
+        }
+        if(isNave)
+        {
+            FindObjectOfType<Enemy>().PlayerSeExplodiuComigo();
         }
         if (ehParaDesaparecerQuandoMorre) 
         { 

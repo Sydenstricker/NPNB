@@ -184,6 +184,14 @@ public class Enemy : MonoBehaviour
     {
         papaiBossMorreuEstouTristeVouMeExplodir = true;
     }
+    public void PlayerSeExplodiuComigo()
+    {
+        this.animator.SetTrigger("Morreu");
+        polygonCollider2D.enabled = false;
+        semMeteoroPlz = false;
+        FindObjectOfType<SoundManager>().NaveSeExplode();
+        Debug.Log("player bateu nas naves");
+    }
     public void MinionsBossNaoSpawnaPI()
     {
         inimigoSoltaPI = true;
