@@ -54,7 +54,9 @@ public class DamageDealer : MonoBehaviour
             }
             if(isHP)    
             { 
-                FindObjectOfType<SoundManager>().HPNave();   
+                FindObjectOfType<SoundManager>().HPNave();
+                Destroy(gameObject);
+
             }
             if(isMataPlayer)
             {
