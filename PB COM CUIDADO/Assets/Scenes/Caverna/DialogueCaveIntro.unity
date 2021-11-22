@@ -438,6 +438,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5667135238525356370, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
+      propertyPath: m_Volume
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667135238525356370, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: DopplerLevel
       value: 0
       objectReference: {fileID: 0}
@@ -3553,7 +3557,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b546be93c2ddcdf48b6243a103684770, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -385,7 +385,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b7a850263f6f0e14eb31e7c171a4fd4e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -900,6 +900,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7613484760393552376, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -943,6 +947,34 @@ PrefabInstance:
     - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: deathMenu
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: loboMorde
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: loboRosna
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: portalSai
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: portalEntra
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: morcegoMorde
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: morcegoRosna
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
       propertyPath: volumeStartGame

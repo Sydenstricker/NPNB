@@ -217,7 +217,19 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
+      - m_Target: {fileID: 286709968}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: quitgame
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2166099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,8 +342,8 @@ MonoBehaviour:
     - Trilha sonora\nFernando S. Costa - Programa\xE7\xE3o\nGuilherme Oliveira -
     Produ\xE7\xE3o\nJ\xE9ssica Nascimento - Game Design/Level Design/Programa\xE7\xE3o\nRonie
     Menezes - Arte/Anima\xE7\xE3o\n\nAGRADECIMENTOS\nLarissa Barros - Anima\xE7\xE3o
-    (Cinematic Intro)\nDiego Lima - Revis\xE3o de texto (Ingl\xEAs)\n\nDOWNLOADS
-    (SFXs)\nprosoundeffects.com\nsonniss.com\nsoundbits.de"
+    (Cinematic Intro)\nDiego Lima - Revis\xE3o de texto (Ingl\xEAs)\n\nDOWNLOAD (SFXs)\nprosoundeffects.com
+    | sonniss.com | soundbits.de | freesfx.co.uk"
 --- !u!222 &102141167
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -405,6 +417,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7613484760393552376, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552376, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b7a850263f6f0e14eb31e7c171a4fd4e, type: 3}
@@ -458,6 +474,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+--- !u!114 &286709968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+  m_PrefabInstance: {fileID: 286709967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b4fd5607dca77449487df1768da730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &444657225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1014,7 +1041,19 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
+      - m_Target: {fileID: 286709968}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StartGame
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1475230626
 MonoBehaviour:
   m_ObjectHideFlags: 0

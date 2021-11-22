@@ -12,5 +12,6 @@ public class PortalNaveFim : MonoBehaviour
     {
         animator.SetTrigger("NaveFim");
         FindObjectOfType<SoundManager>().TocaPortalAbre();
+        FindObjectOfType<SoundManager>().PortalExplosion();
     }
 }

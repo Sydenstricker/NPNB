@@ -3584,7 +3584,7 @@ MonoBehaviour:
   messages:
   - actorId: 0
     message: "Aqui est\xE1, senhor. Veja quem encontrou seu tesouro para voc\xEA."
-    messageSFX: {fileID: 8300000, guid: c2ab035fe680d2e4a8dda813f5be2add, type: 3}
+    messageSFX: {fileID: 8300000, guid: 40aea00df2d64b34983b16e1bd6d549a, type: 3}
   - actorId: 2
     message: "PINKY devolve a B\xDASSOLA ao HOMEM."
     messageSFX: {fileID: 8300000, guid: 8881a865c45aaf4498dc4a3c92ba62ab, type: 3}
@@ -3597,11 +3597,11 @@ MonoBehaviour:
     messageSFX: {fileID: 8300000, guid: 3ead2036d92c51742a67f88fa2099b9a, type: 3}
   - actorId: 0
     message: ... De nada, DEEP. Sou PINKY.
-    messageSFX: {fileID: 8300000, guid: c2ab035fe680d2e4a8dda813f5be2add, type: 3}
+    messageSFX: {fileID: 8300000, guid: d61f545918ce33541914d9bbe982f6da, type: 3}
   - actorId: 0
     message: "Agora me diga: como fa\xE7o para sair daqui? Tudo parece ser t\xE3o
       igual..."
-    messageSFX: {fileID: 8300000, guid: ea3e25e85bdd5074da34cf3e8ddac188, type: 3}
+    messageSFX: {fileID: 8300000, guid: 40aea00df2d64b34983b16e1bd6d549a, type: 3}
   - actorId: 3
     message: "A b\xFAssola, meu tesouro... Ela mostra o caminho."
     messageSFX: {fileID: 8300000, guid: 3ead2036d92c51742a67f88fa2099b9a, type: 3}
@@ -3618,7 +3618,7 @@ MonoBehaviour:
     messageSFX: {fileID: 8300000, guid: aa10d85dca6dfdf4f9268efc94f395e5, type: 3}
   - actorId: 0
     message: "Certo\u2026 At\xE9 mais!"
-    messageSFX: {fileID: 8300000, guid: c2ab035fe680d2e4a8dda813f5be2add, type: 3}
+    messageSFX: {fileID: 8300000, guid: 40aea00df2d64b34983b16e1bd6d549a, type: 3}
   actors:
   - name: PINKY
     sprite: {fileID: 21300000, guid: 3e343dc093d9ea442bdf32de80cbca56, type: 3}
@@ -8128,6 +8128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTutorial: 0
+  isNaveFim: 0
+  estamosSemTempo: 0
 --- !u!95 &871374610
 Animator:
   serializedVersion: 3
@@ -9421,6 +9423,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7613484760393552376, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -9464,6 +9470,46 @@ PrefabInstance:
     - target: {fileID: 7613484760393552377, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: pulo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: moeda
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: deathMenu
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: loboMorde
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: loboRosna
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: puloduplo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: morcegoMorde
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: morcegoRosna
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: volumePortalSai
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613484760393552378, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
+      propertyPath: volumePortalEntra
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7613484760393552383, guid: eaec2baa6f4a7974ab30ae93a529cccf, type: 3}
       propertyPath: m_Name
@@ -9958,7 +10004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8518354055456953100, guid: a354499b39e3fab47978f8d58b5f8e61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.05
+      value: 13.87
       objectReference: {fileID: 0}
     - target: {fileID: 8518354055456953100, guid: a354499b39e3fab47978f8d58b5f8e61, type: 3}
       propertyPath: m_LocalPosition.y
