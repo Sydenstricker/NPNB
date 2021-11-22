@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.21f1 (a38c86f6690f) revision 10718342'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19042.1348; Version 2009; 64bit' Language: 'pt' Physical Memory: 16315 MB
+OS: 'Windows 10 Pro; OS build 22000.318; Version 2009; 64bit' Language: 'pt' Physical Memory: 32698 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
@@ -11,34 +11,49 @@ C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-D:/Documentos/Unity/NPNB Git/NPNB/PB COM CUIDADO
+F:/Repos/ReposUnity/KRAK/NPNB/NPNB/PB COM CUIDADO
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< Updated upstream
 62432
 Successfully changed project path to: D:/Documentos/Unity/NPNB Git/NPNB/PB COM CUIDADO
 D:/Documentos/Unity/NPNB Git/NPNB/PB COM CUIDADO
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 69.89 ms, found 3 plugins.
+=======
+60234
+Successfully changed project path to: F:/Repos/ReposUnity/KRAK/NPNB/NPNB/PB COM CUIDADO
+F:/Repos/ReposUnity/KRAK/NPNB/NPNB/PB COM CUIDADO
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 65.01 ms, found 3 plugins.
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.21f1 (a38c86f6690f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Documentos/Unity/NPNB Git/NPNB/PB COM CUIDADO/Assets
+[Subsystems] Discovering subsystems at path F:/Repos/ReposUnity/KRAK/NPNB/NPNB/PB COM CUIDADO/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Radeon RX 570 Series (ID=0x67df)
+    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2484)
     Vendor:   
-    VRAM:     4075 MB
-    Driver:   27.20.21002.112
+    VRAM:     8043 MB
+    Driver:   30.0.14.9649
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56020
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56832
+>>>>>>> Stashed changes
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+<<<<<<< Updated upstream
 Registered in 0.001759 seconds.
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 69.70 ms, found 3 plugins.
@@ -48,11 +63,25 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1199ms)
 		BeginReloadAssembly (48ms)
+=======
+Registered in 0.001686 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 61.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.504 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1504ms)
+		BeginReloadAssembly (40ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
+<<<<<<< Updated upstream
 		EndReloadAssembly (446ms)
 			LoadAssemblies (46ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
@@ -60,19 +89,36 @@ Domain Reload Profiling:
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (29ms)
 			SetupLoadedEditorAssemblies (189ms)
+=======
+		EndReloadAssembly (394ms)
+			LoadAssemblies (38ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (123ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (167ms)
+>>>>>>> Stashed changes
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
+<<<<<<< Updated upstream
 				RefreshPlugins (70ms)
 				BeforeProcessingInitializeOnLoad (16ms)
 				ProcessInitializeOnLoadAttributes (73ms)
 				ProcessInitializeOnLoadMethodAttributes (25ms)
+=======
+				RefreshPlugins (62ms)
+				BeforeProcessingInitializeOnLoad (11ms)
+				ProcessInitializeOnLoadAttributes (66ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
+>>>>>>> Stashed changes
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.003138 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -83,21 +129,46 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1122ms)
 		BeginReloadAssembly (136ms)
+=======
+Registered in 0.003271 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 61.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.999 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1000ms)
+		BeginReloadAssembly (123ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (20ms)
+<<<<<<< Updated upstream
 		EndReloadAssembly (925ms)
 			LoadAssemblies (84ms)
+=======
+		EndReloadAssembly (826ms)
+			LoadAssemblies (78ms)
+>>>>>>> Stashed changes
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (294ms)
+			SetupTypeCache (261ms)
 			ReleaseScriptCaches (1ms)
+<<<<<<< Updated upstream
 			RebuildScriptCaches (55ms)
 			SetupLoadedEditorAssemblies (378ms)
+=======
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (332ms)
+>>>>>>> Stashed changes
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
+<<<<<<< Updated upstream
 				RefreshPlugins (72ms)
 				BeforeProcessingInitializeOnLoad (77ms)
 				ProcessInitializeOnLoadAttributes (203ms)
@@ -111,13 +182,32 @@ Platform modules already initialized, skipping
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.28 seconds
 Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
+=======
+				RefreshPlugins (62ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (176ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 112.5 MB.
 System memory in use after: 112.7 MB.
 
 Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 2961.
+<<<<<<< Updated upstream
 Total: 3.847900 ms (FindLiveObjects: 0.340100 ms CreateObjectMapping: 0.075600 ms MarkObjects: 3.343600 ms  DeleteObjects: 0.087100 ms)
+=======
+Total: 3.257300 ms (FindLiveObjects: 0.265500 ms CreateObjectMapping: 0.061900 ms MarkObjects: 2.863600 ms  DeleteObjects: 0.064900 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,6 +221,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
   path: Assets/Scenes/Caverna/CavernaGameplay.unity
   artifactKey: Guid(0ffc692bc50552d42bb6dfadd9b76fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/Caverna/CavernaGameplay.unity using Guid(0ffc692bc50552d42bb6dfadd9b76fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ebe80b0f98ba2d0e2e02f350ce87060') in 0.015954 seconds 
@@ -525,18 +616,39 @@ System memory in use after: 113.4 MB.
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2982.
 Total: 3.933100 ms (FindLiveObjects: 0.315000 ms CreateObjectMapping: 0.071000 ms MarkObjects: 3.519500 ms  DeleteObjects: 0.025900 ms)
+=======
+  path: Assets/Animations/Inimigo 3/Big3.png
+  artifactKey: Guid(ead26138bdde76b47b68d315c4b3ae86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Inimigo 3/Big3.png using Guid(ead26138bdde76b47b68d315c4b3ae86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c5a6d0e718540f65cb84011c2a944bf') in 0.077443 seconds 
+  Import took 0.081859 seconds .
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Animations/Inimigo 3/INIMIGO 3.controller
+  artifactKey: Guid(5464c2a59c068164ead9da98d60b5c11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Inimigo 3/INIMIGO 3.controller using Guid(5464c2a59c068164ead9da98d60b5c11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e771d6b3f41fe593ce315c1d6b893a4') in 0.013082 seconds 
+  Import took 0.017148 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Animations/Inimigo 3/dano/Big3 1.png
+  artifactKey: Guid(e59cc6a5bcc9e234ca97c94e55d45999) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Inimigo 3/dano/Big3 1.png using Guid(e59cc6a5bcc9e234ca97c94e55d45999) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95d546f1c228056d4f23d9ed905636fd') in 0.023121 seconds 
+  Import took 0.026468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/Animations/Inimigo 3/dano/Big1 1.png
+  artifactKey: Guid(ca78ce229b1772f4abc0e87e7525ad97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Inimigo 3/dano/Big1 1.png using Guid(ca78ce229b1772f4abc0e87e7525ad97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '312f8c9c5cc4b700912c2f88052fe393') in 0.016539 seconds 
+  Import took 0.020142 seconds .
+>>>>>>> Stashed changes
+
+========================================================================
+<<<<<<< Updated upstream
 Received Prepare
 Registering precompiled user dll's ...
 Registered in 0.003080 seconds.
@@ -7277,15 +7389,77 @@ System memory in use after: 115.4 MB.
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 3133.
 Total: 4.370900 ms (FindLiveObjects: 0.310700 ms CreateObjectMapping: 0.069400 ms MarkObjects: 3.961200 ms  DeleteObjects: 0.027300 ms)
+=======
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/Animations/Inimigo 3/dano/dano.anim
+  artifactKey: Guid(f6d030f36a8ed5a469d6d8c2c1cfdbbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Inimigo 3/dano/dano.anim using Guid(f6d030f36a8ed5a469d6d8c2c1cfdbbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37a35cd72763eca0558ef28a02583801') in 0.009184 seconds 
+  Import took 0.012692 seconds .
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Animations/Inimigo 3/dano/Big2 1.png
+  artifactKey: Guid(61fcde85867447e469d6165e65c20097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Inimigo 3/dano/Big2 1.png using Guid(61fcde85867447e469d6165e65c20097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ceaf7530ead569edea74bee5e7722a5') in 0.017164 seconds 
+  Import took 0.020604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Animations/Inimigo 3/Big2.png
+  artifactKey: Guid(5021e25e199427c45874c2b347704078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Inimigo 3/Big2.png using Guid(5021e25e199427c45874c2b347704078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '391db591dde3d1716aa590d590cda967') in 0.022245 seconds 
+  Import took 0.026145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Animations/Inimigo 3/Big1.png
+  artifactKey: Guid(409f7044ad0cb4b4bb561917b73c4388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Inimigo 3/Big1.png using Guid(409f7044ad0cb4b4bb561917b73c4388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1b2f896cd922b7258c767387ed5769a') in 0.015843 seconds 
+  Import took 0.019771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.545378 seconds.
+  path: Assets/Animations/Inimigo 2/Medium_New1.png
+  artifactKey: Guid(c3ef61d0409e420458f1d2420c39a049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Inimigo 2/Medium_New1.png using Guid(c3ef61d0409e420458f1d2420c39a049) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f37581b7e2d08763d5fa0f946a59d65e') in 0.014673 seconds 
+  Import took 0.018670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/Animations/Inimigo 2/Medium_New4.png
+  artifactKey: Guid(fcfa09ee65d602d4396e1e4e930d133a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Inimigo 2/Medium_New4.png using Guid(fcfa09ee65d602d4396e1e4e930d133a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c52f1dae73319bf90a440799b598fcc9') in 0.013629 seconds 
+  Import took 0.016963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Animations/Inimigo 2/Medium_New2.png
+  artifactKey: Guid(ca425bc6c995e9e43937b4ca2e4a8e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Inimigo 2/Medium_New2.png using Guid(ca425bc6c995e9e43937b4ca2e4a8e3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39ebe19c8f09e0b1b86d4cb31d342c0f') in 0.013095 seconds 
+  Import took 0.016572 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Animations/Inimigo 2/Medium_New3.png
+  artifactKey: Guid(aafc80e45444f4a4aa52726d45c683fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Inimigo 2/Medium_New3.png using Guid(aafc80e45444f4a4aa52726d45c683fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b68da524a4a5cc160314fdbb4fb337ab') in 0.014435 seconds 
+  Import took 0.018146 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.107528 seconds.
+  path: Assets/Animations/Inimigo 2
+  artifactKey: Guid(31e3d7bb8be92724b92500ae5d3db2d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Inimigo 2 using Guid(31e3d7bb8be92724b92500ae5d3db2d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e6aa9a2a47a72d0da0d33bb7d144fa9') in 0.007935 seconds 
+  Import took 0.011805 seconds .
+>>>>>>> Stashed changes
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
