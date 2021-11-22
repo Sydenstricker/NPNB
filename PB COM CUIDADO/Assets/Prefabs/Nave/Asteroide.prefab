@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: -7333588070920612072, guid: 5e247d0de2ed8f44d908e4e69c1e6e35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -119,6 +119,8 @@ MonoBehaviour:
   chanceMaxSoltarHP: 100
   chanceMinSoltarHP: 1
   isNaveBomber: 0
+  isNaveTutorial: 0
+  explosaoAnimacao: {fileID: 0}
   PIPrefab: {fileID: 4493755121161822097, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
   HPPrefab: {fileID: 0}
   minTimeBetweenShots: 30
@@ -191,7 +193,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34409c24467bb95409525bbe7c78f03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 500
+  ehParaDesaparecerQuandoMorre: 0
+  damage: 999999
+  isLobo: 0
+  isMorcego: 0
+  isHP: 0
 --- !u!114 &-3450183020873751381
 MonoBehaviour:
   m_ObjectHideFlags: 0

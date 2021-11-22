@@ -132,7 +132,7 @@ MonoBehaviour:
   durationOfExplosion: 1
   pontosPorInimigo: 0
   deathSFX: {fileID: 8300000, guid: 92b32033d74928b46b88cc07b38c2279, type: 3}
-  volumeMorte: 0.75
+  volumeMorte: 0.5
   shootSound: {fileID: 8300000, guid: e27c04a7d57212d409d91e1ab6f6052c, type: 3}
   shootSoundVolume: 0.25
 --- !u!61 &7944459279002542270
@@ -198,6 +198,7 @@ MonoBehaviour:
   damage: 0
   isLobo: 0
   isMorcego: 0
+  isHP: 0
 --- !u!114 &-8868353738189013803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,5 +225,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coletaSFX: {fileID: 8300000, guid: 032d8030726053f4eb340c2247abc879, type: 3}
-  volumeColeta: 0.351
+  volumeColeta: 0.75
   scoreValue: 500
