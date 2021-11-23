@@ -101,10 +101,13 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.PixelPerfect.dll:
     - UnityEngine.U2D.PixelPerfectCamera
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -119,6 +122,11 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -1220,6 +1228,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 50
@@ -1229,8 +1239,6 @@ ScriptsOnlyBuild:
     - Class: 60
       Script: {instanceID: 0}
     - Class: 61
-      Script: {instanceID: 0}
-    - Class: 70
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -1381,8 +1389,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 20
       Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
     - Class: 48
@@ -1405,9 +1411,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
-    - Class: 212
+    - Class: 328
       Script: {instanceID: 0}
-    - Class: 213
+    - Class: 329
       Script: {instanceID: 0}
     Assets/Scenes/Tutorial/Tutorial.unity:
     - Class: 1
@@ -1901,7 +1907,7 @@ ScriptsOnlyBuild:
     className: MusicPlayer
   - hash:
       serializedVersion: 2
-      Hash: 7674ad7f7e686b4a624f39bca84c1e98
+      Hash: 14d343b32883cf211249212c516fd25a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DamageDealer
@@ -2531,7 +2537,7 @@ ScriptsOnlyBuild:
     className: PlayModeRunnerCallback
   - hash:
       serializedVersion: 2
-      Hash: c98b45964e3116d7e9b12a8907e920a5
+      Hash: f385e3ea146177a499451ab2b4c0ba85
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -3047,7 +3053,7 @@ ScriptsOnlyBuild:
     className: tempototalFinal
   - hash:
       serializedVersion: 2
-      Hash: 83872abe1b9f9b5d406ba66fc68fd153
+      Hash: a4da9c0860e2ee63be6b5e57a7d506a2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SoundManager
@@ -3211,5 +3217,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menus e Telas/FinalMessage.unity
   - Assets/Scenes/Menus e Telas/HighScoreGlobal.unity
   - Assets/Scenes/Menus e Telas/ThanksForPlaying.unity
-  playerPath: "C:/Users/fsc_r/OneDrive/\xC1rea de Trabalho/Projetos Unity/NPNB/No
-    Pink No Blue.exe"
+  playerPath: D:/Documentos/Unity/Build/No Pink No Blue.exe

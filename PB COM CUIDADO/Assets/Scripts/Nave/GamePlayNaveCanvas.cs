@@ -9,16 +9,16 @@ public class GamePlayNaveCanvas : MonoBehaviour
 
     public void RestartGame()
     {
-        StartCoroutine("DeathMenuCo");
+        //StartCoroutine("DeathMenuCo");
         Cursor.visible = true;
         Time.timeScale = 0.05f;
-    }
-    private IEnumerator DeathMenuCo()
-    {
-        yield return new WaitForSeconds(.1f);
         deathMenu.gameObject.SetActive(true);
-        //FindObjectOfType<cameraNaveGlitch>().AtivaGlitchMorte(); //consertar efeito glitch 
     }
+    /*private IEnumerator DeathMenuCo()
+    {
+        yield return new WaitForSeconds(.1f);        
+        //FindObjectOfType<cameraNaveGlitch>().AtivaGlitchMorte(); //consertar efeito glitch 
+    }*/
     public void RestartLevelCaverna()
     {
         SceneManager.LoadScene("CavernaGameplay");
