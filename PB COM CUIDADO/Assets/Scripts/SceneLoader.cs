@@ -3,9 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-
+    [SerializeField] bool isMainMenu = false;
     public void LoadNextScene()
     {
+        if(isMainMenu)
+        {
+            Cursor.visible = false;            
+        }
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
