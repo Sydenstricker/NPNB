@@ -297,8 +297,8 @@ public class PlayerCav : MonoBehaviour
     }
     public void AtivaAguaSplash()
     {
-        //aguaSplash.gameObject.SetActive(true);
-        GameObject aguaVFX = Instantiate(aguaSplash, transform.position, Quaternion.identity) as GameObject;
+        //aguaSplash.gameObject.SetActive(true); STANDBY ESSE FOI O ULTIMO A SER USADO
+        //GameObject aguaVFX = Instantiate(aguaSplash, transform.position, transform.rotation) as GameObject;        
         Debug.Log("fez VFX Agua");
     }
     public void PontosdeID()

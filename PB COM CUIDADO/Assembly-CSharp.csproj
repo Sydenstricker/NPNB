@@ -65,6 +65,8 @@
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Main Menu\IntroTutorial.cs" />
     <Compile Include="Assets\Splash.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
     <Compile Include="Assets\Scripts\Glitchs\Glitch\DigitalGlitch.cs" />
     <Compile Include="Assets\Scripts\Stalker.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="Assets\Scripts\Cave\ParalaxCAV.cs" />
     <Compile Include="Assets\Scripts\LimpaGO.cs" />
     <Compile Include="Assets\Scripts\Nave\Cannon.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\Scripts\Nave\cameraNaveGlitch.cs" />
     <Compile Include="Assets\Scripts\RosnaLoboEnemySpawner.cs" />
     <Compile Include="Assets\Scripts\HealthDisplay.cs" />
@@ -104,6 +107,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSpline.cs" />
     <Compile Include="Assets\Scripts\BolaPretaEntra.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\Scripts\Cave\EnemySpawnerCav.cs" />
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Scripts\MudaCena.cs" />
@@ -117,6 +121,7 @@
     <Compile Include="Assets\Scripts\Cave\PlayerCavTest.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralAdvancedTechniques.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\DialogueCutsceneManager.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\Nave\pegatempoCavPlayerData.cs" />
     <Compile Include="Assets\Scripts\Level.cs" />
@@ -134,6 +139,7 @@
     <Compile Include="Assets\Scripts\Nave\BGScroller.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineTrack.cs" />
     <Compile Include="Assets\Scripts\Nave\BGNaveSprite.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\Scripts\Tutorial\CameraController.cs" />
     <Compile Include="Assets\Scripts\Nave\Boss.cs" />
     <Compile Include="Assets\Scripts\Nave\Enemy.cs" />
@@ -147,6 +153,7 @@
     <Compile Include="Assets\Scripts\ColliderNextScene.cs" />
     <Compile Include="Assets\Scripts\moedaNave.cs" />
     <Compile Include="Assets\Scripts\Nave\SpawnerRandom.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
     <Compile Include="Assets\Scripts\QuestComplete.cs" />
     <Compile Include="Assets\Scripts\Effects\GlitchEffect.cs" />
@@ -170,13 +177,16 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier2d.cs" />
     <Compile Include="Assets\Scripts\Cave\MorcegoEsquerda.cs" />
     <Compile Include="Assets\Scripts\Nave\PegaPontosCavPlayer.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
     <Compile Include="Assets\Scripts\Nave\GamePlayNaveCanvas.cs" />
     <Compile Include="Assets\Scripts\Cave\PontosDeIdentidadeCav.cs" />
     <Compile Include="Assets\Scripts\Tutorial\TutorialController.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\TriggerDialogue.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\Scripts\Nave\pegaPICAVPlayerData.cs" />
     <Compile Include="Assets\Scripts\Nave\WaveConfig.cs" />
     <Compile Include="Assets\Scripts\Nave\BossConfig.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\Scripts\Cave\cameraMovCav.cs" />
     <Compile Include="Assets\Scripts\Nave\ScoreDisplay.cs" />
     <Compile Include="Assets\Scripts\Cave\EnemyPathingCav.cs" />
@@ -196,16 +206,7 @@
     <Compile Include="Assets\Scripts\Nave\Player.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
     <Compile Include="Assets\Scripts\Nave\HealthBarBoss.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\testewatersplash.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
