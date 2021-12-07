@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Splash : MonoBehaviour
 {
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            FindObjectOfType<SoundManager>().Splash();
+            FindObjectOfType<SoundManager>().Splash();            
+            //GetComponentInChildren<splash>(splashAgua);
+            FindObjectOfType<PlayerCav>().AtivaAguaSplash(); 
         }
     }
 }

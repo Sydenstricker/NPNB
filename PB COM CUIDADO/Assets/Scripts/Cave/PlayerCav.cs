@@ -7,6 +7,7 @@ public class PlayerCav : MonoBehaviour
     [SerializeField] float velCimaBaixo = 10f;
     [SerializeField] float velEsqDir = 10f;
     [SerializeField] int health = 200;
+    [SerializeField] GameObject aguaSplash;
 
     [Header("Player Audio")]
     [SerializeField] AudioClip deathSFX;
@@ -293,6 +294,12 @@ public class PlayerCav : MonoBehaviour
         xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x;
         yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y;
         yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y + 2f;
+    }
+    public void AtivaAguaSplash()
+    {
+        //aguaSplash.gameObject.SetActive(true);
+        GameObject aguaVFX = Instantiate(aguaSplash, transform.position, Quaternion.identity) as GameObject;
+        Debug.Log("fez VFX Agua");
     }
     public void PontosdeID()
     {
