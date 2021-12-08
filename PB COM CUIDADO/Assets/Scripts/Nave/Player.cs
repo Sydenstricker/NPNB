@@ -10,8 +10,10 @@ public class Player : MonoBehaviour
     [SerializeField] int health = 200;
     [SerializeField] GameObject deathVFX;
     [SerializeField] float durationOfExplosion = 1f;
+    [SerializeField] bool isPlayer = false;
     private float contatempoNAVE = 0f;
     PolygonCollider2D polygonCollider2D;
+    private Animator animator;
 
     [Header("Player Audio")]
     [SerializeField] AudioClip deathSFX;
@@ -56,6 +58,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         polygonCollider2D = GetComponent<PolygonCollider2D>();
+        animator = GetComponent<Animator>();
         Cursor.visible = false;
         contatempoNAVE = 0f;
         SetUpMoveBoundry();
@@ -85,7 +88,7 @@ public class Player : MonoBehaviour
 
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
-        TomarDano(damageDealer);
+        TomarDano(damageDealer);        
 
     }
 
@@ -98,6 +101,7 @@ public class Player : MonoBehaviour
     {
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
+        PiscaDano();
 
         //currenthealth é a vida da barra com coraçao, health era ref em string
         currentHealth = health;
@@ -115,6 +119,13 @@ public class Player : MonoBehaviour
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
         FindObjectOfType<GamePlayNaveCanvas>().RestartGame();
         //FindObjectOfType<Level>().LoadGameOver();
+    }
+    private void PiscaDano()
+    {
+        if (isPlayer)
+        {
+            animator.SetTrigger("Ai");
+        }
     }
     public int GetHealth()
     {

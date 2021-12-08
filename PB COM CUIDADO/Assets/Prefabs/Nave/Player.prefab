@@ -103,12 +103,27 @@ MonoBehaviour:
   velEsqDir: 10
   limiteTela: 0.5
   health: 500
-  deathVFX: {fileID: 5342202901343134559, guid: aba018b5b047dcb4ab1d54f185b2d144, type: 3}
+  deathVFX: {fileID: 7747228945836049614, guid: d12dd1133eac55e428d8575e8c3f2db7, type: 3}
   durationOfExplosion: 1
+  isPlayer: 0
   deathSFX: {fileID: 8300000, guid: 0479c7650062b8f4698effaa4e3b680d, type: 3}
   volumeMorte: 0.75
   shootSound: {fileID: 8300000, guid: 77fbef9918893b641ac697b1a6f79e1a, type: 3}
   shootSoundVolume: 0.1
+  danoBossSFX: {fileID: 0}
+  volumeDanoBoss: 0.75
+  danoShot1: {fileID: 0}
+  volumeShot1: 0.75
+  danoShot2: {fileID: 0}
+  volumeShot2: 0.75
+  danoShot3: {fileID: 0}
+  volumeShot3: 0.75
+  danoShot4: {fileID: 0}
+  volumeShot4: 0.75
+  danoShot5: {fileID: 0}
+  volumeShot5: 0.75
+  danoShot6: {fileID: 0}
+  volumeShot6: 0.75
   laserPrefab: {fileID: 5424808430729754634, guid: 60f80d4eb19e2ec45a24f8967d3474f6, type: 3}
   laserSpeed: 30
   projectileFirePeriod: 0.1
@@ -132,7 +147,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.12, y: 0.77}
+    oldSize: {x: 7, y: 4.8125}
     newSize: {x: 0.98, y: 0.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
