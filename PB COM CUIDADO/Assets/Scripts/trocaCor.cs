@@ -34,5 +34,5 @@ public class trocaCor : MonoBehaviour
     public void BossPutoVidaVermelha()
     {
         bossPutoBarraDeVidaVermelha = true;
-    }
+    }   
 }
