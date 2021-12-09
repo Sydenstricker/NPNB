@@ -8,14 +8,15 @@ public class StationTutorialSaiDeCena : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         velocidadeX += velocidadeSaideCena;
+        if(podeAndarPlataformaTut == false) { NaoTiraPlataformaCenaTutorial(); }
         if (podeAndarPlataformaTut) { AndaPlataforma(); };
     }
     public void TiraPlataformaCenaTutorial()
     {
-        velocidadeSaideCena = 1.5f * (Time.deltaTime);
+        velocidadeSaideCena = 10.5f * (Time.deltaTime);
         podeAndarPlataformaTut = true;
     }
     public void NaoTiraPlataformaCenaTutorial()
