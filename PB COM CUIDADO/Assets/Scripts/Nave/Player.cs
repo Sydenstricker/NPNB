@@ -79,12 +79,14 @@ public class Player : MonoBehaviour
             TomouTiroBoss();
             Debug.Log("tomou tiro boss");
         }
+        if (other.gameObject.CompareTag("WaffleNave")) { return; }
         if (other.gameObject.CompareTag("shot1")) { TomouTiroShot1(); }
         if (other.gameObject.CompareTag("shot2")) { TomouTiroShot2(); }
         if (other.gameObject.CompareTag("shot3")) { TomouTiroShot3(); }
         if (other.gameObject.CompareTag("shot4")) { TomouTiroShot4(); }
         if (other.gameObject.CompareTag("shot5")) { TomouTiroShot5(); }
         if (other.gameObject.CompareTag("shot6")) { TomouTiroShot6(); }
+        //if (other.gameObject.CompareTag("HPCura")) { return; }
 
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
@@ -99,13 +101,18 @@ public class Player : MonoBehaviour
     }
     private void TomarDano(DamageDealer damageDealer)
     {
+        int healthInicial = health;   // usei variavel local para resolver coração piscava nave
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
-        PiscaDano();
+        if(healthInicial > health)
+        { 
+            PiscaDano();           
+        }
 
         //currenthealth é a vida da barra com coraçao, health era ref em string
         currentHealth = health;
         healthBar.SetHealth(currentHealth);
+
         if (health <= 0)
         {
             PlayerMorreu();

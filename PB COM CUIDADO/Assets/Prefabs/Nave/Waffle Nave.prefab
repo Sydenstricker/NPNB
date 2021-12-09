@@ -11,15 +11,13 @@ GameObject:
   - component: {fileID: 4225588118928698343}
   - component: {fileID: 7245225033657616785}
   - component: {fileID: 1739123703556607803}
-  - component: {fileID: -4276455288876568558}
   - component: {fileID: 7944459279002542270}
   - component: {fileID: -8050114806327008689}
-  - component: {fileID: 4764726036606199784}
   - component: {fileID: -8868353738189013803}
   - component: {fileID: -132970372770031681}
   m_Layer: 9
   m_Name: Waffle Nave
-  m_TagString: Untagged
+  m_TagString: WaffleNave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,41 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826013dc3d69d04418cea894ec4f9739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-4276455288876568558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8521707023408420462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7f9cb0432d7ade499da3dce2c1359da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100000000
-  scoreValue: 2000
-  chanceMaxSoltarPID: 100
-  chanceMinSoltarPID: 1
-  chanceMaxSoltarHP: 100
-  chanceMinSoltarHP: 1
-  isNaveBomber: 0
-  isNaveTutorial: 0
-  isTaxi: 0
-  explosaoAnimacao: {fileID: 0}
-  PIPrefab: {fileID: 4493755121161822097, guid: 9e11ef9cdaee2944e81e5e8bab007173, type: 3}
-  HPPrefab: {fileID: 0}
-  minTimeBetweenShots: 30
-  maxTimeBetweenShots: 30
-  projectile: {fileID: 1636617385442240539, guid: 94aaed75082211247b853608008f9c4c, type: 3}
-  projectileSpeed: 10
-  morteVFX: {fileID: 4726755263343360560, guid: 9d5fc06af234e7244870127e8bb866ec, type: 3}
-  durationOfExplosion: 1
-  pontosPorInimigo: 0
-  deathSFX: {fileID: 8300000, guid: 92b32033d74928b46b88cc07b38c2279, type: 3}
-  volumeMorte: 0.5
-  shootSound: {fileID: 8300000, guid: e27c04a7d57212d409d91e1ab6f6052c, type: 3}
-  shootSoundVolume: 0.25
 --- !u!61 &7944459279002542270
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -183,25 +146,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4764726036606199784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8521707023408420462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34409c24467bb95409525bbe7c78f03a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ehParaDesaparecerQuandoMorre: 0
-  damage: 0
-  isLobo: 0
-  isMorcego: 0
-  isHP: 0
-  isMataPlayer: 0
-  isNave: 0
 --- !u!114 &-8868353738189013803
 MonoBehaviour:
   m_ObjectHideFlags: 0
