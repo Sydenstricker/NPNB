@@ -9,12 +9,17 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
     [SerializeField] bool isNave = false;
+    private bool playerMorreu = false;
 
+    private void Start()
+    {
+        playerMorreu = false;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && (playerMorreu == false))
         {
             if (GameisPaused)
             {
@@ -62,4 +67,8 @@ public class PauseMenu : MonoBehaviour
         naveTutorialMorreu = true;
     }
 
+    public void PlayerMorreuNaoPermitirPausa()
+    {
+        playerMorreu = true;
+    }
 }

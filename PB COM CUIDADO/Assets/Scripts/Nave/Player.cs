@@ -121,6 +121,7 @@ public class Player : MonoBehaviour
     private void PlayerMorreu()
     {
         Destroy(gameObject);
+        FindObjectOfType<PauseMenu>().PlayerMorreuNaoPermitirPausa();
         GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(explosion, durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);

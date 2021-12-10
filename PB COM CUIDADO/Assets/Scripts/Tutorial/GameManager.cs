@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<cameraMovCav>().AtivaGlitchMorte();
         }
 
+        FindObjectOfType<PauseMenu>().PlayerMorreuNaoPermitirPausa();
         FindObjectOfType<SoundManager>().TocaDeathMenu();
         player.SetActive(false);
         Cursor.visible = true;
@@ -75,6 +76,7 @@ public class GameManager : MonoBehaviour
     }
     public void HighScoreTut()
     {
+        FindObjectOfType<PauseMenu>().PlayerMorreuNaoPermitirPausa();
         FindObjectOfType<CameraController>().AtivaGlitchScore();
         Cursor.visible = true;
         scoremenu.gameObject.SetActive(true);
@@ -85,6 +87,7 @@ public class GameManager : MonoBehaviour
     }
     public void HighScoreCav()
     {
+        FindObjectOfType<PauseMenu>().PlayerMorreuNaoPermitirPausa();
         FindObjectOfType<cameraMovCav>().AtivaGlitchScore();
         Cursor.visible = true;
         scoremenu.gameObject.SetActive(true);
@@ -97,6 +100,7 @@ public class GameManager : MonoBehaviour
     }
     public void HighScoreNave()
     {
+        FindObjectOfType<PauseMenu>().PlayerMorreuNaoPermitirPausa();
         Cursor.visible = true;
         AdicionaScoreNoPlayerDataNAVE();
         AdicionaPINoPlayerDataNAVE();
@@ -106,6 +110,7 @@ public class GameManager : MonoBehaviour
     }
     public void PIMenuCav()
     {
+        FindObjectOfType<PauseMenu>().PlayerMorreuNaoPermitirPausa();
         Cursor.visible = true;
         piMenu.gameObject.SetActive(true);
         playerCAV.SetActive(false);

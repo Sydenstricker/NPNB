@@ -257,6 +257,7 @@ public class PlayerCav : MonoBehaviour
 
     private void PlayerMorreu()
     {
+        FindObjectOfType<PauseMenu>().PlayerMorreuNaoPermitirPausa();
         velocidade = 0; pulo = 0;
         animator.SetTrigger("Morreu");
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, volumeMorte);
