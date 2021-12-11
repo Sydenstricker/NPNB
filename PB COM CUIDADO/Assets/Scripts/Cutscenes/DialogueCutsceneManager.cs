@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class DialogueCutsceneManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     [SerializeField] bool isNaveDialogoInicio = false;
     [SerializeField] bool isCaveDialogoFinal = false;
     [SerializeField] bool isCaveDialogoInicio = false;
+    public bool podeProximoDialogo = true;
 
     //public Animator PinkyAnimator;
 
@@ -54,7 +56,7 @@ public class DialogueCutsceneManager : MonoBehaviour
     public void NextMessage()
     {
         mandouTrigger = false;
-        activeMessage++;
+        activeMessage++;        
 
         if (activeMessage < currentMessages.Length)
         {
@@ -76,10 +78,17 @@ public class DialogueCutsceneManager : MonoBehaviour
     {
         backgroundBox.transform.localScale = Vector3.zero;
     }
+    private IEnumerator DelayDialogos(float delay)
+    {
+        yield return new WaitForSecondsRealtime(delay);
+        yield return podeProximoDialogo = true;        
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) && isActive == true)
+        if (Input.GetKeyDown(KeyCode.Return) && (isActive == true) && (podeProximoDialogo == true))
         {
+            podeProximoDialogo = false;
+            StartCoroutine(DelayDialogos(1.3f));
             NextMessage();
         }
 
@@ -93,7 +102,7 @@ public class DialogueCutsceneManager : MonoBehaviour
         if (contadorDialogo == 0)
         {
             if (isCaveDialogoInicio)
-            {
+            {                
                 FindObjectOfType<CharCutsceneController>().OlhaAtrasPinky();
                 mandouTrigger = true;
             }
@@ -108,7 +117,7 @@ public class DialogueCutsceneManager : MonoBehaviour
             if (isCaveDialogoInicio)
             {
                 FindObjectOfType<CharCutsceneController>().PuloDuroPinky();
-                mandouTrigger = true;
+                mandouTrigger = true;                
             }
             if (isNaveDialogoInicio)
             {
