@@ -3766,6 +3766,10 @@ PrefabInstance:
       propertyPath: isCaveDialogoFinal
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 912970754478286213, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
+      propertyPath: podeProximoDialogo
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8725,6 +8729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b27b1005bffb484e9e5644f8ee78758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainMenu: 0
 --- !u!4 &1036958671
 Transform:
   m_ObjectHideFlags: 0

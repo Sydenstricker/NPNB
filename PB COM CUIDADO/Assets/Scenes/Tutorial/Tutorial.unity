@@ -31917,6 +31917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b27b1005bffb484e9e5644f8ee78758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMainMenu: 0
 --- !u!4 &1105842077
 Transform:
   m_ObjectHideFlags: 0
@@ -58999,20 +59000,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b4fd5607dca77449487df1768da730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moeda: {fileID: 8300000, guid: 559ef7ebff720074cac661126467db37, type: 3}
-  volumeMoeda: 0.75
-  pulo: {fileID: 8300000, guid: d9d7f2d2ec9e65a4c8f9be63db43de6f, type: 3}
-  volumePulo: 0.75
   startgame: {fileID: 8300000, guid: bde755c910a64f144b8d7b402692c823, type: 3}
   volumeStartGame: 0.75
   quitgame: {fileID: 8300000, guid: c92606a5013c8604abc45f75e8b96d8a, type: 3}
   volumeQuitGame: 0.75
-  puloduplo: {fileID: 8300000, guid: cd7a51088e2cf9041911f9c37aefbb5f, type: 3}
-  volumePuloDuplo: 0.75
   portalEntra: {fileID: 8300000, guid: ab073eb4e5624a24a94c29020995a097, type: 3}
   volumePortalEntra: 1
   portalSai: {fileID: 8300000, guid: 04407eb070893ff43aa9f14976c7ebc8, type: 3}
   volumePortalSai: 1
+  portalExplosion: {fileID: 0}
+  volumePExplosion: 0.75
   deathMenu: {fileID: 8300000, guid: 13eba64f5b46f564d9e5485087fd6364, type: 3}
   volumeDeathMenu: 1
   loboRosna: {fileID: 0}
@@ -59021,11 +59018,18 @@ MonoBehaviour:
   volumeLoboMorde: 0.75
   morcegoRosna: {fileID: 0}
   volumeMorcegoRosna: 0.75
+  stalkerSound: {fileID: 0}
+  volumeStalkerSound: 0.75
+  splash: {fileID: 0}
+  volumeSplash: 0.75
   morcegoMorde: {fileID: 0}
+  volumeMorcegoMorde: 0.75
   HPNaveSFX: {fileID: 0}
   volumeHPNave: 0.75
   naveBomberSFX: {fileID: 0}
+  volumeNaveBomber: 0.75
   naveSeExplode: {fileID: 0}
+  volumeNaveSeExplode: 0.75
 --- !u!4 &1917963213
 Transform:
   m_ObjectHideFlags: 0
@@ -62851,6 +62855,10 @@ PrefabInstance:
     - target: {fileID: 912970754478286209, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_Name
       value: DialogueBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 912970754478286213, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
+      propertyPath: podeProximoDialogo
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 912970754478286214, guid: e51c0d5d66069e64891ae293f3153e2f, type: 3}
       propertyPath: m_Pivot.x
