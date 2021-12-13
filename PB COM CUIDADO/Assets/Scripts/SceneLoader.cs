@@ -34,4 +34,17 @@ public class SceneLoader : MonoBehaviour
     {
         Application.Quit();
     }
+    public void ComecaJogoBR()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void ComecaJogoEN()
+    {
+        SceneManager.LoadScene("MainMenuEN");
+    }
+    public void CinematicaEN()
+    {
+        Cursor.visible = false;
+        SceneManager.LoadScene("Cinematics IntroEN");
+    }
 }

@@ -88,7 +88,7 @@ public class DialogueCutsceneManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) && (isActive == true) && (podeProximoDialogo == true))
         {
             podeProximoDialogo = false;
-            StartCoroutine(DelayDialogos(1.3f));
+            StartCoroutine(DelayDialogos(1.4f));
             NextMessage();
         }
 

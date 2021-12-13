@@ -29,6 +29,10 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void VoltaMainMenuEN()
+    {
+        SceneManager.LoadScene("MainMenuEN");
+    }
     public void QuitGame()
     {
         Application.Quit();
@@ -39,22 +43,45 @@ public class LevelLoader : MonoBehaviour
         FindObjectOfType<GameSession>().ResetGame();
         SceneManager.LoadScene("Tutorial");
     }
+    public void RestartLevelTutEN()
+    {
+        FindObjectOfType<PauseMenu>().Resume();
+        FindObjectOfType<GameSession>().ResetGame();
+        SceneManager.LoadScene("TutorialEN");
+    }
     public void RestartLevelCav()
     {
         FindObjectOfType<PauseMenu>().Resume();
         FindObjectOfType<GameSession>().ResetGame();
         SceneManager.LoadScene("CavernaGameplay");
     }
+    public void RestartLevelCavEN()
+    {
+        FindObjectOfType<PauseMenu>().Resume();
+        FindObjectOfType<GameSession>().ResetGame();
+        SceneManager.LoadScene("CavernaGameplayEN");
+    }
     public void TerminouFaseCavernaGameplay()
     {
         //FindObjectOfType<GameManager>().
         SceneManager.LoadScene("DialogueCaveEnd");
+    }
+    public void TerminouFaseCavernaGameplayEN()
+    {
+        //FindObjectOfType<GameManager>().
+        SceneManager.LoadScene("DialogueCaveEndEN");
     }
     public void RestartLevelNave()
     {
         FindObjectOfType<PauseMenu>().Resume();
         FindObjectOfType<GameSession>().ResetGame();
         SceneManager.LoadScene("NaveBlueGameplay");
+    }
+    public void RestartLevelNaveEN()
+    {
+        FindObjectOfType<PauseMenu>().Resume();
+        FindObjectOfType<GameSession>().ResetGame();
+        SceneManager.LoadScene("NaveBlueGameplayEN");
     }
 
 }
