@@ -123200,10 +123200,14 @@ PrefabInstance:
     - target: {fileID: 1487228204402078256, guid: 8670b1f60ab8b2c4fa560cfbd7ae44ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1173133585}
+      objectReference: {fileID: 1533992619}
     - target: {fileID: 1487228204402078256, guid: 8670b1f60ab8b2c4fa560cfbd7ae44ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: VoltaMainMenuEN
+      value: VoltarMenuEN
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487228204402078256, guid: 8670b1f60ab8b2c4fa560cfbd7ae44ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeathMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1487228204957914658, guid: 8670b1f60ab8b2c4fa560cfbd7ae44ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -123242,8 +123246,16 @@ PrefabInstance:
       value: QUIT
       objectReference: {fileID: 0}
     - target: {fileID: 4399400917636711837, guid: 8670b1f60ab8b2c4fa560cfbd7ae44ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1173133585}
+    - target: {fileID: 4399400917636711837, guid: 8670b1f60ab8b2c4fa560cfbd7ae44ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: VoltarMenuEN
+      value: VoltaMainMenuEN
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399400917636711837, guid: 8670b1f60ab8b2c4fa560cfbd7ae44ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelLoader, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4620290782722411088, guid: 8670b1f60ab8b2c4fa560cfbd7ae44ae, type: 3}
       propertyPath: m_AnchorMax.y

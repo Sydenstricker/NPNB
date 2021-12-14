@@ -204,6 +204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerNave
       objectReference: {fileID: 0}
+    - target: {fileID: 2878337594822490224, guid: 56d6e8ddb77cb0449874028348b5c46f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2878337594822490226, guid: 56d6e8ddb77cb0449874028348b5c46f, type: 3}
       propertyPath: health
       value: 1000
@@ -3327,8 +3331,16 @@ PrefabInstance:
       value: -71.25
       objectReference: {fileID: 0}
     - target: {fileID: 2563425717705833652, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1815625511}
+    - target: {fileID: 2563425717705833652, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartGameNaveEN
+      value: RestartLevelNaveEN
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563425717705833652, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelLoader, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2563425717988776101, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3395,8 +3407,16 @@ PrefabInstance:
       value: RESTART
       objectReference: {fileID: 0}
     - target: {fileID: 4555264277107323233, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1815625511}
+    - target: {fileID: 4555264277107323233, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartGameNaveEN
+      value: RestartLevelNaveEN
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555264277107323233, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelLoader, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4555264277318031981, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_Name
