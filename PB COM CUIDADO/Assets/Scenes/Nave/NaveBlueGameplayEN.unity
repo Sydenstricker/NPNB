@@ -204,6 +204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerNave
       objectReference: {fileID: 0}
+    - target: {fileID: 2878337594822490224, guid: 56d6e8ddb77cb0449874028348b5c46f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2878337594822490226, guid: 56d6e8ddb77cb0449874028348b5c46f, type: 3}
       propertyPath: health
       value: 1000
@@ -1866,6 +1870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1336556133604115104, guid: b8762e899948398408631066de83d8f0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1671431160641818444, guid: b8762e899948398408631066de83d8f0, type: 3}
       propertyPath: Loop
       value: 1
@@ -2828,6 +2836,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7400258700673273704, guid: e4abefc60af628c469689a886816fbdc, type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400258700673273704, guid: e4abefc60af628c469689a886816fbdc, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7400258700673273705, guid: e4abefc60af628c469689a886816fbdc, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -3315,8 +3331,16 @@ PrefabInstance:
       value: -71.25
       objectReference: {fileID: 0}
     - target: {fileID: 2563425717705833652, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1815625511}
+    - target: {fileID: 2563425717705833652, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartGameNaveEN
+      value: RestartLevelNaveEN
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563425717705833652, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelLoader, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2563425717988776101, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3383,8 +3407,16 @@ PrefabInstance:
       value: RESTART
       objectReference: {fileID: 0}
     - target: {fileID: 4555264277107323233, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1815625511}
+    - target: {fileID: 4555264277107323233, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartGameNaveEN
+      value: RestartLevelNaveEN
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555264277107323233, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelLoader, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4555264277318031981, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_Name
@@ -3589,6 +3621,10 @@ PrefabInstance:
     - target: {fileID: 5456642987533735707, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456642987533735709, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}
+      propertyPath: cenaEN
+      value: MainMenuEN
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a20c70f396a034ebf89ce95c08dbc6, type: 3}

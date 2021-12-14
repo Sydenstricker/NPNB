@@ -23,11 +23,11 @@ public class PauseMenu : MonoBehaviour
         {
             if (GameisPaused)
             {
-                Resume();
+                Resume();               
             }
             else
             {
-                Pause();
+                Pause();                
             }
         }
     }
@@ -38,10 +38,16 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameisPaused = false;
+        //GameObject.FindWithTag("Player").GetComponent<PlayerController>().enabled = true;
+        //GameObject.FindWithTag("Player").GetComponent<PlayerCav>().enabled = true;
+        //GameObject.FindWithTag("Player").GetComponent<Player>().enabled = true;
+
+
         if (isNave)
         {
-           FindObjectOfType<StationTutorialSaiDeCena>().NaoTiraPlataformaCenaTutorial();
-            if(naveTutorialMorreu)
+           FindObjectOfType<StationTutorialSaiDeCena>().NaoTiraPlataformaCenaTutorial();           
+
+            if (naveTutorialMorreu)
             {
                 FindObjectOfType<StationTutorialSaiDeCena>().TiraPlataformaCenaTutorial();
             }
@@ -54,12 +60,18 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        GameisPaused = true;
+        GameisPaused = true;        
         Cursor.visible = true;
+        //GameObject.FindWithTag("Player").GetComponent<PlayerController>().enabled = false;
+        //GameObject.FindWithTag("Player").GetComponent<PlayerCav>().enabled = false;
+        //GameObject.FindWithTag("Player").GetComponent<Player>().enabled = false;
+
+
         if (isNave)
         {
-            FindObjectOfType<StationTutorialSaiDeCena>().NaoTiraPlataformaCenaTutorial();
-            if(naveTutorialMorreu) { FindObjectOfType<StationTutorialSaiDeCena>().NaoTiraPlataformaCenaTutorial(); }
+            FindObjectOfType<StationTutorialSaiDeCena>().NaoTiraPlataformaCenaTutorial();            
+
+            if (naveTutorialMorreu) { FindObjectOfType<StationTutorialSaiDeCena>().NaoTiraPlataformaCenaTutorial(); }
         }        
     }
     public void NaveTutorialMorreu()
