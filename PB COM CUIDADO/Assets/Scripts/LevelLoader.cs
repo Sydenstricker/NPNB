@@ -6,7 +6,7 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 5f;
-
+    [SerializeField] bool isNaveDesbugaSom = false;
     public void LoadNextLevel()
     {
 
@@ -27,11 +27,23 @@ public class LevelLoader : MonoBehaviour
 
     public void VoltaMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        if(isNaveDesbugaSom == true)
+        {
+            FindObjectOfType<MusicPlayer>().DesbugaMusicaDuplicada();
+            SceneManager.LoadScene("MainMenu");
+        }
+        else
+            SceneManager.LoadScene("MainMenu");
     }
     public void VoltaMainMenuEN()
     {
-        SceneManager.LoadScene("MainMenuEN");
+        if(isNaveDesbugaSom == true)
+        {
+            FindObjectOfType<MusicPlayer>().DesbugaMusicaDuplicada();
+            SceneManager.LoadScene("MainMenuEN");
+        }
+        else
+            SceneManager.LoadScene("MainMenuEN");
     }
     public void QuitGame()
     {
@@ -73,12 +85,14 @@ public class LevelLoader : MonoBehaviour
     }
     public void RestartLevelNave()
     {
+        
         FindObjectOfType<PauseMenu>().Resume();
         FindObjectOfType<GameSession>().ResetGame();
         SceneManager.LoadScene("NaveBlueGameplay");
     }
     public void RestartLevelNaveEN()
     {
+        
         FindObjectOfType<PauseMenu>().Resume();
         FindObjectOfType<GameSession>().ResetGame();
         SceneManager.LoadScene("NaveBlueGameplayEN");

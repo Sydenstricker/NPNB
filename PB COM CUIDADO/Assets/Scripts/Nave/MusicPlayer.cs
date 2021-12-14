@@ -25,6 +25,10 @@ public class MusicPlayer : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    public void DesbugaMusicaDuplicada()
+    {
+        Destroy(gameObject);
+    }
     /*private void Update()
     {
         ativarDestruirGO = FindObjectsOfType<Boss>().Length;

@@ -6,6 +6,7 @@ public class DeathMenu : MonoBehaviour
     public string cena;
     public string cenaEN;
     private int vidaPlayer;
+    [SerializeField] bool isNaveDesbugaSom = false;
     public void RestartGame()
     {
         FindObjectOfType<GameManager>().Restart();
@@ -22,11 +23,23 @@ public class DeathMenu : MonoBehaviour
     }
     public void VoltarMenu()
     {
-        SceneManager.LoadScene(cena);
+        if(isNaveDesbugaSom == true)
+        {
+            FindObjectOfType<MusicPlayer>().DesbugaMusicaDuplicada();
+            SceneManager.LoadScene(cena);
+        }
+        else
+            SceneManager.LoadScene(cena);
     }
     public void VoltarMenuEN()
     {
-        SceneManager.LoadScene(cenaEN);
+        if(isNaveDesbugaSom == true)
+        {
+            FindObjectOfType<MusicPlayer>().DesbugaMusicaDuplicada();
+            SceneManager.LoadScene(cenaEN);
+        }
+        else
+            SceneManager.LoadScene(cenaEN);
     }
     public void RestartGameCav()
     {
