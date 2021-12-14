@@ -23,11 +23,11 @@ public class PauseMenu : MonoBehaviour
         {
             if (GameisPaused)
             {
-                Resume();
+                Resume();               
             }
             else
             {
-                Pause();
+                Pause();                
             }
         }
     }
@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        GameisPaused = false;
+        GameisPaused = false;        
         if (isNave)
         {
            FindObjectOfType<StationTutorialSaiDeCena>().NaoTiraPlataformaCenaTutorial();
@@ -54,7 +54,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        GameisPaused = true;
+        GameisPaused = true;        
         Cursor.visible = true;
         if (isNave)
         {
